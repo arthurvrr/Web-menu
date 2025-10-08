@@ -1,31 +1,89 @@
 <!DOCTYPE html>
-<html lang="pt-br ">
+<html lang="pt-br">
     <head>
-        <link rel="stylesheets" href="styles.css">
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Menu</title>
+        <style>
+            body {
+                margin: 0; /* Remove as margens padrão do navegador, garantindo que o "bloco" começe junto à página*/
+                background-color: wheat; /*Cor de fundo*/
+
+                display: grid; /*Divide o body em grids (CSS grid)*/
+
+                /*
+                    1. auto: é referente ao header, seu tamanho varia conforme o seu conteudo (auto)
+                    2. 1fr: referente ao main, ou seja, o espaço que contem os card dos produtos, ocupa o espaço disponivel (1fr)
+                    2. auto: referente ao footer, rodape da página, terá o tamanho do seu conteudo (auto)
+                 */
+                grid-template-rows: auto 1fr auto;
+
+                grid-template-areas: 
+                    "header-area"
+                    "main-area"
+                    "footer-area";
+
+                min-height: 100vh;
+                
+            }
+
+
+
+            header {
+                /*O header contém o logo da empresa e botões que permitem a navegação em outras páginas, como "Como chegar", "Contato" "Sobre nós"
+                Esses botões quanto apertados levaram a outra página contendo a informação respectiva*/
+                grid-area: header-area;
+
+            }
+
+            main {
+                /*O main contém o conteúdo principal da pagina atual, como o menu de navegação entre os tipos de produtos do
+                cardápio, como "Docinhos", "Bolos", "Tortas", "Fritos", "Assados" (..)* e principalmente os card que representam 
+                os produtos*/
+                grid-area: main-area;
+            }
+
+            footer {
+                grid-area: footer-area;
+
+            }
+
+            /* Uma div particionada, de modo que cada coluna contenha
+            um card de um produto*/
+            .menu-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px          /*Espaçamento entre os cards*/
+            }
+
+
+
+        </style>
     </head>
 
     <body>
+        <header>
 
-        <aside class="sidebar">
-            <nav>
-                <ul>
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#doces">Doces</a></li>
-                    <li><a href="#salgados">Salgados</a></li>
-                    <li><a href="#tortas">Tortas</a></li>
-                </ul>
+        </header>
+
+        <main>
 
 
-            </nav>
-
-
-        </aside>
+        </main>
+        
         
 
-    </body>
+        
 
+   
+
+        <footer>
+
+
+
+        </footer>
+
+     </body>
 
 </html>
