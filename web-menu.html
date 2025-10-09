@@ -31,22 +31,6 @@
             }
 
 
-
-            header {
-                /*O header contém o logo da empresa e botões que permitem a navegação em outras páginas, como "Como chegar", "Contato" "Sobre nós"
-                Esses botões quanto apertados levaram a outra página contendo a informação respectiva*/
-                grid-area: header-area;
-
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                
-                background-color: transparent; /*Cor de fundo*/
-                
-                /* Alinha os itens do header verticalmente*/
-                align-items: center;
-
-            }
-
             main {
                 /*O main contém o conteúdo principal da pagina atual, como o menu de navegação entre os tipos de produtos do
                 cardápio, como "Docinhos", "Bolos", "Tortas", "Fritos", "Assados" (..)* e principalmente os card que representam 
@@ -68,11 +52,41 @@
 
             }
 
+           
+            header {
+                /*O header contém o logo da empresa e botões que permitem a navegação em outras páginas, como "Como chegar", "Contato" "Sobre nós"
+                Esses botões quanto apertados levaram a outra página contendo a informação respectiva*/
+                grid-area: header-area;
+
+                display: grid;
+                grid-template-columns: 1fr;
+                
+                background-color: transparent; /*Cor de fundo*/
+                
+                /* Alinha os itens do header verticalmente*/
+                align-items: center;
+
+            }   
+
+            .header-logo {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .header-logo img {
+                width: 200px;
+                height: auto;
+                margin: 10px;
+
+            }
+
             .header-nav{
                 display: flex;
                 gap: 70px;
                 /*Alinhas os itens da classe no cetro do container*/
                 justify-content: center;
+
             }
 
             .header-nav a{
@@ -80,7 +94,7 @@
                 border-radius: 50px; /*Arredonda a borda*/
                 
                 transition: background-color 0.3s ease;
-                background-color: brown;
+                background-color: #8a443d;
 
                 font-family: "Urbanist", sans-serif;
                 font-optical-sizing: auto;
@@ -88,21 +102,87 @@
                 font-style: normal;
                 color: white;
                 text-decoration: none;
+                
             }
 
             /*Define a propriedade hover para "a"*/
             .header-nav a:hover {
-                background-color: blue;
+                background-color: #591917;
                 cursor: pointer;
             }
+            
+            /*===================================================================================*/
+            /*                      TABLET SCREEN: MIN-WIDTH:768PX*/
+            /*===================================================================================*/
 
-            .header-logo img {
-                width: 200px;
-                height: auto;
-                margin: 10px;
+            @media (min-width: 768px){
+
+                header {
+                    /*O header contém o logo da empresa e botões que permitem a navegação em outras páginas, como "Como chegar", "Contato" "Sobre nós"
+                    Esses botões quanto apertados levaram a outra página contendo a informação respectiva*/
+                    grid-area: header-area;
+
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                
+                    background-color: transparent; /*Cor de fundo*/
+                
+                    /* Alinha os itens do header verticalmente*/
+                    align-items: center;
+
+               }
+
+               .header-logo {
+                    display: flex;
+                    align-items: left;
+                    justify-content: left;
+                }
             }
 
+            /*===================================================================================*/
+            /*                      DESKOP SCREEN: MIN-WIDTH:1024PX*/
+            /*===================================================================================*/
 
+            @media (min-width: 1024px) { /*Header para desktop, se a largura minima for 1024px, aplica as propriedades abaixo*/
+                
+                header {
+                    /*O header contém o logo da empresa e botões que permitem a navegação em outras páginas, como "Como chegar", "Contato" "Sobre nós"
+                    Esses botões quanto apertados levaram a outra página contendo a informação respectiva*/
+                    grid-area: header-area;
+
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                
+                    background-color: transparent; /*Cor de fundo*/
+                
+                    /* Alinha os itens do header verticalmente*/
+                    align-items: center;
+
+                }
+
+                .header-nav a{
+                    padding: 10px 20px; /*Adiciona um espaço de 10 px acima e abaixo e 20 px dos lados*/
+                    border-radius: 50px; /*Arredonda a borda*/
+                
+                    transition: background-color 0.3s ease;
+                    background-color: transparent;
+
+                    font-family: "Urbanist", sans-serif;
+                    font-optical-sizing: auto;
+                    font-weight: 200;
+                    font-style: normal;
+                    color: white;
+                    text-decoration: none;
+                }
+
+            /*Define a propriedade hover para "a"*/
+                .header-nav a:hover {
+                    background-color: brown;
+                    cursor: pointer;
+                }
+
+            }
+            
         </style>
     </head>
 
