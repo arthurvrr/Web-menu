@@ -30,7 +30,6 @@
                 
             }
 
-
             main {
                 /*O main contém o conteúdo principal da pagina atual, como o menu de navegação entre os tipos de produtos do
                 cardápio, como "Docinhos", "Bolos", "Tortas", "Fritos", "Assados" (..)* e principalmente os card que representam 
@@ -43,9 +42,9 @@
 
             }
 
+            .menu-grid {
             /* Uma div particionada, de modo que cada coluna contenha
             um card de um produto*/
-            .menu-grid {
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
                 gap: 20px          /*Espaçamento entre os cards*/
@@ -66,7 +65,8 @@
                 /* Alinha os itens do header verticalmente*/
                 align-items: center;
 
-            }   
+            }  
+
 
             .header-logo {
                 display: flex;
@@ -75,7 +75,7 @@
             }
 
             .header-logo img {
-                width: 200px;
+                width: 120px;
                 height: auto;
                 margin: 10px;
 
@@ -83,32 +83,31 @@
 
             .header-nav{
                 display: flex;
-                gap: 70px;
+                gap: 50px;
                 /*Alinhas os itens da classe no cetro do container*/
                 justify-content: center;
-
+                
             }
 
             .header-nav a{
-                padding: 10px 20px; /*Adiciona um espaço de 10 px acima e abaixo e 20 px dos lados*/
-                border-radius: 50px; /*Arredonda a borda*/
-                
-                transition: background-color 0.3s ease;
-                background-color: #8a443d;
-
                 font-family: "Urbanist", sans-serif;
                 font-optical-sizing: auto;
                 font-weight: 200;
+                font-size: medium;
                 font-style: normal;
                 color: white;
+                vertical-align: middle;
                 text-decoration: none;
+                white-space: nowrap;
                 
             }
 
-            /*Define a propriedade hover para "a"*/
-            .header-nav a:hover {
-                background-color: #591917;
-                cursor: pointer;
+            .main-background img{
+                max-width: 100%;
+                height: auto;
+                display: block;
+
+
             }
             
             /*===================================================================================*/
@@ -161,21 +160,38 @@
                 }
 
                 .header-nav a{
-                    padding: 10px 20px; /*Adiciona um espaço de 10 px acima e abaixo e 20 px dos lados*/
-                    border-radius: 50px; /*Arredonda a borda*/
-                
-                    transition: background-color 0.3s ease;
-                    background-color: transparent;
-
+                    transition-duration: 1s;
+                    padding: 10px 20px;
+                    border-radius: 60px;
                     font-family: "Urbanist", sans-serif;
                     font-optical-sizing: auto;
                     font-weight: 200;
+                    font-size: medium;
                     font-style: normal;
                     color: white;
+                    vertical-align: middle;
                     text-decoration: none;
+                    white-space: nowrap;
+        
                 }
 
-            /*Define a propriedade hover para "a"*/
+                .header-nav{
+                    display: flex;
+                    gap: 100px;
+                    /*Alinhas os itens da classe no cetro do container*/
+                    justify-content: center;
+                
+                }
+
+                .header-logo img {
+                    width: 200px;
+                    height: auto;
+                    margin: 10px;
+
+                }
+
+
+                /*Define a propriedade hover para "a"*/
                 .header-nav a:hover {
                     background-color: brown;
                     cursor: pointer;
@@ -192,24 +208,24 @@
             <div class="header-logo">
                 <img src="logo.png" alt="Logo">
             </div>
+
             <nav class="header-nav">
-                <a href="#contact">Contato</a>
+                <a href="#location"> Como chegar</a>
                 <a href="#about-us">Sobre nós</a>
-                <a href="#location">Como chegar</a>
+                <a href="#contact">Contato</a>
+
             </nav>
 
         </header>
 
         <main>
+            <div class="main-background">
+                <img src="salgados-background.jpg">
+            </div>
 
 
         </main>
-        
-        
 
-        
-
-   
 
         <footer>
 
