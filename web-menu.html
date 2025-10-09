@@ -8,7 +8,7 @@
         <style>
             body {
                 margin: 0; /* Remove as margens padrão do navegador, garantindo que o "bloco" começe junto à página*/
-                background-color: wheat; /*Cor de fundo*/
+                background-color: wheat;
 
                 display: grid; /*Divide o body em grids (CSS grid)*/
 
@@ -35,6 +35,14 @@
                 Esses botões quanto apertados levaram a outra página contendo a informação respectiva*/
                 grid-area: header-area;
 
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                
+                background-color: transparent; /*Cor de fundo*/
+                
+                /* Alinha os itens do header verticalmente*/
+                align-items: center;
+
             }
 
             main {
@@ -55,8 +63,37 @@
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
                 gap: 20px          /*Espaçamento entre os cards*/
+
             }
 
+            .header-nav{
+                display: flex;
+                gap: 70px;
+                /*Alinhas os itens da classe no cetro do container*/
+                justify-content: center;
+            }
+
+            .header-nav a{
+                padding: 10px 20px; /*Adiciona um espaço de 10 px acima e abaixo e 20 px dos lados*/
+                border-radius: 50px; /*Arredonda a borda*/
+                
+                transition: background-color 0.3s ease;
+                background-color: brown;
+                color: white;
+                text-decoration: none;
+            }
+
+            /*Define a propriedade hover para "a"*/
+            .header-nav a:hover {
+                background-color: blue;
+                cursor: pointer;
+            }
+
+            .header-logo img {
+                width: 200px;
+                height: auto;
+                margin: 10px;
+            }
 
 
         </style>
@@ -64,6 +101,15 @@
 
     <body>
         <header>
+            
+            <div class="header-logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <nav class="header-nav">
+                <a href="#contact">Contato</a>
+                <a href="#about-us">Sobre nós</a>
+                <a href="#location">Como chegar</a>
+            </nav>
 
         </header>
 
