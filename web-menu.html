@@ -1,227 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Menu</title>
-        <style>
-            body {
-                margin: 0; /* Remove as margens padrão do navegador, garantindo que o "bloco" começe junto à página*/
-                background-color: wheat;
-
-                display: grid; /*Divide o body em grids (CSS grid)*/
-
-                /*
-                    1. auto: é referente ao header, seu tamanho varia conforme o seu conteudo (auto)
-                    2. 1fr: referente ao main, ou seja, o espaço que contem os card dos produtos, ocupa o espaço disponivel (1fr)
-                    2. auto: referente ao footer, rodape da página, terá o tamanho do seu conteudo (auto)
-                 */
-                grid-template-rows: auto 1fr auto;
-
-                grid-template-areas: 
-                    "header-area"
-                    "main-area"
-                    "footer-area";
-
-                min-height: 100vh;
-                
-            }
-
-            main {
-                /*O main contém o conteúdo principal da pagina atual, como o menu de navegação entre os tipos de produtos do
-                cardápio, como "Docinhos", "Bolos", "Tortas", "Fritos", "Assados" (..)* e principalmente os card que representam 
-                os produtos*/
-                grid-area: main-area;
-            }
-
-            footer {
-                grid-area: footer-area;
-
-            }
-
-            .menu-grid {
-            /* Uma div particionada, de modo que cada coluna contenha
-            um card de um produto*/
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                gap: 20px          /*Espaçamento entre os cards*/
-
-            }
-
-           
-            header {
-                /*O header contém o logo da empresa e botões que permitem a navegação em outras páginas, como "Como chegar", "Contato" "Sobre nós"
-                Esses botões quanto apertados levaram a outra página contendo a informação respectiva*/
-                grid-area: header-area;
-
-                display: grid;
-                grid-template-columns: 1fr;
-                
-                background-color: transparent; /*Cor de fundo*/
-                
-                /* Alinha os itens do header verticalmente*/
-                align-items: center;
-
-            }  
-
-
-            .header-logo {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .header-logo img {
-                width: 120px;
-                height: auto;
-                margin: 10px;
-
-            }
-
-            .header-nav{
-                display: flex;
-                gap: 50px;
-                /*Alinhas os itens da classe no cetro do container*/
-                justify-content: center;
-                
-            }
-
-            .header-nav a{
-                font-family: "Urbanist", sans-serif;
-                font-optical-sizing: auto;
-                font-weight: 200;
-                font-size: medium;
-                font-style: normal;
-                color: white;
-                vertical-align: middle;
-                text-decoration: none;
-                white-space: nowrap;
-                
-            }
-
-            .main-background img{
-                max-width: 100%;
-                height: auto;
-                display: block;
-
-
-            }
-            
-            /*===================================================================================*/
-            /*                      TABLET SCREEN: MIN-WIDTH:768PX*/
-            /*===================================================================================*/
-
-            @media (min-width: 768px){
-
-                header {
-                    /*O header contém o logo da empresa e botões que permitem a navegação em outras páginas, como "Como chegar", "Contato" "Sobre nós"
-                    Esses botões quanto apertados levaram a outra página contendo a informação respectiva*/
-                    grid-area: header-area;
-
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                
-                    background-color: transparent; /*Cor de fundo*/
-                
-                    /* Alinha os itens do header verticalmente*/
-                    align-items: center;
-
-               }
-
-               .header-logo {
-                    display: flex;
-                    align-items: left;
-                    justify-content: left;
-                }
-            }
-
-            /*===================================================================================*/
-            /*                      DESKOP SCREEN: MIN-WIDTH:1024PX*/
-            /*===================================================================================*/
-
-            @media (min-width: 1024px) { /*Header para desktop, se a largura minima for 1024px, aplica as propriedades abaixo*/
-                
-                header {
-                    /*O header contém o logo da empresa e botões que permitem a navegação em outras páginas, como "Como chegar", "Contato" "Sobre nós"
-                    Esses botões quanto apertados levaram a outra página contendo a informação respectiva*/
-                    grid-area: header-area;
-
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                
-                    background-color: transparent; /*Cor de fundo*/
-                
-                    /* Alinha os itens do header verticalmente*/
-                    align-items: center;
-
-                }
-
-                .header-nav a{
-                    transition-duration: 1s;
-                    padding: 10px 20px;
-                    border-radius: 60px;
-                    font-family: "Urbanist", sans-serif;
-                    font-optical-sizing: auto;
-                    font-weight: 200;
-                    font-size: medium;
-                    font-style: normal;
-                    color: white;
-                    vertical-align: middle;
-                    text-decoration: none;
-                    white-space: nowrap;
-        
-                }
-
-                .header-nav{
-                    display: flex;
-                    gap: 100px;
-                    /*Alinhas os itens da classe no cetro do container*/
-                    justify-content: center;
-                
-                }
-
-                .header-logo img {
-                    width: 200px;
-                    height: auto;
-                    margin: 10px;
-
-                }
-
-
-                /*Define a propriedade hover para "a"*/
-                .header-nav a:hover {
-                    background-color: brown;
-                    cursor: pointer;
-                }
-
-            }
-            
-        </style>
+        <link rel="stylesheet" href="styles.css">
     </head>
 
     <body>
         <header>
-            
-            <div class="header-logo">
-                <img src="logo.png" alt="Logo">
-            </div>
 
-            <nav class="header-nav">
-                <a href="#location"> Como chegar</a>
-                <a href="#about-us">Sobre nós</a>
-                <a href="#contact">Contato</a>
+            <div class="header-left-segment">
 
-            </nav>
+                <nav>
+                    <button type="button" class="header-info-bars" aria-label="Informações">
+                        <img src="img/icons/menus.png" alt="">
+                    </button>
+                </nav>
+
+                <h1 class="header-logo">VANELLIS</h1>
+
+                <button type="button" class="header-cart" aria-label="Carrinho">
+                    <img src="img/icons/grocery-store.png" alt="">
+                </button>
+
+           </div>
+
+            <div class="header-right-segment">
+
+                <nav class="header-links-tablet">
+                    <a href="">"Sobre nós</a>
+                    <a href="">Como chegar</a>
+                    <a href="">Contato</a>
+                </nav>
+
+                <nav class="header-actions-tablet">
+                    <a href=""><img src="img/icons/whatsapp.png"></a>
+                    <a href=""><img src="img/icons/instagram.png"></a>
+                    <a href=""><img src="img/icons/grocery-store.png"></a>
+                </nav>
+
+           </div>
+
 
         </header>
 
         <main>
-            <div class="main-background">
-                <img src="salgados-background.jpg">
-            </div>
+            
+
+            <nav class="main-menu">
+                
+            </nav>
+            
 
 
         </main>
