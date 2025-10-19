@@ -95,7 +95,7 @@ header{
 .header-info-bars img{
     width: 25px;
     display: block;
-    padding: 0px;
+
 }
 
 .header-cart{
@@ -113,8 +113,7 @@ header{
 .header-cart img{
     width: 25px;
     display: block;
-    padding:  0px;
-    margin: 0px;
+
 
 }
 
@@ -127,6 +126,10 @@ header{
     display: none;
 }
 
+.header-links-tablet{
+    display: none;
+}
+
 
 
 
@@ -136,35 +139,63 @@ header{
 
 @media (min-width: 768px){
 
-    header {
+    header{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr auto;
 
+    }
+
+    .header-left-segment{
+        display: flex;
+
+        align-items: center;
+
+        gap: 40px;
+
+        grid-template-columns: none;
+        width: auto;
     }
 
     .header-logo{
         justify-self: start;
+        
+    }
+
+    .header-right-segment{
+        display: block;
+    }
+
+
+
+    .header-links-tablet{
+        display: flex;
+        gap: 40px
+    }
+
+    .header-links-tablet a{
+        text-decoration: none;
+
+        font-family: 'LouisGeorgeCafe', sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: normal;
+        color: black;
+    }
+
+   .header-actions-tablet{
+        display: flex;
+        gap: 40px;
+        margin: 10px;
 
     }
 
+    .header-actions-tablet img{
+        width: 25px;
+    }
+
+    .header-cart,
     .header-info-bars{
         display: none;
-
-
     }
-
-    .header-cart {
-        display: none;
-    }
-
-    .header-actions-tablet img {
-        width: 20px;
-
-    }
-
-    
-
-
-
 
 }
