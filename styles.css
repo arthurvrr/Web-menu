@@ -199,3 +199,44 @@ header{
     }
 
 }
+
+
+/*===================================================
+            DESKTOP VIEW: min-width: 1024px.
+=====================================================*/
+
+@media (min-width: 1024px){
+
+    .header-links-tablet{
+        display: flex;
+        gap: 40px
+    }
+
+    .header-links-tablet a{
+        text-decoration: none;
+
+        font-family: 'LouisGeorgeCafe', sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: normal;
+        color: black;
+
+        transition: color 0.5s ease,
+                    transform 0.5ms ease;
+    }
+
+.header-links-tablet a:hover {
+    color: var(--color03);
+    cursor: pointer;
+
+    transform: scale(1.05);
+
+
+}
+
+
+
+
+
+
+}
