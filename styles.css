@@ -193,13 +193,52 @@ header{
     display: none;
 }
 
+.main-menu {
+    background-color: white;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+
+    margin-top: 1rem;
+
+}
+
+.main-menu ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    gap:3rem;
+}
+
+.main-menu li a{
+    padding: 5px;
+    text-decoration: none;
+
+    font-family: 'LouisGeorgeCafe', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-style: normal;
+    color: black;
+
+    border-radius: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-menu li a.active-category {
+    background-color: #894e3f;
+    color: white;
+}
+
+
+
 
 
 /*===================================================
-            TABLET VIEW: min-width: 768px.
+            TABLET VIEW: min-width: 1024px.
 =====================================================*/
 
-@media (min-width: 768px){
+@media (min-width: 1024px){
 
     header{
         display: grid;
@@ -262,12 +301,10 @@ header{
 
 }
 
-
 /*===================================================
-            DESKTOP VIEW: min-width: 1024px.
+            DESKTOP VIEW: min-width: 1440x.
 =====================================================*/
-
-@media (min-width: 1024px){
+@media (min-width: 1440px){
 
     .header-links-tablet{
         display: flex;
@@ -329,19 +366,54 @@ header{
     }
 
     .side-images-pair {
-        display: flex;
-        grid-template-columns: 1fr 1fr;
+        display: grid;
+        grid-template-columns: auto 1fr;
         background-color: snow;
         border-radius: 1rem;
         transition: transform 1s ease;
         box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25); 
+        gap: 15px;
 
     }
 
     .side-images-pair:hover{
         transform: scale(1.015);
 
+    }
+
+    .side-images-pair .text-content h1{
+        font-family: 'LouisGeorgeCafe', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 3rem;
+        
+    }
+
+        .side-images-pair .text-content p{
+        font-family: 'LouisGeorgeCafe', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 2rem;
+        
+    }
+
+    .main-menu ul {
+        gap: 15rem
+    }
+
+    .main-menu li a {
+        display: inline-block;
+        transition: background-color 0.6s ease, 
+                    color 0.3s ease,
+                    transform 0.6s ease;
 
     }
 
+    .main-menu li a:hover {
+        transform: scale(1.15);
+        cursor: pointer;
+        background-color: wheat;
+        color: white;
+
+    }
 }
