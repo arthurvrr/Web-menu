@@ -1,49 +1,60 @@
 :root{
     --color01: #c37960;
     --color02: #f0d7a7;
-    --color03: #894e3f;
+    --color03: #82652F;
     --color04: #eee1ba;
     --color05: #9c634f;
     --color06: #fff0db;
     --color07: #faf0e6;
+    --color08: #D9B167;
 
 }
 
 @font-face {
     font-family: 'LouisGeorgeCafe';
-    src: url('fontes/Louis\ George\ Cafe.ttf') format('truetype');
+    src: url('fontes/LouisGeorgeCafe.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'LouisGeorgeCafe';
-    src: url('fontes/Louis\ George\ Cafe\ Bold.ttf') format('truetype');
+    src: url('fontes/LouisGeorgeCafeBold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'LouisGeorgeCafe';
-    src: url('fontes/Louis\ George\ Cafe\ Light.ttf') format('truetype');
+    src: url('fontes/LouisGeorgeCafeLight.ttf') format('truetype');
     font-weight: lighter;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'LouisGeorgeCafe';
-    src: url('fontes/Louis\ George\ Cafe\ Italic.ttf') format('truetype');
+    src: url('fontes/LouisGeorgeCafeItalic.ttf') format('truetype');
     font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'LouisGeorgeCafe';
+    src: url('fontes/LouisGeorgeCafeBoldItalic.ttf') format('truetype');
+    font-weight: bold;
     font-style: italic;
 }
 
 
 body {
-    background-color: wheat;
+    background-color: var(--color08);
     margin: 0px;   
 
 }
 
+/*=======================================
+                HEADER
+=======================================*/
 
 header{
     display: grid;
@@ -129,6 +140,11 @@ header{
     display: none;
 }
 
+
+/*=======================================
+                SLIDER
+=======================================*/
+
 .container {
     display: block;
     padding: 1rem;  
@@ -193,12 +209,18 @@ header{
     display: none;
 }
 
+
+/*=======================================
+                MENU SELECTION
+=======================================*/
+
 .main-menu {
     background-color: white;
     box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
     padding: 1rem 0;
 
     margin-top: 1rem;
+    margin-bottom: 1rem;
 
 }
 
@@ -228,6 +250,111 @@ header{
 .main-menu li a.active-category {
     background-color: #894e3f;
     color: white;
+}
+
+/*=======================================
+                CARDS
+=======================================*/
+.menu-grid{
+    display: grid;
+    gap: 1rem;
+    margin: 15px;
+    
+}
+
+.product-card{
+    display: grid;
+    grid-template-columns: 1fr;
+
+    background-color: white;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 2rem;
+
+}
+
+.product-card .card-image-container{
+    padding: 1rem;
+    overflow: hidden;
+    
+
+}
+
+.product-card .card-image-container img {
+    display: block;
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+    border-radius: 2rem;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.product-card .card-text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card .card-text-container .name-price-row{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+
+.product-card .card-text-container .product-name {
+    padding: 1rem;
+    justify-self: start;
+
+    font-family: 'LouisGeorgeCafe',sans-serif;
+    font-weight: bold ;
+    font-style: normal;
+    font-size: 30px;
+    -webkit-text-stroke: 0.7px var(--color03);
+    color: var(--color03);
+}
+
+.product-card .card-text-container .price-measure{
+    justify-self: end;
+    padding: 1rem;
+    color: var(--color03);
+}
+.product-card .card-text-container .product-price {
+    font-family: 'LouisGeorgeCafe',sans-serif;
+    font-weight: lighter ;
+    font-style: normal;
+    font-size: 30px;
+    color: var(--color03);
+
+}
+
+.product-card .card-text-container .product-measure{
+    font-family: 'LouisGeorgeCafe',sans-serif;
+    font-weight: bold ;
+    font-style: normal;
+    -webkit-text-stroke: 0.5px var(--color03);
+    font-size: 15px;
+    color: #82652F;
+
+}
+
+.product-card .card-text-container .product-info {
+    padding: 1rem;
+    font-family: 'LouisGeorgeCafe',sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 25px;
+    -webkit-text-stroke: 0.5px var(--color08);
+    color: var(--color08);
+    
+}
+
+
+/*CARD-TYPE-01*/
+
+.card-type-01{
+    display: grid;
+    grid-template-rows: 60% auto auto;
+    aspect-ratio: 1 / 1;
 }
 
 
@@ -412,8 +539,6 @@ header{
     .main-menu li a:hover {
         transform: scale(1.15);
         cursor: pointer;
-        background-color: wheat;
-        color: white;
 
     }
 }
