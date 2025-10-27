@@ -45,6 +45,13 @@
     font-style: italic;
 }
 
+@font-face {
+    font-family: 'Inter';
+    src: url(/fontes/Inter-ExtraBold.woff2) format('woff2');
+    font-weight: bolder;
+    font-style: normal;
+}
+
 
 body {
     background-color: var(--color08);
@@ -347,6 +354,47 @@ header{
     color: var(--color08);
     
 }
+
+.quantidy-selector {
+    display: flex;
+    border-radius: 50px;
+    background-color: var(--color08);
+    aspect-ratio: 3 / 1;
+    width: 200px;
+    justify-content:space-between;
+    align-items: center;
+    margin: 1rem;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
+
+    font-family: 'LouisGeorgeCafe';
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+.quantidy-selector button{
+    display: flex;
+    background-color: white;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    aspect-ratio: 1 / 1;
+    width: 50px;
+    margin: 5px;
+
+    justify-content: center;
+    align-items: center;
+
+    
+    
+}
+
+.quantidy-selector img{
+    aspect-ratio: 1 / 1;
+    width: 35px;
+}
+
+
 
 
 /*CARD-TYPE-01*/
