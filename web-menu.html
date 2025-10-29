@@ -92,9 +92,10 @@
             <!-- Cada agrupamento de produto será divido em sections-->
             <section id="doces-section" class="category-section category-visible">
                 <div class="menu-grid"> <!--Na class "menu-grid" será configurado o display dos cards para a visualizacao mobile, tablet e desktop-->
-                    <div class="product-card card-type-01"> <!--"Product-card" é a classe base e a "card-type-xx" é a classe modificadora, para cada estilo de card-->
+                    
+                    <div id= "brigadeiro-preto" class="product-card card-type-01"> <!--"Product-card" é a classe base e a "card-type-xx" é a classe modificadora, para cada estilo de card-->
                         <div class="card-image-container">
-                            <img src="/img/card-images/brigadeiro-preto.png" alt="Brigadeiro">
+                            <img src="/img/card-images/brigadeiro-preto01.png" alt="Brigadeiro">
                         </div>
                         <div class="card-text-container">
                             <div class="name-price-row">
@@ -118,16 +119,226 @@
                             
                         </div>
                     </div>
-                    <div class="product-card card-type-01">
+                    <div id="brigadeiro-branco"  class="product-card card-type-01">
+
+                        <div class="card-image-container">
+                            <img src="/img/card-images/brigadeiro-branco.png" alt="Brigadeiro branco">
+                        </div>
+
+                        <div class="card-text-container">
+                            <div class="name-price-row">
+                                <h3 class="product-name">BRIGADEIRO BRANCO</h3>
+                                <div class="price-measure">
+                                    <span class="product-price">R$1.70</span>
+                                    <span class="product-measure">UN</span>
+                                </div>
+                            </div>
+                            <p class="product-info">Aproximadamente 20 gramas</p>
+                        </div>
+
+                        <div class="card-actions-container">
+                            <div class="quantity-selector">
+                                <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                <span class="quantity-value">25</span>
+                                <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                            </div>
+
+                            <button type="button" class="add-to-cart-button" ><img src="/img/icons/add-to-cart.png"></button>
+                        </div>
                         
                     </div>
-                    <div class="product-card card-type-02">
 
+                    <div id="beijinho" class="product-card card-type-01">
+                        <div class="card-image-container">
+                            <img src="/img/card-images/beijinho-coco.png" alt="Beijinho">
+                        </div>
+
+                        <div class="card-text-container">
+                            <div class="name-price-row">
+                                <h3 class="product-name">BEIJINHO</h3>
+                                <div class="price-measure">
+                                    <span class="product-price">R$1.70</span>
+                                    <span class="product-measure">UN</span>
+                                </div>
+                            </div>
+                            <p class="product-info">Aproximadamente 20 gramas</p>
+                        </div>
+
+                        <div class="card-actions-container">
+                            <div class="quantity-selector">
+                                <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                <span class="quantity-value">25</span>
+                                <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                            </div>
+
+                            <button type="button" class="add-to-cart-button" ><img src="/img/icons/add-to-cart.png"></button>
+                        </div>
+                        
                     </div>
                     
-                    <div class="product-card card-type-03">
+                    <div id="docinho-amendoim" class="product-card card-type-01">
+                        <div class="card-image-container">
+                            <img src="/img/card-images/docinho-amendoim.png" alt="Amendoim">
+                        </div>
 
+                        <div class="card-text-container">
+                            <div class="name-price-row">
+                                <h3 class="product-name">AMENDOIM</h3>
+                                <div class="price-measure">
+                                    <span class="product-price">R$1.70</span>
+                                    <span class="product-measure">UN</span>
+                                </div>
+                            </div>
+                            <p class="product-info">Aproximadamente 20 gramas</p>
+                        </div>
+
+                        <div class="card-actions-container">
+                            <div class="quantity-selector">
+                                <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                <span class="quantity-value">25</span>
+                                <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                            </div>
+
+                            <button type="button" class="add-to-cart-button" ><img src="/img/icons/add-to-cart.png"></button>
+                        </div>
+            
                     </div>
+
+                    <div id="doce-de-leite" class="product-card card-type-01">
+                        <div class="card-image-container">
+                            <img src="/img/card-images/doce-de-leite.png" alt="Doce de leite">
+                        </div>
+
+                        <div class="card-text-container">
+                            <div class="name-price-row">
+                                <h3 class="product-name">DOCE DE LEITE</h3>
+                                <div class="price-measure">
+                                    <span class="product-price">R$1.70</span>
+                                    <span class="product-measure">UN</span>
+                                </div>
+                            </div>
+                            <p class="product-info">Aproximadamente 20 gramas</p>
+                        </div>
+
+                        <div class="card-actions-container">
+                            <div class="quantity-selector">
+                                <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                <span class="quantity-value">25</span>
+                                <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                            </div>
+
+                            <button type="button" class="add-to-cart-button" ><img src="/img/icons/add-to-cart.png"></button>
+                        </div>
+                    </div>
+
+                    <div id="docinho-nozes" class="product-card card-type-01">
+                        <div class="card-image-container">
+                            <img src="/img/card-images/brigadeiro-nozes.png" alt="Nozes">
+                        </div>
+
+                        <div class="card-text-container">
+                            <div class="name-price-row">
+                                <h3 class="product-name">NOZES</h3>
+                                <div class="price-measure">
+                                    <span class="product-price">R$2.00</span>
+                                    <span class="product-measure">UN</span>
+                                </div>
+                            </div>
+                            <p class="product-info">Aproximadamente 20 gramas</p>
+                        </div>
+
+                        <div class="card-actions-container">
+                            <div class="quantity-selector">
+                                <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                <span class="quantity-value">25</span>
+                                <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                            </div>
+
+                            <button type="button" class="add-to-cart-button" ><img src="/img/icons/add-to-cart.png"></button>
+                        </div>
+                    </div>
+
+                    <div id="olho-sogra" class="product-card card-type-01">
+                        <div class="card-image-container">
+                            <img src="/img/card-images/olho-de-sogra.jpg" alt="Olho de sogra">
+                        </div>
+
+                        <div class="card-text-container">
+                            <div class="name-price-row">
+                                <h3 class="product-name">OLHO DE SOGRA</h3>
+                                <div class="price-measure">
+                                    <span class="product-price">R$2.00</span>
+                                    <span class="product-measure">UN</span>
+                                </div>
+                            </div>
+                            <p class="product-info">Aproximadamente 20 gramas</p>
+                        </div>
+
+                        <div class="card-actions-container">
+                            <div class="quantity-selector">
+                                <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                <span class="quantity-value">25</span>
+                                <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                            </div>
+
+                            <button type="button" class="add-to-cart-button" ><img src="/img/icons/add-to-cart.png"></button>
+                        </div>
+                    </div>
+
+                    <div id="ninho-nutella" class="product-card card-type-01">
+                        <div class="card-image-container">
+                            <img src="/img/card-images/leite-ninho-nutell.jpg" alt="Leite Ninho com nutella">
+                        </div>
+
+                        <div class="card-text-container">
+                            <div class="name-price-row">
+                                <h3 class="product-name">LEITE NINHO & NUTELLA</h3>
+                                <div class="price-measure">
+                                    <span class="product-price">R$2.20</span>
+                                    <span class="product-measure">UN</span>
+                                </div>
+                            </div>
+                            <p class="product-info">Aproximadamente 20 gramas</p>
+                        </div>
+
+                        <div class="card-actions-container">
+                            <div class="quantity-selector">
+                                <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                <span class="quantity-value">25</span>
+                                <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                            </div>
+
+                            <button type="button" class="add-to-cart-button" ><img src="/img/icons/add-to-cart.png"></button>
+                        </div>
+                    </div>
+
+                    <div id="camafeu-nozes" class="product-card card-type-01">
+                        <div class="card-image-container">
+                            <img src="/img/card-images/camafeu-branco.webp" alt="Camafeu">
+                        </div>
+
+                        <div class="card-text-container">
+                            <div class="name-price-row">
+                                <h3 class="product-name">CAMAFEU</h3>
+                                <div class="price-measure">
+                                    <span class="product-price">R$2.90</span>
+                                    <span class="product-measure">UN</span>
+                                </div>
+                            </div>
+                            <p class="product-info">Aproximadamente 20 gramas</p>
+                        </div>
+
+                        <div class="card-actions-container">
+                            <div class="quantity-selector">
+                                <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                <span class="quantity-value">25</span>
+                                <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                            </div>
+
+                            <button type="button" class="add-to-cart-button" ><img src="/img/icons/add-to-cart.png"></button>
+                        </div>
+                    </div>
+                    
                 </div>
             </section>
 

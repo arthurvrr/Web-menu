@@ -262,6 +262,7 @@ header{
 /*=======================================
                 CARDS
 =======================================*/
+
 .menu-grid{
     display: grid;
     gap: 1rem;
@@ -277,6 +278,7 @@ header{
     box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
     border-radius: 2rem;
 }
+
 
 .product-card .card-image-container{
     padding: 1rem;
@@ -424,7 +426,7 @@ header{
 
 
 
-/*CARD-TYPE-01*/
+/*================CARD-TYPE-01=============*/
 
 .card-type-01{
     display: grid;
@@ -508,6 +510,11 @@ header{
 =====================================================*/
 @media (min-width: 1440px){
 
+
+/*=======================================
+                HEADER
+=======================================*/
+
     .header-links-tablet{
         display: flex;
         gap: 40px
@@ -533,6 +540,11 @@ header{
         transform: scale(1.05);
     }
 
+
+/*=======================================
+                SLIDER
+=======================================*/
+
     .container {
         display: grid;
         grid-template-columns: auto 1fr;
@@ -550,6 +562,10 @@ header{
         width: 65vw;
         max-width: 48rem;
     }
+
+/*=======================================
+            SIDE-IMAGE
+=======================================*/
 
     .side-images{
         display: grid;
@@ -591,7 +607,7 @@ header{
         
     }
 
-        .side-images-pair .text-content p{
+    .side-images-pair .text-content p{
         font-family: 'LouisGeorgeCafe', sans-serif;
         font-style: normal;
         font-weight: normal;
@@ -616,4 +632,18 @@ header{
         cursor: pointer;
 
     }
+
+/*=======================================
+                CARDS
+=======================================*/
+
+    .product-card{
+        transition: transform 0.6s ease;
+    }
+
+    .product-card:hover{
+        transform: scale(1.015);
+
+    }
+
 }
