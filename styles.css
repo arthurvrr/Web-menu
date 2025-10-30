@@ -520,6 +520,13 @@ header{
     display: inline;
 }
 
+/*=============== CARD-TYPE-03 =================*/
+.card-type-03 {
+    display: grid;
+    grid-template-rows: auto auto auto auto auto auto;
+
+}
+
 /*===================================================
             TABLET VIEW: min-width: 1024px.
 =====================================================*/
