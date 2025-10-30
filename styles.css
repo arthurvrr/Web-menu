@@ -423,20 +423,102 @@ header{
     
 }
 
+.card-size-selector-container{
+    display: grid;
+    grid-template-columns: auto auto;
+}
 
+.card-size-selector-container button{
+    background-color: var(--color08);
+    text-decoration: none;
+    border: none;
+    text-align: center;
+    margin: 1rem;
+    margin-bottom: 0px;
+    border-radius: 20px;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
+    height: 2.5rem;
+    cursor: pointer;
 
+    font-family: 'LouisGeorgeCafe', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: white;
+}
 
 /*================CARD-TYPE-01=============*/
 
 .card-type-01{
     display: grid;
-    grid-template-rows: auto auto auto;
-    
+    grid-template-rows: auto auto auto;   
+}
+
+/*================CARD-TYPE-02=============*/
+
+
+/* DISABLE VIEW*/
+
+.card-type-02{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+}
+
+.card-type-02 .product-measure,
+.card-type-02 .product-info {
+    display: none;
+}
+
+.card-type-02 .quantity-selector,
+.card-type-02 .add-to-cart-button{
+    background-color: #BEBEBE;
+}
+
+.card-type-02 .product-price{
+    display: none;
+}
+
+.card-type-02 .quantity-selector button {
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.card-type-02 .add-to-cart-button{
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.card-type-02 .quantity-selector img{
+    opacity: 0.3;
 }
 
 
+/*ENABLE VIEW, USING "size-selected" tag*/
 
+.card-type-02.size-selected .product-measure{
+    display: block;
+}
 
+.card-type-02.size-selected .product-info{
+    display: block;
+}
+
+.card-type-02.size-selected .add-to-cart-button{
+    background-color: #229537;
+}
+
+.card-type-02.size-selected .quantity-selector{
+    background-color: var(--color08);
+
+}
+
+.card-type-02.size-selected .quantity-selector img {
+    opacity: 1;
+}
+
+.card-type-02.size-selected .product-price{
+    display: inline;
+}
 
 /*===================================================
             TABLET VIEW: min-width: 1024px.
