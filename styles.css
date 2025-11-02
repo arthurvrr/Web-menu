@@ -154,13 +154,15 @@ header{
 
 .container {
     display: block;
-    padding: 1rem;  
+    padding: 1rem;
+
 }
 
 .slider-wrapper {
     position: relative;
     max-width: 48rem;
     margin: 0 auto;
+    transition: transform ease 1s;
 
 }
 
@@ -266,7 +268,9 @@ header{
 .menu-grid{
     display: grid;
     gap: 1rem;
-    margin: 15px;
+    margin: 0 0.5rem;
+
+    grid-template-columns: 1fr;
     
 }
 
@@ -355,6 +359,7 @@ header{
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
+    margin: 1rem 1rem;
 }
 
 .quantity-selector {
@@ -363,10 +368,10 @@ header{
     border-radius: 50px;
     background-color: var(--color08);
     aspect-ratio: 3 / 1;
-    width: 200px;
+    height: 4rem;
     justify-content:space-between;
     align-items: center;
-    margin: 1rem;
+    
     box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
 
     font-family: 'LouisGeorgeCafe';
@@ -382,7 +387,7 @@ header{
     border: none;
     cursor: pointer;
     aspect-ratio: 1 / 1;
-    width: 50px;
+    height: 3rem;
     margin: 5px;
 
     justify-content: center;
@@ -398,13 +403,12 @@ header{
 
 .add-to-cart-button {
     display: flex;
-    margin: 1rem;
     justify-self: end;
     background-color: #229537;
     border: none;
     cursor: pointer;
     aspect-ratio: 1.5 / 1 ;
-    height: 66px;
+    height: 4rem;
     box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
     border-radius: 50px;
 
@@ -424,7 +428,7 @@ header{
     grid-template-columns: auto auto;
 }
 
-.card-size-selector-container button{
+.card-size-selector-container .size-button{
     background-color: var(--color08);
     text-decoration: none;
     border: none;
@@ -441,11 +445,21 @@ header{
     font-style: normal;
     font-size: 1.5rem;
     color: white;
+
+    transition: background-color 0.6s ease,
+                color 0.6s ease;
+}
+
+.size-button.button-selected{
+    background-color: var(--color03);
+    color: white;
 }
 
 .card-flavor-selector-container{
     margin: 0.5rem 1rem;
+
 };
+
 
 /*================CARD-TYPE-01=============*/
 
@@ -579,6 +593,10 @@ header{
 
 @media (min-width: 1024px){
 
+    /*=======================================
+                    HEADER  
+    =======================================*/
+
     header{
         display: grid;
         grid-template-columns: 1fr auto;
@@ -604,8 +622,6 @@ header{
     .header-right-segment{
         display: block;
     }
-
-
 
     .header-links-tablet{
         display: flex;
@@ -636,6 +652,14 @@ header{
     .header-cart,
     .header-info-bars{
         display: none;
+    }
+
+    /*=======================================
+                    CARD
+    =======================================*/
+    .menu-grid{
+        display: grid;
+        grid-template-columns: auto auto auto;
     }
 
 }
@@ -701,6 +725,9 @@ header{
 /*=======================================
             SIDE-IMAGE
 =======================================*/
+    .slider-wrapper:hover{
+        transform: scale(1.015);
+    }
 
     .side-images{
         display: grid;
@@ -768,9 +795,12 @@ header{
 
     }
 
-/*=======================================
-                CARDS
-=======================================*/
+    /*=======================================
+                    CARDS
+    =======================================*/
+    .menu-grid{
+        grid-template-columns: auto auto auto auto;
+    }
 
     .product-card{
         transition: transform 0.6s ease;

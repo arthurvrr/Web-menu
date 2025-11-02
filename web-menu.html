@@ -363,8 +363,10 @@
 
                         <!--Container contendo os 2 botões do tamanho do produto, a seleção do tamanho é chave para a progressão interativa do card-->
                         <div class="card-size-selector-container">
-                            <button class="mini-size-button">MINI</button>
-                            <button class="trad-size-button">TRADICIONAL</button>
+                            <!-- A seleção de algum dos tamanhos faz com que o botão seja estilizado - mudando de cor - para sinalizar ao usuário que a opção foi selecionada.
+                            Esse controle de estilo é feito através da tag "button-selected", que sinaliza a interação do usuário com o botão-->
+                            <button class="size-button">MINI</button>
+                            <button class="size-button">TRADICIONAL</button>
                         </div>
 
                         <!--Conteiner com os botão seletor de tamanho e o botão de adicionar ao carrinho, esses só são liberados com a escolha de um tamanho - "size-selected"-->
@@ -380,7 +382,7 @@
                     </div>
 
                     <!--A card-type-03 também requer JS para a progressão interativa da compra do produto-->
-                    <div id="cupcake" class="product-card card-type-03 flavor-selected size-selected">
+                    <div id="cupcake" class="product-card card-type-03">
                         <!--Contianer com a imagem do produto-->
                         <div class="card-image-container"><img src="" alt="Cupcake"></div>
 
@@ -398,8 +400,10 @@
 
                         <!--Container com os botões mini e tradicional, revelam o preço, unidade e peso do produto quando selecionadas-->
                         <div class="card-size-selector-container">
-                            <button class="mini-size-button">MINI</button>
-                            <button class="trad-size-button">TRADICIONAL</button>
+                            <!-- A seleção de algum dos tamanhos faz com que o botão seja estilizado - mudando de cor - para sinalizar ao usuário que a opção foi selecionada.
+                            Esse controle de estilo é feito através da tag "button-selected", que sinaliza a interação do usuário com o botão-->
+                            <button class="size-button button-selected">MINI</button>
+                            <button class="size-button">TRADICIONAL</button>
                         </div>
 
                         <!-- Container com o descrição do peso do produto selecionado, só é revelado a partir da seleção do tamanho - "size-selected"-->
