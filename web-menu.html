@@ -92,8 +92,9 @@
             <!-- Cada agrupamento de produto será divido em sections-->
             <section id="doces-section" class="category-section category-visible">
                 <div class="menu-grid"> <!--Na class "menu-grid" será configurado o display dos cards para a visualizacao mobile, tablet e desktop-->
+                    <!--"Product-card" é a classe base e a "card-type-xx" é a classe modificadora, para cada estilo de card-->
                     
-                    <div id= "brigadeiro-preto" class="product-card card-type-01"> <!--"Product-card" é a classe base e a "card-type-xx" é a classe modificadora, para cada estilo de card-->
+                    <div id= "brigadeiro-preto" class="product-card card-type-01"> 
                         <div class="card-image-container">
                             <img src="/img/card-images/brigadeiro-preto01.png" alt="Brigadeiro">
                         </div>
@@ -119,6 +120,7 @@
                             
                         </div>
                     </div>
+
                     <div id="brigadeiro-branco"  class="product-card card-type-01">
 
                         <div class="card-image-container">
@@ -341,24 +343,31 @@
 
                     <!--A card-type-02 necessida o uso de JS para esconder/revelar as informações do produto com base no tamanho selecionado-->
                     <div id="quindim" class="product-card card-type-02">
+                        <!-- Container com a imagem do produto, a imagem será modificada conforme o tamanho do produto selecionado-->
                         <div class="card-image-container"><img src="" alt="Quindim"></div>
 
+                        <!-- Container com o nome, preço e unidade do comercialização e peso do produto.-->
                         <div class="card-text-container">
                             <div class="name-price-row">
                                 <h3 class="product-name">QUINDIM</h3>
+                                <!--A class "price-measure só aparecerá quando o tamanho do produto for selecionado - quando product-card tiver a tag "size-selected"-->
                                 <div class="price-measure">
+                                    <!--O conteudo de "product-price" será alterado conforme o tamanho for selecionado, cada tamanho tem um preço-->
                                     <span class="product-price">1</span>
                                     <span class="product-measure">UN</span>
                                 </div>                
                             </div>
-                            <p class="product-info">info</p>  
+                            <!--Esse parágrafo conterá o preso do produto para o tamanho selecionado, ou seja, cada tamanho tem o seu próprio peso.-->
+                            <p class="product-info">info</p> 
                         </div>
 
+                        <!--Container contendo os 2 botões do tamanho do produto, a seleção do tamanho é chave para a progressão interativa do card-->
                         <div class="card-size-selector-container">
                             <button class="mini-size-button">MINI</button>
                             <button class="trad-size-button">TRADICIONAL</button>
                         </div>
 
+                        <!--Conteiner com os botão seletor de tamanho e o botão de adicionar ao carrinho, esses só são liberados com a escolha de um tamanho - "size-selected"-->
                         <div class="card-actions-container">
                             <div class="quantity-selector">
                                 <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
@@ -370,39 +379,63 @@
                         </div>
                     </div>
 
-                    <div id="cupcake" class="product-card card-type-03">
+                    <!--A card-type-03 também requer JS para a progressão interativa da compra do produto-->
+                    <div id="cupcake" class="product-card card-type-03 flavor-selected size-selected">
                         <!--Contianer com a imagem do produto-->
                         <div class="card-image-container"><img src="" alt="Cupcake"></div>
 
                         <!-- Container com nome do produto, preço e medida-->
-                        <div class="card-text-container">
+                        <div class="card-name-price-container">
                             <div class="name-price-row">
                                 <h3 class="product-name">CUPCAKE</h3>
+                                <!-- Escondido até a seleção do tamanho-->
                                 <div class="price-measure">
-                                    <span class="product-price">PRECO</span>
+                                    <span class="product-price">R$4.00</span>
                                     <span class="product-measure">UN</span>
                                 </div>
                             </div>
                         </div>
 
-                        <!--Container com os botões mini e tradicional-->
+                        <!--Container com os botões mini e tradicional, revelam o preço, unidade e peso do produto quando selecionadas-->
                         <div class="card-size-selector-container">
                             <button class="mini-size-button">MINI</button>
                             <button class="trad-size-button">TRADICIONAL</button>
                         </div>
 
-                        <!-- Container com o descrição do peso do produto selecionado-->
-                        <div class="card-text-container">
+                        <!-- Container com o descrição do peso do produto selecionado, só é revelado a partir da seleção do tamanho - "size-selected"-->
+                        <div class="card-info-row weight-info">
                             <p class="product-info"> Tantas gramas</p>
                         </div>
 
-                        <!--Container com o selector box para o sabor do produto-->
-                        <div class="card-flavor-selector-box-container">
-                            <select>SABORES</select>
+                        <!--Container com o selector box para o sabor do produto, revela a descrição do sabor selecionado e permite selecionar a quantidade e adicionar o produto ao carrinho-->
+                        <div class="card-flavor-selector-container">
+                            <select name="sabor" id="cupcake" class="flavor-select">
+                                <option value="" disabled selected>SABORES</option>
+                                <option value="red-velvet">Red Velvet</option>
+                                <option value="chocolate">Chocolate</option>
+                                <option value="Baunilha">Baunilha</option>
+                            </select>
                         </div>
 
-                        <!-- Container com quantity-selector e add-to-cart-button-->
-                        <div class="card-actions-container"></div>
+                        <!-- Container com a descrição do sabor selecionado, só é visível se o sabor for selecionado - "flavor-selected"-->
+                        <div class="card-info-row flavor-info">
+                            <p class="product-info">Bolo de cenoura recheado com leite condensado e cobertura de ganache branco</p>
+                        </div>
+
+                        <!-- Container com quantity-selector e add-to-cart-button, só aparece quando o tamanho e o sabor estão selecionados - "size-selected" e "flavor-selected"-->
+                        <div class="card-actions-container">
+                            <!--Seletor de quantidade-->
+                            <div class="quantity-selector">
+                                <!--Botão diminui a quantidade-->
+                                <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                <!--Mostrador da quantidade selecionada, o mínimo é 25 unidades-->
+                                <span class="quantity-value">25</span>
+                                <!--Botão aumentada a quantidade-->
+                                <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                            </div>
+                            <!--Botão para adicionar ao carrinho-->
+                            <button type="button" class="add-to-cart-button" ><img src="/img/icons/add-to-cart.svg"></button>
+                        </div>
 
                     </div>
                     

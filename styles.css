@@ -302,13 +302,13 @@ header{
     flex-direction: column;
 }
 
-.product-card .card-text-container .name-price-row{
+.name-price-row{
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
 }
 
-.product-card .card-text-container .product-name {
+.product-name {
     margin: 0px 1rem;
     justify-self: start;
 
@@ -320,32 +320,28 @@ header{
     color: var(--color03);
 }
 
-.product-card .card-text-container .price-measure{
+.price-measure{
     justify-self: end;
     margin: 0px 1rem;
     color: var(--color03);
-}
-.product-card .card-text-container .product-price {
-    font-family: 'LouisGeorgeCafe',sans-serif;
-    font-weight: lighter ;
-    font-style: normal;
-    font-size: 30px;
-    color: var(--color03);
 
-}
-
-.product-card .card-text-container .product-measure{
     font-family: 'LouisGeorgeCafe',sans-serif;
     font-weight: bold ;
     font-style: normal;
     -webkit-text-stroke: 0.5px var(--color03);
     font-size: 15px;
-    color: #82652F;
-
 }
 
-.product-card .card-text-container .product-info {
-    margin: 0px 1rem;
+.product-price {
+    font-family: 'LouisGeorgeCafe',sans-serif;
+    font-weight: lighter ;
+    font-style: normal;
+    font-size: 30px;
+    color: var(--color03);
+}
+
+.product-info {
+    margin: 0.5rem 1rem;
     font-family: 'LouisGeorgeCafe',sans-serif;
     font-weight: bold;
     font-style: normal;
@@ -447,6 +443,10 @@ header{
     color: white;
 }
 
+.card-flavor-selector-container{
+    margin: 0.5rem 1rem;
+};
+
 /*================CARD-TYPE-01=============*/
 
 .card-type-01{
@@ -523,8 +523,54 @@ header{
 /*=============== CARD-TYPE-03 =================*/
 .card-type-03 {
     display: grid;
-    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto auto;
 
+}
+
+/* DISABLE VIEW*/
+
+.card-type-03 .product-measure,
+.card-type-03 .product-price,
+.card-type-03 .flavor-info,
+.card-type-03 .weight-info,
+.card-type-03 .card-flavor-selector-container{
+    display: none;
+}
+
+.card-type-03 .quantity-selector,
+.card-type-03 .add-to-cart-button{
+    background-color: #BEBEBE;
+}
+
+/*ENABLE VIEW, USING "size-selected" tag*/
+
+.card-type-03.size-selected .product-measure,
+.card-type-03.size-selected .product-price {
+    display: inline;
+}
+
+.card-type-03.size-selected .weight-info{
+    display: block;
+}
+
+.card-type-03.size-selected.flavor-selected .flavor-info{
+    display: block;
+}
+
+.card-type-03.size-selected .card-flavor-selector-container{
+    display: block;
+}
+
+.card-type-03.size-selected.flavor-selected .card-flavor-selector-container{
+    display: block;
+}
+
+.card-type-03.size-selected.flavor-selected .add-to-cart-button{
+    background-color: #229537;
+}
+
+.card-type-03.size-selected.flavor-selected .quantity-selector{
+    background-color: var(--color08);
 }
 
 /*===================================================
