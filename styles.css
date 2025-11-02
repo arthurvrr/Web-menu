@@ -308,18 +308,19 @@ header{
 
 .name-price-row{
     display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
 }
 
 .product-name {
     margin: 0px 1rem;
     justify-self: start;
 
+
     font-family: 'LouisGeorgeCafe',sans-serif;
     font-weight: bold ;
     font-style: normal;
-    font-size: 30px;
+    font-size: 20px;
     -webkit-text-stroke: 0.7px var(--color03);
     color: var(--color03);
 }
@@ -328,12 +329,7 @@ header{
     justify-self: end;
     margin: 0px 1rem;
     color: var(--color03);
-
-    font-family: 'LouisGeorgeCafe',sans-serif;
-    font-weight: bold ;
-    font-style: normal;
-    -webkit-text-stroke: 0.5px var(--color03);
-    font-size: 15px;
+    white-space: nowrap;
 }
 
 .product-price {
@@ -344,12 +340,21 @@ header{
     color: var(--color03);
 }
 
+.product-measure{
+    font-family: 'LouisGeorgeCafe',sans-serif;
+    font-weight: bold ;
+    font-style: normal;
+    -webkit-text-stroke: 0.5px var(--color03);
+    font-size: 15px;
+
+}
+
 .product-info {
     margin: 0.5rem 1rem;
     font-family: 'LouisGeorgeCafe',sans-serif;
     font-weight: bold;
     font-style: normal;
-    font-size: 25px;
+    font-size: 20px;
     -webkit-text-stroke: 0.5px var(--color08);
     color: var(--color08);
     
@@ -365,7 +370,7 @@ header{
 .quantity-selector {
     display: flex;
     justify-self: start;
-    border-radius: 50px;
+    border-radius: 4rem;
     background-color: var(--color08);
     aspect-ratio: 3 / 1;
     height: 4rem;
@@ -383,11 +388,12 @@ header{
 .quantity-selector button{
     display: flex;
     background-color: white;
-    border-radius: 50px;
+    border-radius: 50%;
     border: none;
     cursor: pointer;
     aspect-ratio: 1 / 1;
-    height: 3rem;
+    height: 80%;
+    object-fit: contain;
     margin: 5px;
 
     justify-content: center;
@@ -396,8 +402,9 @@ header{
 }
 
 .quantity-selector img{
-    aspect-ratio: 1 / 1;
-    width: 35px;
+    height: 80%;
+    width: 80%;
+    object-fit: contain;
 }
 
 
@@ -410,7 +417,7 @@ header{
     aspect-ratio: 1.5 / 1 ;
     height: 4rem;
     box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 50px;
+    border-radius: 3rem;
 
     justify-content: center;
     align-items: center;
@@ -418,8 +425,9 @@ header{
 }
 
 .add-to-cart-button img{
-    aspect-ratio: 1/ 1;
-    width: 50px;
+    height: 80%;
+    width: 80%;
+    object-fit: contain;
     
 }
 
@@ -658,8 +666,16 @@ header{
                     CARD
     =======================================*/
     .menu-grid{
-        display: grid;
-        grid-template-columns: auto auto auto;
+        display: block;
+        column-count: 3;
+    
+        grid-template-columns: none;
+    }
+
+    .product-card{
+        break-inside: avoid;
+        margin-bottom: 1.5rem ;
+
     }
 
 }
@@ -706,7 +722,7 @@ header{
 
     .container {
         display: grid;
-        grid-template-columns: auto 1fr;
+        grid-template-columns: 48rem 1fr;
         padding: 1rem;
         gap: 2rem;
         align-items: start;
@@ -799,7 +815,7 @@ header{
                     CARDS
     =======================================*/
     .menu-grid{
-        grid-template-columns: auto auto auto auto;
+        column-count: 4;
     }
 
     .product-card{
