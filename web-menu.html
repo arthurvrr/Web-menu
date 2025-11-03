@@ -41,10 +41,7 @@
 
         </header>
 
-
-
-        <main>
-            
+        <main>    
             <section class="container">
                 <div class="slider-wrapper">
                     <div class="slider">
@@ -79,8 +76,6 @@
                 </div>
             </section>
 
-
-
             <nav class="main-menu">
                 <ul>
                     <li><a href="#Doces">DOCES</a></li>
@@ -89,9 +84,12 @@
                 </ul>
             </nav>
             
+
             <!-- Cada agrupamento de produto será divido em sections-->
-            <section id="doces-section" class="category-section category-visible">
-                <div class="menu-grid"> <!--Na class "menu-grid" será configurado o display dos cards para a visualizacao mobile, tablet e desktop-->
+            <!-- A exibição dos cards de cada section acontece por meio da tag "category-visible"-->
+            <section id="doces-section" class="category-section">
+                <!-- A aba do "Doces" do cardápio esta setada com padrão, ou seja começará com a tag "category-visible" -->
+                <div class="menu-grid"> <!-- Na class "menu-grid" será configurado o display dos cards para a visualizacao mobile, tablet e desktop-->
                     <!--"Product-card" é a classe base e a "card-type-xx" é a classe modificadora, para cada estilo de card-->
                     
                     <div id= "brigadeiro-preto" class="product-card card-type-01"> 
@@ -446,8 +444,575 @@
                 </div>
             </section>
 
-            <section id="salgados-section" class="category-section">
+            <section id="salgados-section" class="category-section category-visible">
                 <div class="menu-grid">
+
+                    <div id="bolinha-queijo" class="product-card card-type-01">
+                        <div class="card-image-container"><img src="/img/card-images/bolinha-queijo.jpg"></div>
+
+                        <div class="card-text-container">
+                            <div class="name-price-row">
+                                <h3 class="product-name">BOLINHA DE QUEIJO</h3>
+                                <div class="price-measure">
+                                    <span class="product-price">R$1.80</span>
+                                    <span class="product-measure">UN</span>
+                                </div>
+                            </div>
+                            <p class="product-info">Aproximadamente 20 gramas</p>
+                        </div>
+
+                        <div class="card-actions-container">
+                            <div class="quantity-selector">
+                                <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                <span class="quantity-value">25</span>
+                                <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                            </div>
+
+                            <button type="button" class="add-to-cart-button" ><img src="/img/icons/add-to-cart.svg"></button>
+                            
+                        </div>
+                    </div>
+
+                    <div id="coxinha-queijo" class="product-card card-type-01">
+                        <div class="card-image-container"><img src="/img/card-images/coxinha-frango.webp"></div>
+
+                        <div class="card-text-container">
+                            <div class="name-price-row">
+                                <h3 class="product-name">COXINHA</h3>
+                                <div class="price-measure">
+                                    <span class="product-price">R$1.60</span>
+                                    <span class="product-measure">UN</span>
+                                </div>
+                            </div>
+                            <p class="product-info">Aproximadamente 20 gramas</p>
+                        </div>
+
+                        <div class="card-actions-container">
+                            <div class="quantity-selector">
+                                <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                <span class="quantity-value">25</span>
+                                <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                            </div>
+
+                            <button type="button" class="add-to-cart-button" ><img src="/img/icons/add-to-cart.svg"></button>
+                            
+                        </div>
+                    </div>
+
+                    <div id="croquete-carne" class="product-card card-type-01">
+                        <div class="card-image-container"><img src="/img/card-images/croquete-de-carne.jpg"></div>
+
+                        <div class="card-text-container">
+                            <div class="name-price-row">
+                                <h3 class="product-name">CROQUETE DE CARNE</h3>
+                                <div class="price-measure">
+                                    <span class="product-price">R$1.80</span>
+                                    <span class="product-measure">UN</span>
+                                </div>
+                            </div>
+                            <p class="product-info">Aproximadamente 20 gramas</p>
+                        </div>
+
+                        <div class="card-actions-container">
+                            <div class="quantity-selector">
+                                <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                <span class="quantity-value">25</span>
+                                <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                            </div>
+
+                            <button type="button" class="add-to-cart-button" ><img src="/img/icons/add-to-cart.svg"></button>
+                            
+                        </div>
+                    </div>
+
+                    <div id="enroladinho-frito" class="product-card card-type-01">
+                        <div class="card-image-container"><img src="/img/card-images/enroladinho-frito.jpg"></div>
+
+                        <div class="card-text-container">
+                            <div class="name-price-row">
+                                <h3 class="product-name">ENROLADINHO FRITO</h3>
+                                <div class="price-measure">
+                                    <span class="product-price">R$1.60</span>
+                                    <span class="product-measure">UN</span>
+                                </div>
+                            </div>
+                            <p class="product-info">Aproximadamente 20 gramas</p>
+                        </div>
+
+                        <div class="card-actions-container">
+                            <div class="quantity-selector">
+                                <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                <span class="quantity-value">25</span>
+                                <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                            </div>
+
+                            <button type="button" class="add-to-cart-button" ><img src="/img/icons/add-to-cart.svg"></button>
+                            
+                        </div>
+                    </div>
+
+                    <div id="folhadinho-salsicha" class="product-card card-type-01">
+                        <div class="card-image-container"><img src="/img/card-images/folhadinho-salsicha.png"></div>
+
+                        <div class="card-text-container">
+                            <div class="name-price-row">
+                                <h3 class="product-name">FOLHADINHO DE SALSICHA</h3>
+                                <div class="price-measure">
+                                    <span class="product-price">R$1.80</span>
+                                    <span class="product-measure">UN</span>
+                                </div>
+                            </div>
+                            <p class="product-info">Aproximadamente 20 gramas</p>
+                        </div>
+
+                        <div class="card-actions-container">
+                            <div class="quantity-selector">
+                                <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                <span class="quantity-value">25</span>
+                                <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                            </div>
+
+                            <button type="button" class="add-to-cart-button" ><img src="/img/icons/add-to-cart.svg"></button>
+                            
+                        </div>
+                    </div>
+
+                    <div id="doguinho-salsicha" class="product-card card-type-01">
+                        <div class="card-image-container"><img src="/img/card-images/doguinho-salsicha.png"></div>
+
+                        <div class="card-text-container">
+                            <div class="name-price-row">
+                                <h3 class="product-name">DOGUINHO</h3>
+                                <div class="price-measure">
+                                    <span class="product-price">R$1.80</span>
+                                    <span class="product-measure">UN</span>
+                                </div>
+                            </div>
+                            <p class="product-info">Aproximadamente 20 gramas</p>
+                        </div>
+
+                        <div class="card-actions-container">
+                            <div class="quantity-selector">
+                                <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                <span class="quantity-value">25</span>
+                                <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                            </div>
+
+                            <button type="button" class="add-to-cart-button" ><img src="/img/icons/add-to-cart.svg"></button>
+                            
+                        </div>
+                    </div>
+
+                    <div id="prensadinho" class="product-card card-type-01">
+                        <div class="card-image-container"><img src="/img/card-images/sanduiche-prensadinho.png"></div>
+
+                        <div class="card-text-container">
+                            <div class="name-price-row">
+                                <h3 class="product-name">PRENSADINHO</h3>
+                                <div class="price-measure">
+                                    <span class="product-price">R$2.60</span>
+                                    <span class="product-measure">UN</span>
+                                </div>
+                            </div>
+                            <p class="product-info">Aproximadamente 40 gramas</p>
+                        </div>
+
+                        <div class="card-actions-container">
+                            <div class="quantity-selector">
+                                <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                <span class="quantity-value">25</span>
+                                <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                            </div>
+
+                            <button type="button" class="add-to-cart-button" ><img src="/img/icons/add-to-cart.svg"></button>
+                            
+                        </div>
+                    </div>
+
+                    <div id="risoles" class="product-card card-type-04">
+                        <div class="card-image-container">
+                            <img src="img/card-images/risoles.png">
+                        </div>
+
+                        <div class="card-text-container">
+                            <div class="name-price-row">
+                                <h3 class="product-name">RISOLES</h3>
+                                <div class="price-measure">
+                                    <span class="product-price">R$1.60</span>
+                                    <span class="product-measure">UN</span>
+                                </div>
+                            </div>
+                            <p class="product-info">Aproximadamente 20 gramas</p>
+                        </div>
+
+                        
+                        <div class="card-flavor-selector-container">
+                            <select name="sabor" id="risoles" class="flavor-select">
+                                <option value="" disabled selected>SABORES</option>
+                                <option value="carne">Carne</option>
+                                <option value="frango">Frango</option>
+                                <option value="frios">Frios</option>
+                                <option value="palmito">Palmito</option>
+                                <option value="calabresa">Calabresa</option>
+                                <option value="queijo">Queijo</option>
+                            </select>
+                        </div>
+
+                        <!-- A seleção do sabor permite a compra do produto através da tag "flavor-selected"-->
+                        <div class="card-actions-container">
+                            <div class="quantity-selector">
+                                <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                <span class="quantity-value">25</span>
+                                <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                            </div>
+                            <button type="button" class="add-to-cart-button" ><img src="/img/icons/add-to-cart.svg"></button>
+                        </div>
+                    </div>
+
+                    <div id="pastel-pastelina" class="product-card card-type-04">
+                        <div class="card-image-container">
+                            <img src="img/card-images/pastel-pastelina.jpg">
+                        </div>
+
+                        <div class="card-text-container">
+                            <div class="name-price-row">
+                                <h3 class="product-name">RISOLES</h3>
+                                <div class="price-measure">
+                                    <span class="product-price">R$2.00</span>
+                                    <span class="product-measure">UN</span>
+                                </div>
+                            </div>
+                            <p class="product-info">Aproximadamente 20 gramas</p>
+                        </div>
+
+                        
+                        <div class="card-flavor-selector-container">
+                            <select name="sabor" id="pastel-pastelina" class="flavor-select">
+                                <option value="" disabled selected>SABORES</option>
+                                <option value="carne">Carne</option>
+                                <option value="frango">Frango</option>
+                            </select>
+                        </div>
+
+                        <!-- A seleção do sabor permite a compra do produto através da tag "flavor-selected"-->
+                        <div class="card-actions-container">
+                            <div class="quantity-selector">
+                                <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                <span class="quantity-value">25</span>
+                                <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                            </div>
+                            <button type="button" class="add-to-cart-button" ><img src="/img/icons/add-to-cart.svg"></button>
+                        </div>
+                    </div>
+
+                    <div id="empadinha-assada" class="product-card card-type-04">
+                        <div class="card-image-container">
+                            <img src="img/card-images/empadinha-assada.avif">
+                        </div>
+
+                        <div class="card-text-container">
+                            <div class="name-price-row">
+                                <h3 class="product-name">EMPADINHA</h3>
+                                <div class="price-measure">
+                                    <span class="product-price">R$2.30</span>
+                                    <span class="product-measure">UN</span>
+                                </div>
+                            </div>
+                            <p class="product-info">Aproximadamente 20 gramas</p>
+                        </div>
+
+                        
+                        <div class="card-flavor-selector-container">
+                            <select name="sabor" id="empadinha-assada" class="flavor-select">
+                                <option value="" disabled selected>SABORES</option>
+                                <option value="frango">Frango</option>
+                                <option value="palmito">Palmito</option>
+                            </select>
+                        </div>
+
+                        <!-- A seleção do sabor permite a compra do produto através da tag "flavor-selected"-->
+                        <div class="card-actions-container">
+                            <div class="quantity-selector">
+                                <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                <span class="quantity-value">25</span>
+                                <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                            </div>
+                            <button type="button" class="add-to-cart-button" ><img src="/img/icons/add-to-cart.svg"></button>
+                        </div>
+                    </div>
+
+                    <div id="pastel-forno" class="product-card card-type-04">
+                        <div class="card-image-container">
+                            <img src="img/card-images/pastelzinho-forno.jpg">
+                        </div>
+
+                        <div class="card-text-container">
+                            <div class="name-price-row">
+                                <h3 class="product-name">PASTEL DE FORNO</h3>
+                                <div class="price-measure">
+                                    <span class="product-price">R$1.80</span>
+                                    <span class="product-measure">UN</span>
+                                </div>
+                            </div>
+                            <p class="product-info">Aproximadamente 20 gramas</p>
+                        </div>
+
+                        
+                        <div class="card-flavor-selector-container">
+                            <select name="sabor" id="pastel-forno" class="flavor-select">
+                                <option value="" disabled selected>SABORES</option>
+                                <option value="carne">Carne</option>
+                                <option value="frango">Frango</option>
+                                <option value="brocolis">Brócolis</option>
+                                <option value="palmito">Palmito</option>
+                            </select>
+                        </div>
+
+                        <!-- A seleção do sabor permite a compra do produto através da tag "flavor-selected"-->
+                        <div class="card-actions-container">
+                            <div class="quantity-selector">
+                                <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                <span class="quantity-value">25</span>
+                                <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                            </div>
+                            <button type="button" class="add-to-cart-button" ><img src="/img/icons/add-to-cart.svg"></button>
+                        </div>
+                    </div>
+
+                    <div id="cachorro-quente" class="product-card card-type-01">
+                        <div class="card-image-container"><img src="/img/card-images/cachorro-quente.jpg"></div>
+
+                        <div class="card-text-container">
+                            <div class="name-price-row">
+                                <h3 class="product-name">CACHORRO QUENTE</h3>
+                                <div class="price-measure">
+                                    <span class="product-price">R$2.50</span>
+                                    <span class="product-measure">UN</span>
+                                </div>
+                            </div>
+                            <p class="product-info">Pãozinho fofinho com suculento recheio de salsicha picada ao molho de tomate, temperado com alho, cebola e um toque de salsa. Aprox. 40g por unidade.</p>
+                        </div>
+
+                        <div class="card-actions-container">
+                            <div class="quantity-selector">
+                                <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                <span class="quantity-value">25</span>
+                                <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                            </div>
+
+                            <button type="button" class="add-to-cart-button" ><img src="/img/icons/add-to-cart.svg"></button>
+                        </div>
+
+                    </div>
+
+                    <div id="mini-hamburguer" class="product-card card-type-05">
+                        <div class="card-image-container">
+                            <img src="/img/card-images/mini-hamburguer.webp">
+                        </div>
+
+                        <div class="card-text-container">
+                            <div class="name-price-row">
+                                <h3 class="product-name">HAMBURGUER</h3>
+                                <div class="price-measure">
+                                    <span class="product-price">R$5.00</span>
+                                    <span class="product-measure">UN</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-flavor-selector-container">
+                            <select name="sabor" id="mini-hamburguer" class="flavor-select">
+                                <option value="" disabled selected>SABORES</option>
+                                <option value="tradicional">Tradicional</option>
+                                <option value="cheddar">Cheddar</option>
+                                <option value="vegetariano">Vegetariano</option>
+                            </select>
+                        </div>
+
+                        <div class="card-info-row flavor-info">
+                            <div class="product-info">ingredientes do sabor</div>
+                            
+                        </div>
+                
+                        <div class="card-actions-container">
+                            <div class="quantity-selector">
+                                <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                <span class="quantity-value">25</span>
+                                <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                            </div>
+
+                            <button type="button" class="add-to-cart-button" ><img src="/img/icons/add-to-cart.svg"></button>
+                        </div>
+
+
+                    </div>
+
+                    <div id="canape" class="product-card card-type-04">
+                        <div class="card-image-container">
+                            <img src="img/card-images/canape.jpg">
+                        </div>
+
+                        <div class="card-text-container">
+                            <div class="name-price-row">
+                                <h3 class="product-name">CANAPÉ</h3>
+                                <div class="price-measure">
+                                    <span class="product-price">R$2.80</span>
+                                    <span class="product-measure">UN</span>
+                                </div>
+                            </div>
+                            <p class="product-info">Aproximadamente 30 gramas</p>
+                        </div>
+
+                        
+                        <div class="card-flavor-selector-container">
+                            <select name="sabor" id="canape" class="flavor-select">
+                                <option value="" disabled selected>SABORES</option>
+                                <option value="gorgonzola-nozes">Gorgonzola & Nozes</option>
+                                <option value="tomate-seco">Tomate seco</option>
+                                <option value="palmito">Palmito</option>
+                            </select>
+                        </div>
+
+                        <!-- A seleção do sabor permite a compra do produto através da tag "flavor-selected"-->
+                        <div class="card-actions-container">
+                            <div class="quantity-selector">
+                                <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                <span class="quantity-value">25</span>
+                                <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                            </div>
+                            <button type="button" class="add-to-cart-button" ><img src="/img/icons/add-to-cart.svg"></button>
+                        </div>
+                    </div>
+
+                    <div id="mini-pizza" class="product-card card-type-05 flavor-selected">
+                        <div class="card-image-container">
+                            <img src="/img/card-images/mini-pizza.png" alt="Mini Pizza">
+                        </div>
+
+                        <div class="card-text-container">
+                            <div class="name-price-row">
+                                <h3 class="product-name">MINI PIZZA</h3>
+                                <div class="price-measure">
+                                    <span class="product-price">R$2.50</span>
+                                    <span class="product-measure">UN</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-flavor-selector-container">
+                            <select name="sabor" id="mini-pizza" class="flavor-select">
+                                <option value="" disabled selected>SABORES</option>
+                                <option value="frango">Frango</option>
+                                <option value="calabresa">Calabresa</option>
+                                <option value="marguerita">Marguerita</option>
+                                <option value="mussarela">Mussarela</option>
+
+                            </select>
+                        </div>
+
+                        <div class="card-info-row flavor-info">
+                            <div class="product-info">ingredientes do sabor + peso</div>
+                            
+                        </div>
+                
+                        <div class="card-actions-container">
+                            <div class="quantity-selector">
+                                <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                <span class="quantity-value">25</span>
+                                <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                            </div>
+
+                            <button type="button" class="add-to-cart-button" ><img src="/img/icons/add-to-cart.svg"></button>
+                        </div>
+
+
+                    </div>
+
+                    <div id="mini-quiche" class="product-card card-type-05">
+                        <div class="card-image-container">
+                            <img src="/img/card-images/mini-quiche.jpg" alt="Mini Quiche">
+                        </div>
+
+                        <div class="card-text-container">
+                            <div class="name-price-row">
+                                <h3 class="product-name">MINI QUICHE</h3>
+                                <div class="price-measure">
+                                    <span class="product-price">R$2.80</span>
+                                    <span class="product-measure">UN</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-flavor-selector-container">
+                            <select name="sabor" id="mini-quiche" class="flavor-select">
+                                <option value="" disabled selected>SABORES</option>
+                                <option value="frango">Frango</option>
+                                <option value="lorraine">Lorraine</option>
+                                <option value="palmito">Palmito</option>
+                                <option value="alho-poro">Alho Poró</option>
+                                <option value="queijo">Queijo</option>
+                            </select>
+                        </div>
+
+                        <div class="card-info-row flavor-info">
+                            <div class="product-info">ingredientes do sabor + peso</div>
+                            
+                        </div>
+                
+                        <div class="card-actions-container">
+                            <div class="quantity-selector">
+                                <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                <span class="quantity-value">25</span>
+                                <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                            </div>
+
+                            <button type="button" class="add-to-cart-button" ><img src="/img/icons/add-to-cart.svg"></button>
+                        </div>
+
+
+                    </div>
+
+                    <div id="barquete" class="product-card card-type-05">
+                        <div class="card-image-container">
+                            <img src="/img/card-images/barquete.png" alt="Barquete">
+                        </div>
+
+                        <div class="card-text-container">
+                            <div class="name-price-row">
+                                <h3 class="product-name">BARQUETE</h3>
+                                <div class="price-measure">
+                                    <span class="product-price">R$2.80</span>
+                                    <span class="product-measure">UN</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-flavor-selector-container">
+                            <select name="sabor" id="barquete" class="flavor-select">
+                                <option value="" disabled selected>SABORES</option>
+                                <option value="tomate-seco">Tomate seco</option>
+                                <option value="fios-">Fios de ovos</option>
+                            </select>
+                        </div>
+
+                        <div class="card-info-row flavor-info">
+                            <div class="product-info">ingredientes do sabor + peso</div>
+                            
+                        </div>
+                
+                        <div class="card-actions-container">
+                            <div class="quantity-selector">
+                                <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                <span class="quantity-value">25</span>
+                                <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                            </div>
+
+                            <button type="button" class="add-to-cart-button" ><img src="/img/icons/add-to-cart.svg"></button>
+                        </div>
+
+
+                    </div>
+
 
                 </div>
             </section>
