@@ -690,6 +690,18 @@ header{
     font-size: 1rem;
 }
 
+/* DISABLE VIEW*/
+
+.card-type-06 .add-to-cart-button{
+    background-color: #BEBEBE;
+}
+
+/* ENABLE VIEW*/
+
+.product-card.card-type-06.all-flavors-selected .add-to-cart-button{
+    background-color: #229537;
+}
+
 /*===================================================
             TABLET VIEW: min-width: 1024px.
 =====================================================*/
