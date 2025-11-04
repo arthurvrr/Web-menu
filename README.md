@@ -15,7 +15,7 @@ Below you can see some ideias that I'll implement in this project. Suggestions a
 - [ ] Do website's footer.
 - [x] Develop the main navigation menu.
 - [x] Develop "DOCES" menu section.
-- [ ] Develop "SALGADOS" menu section.
+- [x] Develop "SALGADOS" menu section.
 - [ ] Develop "TORTAS" menu section.
 - [ ] Develop a visual effect to dispose all products cards.
   - [ ] Implement a Masonry grid layout for products.
