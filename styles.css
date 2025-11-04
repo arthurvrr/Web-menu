@@ -680,6 +680,11 @@ header{
 
 /*================CARD-TYPE-06=============*/
 
+.card-type-06{
+    grid-template-rows: repeat(5,auto);
+
+}
+
 .product-card.card-type-06 .card-flavor-selector-container{
     display: grid;
     grid-template-columns: repeat(2,auto);
@@ -701,6 +706,40 @@ header{
 .product-card.card-type-06.all-flavors-selected .add-to-cart-button{
     background-color: #229537;
 }
+
+/*================CARD-TYPE-07=============*/
+.card-type-07{
+    
+}
+
+/* DISABLE VIEW*/
+
+.product-card.card-type-07 .card-name-price-container .price-measure,
+.product-card.card-type-07 .card-info-row.weight-info,
+.product-card.card-type-07 .card-flavor-selector-container,
+.product-card.card-type-07 .card-info-row.flavor-info{
+    display: none;
+}
+
+.card-type-07 .add-to-cart-button{
+    background-color: #BEBEBE;
+}
+
+/* ENABLE VIEW*/
+
+.product-card.card-type-07.size-selected .card-info-row.weight-info,
+.product-card.card-type-07.size-selected .card-flavor-selector-container{
+    display: block;
+}
+
+.product-card.card-type-07.size-selected.flavor-selected .card-info-row.flavor-info{
+    display: block;
+}
+
+.product-card.card-type-07.size-selected.flavor-selected .add-to-cart-button{
+    background-color: #229537;
+}
+
 
 /*===================================================
             TABLET VIEW: min-width: 1024px.
