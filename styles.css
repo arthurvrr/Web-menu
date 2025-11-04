@@ -732,7 +732,8 @@ header{
     display: block;
 }
 
-.product-card.card-type-07.size-selected.flavor-selected .card-info-row.flavor-info{
+.product-card.card-type-07.size-selected.flavor-selected .card-info-row.flavor-info,
+.product-card.card-type-07.size-selected.flavor-selected .price-measure{
     display: block;
 }
 
