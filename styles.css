@@ -375,6 +375,23 @@ header{
     margin: 1rem 1rem;
 }
 
+
+/*Posicionamento exclusivo para o produto torta-quiche*/
+.card-actions-container.torta-quiche{
+    display: flex;
+    justify-content: end;
+
+}
+
+.card-actions-container.torta-quiche .add-to-cart-button{
+    aspect-ratio: 2 / 1;
+}
+
+.card-actions-container.torta-quiche .add-to-cart-button img{
+    height: 90%;
+    width: 90%;
+}
+
 .quantity-selector {
     display: flex;
     justify-self: start;
@@ -472,6 +489,7 @@ header{
 }
 
 .card-flavor-selector-container{
+    display: flex;
     margin: 0.5rem 1rem;
 
 };
@@ -553,7 +571,7 @@ header{
 /*=============== CARD-TYPE-03 =================*/
 .card-type-03 {
     display: grid;
-    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-rows: repeat(7,auto);
 
 }
 
@@ -659,6 +677,19 @@ header{
 .card-type-05.flavor-selected .quantity-selector{
     background-color: var(--color08);
 }
+
+/*================CARD-TYPE-06=============*/
+
+.product-card.card-type-06 .card-flavor-selector-container{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    gap: 1rem;
+}
+
+.product-card.card-type-06 .card-text-container .product-info{
+    font-size: 1rem;
+}
+
 /*===================================================
             TABLET VIEW: min-width: 1024px.
 =====================================================*/

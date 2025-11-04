@@ -87,7 +87,7 @@
 
             <!-- Cada agrupamento de produto será divido em sections-->
             <!-- A exibição dos cards de cada section acontece por meio da tag "category-visible"-->
-            <section id="doces-section" class="category-section">
+            <section id="doces-section" class="category-section ">
                 <!-- A aba do "Doces" do cardápio esta setada com padrão, ou seja começará com a tag "category-visible" -->
                 <div class="menu-grid"> <!-- Na class "menu-grid" será configurado o display dos cards para a visualizacao mobile, tablet e desktop-->
                     <!--"Product-card" é a classe base e a "card-type-xx" é a classe modificadora, para cada estilo de card-->
@@ -1013,16 +1013,108 @@
 
                     </div>
 
+                    <div id="torta-quiche" class="product-card card-type-03 size-selected flavor-selected">
+
+                        <div class="card-image-container"><img src="/img/card-images/quiche-pequeno.jpg" alt="Torta Quiche"></div>
+
+                        <div class="card-name-price-container">
+                            <div class="name-price-row">
+                                <h3 class="product-name">TORTA QUICHE</h3>
+                                <div class="price-measure">
+                                    <span class="product-price">R$140.00</span>
+                                    <span class="product-measure">UN</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Container com os botões mini e tradicional, revelam o preço, unidade e peso do produto quando selecionadas-->
+                        <div class="card-size-selector-container">
+                            <!-- A seleção de algum dos tamanhos faz com que o botão seja estilizado - mudando de cor - para sinalizar ao usuário que a opção foi selecionada.
+                            Esse controle de estilo é feito através da tag "button-selected", que sinaliza a interação do usuário com o botão-->
+                            <button class="size-button button-selected">PEQUENO</button>
+                            <button class="size-button">GRANDE</button>
+                        </div>
+
+                        <div class="card-info-row">
+                            <p class="product-info">PESO MUDA CONFORME O TAMANHO</p>
+                        </div>
+
+                        <!--Container com o selector box para o sabor do produto, revela a descrição do sabor selecionado e permite selecionar a quantidade e adicionar o produto ao carrinho-->
+                        <div class="card-flavor-selector-container">
+                            <select name="sabor" id="torta-quiche" class="flavor-select">
+                                <option value="" disabled selected>SABORES</option>
+                                <option value="lorraine">Lorraine</option>
+                                <option value="frango">Frango</option>
+                                <option value="alho-poro">Alho Poró</option>
+                            </select>
+                        </div>
+
+                        <!-- Container com a descrição do sabor selecionado, só é visível se o sabor for selecionado - "flavor-selected"-->
+                        <div class="card-info-row flavor-info">
+                            <p class="product-info">Sabor muda conforme a seleção</p>
+                        </div>
+
+                        <!-- Container add-to-cart-button, só aparece quando o tamanho e o sabor estão selecionados - "size-selected" e "flavor-selected"-->
+                        <div class="card-actions-container torta-quiche">
+                            <!--Botão para adicionar ao carrinho-->
+                            <button type="button" class="add-to-cart-button" ><img src="/img/icons/add-to-cart.svg"></button>
+                        </div>
+
+                    </div>
+
+                    <div id="pizza-pan" class="product-card card-type-06">
+                        <div class="card-image-container"> <img src="/img/card-images/pizza-pan.jpg" alt="Pizza pan"></div>
+
+                        <div class="card-name-price-container">
+                            <div class="name-price-row">
+                                <h3 class="product-name">PIZZA PAN</h3>
+                                <div class="price-measure">
+                                    <span class="product-price">R$59.90</span>
+                                    <span class="product-measure">KG</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-text-container">
+                            <p class="product-info">Pizza Pan quadrada de massa alta e fofinha. São 12 fatias e cerca de 2kg de sabor. Perfeita para dividir, escolha até 2 sabores!</p>
+                        </div>
+
+                        <div class="card-flavor-selector-container">
+                            <select name="sabor1" id="pizza-pan-sabor1" class="flavor-select right-flavor" aria-label="Seleção do primeiro sabor">
+                                <option value="" disabled selected>SABOR 01</option>
+                                <option value="calabresa">Calabresa</option>
+                                <option value="frango-catupiry">Frango & Catupiry</option>
+                                <option value="quatro-queijos">Quatro queijos</option>
+                            </select>
+
+                            <select name="sabor2" id="pizza-pan-sabor2" class="flavor-select left-flavor" aria-label="Seleção do segundo sabor">
+                                <option value="" disabled selected>SABOR 02</option>
+                                <option value="calabresa">Calabresa</option>
+                                <option value="frango-catupiry">Frango & Catupiry</option>
+                                <option value="quatro-queijos">Quatro queijos</option>
+                            </select>
+                        </div>
+
+                        <!-- Container add-to-cart-button, só aparece quando o tamanho e o sabor estão selecionados - "size-selected" e "flavor-selected"-->
+                        <div class="card-actions-container torta-quiche">
+                            <!--Botão para adicionar ao carrinho-->
+                            <button type="button" class="add-to-cart-button" ><img src="/img/icons/add-to-cart.svg"></button>
+                        </div>
+
+                    </div>
 
                 </div>
+
+
+                
             </section>
 
-            <section id="tortas-section" class="category-section">
+            <section id="tortas-section" class="category-section ">
                 <div class="menu-grid">
 
                 </div>
             </section>
-
+        
 
         </main>
 
