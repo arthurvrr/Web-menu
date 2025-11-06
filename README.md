@@ -8,17 +8,17 @@ Below you can see some ideias that I'll implement in this project. Suggestions a
 
 * About website view and funcionalities:
 - [x] Implement website header.
-    - [ ] Do hidden menu for mobile view.
+    - [ ] Develop hidden menu for mobile view.
     - [ ] Develop the shopping cart interface.
     - [ ] Create the "Como chegar", "Sobre nós" and "Contato" pages.
 - [x] Build a product display slider.
-- [ ] Do website's footer.
+- [ ] Develop website's footer.
 - [x] Develop the main navigation menu.
 - [x] Develop "DOCES" menu section.
 - [x] Develop "SALGADOS" menu section.
 - [ ] Develop "TORTAS" menu section.
-- [ ] Develop a visual effect to dispose all products cards.
-  - [ ] Implement a Masonry grid layout for products.
+- [x] Develop a visual effect to dispose all products cards.
+  - [x] Implement a Masonry grid layout for products.
   - [ ] Fix end menu layout problem.
 - [ ] Develop product card animation.
 - [ ] Implement the order check-out flux.
