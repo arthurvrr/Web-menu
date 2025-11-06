@@ -347,6 +347,7 @@ header{
     font-style: normal;
     font-size: 30px;
     color: var(--color03);
+    margin: 0;
 }
 
 .product-measure{
@@ -656,7 +657,7 @@ header{
 
 /* DISABLE VIEW*/
 
-.card-type-05 .card-info-row,
+.card-type-05 .card-info-row.flavor-info,
 .card-type-05 .price-measure {
     display: none;
 }
@@ -671,7 +672,7 @@ header{
     display: inline;
 }
 
-.card-type-05.flavor-selected .card-info-row{
+.card-type-05.flavor-selected .card-info-row.flavor-info{
     display: block;
 }
 
@@ -753,15 +754,19 @@ header{
     row-gap: 1rem;
 }
 
-.card-info-row.flavor-info .product-info.torta-macron{
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: normal;
+.card-type-08 .card-price-button{
+    margin-bottom: 1rem;
 }
 
 .card-style-selector-container{
     display: grid;
     grid-template-columns: auto auto;
+}
+
+.card-type-08 .card-info-row.flavor-info .product-info{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
 }
 
 .card-style-selector-container .style-button{
@@ -808,6 +813,32 @@ header{
     justify-self: start;
     margin: 0px;
     
+}
+
+/* DISABLE VIEW*/
+
+.product-card.card-type-08 .card-info-row.weight-info{
+    display: none;
+}
+
+.product-card.card-type-08 .card-price-button button{
+    background-color: #BEBEBE;
+}
+
+/* ENABLE VIEW*/
+
+.product-card.card-type-08.size-selected .card-info-row.weight-info{
+    display: block;
+}
+
+.product-card.card-type-08.size-selected .card-price-button button{
+    background-color: #229537;
+}
+
+/*================CARD-TYPE-09=============*/
+.card-type-09{
+    row-gap: 1rem;
+
 }
 
 /*===================================================
