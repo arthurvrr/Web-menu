@@ -494,12 +494,12 @@ header{
     display: flex;
     margin: 0 1rem;
 
-};
-
+}
 
 /*================CARD-TYPE-01=============*/
 
 .card-type-01{
+    display: grid;
     row-gap: 1rem;
 }
 
