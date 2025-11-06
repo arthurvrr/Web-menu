@@ -758,48 +758,15 @@ header{
     margin-bottom: 1rem;
 }
 
-.card-style-selector-container{
-    display: grid;
-    grid-template-columns: auto auto;
-}
-
 .card-type-08 .card-info-row.flavor-info .product-info{
     font-style: normal;
     font-weight: normal;
     font-size: 1rem;
 }
 
-.card-style-selector-container .style-button{
-    background-color: var(--color08);
-    text-decoration: none;
-    border: none;
-    text-align: center;
-    margin: 0 1rem;
-    margin-bottom: 0px;
-    border-radius: 20px;
-    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
-    height: 2.5rem;
-    cursor: pointer;
-
-    font-family: 'LouisGeorgeCafe', sans-serif;
-    font-weight: bold;
-    font-style: normal;
-    font-size: 1.5rem;
-    color: white;
-
-    transition: background-color 0.6s ease,
-                color 0.6s ease;
-}
-
-.style-button.button-selected{
-    background-color: var(--color03);
-    color: white;
-}
-
 .card-size-options-selector-container{
     display: flex;
     margin: 0 1rem;
-
 }
 
 .card-price-button{
@@ -840,6 +807,77 @@ header{
     row-gap: 1rem;
 
 }
+
+.card-type-09 .card-price-button{
+    margin-bottom: 1rem;
+}
+
+.card-type-09 .card-style-selector-container{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.card-type-09 .card-info-row.weight-info .product-info,
+.card-type-09 .card-info-row.flavor-info .product-info{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.card-style-selector-container .style-button{
+    background-color: var(--color08);
+    text-decoration: none;
+    border: none;
+    text-align: center;
+    margin: 0 1rem;
+    margin-bottom: 0px;
+    border-radius: 20px;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
+    height: 2.5rem;
+    cursor: pointer;
+
+    font-family: 'LouisGeorgeCafe', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: white;
+
+    transition: background-color 0.6s ease,
+                color 0.6s ease;
+}
+
+.card-style-selector-container .style-button.button-selected{
+    background-color: var(--color03);
+    color: white;
+}
+
+
+/* DISABLE VIEW*/
+
+.card-type-09 .card-info-row.weight-info{
+    display: none;
+}
+
+.card-type-09 .card-price-button button{
+    background-color: #BEBEBE;
+}
+
+.card-type-09 .card-size-options-selector-container{
+    display: none;
+}
+
+/* ENABLE VIEW*/
+
+.card-type-09.style-selected .card-size-options-selector-container{
+    display: block;
+}
+.card-type-09.size-selected .card-info-row.weight-info{
+    display: block;
+}
+
+.card-type-09.style-selected.size-selected .card-price-button button{
+    background-color: #229537;
+}
+
 
 /*===================================================
             TABLET VIEW: min-width: 1024px.
