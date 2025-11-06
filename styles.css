@@ -318,7 +318,7 @@ header{
 .name-price-row{
     display: grid;
     grid-template-columns: 1fr auto;
-    align-items: baseline;
+    align-items: start;
 }
 
 .product-name {
@@ -503,6 +503,8 @@ header{
     row-gap: 1rem;
 }
 
+
+
 /*================CARD-TYPE-02=============*/
 
 
@@ -515,7 +517,7 @@ header{
 }
 
 .card-type-02 .product-measure,
-.card-type-02 .product-info {
+.card-type-02 .card-info-row.weight-info {
     display: none;
 }
 
@@ -545,13 +547,12 @@ header{
 
 /*ENABLE VIEW, USING "size-selected" tag*/
 
-.card-type-02.size-selected .product-measure{
+.card-type-02.size-selected .product-measure,
+.card-type-02.size-selected .card-info-row.weight-info{
     display: block;
 }
 
-.card-type-02.size-selected .product-info{
-    display: block;
-}
+
 
 .card-type-02.size-selected .add-to-cart-button{
     background-color: #229537;
@@ -694,8 +695,10 @@ header{
     gap: 1rem;
 }
 
-.product-card.card-type-06 .card-text-container .product-info{
-    font-size: 1rem;
+.product-card.card-type-06 .card-info-row .product-info{
+    font-size: 1.2rem;
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* DISABLE VIEW*/
