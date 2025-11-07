@@ -296,8 +296,7 @@ header{
     padding: 1rem;
     padding-bottom: 0;
     aspect-ratio: 4 / 3;
-    
-    overflow: hidden;
+
 }
 
 .product-card .card-image-container img {
@@ -308,11 +307,7 @@ header{
     object-fit: cover;
     border-radius: 2rem;
     box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
-}
-
-.product-card .card-text-container {
-    display: flex;
-    flex-direction: column;
+    
 }
 
 .name-price-row{
@@ -492,30 +487,17 @@ header{
 }
 
 .card-flavor-selector-container{
-    display: flex;
+    display: grid;
     margin: 0 1rem;
-
 }
 
 /*================CARD-TYPE-01=============*/
-
-.card-type-01{
-    display: grid;
-    row-gap: 1rem;
-}
-
 
 
 /*================CARD-TYPE-02=============*/
 
 
 /* DISABLE VIEW*/
-
-.card-type-02{
-    display: grid;
-    gap: 1rem;
-    
-}
 
 .card-type-02 .product-measure,
 .card-type-02 .card-info-row.weight-info {
@@ -573,12 +555,6 @@ header{
 }
 
 /*=============== CARD-TYPE-03 =================*/
-.card-type-03 {
-    display: grid;
-    
-    row-gap: 1rem;
-
-}
 
 /* DISABLE VIEW*/
 
@@ -627,12 +603,6 @@ header{
 }
 
 /*================CARD-TYPE-04=============*/
-.card-type-04{
-    display: grid;
-    grid-template-rows: repeat(4,auto);
-    row-gap: 1rem;
-
-}
 
 /* DISABLE VIEW*/
 .card-type-04 .quantity-selector,
@@ -650,10 +620,6 @@ header{
 }
 
 /*================CARD-TYPE-05=============*/
-.card-type-05 {
-    display: grid;
-    row-gap: 1rem;
-}
 
 /* DISABLE VIEW*/
 
@@ -686,10 +652,6 @@ header{
 
 /*================CARD-TYPE-06=============*/
 
-.card-type-06{
-    row-gap: 1rem;
-}
-
 .product-card.card-type-06 .card-flavor-selector-container{
     display: grid;
     grid-template-columns: repeat(2,auto);
@@ -715,10 +677,6 @@ header{
 }
 
 /*================CARD-TYPE-07=============*/
-.card-type-07{
-    row-gap: 1rem;
-    
-}
 
 /* DISABLE VIEW*/
 
@@ -750,13 +708,7 @@ header{
 }
 
 /*================CARD-TYPE-08=============*/
-.card-type-08{
-    row-gap: 1rem;
-}
 
-.card-type-08 .card-price-button{
-    margin-bottom: 1rem;
-}
 
 .card-type-08 .card-info-row.flavor-info .product-info{
     font-style: normal;
@@ -765,7 +717,7 @@ header{
 }
 
 .card-size-options-selector-container{
-    display: flex;
+    display: grid;
     margin: 0 1rem;
 }
 
@@ -773,13 +725,15 @@ header{
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
-    margin: 0 1rem;
+
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
 }
 
 .card-price-button .price-measure{
     justify-self: start;
     margin: 0px;
-    
 }
 
 /* DISABLE VIEW*/
@@ -802,17 +756,11 @@ header{
     background-color: #229537;
 }
 
+
+
 /*================CARD-TYPE-09=============*/
-.card-type-09{
-    row-gap: 1rem;
 
-}
-
-.card-type-09 .card-price-button{
-    margin-bottom: 1rem;
-}
-
-.card-type-09 .card-style-selector-container{
+.card-style-selector-container{
     display: grid;
     grid-template-columns: auto auto;
 }
@@ -868,13 +816,50 @@ header{
 /* ENABLE VIEW*/
 
 .card-type-09.style-selected .card-size-options-selector-container{
-    display: block;
+    display: grid;
 }
 .card-type-09.size-selected .card-info-row.weight-info{
     display: block;
 }
 
 .card-type-09.style-selected.size-selected .card-price-button button{
+    background-color: #229537;
+}
+
+/*================CARD-TYPE-10=============*/
+
+.card-extra-options-selector-container{
+    display: grid;
+    margin: 0 1rem;
+}
+
+/* DISAABLE VIEW*/
+
+.card-type-10 .card-info-row.weight-info,
+.card-type-10 .card-extra-options-selector-container,
+.card-type-10 .card-size-options-selector-container{
+    display: none;
+}
+
+.card-type-10 .card-price-button button{
+    background-color: #BEBEBE;
+}
+
+/* ENABLE VIEW*/
+
+.card-type-10.style-selected .card-size-options-selector-container{
+    display: grid;
+}
+
+.card-type-10.style-selected.size-selected .card-extra-options-selector-container{
+    display: grid;
+}
+
+.card-type-10.style-selected.size-selected .card-info-row.weight-info{
+    display: block;
+}
+
+.card-type-10.style-selected.size-selected.extra-selected .card-price-button button{
     background-color: #229537;
 }
 
@@ -959,7 +944,7 @@ header{
     .product-card{
         break-inside: avoid;
         margin-bottom: 1.5rem ;
-
+        gap: 1rem;
     }
 
 }
