@@ -1,0 +1,179 @@
+/*=======================================
+                HEADER
+=======================================*/
+
+header{
+    display: grid;
+    align-items: center;
+    background-color: white;
+       
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-left-segment {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    width: 100%;
+
+}
+
+.header-left-segment nav{
+    justify-self: start;
+}
+
+
+.header-logo{
+    
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: bold;
+    padding: 0px;
+    margin: 0px;
+    font-size: 30px;
+    color: black;
+
+    justify-self: center;
+}
+
+
+.header-info-bars{
+    margin: 15px;
+    border: none;
+    background: none;
+    font-size: 0px;
+    padding: 0px;
+    cursor: pointer;
+    
+    justify-self: start;
+
+}
+
+.header-info-bars img{
+    width: 25px;
+    display: block;
+
+}
+
+.header-cart{
+    margin: 15px;
+    border: none;
+    background: none;
+    font-size: 0px;
+    padding: 0px;
+    cursor: pointer;
+
+    justify-self: end;
+
+}
+
+.header-cart img{
+    width: 25px;
+    display: block;
+
+
+}
+
+.header-actions-tablet {
+    display: none;
+}
+
+.header-right-segment {
+    display: none;
+}
+
+.header-links-tablet{
+    display: none;
+}
+
+
+/*=======================================
+HEADER - TABLET-VIEW: min-width: 1024px
+========================================*/
+
+@media (min-width: 1024px){
+
+    header{
+        display: grid;
+        grid-template-columns: 1fr auto;
+
+    }
+
+    .header-left-segment{
+        display: flex;
+
+        align-items: center;
+
+        gap: 40px;
+
+        grid-template-columns: none;
+        width: auto;
+    }
+
+    .header-logo{
+        justify-self: start;
+        
+    }
+
+    .header-right-segment{
+        display: block;
+    }
+
+    .header-links-tablet{
+        display: flex;
+        gap: 40px
+    }
+
+    .header-links-tablet a{
+        text-decoration: none;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: normal;
+        color: black;
+    }
+
+   .header-actions-tablet{
+        display: flex;
+        gap: 40px;
+        margin: 10px;
+
+    }
+
+    .header-actions-tablet img{
+        width: 25px;
+    }
+
+    .header-cart,
+    .header-info-bars{
+        display: none;
+    }
+
+}
+
+/*=======================================
+HEADER - DESLTOP-VIEW: min-width: 1440px
+========================================*/
+
+
+@media (min-width: 1440px){
+
+    .header-links-tablet a{
+        text-decoration: none;
+
+        font-size: 20px;
+        font-style: normal;
+        font-weight: normal;
+        color: black;
+
+        transition: color 0.5s ease,
+                    transform 0.5s ease;
+    }
+
+    .header-links-tablet a:hover {
+        color: var(--color03);
+        cursor: pointer;
+
+        transform: scale(1.05);
+    }
+
+}

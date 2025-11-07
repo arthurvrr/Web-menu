@@ -4,7 +4,17 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Padaria & Confeitaria Vanellis</title>
+
+        <link rel="stylesheet" href="global.css">
+        <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="slider.css">
+        <link rel="stylesheet" href="main-menu.css">
+        <link rel="stylesheet" href="cards.css">
+
+
         <link rel="stylesheet" href="styles.css">
+
+
     </head>
 
     <body>
@@ -32,9 +42,9 @@
 
             <div class="header-right-segment">
                 <nav class="header-actions-tablet">
-                    <a href=""><img src="img/icons/whatsapp.png"></a>
-                    <a href=""><img src="img/icons/instagram.png"></a>
-                    <a href=""><img src="img/icons/grocery-store.png"></a>
+                    <a href="" aria-label="Nosso Whatsapp"><img src="img/icons/whatsapp.png"></a>
+                    <a href="" aria-label="Nosso Instagram"><img src="img/icons/instagram.png"></a>
+                    <a href="" aria-label="Ver carrinho"><img src="img/icons/grocery-store.png"></a>
                 </nav>
            </div>
 
@@ -87,7 +97,7 @@
 
             <!-- Cada agrupamento de produto será divido em sections-->
             <!-- A exibição dos cards de cada section acontece por meio da tag "category-visible"-->
-            <section id="doces-section" class="category-section">
+            <section id="doces-section" class="category-section category-visible ">
                 <!-- A aba do "Doces" do cardápio esta setada com padrão, ou seja começará com a tag "category-visible" -->
                 <div class="menu-grid"> <!-- Na class "menu-grid" será configurado o display dos cards para a visualizacao mobile, tablet e desktop-->
                     <!--"Product-card" é a classe base e a "card-type-xx" é a classe modificadora, para cada estilo de card-->
@@ -367,7 +377,7 @@
                     </div>
 
                     <!--A card-type-02 necessida o uso de JS para esconder/revelar as informações do produto com base no tamanho selecionado-->
-                    <div id="quindim" class="product-card card-type-02">
+                    <div id="quindim" class="product-card card-type-02 size-selected">
                         <!-- Container com a imagem do produto, a imagem será modificada conforme o tamanho do produto selecionado-->
                         <div class="card-image-container"><img src="/img/card-images/quindim-mini.webp" alt="Quindim"></div>
 
@@ -441,7 +451,7 @@
 
                         <!--Container com o selector box para o sabor do produto, revela a descrição do sabor selecionado e permite selecionar a quantidade e adicionar o produto ao carrinho-->
                         <div class="card-flavor-selector-container">
-                            <select name="sabor" id="cupcake" class="flavor-select">
+                            <select name="sabor" id="cupcake-flavor" class="flavor-select">
                                 <option value="" disabled selected>SABORES</option>
                                 <option value="red-velvet">Red Velvet</option>
                                 <option value="chocolate">Chocolate</option>
@@ -473,7 +483,7 @@
                 </div>
             </section>
 
-            <section id="salgados-section" class="category-section  category-visible">
+            <section id="salgados-section" class="category-section">
                 <div class="menu-grid">
                     <div id="bolinha-queijo" class="product-card card-type-01">
                         <div class="card-image-container"><img src="/img/card-images/bolinha-queijo.jpg"></div>
@@ -697,7 +707,7 @@
 
                         
                         <div class="card-flavor-selector-container">
-                            <select name="sabor" id="risoles" class="flavor-select">
+                            <select name="sabor" id="risoles-flavor" class="flavor-select">
                                 <option value="" disabled selected>SABORES</option>
                                 <option value="carne">Carne</option>
                                 <option value="frango">Frango</option>
@@ -739,7 +749,7 @@
                         </div>
                         
                         <div class="card-flavor-selector-container">
-                            <select name="sabor" id="pastel-pastelina" class="flavor-select">
+                            <select name="sabor" id="pastel-pastelina-flavor" class="flavor-select">
                                 <option value="" disabled selected>SABORES</option>
                                 <option value="carne">Carne</option>
                                 <option value="frango">Frango</option>
@@ -777,7 +787,7 @@
                         </div>
                         
                         <div class="card-flavor-selector-container">
-                            <select name="sabor" id="empadinha-assada" class="flavor-select">
+                            <select name="sabor" id="empadinha-assada-flavor" class="flavor-select">
                                 <option value="" disabled selected>SABORES</option>
                                 <option value="frango">Frango</option>
                                 <option value="palmito">Palmito</option>
@@ -815,7 +825,7 @@
                         </div>
                         
                         <div class="card-flavor-selector-container">
-                            <select name="sabor" id="pastel-forno" class="flavor-select">
+                            <select name="sabor" id="pastel-forno-flavor" class="flavor-select">
                                 <option value="" disabled selected>SABORES</option>
                                 <option value="carne">Carne</option>
                                 <option value="frango">Frango</option>
@@ -884,7 +894,7 @@
                         </div>
 
                         <div class="card-flavor-selector-container">
-                            <select name="sabor" id="mini-hamburguer" class="flavor-select">
+                            <select name="sabor" id="mini-hamburguer-flavor" class="flavor-select">
                                 <option value="" disabled selected>SABORES</option>
                                 <option value="tradicional">Tradicional</option>
                                 <option value="cheddar">Cheddar</option>
@@ -930,7 +940,7 @@
                         </div>
                         
                         <div class="card-flavor-selector-container">
-                            <select name="sabor" id="canape" class="flavor-select">
+                            <select name="sabor" id="canape-flavor" class="flavor-select">
                                 <option value="" disabled selected>SABORES</option>
                                 <option value="gorgonzola-nozes">Gorgonzola & Nozes</option>
                                 <option value="tomate-seco">Tomate seco</option>
@@ -969,7 +979,7 @@
                         </div>
 
                         <div class="card-flavor-selector-container">
-                            <select name="sabor" id="mini-pizza" class="flavor-select">
+                            <select name="sabor" id="mini-pizza-flavor" class="flavor-select">
                                 <option value="" disabled selected>SABORES</option>
                                 <option value="frango">Frango</option>
                                 <option value="calabresa">Calabresa</option>
@@ -1012,7 +1022,7 @@
                         </div>
 
                         <div class="card-flavor-selector-container">
-                            <select name="sabor" id="mini-quiche" class="flavor-select">
+                            <select name="sabor" id="mini-quiche-flavor" class="flavor-select">
                                 <option value="" disabled selected>SABORES</option>
                                 <option value="frango">Frango</option>
                                 <option value="lorraine">Lorraine</option>
@@ -1054,7 +1064,7 @@
                         </div>
 
                         <div class="card-flavor-selector-container">
-                            <select name="sabor" id="barquete" class="flavor-select">
+                            <select name="sabor" id="barquete-flavor" class="flavor-select">
                                 <option value="" disabled selected>SABORES</option>
                                 <option value="tomate-seco">Tomate seco</option>
                                 <option value="fios-">Fios de ovos</option>
@@ -1107,7 +1117,7 @@
 
                         <!--Container com o selector box para o sabor do produto, revela a descrição do sabor selecionado e permite selecionar a quantidade e adicionar o produto ao carrinho-->
                         <div class="card-flavor-selector-container">
-                            <select name="sabor" id="torta-quiche" class="flavor-select">
+                            <select name="sabor" id="torta-quiche-flavor" class="flavor-select">
                                 <option value="" disabled selected>SABORES</option>
                                 <option value="lorraine">Lorraine</option>
                                 <option value="frango">Frango</option>
@@ -1146,14 +1156,14 @@
                         </div>
 
                         <div class="card-flavor-selector-container">
-                            <select name="sabor1" id="pizza-pan-sabor1" class="flavor-select right-flavor" aria-label="Seleção do primeiro sabor">
+                            <select name="sabor1" id="pizza-pan-flavor01" class="flavor-select right-flavor" aria-label="Seleção do primeiro sabor">
                                 <option value="" disabled selected>SABOR 01</option>
                                 <option value="calabresa">Calabresa</option>
                                 <option value="frango-catupiry">Frango & Catupiry</option>
                                 <option value="quatro-queijos">Quatro queijos</option>
                             </select>
 
-                            <select name="sabor2" id="pizza-pan-sabor2" class="flavor-select left-flavor" aria-label="Seleção do segundo sabor">
+                            <select name="sabor2" id="pizza-pan-flavor2" class="flavor-select left-flavor" aria-label="Seleção do segundo sabor">
                                 <option value="" disabled selected>SABOR 02</option>
                                 <option value="calabresa">Calabresa</option>
                                 <option value="frango-catupiry">Frango & Catupiry</option>
@@ -1194,7 +1204,7 @@
                         </div>
 
                         <div class="card-flavor-selector-container">
-                            <select name="sabor" id="torta-fria" class="flavor-select">
+                            <select name="sabor" id="torta-fria-flavor" class="flavor-select">
                                 <option value="" disabled selected>SABORES</option>
                                 <option value="frango">Frango</option>
                                 <option value="frios">Frios</option>
@@ -1678,8 +1688,6 @@
                     </div>
 
                     </div>
-
-                    
 
                 </div>
             </section>

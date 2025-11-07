@@ -1,0 +1,285 @@
+/*=======================================
+            CARDS - BASES
+=======================================*/
+
+/*O estilo foram desenvolvidos com o princípio de "Mobile First", então os estilos bases são aplicados
+diretamente sobre as versões de dispositívos móveis. Acima de 1024px de largura existe modificações nas clases bases.
+===================================================================================================================*/
+
+
+/*A classe "menu-grid" define o espaço onde os cards vão aparecer, modificações na propriedade 
+"grid-template-colums" permite aumentar o númeo de cards exibidos lado a lado.*/
+.menu-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 0 0.5rem;
+}
+
+
+
+/* "product-card* é a classe básica dos cards, ela define os estilos padrões a todos os cards, como cor de fundo, sombra,
+espaçamento e raio da borda. Essa classe "cresce" verticalmente conforme os elementos dentro dela e sua
+largura é fixa, definida pela largura da imagem da classe "card-image-container", para alterar o largura é necessário modificar as
+dimensões da imagem.*/
+.product-card{
+    display: grid;
+    grid-template-columns: 1fr;
+
+    background-color: white;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 2rem;
+    row-gap: 1rem;
+}
+
+
+
+/*A "card-imagem-container" controla a moldura da imagem dentro do card, para aumentar a largura do "product-card" é necessário
+mudar o aspect-radio*/
+.product-card .card-image-container{
+    padding: 1rem;
+    padding-bottom: 0;
+    aspect-ratio: 4 / 3;
+}
+
+
+
+/* Essa classe faz com que a imagem fique encapsulada dentro do molde definido na classe "card-image-container" além de definir 
+estilos */
+.product-card .card-image-container img {
+    display: block;
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+    border-radius: 2rem;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.name-price-row{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+}
+
+
+
+.product-name {
+    margin: 0px 1rem;
+    justify-self: start;
+
+
+    font-family: 'LouisGeorgeCafe',sans-serif;
+    font-weight: bold ;
+    font-style: normal;
+    font-size: 20px;
+    -webkit-text-stroke: 0.7px var(--color03);
+    color: var(--color03);
+}
+
+
+
+.price-measure{
+    justify-self: end;
+    margin: 0px 1rem;
+    color: var(--color03);
+    white-space: nowrap;
+}
+
+
+
+.product-price {
+    font-weight: lighter ;
+    font-style: normal;
+    font-size: 30px;
+    color: var(--color03);
+    margin: 0px;
+}
+
+
+
+.product-measure{
+    font-weight: bold ;
+    font-style: normal;
+    -webkit-text-stroke: 0.5px var(--color03);
+    font-size: 15px;
+}
+
+
+
+.product-info {
+    margin: 0 1rem;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 20px;
+    -webkit-text-stroke: 0.5px var(--color08);
+    color: var(--color08);
+}
+
+
+
+.card-actions-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    margin: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+
+
+/*=======QUANTITY SELECTOR=======*/
+.quantity-selector {
+    display: flex;
+    justify-self: start;
+    border-radius: 4rem;
+    background-color: var(--color08);
+    aspect-ratio: 3 / 1;
+    height: 4rem;
+    justify-content:space-between;
+    align-items: center;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+.quantity-selector button{
+    display: flex;
+    background-color: white;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    aspect-ratio: 1 / 1;
+    height: 80%;
+    object-fit: contain;
+    margin: 5px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.quantity-selector img{
+    height: 80%;
+    width: 80%;
+    object-fit: contain;
+}
+/*===============================*/
+
+
+
+/*==========ADD-TO-CART==========*/
+.add-to-cart-button {
+    display: flex;
+    justify-self: end;
+    background-color: #229537;
+    border: none;
+    cursor: pointer;
+    aspect-ratio: 1.5 / 1 ;
+    height: 4rem;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 3rem;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.add-to-cart-button img{
+    height: 80%;
+    width: 80%;
+    object-fit: contain; 
+}
+/*===============================*/
+
+
+
+.card-size-selector-container{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.card-size-selector-container .size-button{
+    background-color: var(--color08);
+    text-decoration: none;
+    border: none;
+    text-align: center;
+    margin: 0 1rem;
+    margin-bottom: 0px;
+    border-radius: 20px;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
+    height: 2.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: white;
+    transition: background-color 0.6s ease,
+                color 0.6s ease;
+}
+
+.size-button.button-selected{
+    background-color: var(--color03);
+}
+
+.card-flavor-selector-container{
+    display: grid;
+    margin: 0 1rem;
+}
+
+
+/*------------------------
+=======CARD-TYPE-02=======
+--------------------------
+Nesse card é usado a tag "size-selected", ela permite a exibição interativa das informaçõs do produto.
+Por exemplo, o produto de id="qundim" possui dois tamanhos - MINI e TRADICIONAL - cada um com preços e pesos únicos, os quais a
+exibição é feita através da tag mencionada. Além disso, é tag serve de controle para permitir a adição do produto ao carrinho
+apenas quanto um dos tamanhos for selecionados.
+
+Por padrão, o card-type-02 conta 5 linhas, sendo elas: card-image-container, card-name-price-container, card-info-row.weight-info,
+card-size-selector e card-actions-container.
+*/
+
+
+
+/*-----DISABLE VIEW-----*/
+.card-type-02 .card-name-price-container .name-price-row .price-measure,
+.card-type-02 .card-info-row.weight-info{
+    display: none;
+}
+
+.card-type-02 .quantity-selector,
+.card-type-02 .add-to-cart-button{
+    background-color: #BEBEBE;
+}
+
+.card-type-02 .quantity-selector img{
+    opacity: 0.3;
+}
+
+
+/*-----ENABLE VIEW-----*/
+.card-type-02.size-selected .card-name-price-container .name-price-row .price-measure,
+.card-type-02.size-selected .card-info-row.weight-info{
+    display: block;
+}
+
+
+.card-type-02.size-selected .add-to-cart-button{
+    background-color: #229537;
+}
+
+.card-type-02.size-selected .quantity-selector{
+    background-color: var(--color08);
+}
+
+.card-type-02.size-selected .quantity-selector img {
+    opacity: 1;
+}
+
+.card-type-02.size-selected .product-price{
+    display: inline;
+}
+
+
