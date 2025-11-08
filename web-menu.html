@@ -97,7 +97,7 @@
 
             <!-- Cada agrupamento de produto será divido em sections-->
             <!-- A exibição dos cards de cada section acontece por meio da tag "category-visible"-->
-            <section id="doces-section" class="category-section category-visible ">
+            <section id="doces-section" class="category-section">
                 <!-- A aba do "Doces" do cardápio esta setada com padrão, ou seja começará com a tag "category-visible" -->
                 <div class="menu-grid"> <!-- Na class "menu-grid" será configurado o display dos cards para a visualizacao mobile, tablet e desktop-->
                     <!--"Product-card" é a classe base e a "card-type-xx" é a classe modificadora, para cada estilo de card-->
@@ -377,7 +377,7 @@
                     </div>
 
                     <!--A card-type-02 necessida o uso de JS para esconder/revelar as informações do produto com base no tamanho selecionado-->
-                    <div id="quindim" class="product-card card-type-02 size-selected">
+                    <div id="quindim" class="product-card card-type-02">
                         <!-- Container com a imagem do produto, a imagem será modificada conforme o tamanho do produto selecionado-->
                         <div class="card-image-container"><img src="/img/card-images/quindim-mini.webp" alt="Quindim"></div>
 
@@ -420,7 +420,7 @@
                     </div>
 
                     <!--A card-type-03 também requer JS para a progressão interativa da compra do produto-->
-                    <div id="cupcake" class="product-card card-type-03 size-selected flavor-selected">
+                    <div id="cupcake" class="product-card card-type-03">
                         <!--Contianer com a imagem do produto-->
                         <div class="card-image-container"><img src="/img/card-images/cupcake-tradicional.webp" alt="Cupcake"></div>
 
@@ -440,7 +440,7 @@
                         <div class="card-size-selector-container">
                             <!-- A seleção de algum dos tamanhos faz com que o botão seja estilizado - mudando de cor - para sinalizar ao usuário que a opção foi selecionada.
                             Esse controle de estilo é feito através da tag "button-selected", que sinaliza a interação do usuário com o botão-->
-                            <button class="size-button button-selected">MINI</button>
+                            <button class="size-button">MINI</button>
                             <button class="size-button">TRADICIONAL</button>
                         </div>
 
@@ -483,7 +483,7 @@
                 </div>
             </section>
 
-            <section id="salgados-section" class="category-section">
+            <section id="salgados-section" class="category-section category-visible">
                 <div class="menu-grid">
                     <div id="bolinha-queijo" class="product-card card-type-01">
                         <div class="card-image-container"><img src="/img/card-images/bolinha-queijo.jpg"></div>
