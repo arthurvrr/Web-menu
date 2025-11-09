@@ -645,7 +645,31 @@ a partir da seleção do estilo.
     background-color: #229537;
 }
 
+/*------------------------
+=======CARD-TYPE-11=======
+--------------------------
+*/
 
+/*-----DISABLE VIEW-----*/
+.card-type-11 .card-price-button button{
+    background-color: #BEBEBE;
+}
+
+.card-type-11 .card-info-row.flavor-info{
+    display: none;
+}
+
+/*-----ENABLE VIEW-----*/
+.card-type-11.flavor-selected .card-info-row.flavor-info{
+    display: block;
+}
+
+.card-type-11.flavor-selected .card-price-button button{
+    background-color: #229537;
+}
+
+/*===================================================================================================================
+                                        Modificações para diferentes dispositivos*/
 
 /*===================================================
             TABLET VIEW: min-width: 1024px.
