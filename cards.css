@@ -612,6 +612,14 @@ a partir da seleção do estilo.
 --------------------------
 */
 
+.card-type-10 .card-info-row.flavor-info .product-info,
+.card-type-10 .card-info-row.weight-info .product-info{
+    font-weight: normal ;
+    font-style: normal;
+    font-size: 1.2rem;
+
+}
+
 .card-extra-options-selector-container{
     display: grid;
     margin: 0 1rem;
@@ -649,6 +657,14 @@ a partir da seleção do estilo.
 =======CARD-TYPE-11=======
 --------------------------
 */
+
+.card-type-11 .card-info-row.flavor-info .product-info,
+.card-type-11 .card-info-row.weight-info .product-info{
+    font-weight: normal ;
+    font-style: normal;
+    font-size: 1.2rem;
+
+}
 
 /*-----DISABLE VIEW-----*/
 .card-type-11 .card-price-button button{
