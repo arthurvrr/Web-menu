@@ -215,6 +215,10 @@ estilos */
     cursor: not-allowed;
 }
 
+.is-hidden{
+    display: none !important;
+}
+
 /*===============================*/
 
 .card-size-selector-container{
@@ -262,33 +266,8 @@ Por padrão, o card-type-02 conta 5 linhas, sendo elas: card-image-container, ca
 card-size-selector e card-actions-container.
 */
 
-/*-----DISABLE VIEW-----*/
-.card-type-02 .card-name-price-container .name-price-row .price-measure,
-.card-type-02 .card-info-row.weight-info{
-    display: none;
-}
-
 /*-----ENABLE VIEW-----*/
-.card-type-02.size-selected .card-name-price-container .name-price-row .price-measure,
-.card-type-02.size-selected .card-info-row.weight-info{
-    display: block;
-}
 
-.card-type-02.size-selected .add-to-cart-button{
-    background-color: #229537;
-}
-
-.card-type-02.size-selected .quantity-selector{
-    background-color: var(--color08);
-}
-
-.card-type-02.size-selected .quantity-selector img {
-    opacity: 1;
-}
-
-.card-type-02.size-selected .product-price{
-    display: inline;
-}
 
 
 
@@ -305,44 +284,6 @@ injeta a tag "flavor-selected", a qual exibe o seletor de quantidade (card-actio
 ao carrinho (add-to-cart-button button).
 */
 
-/*-----DISABLE VIEW-----*/
-.card-type-03 .price-measure,
-.card-type-03 .flavor-info,
-.card-type-03 .card-info-row.weight-info,
-.card-type-03 .card-flavor-selector-container{
-    display: none;
-}
-
-
-/*-----ENABLE VIEW-----*/
-/*Exibe o preço e a unidade de venda*/
-.card-type-03.size-selected .price-measure{
-    display: inline;
-}
-
-/*Exibe a informação do peso*/
-.card-type-03.size-selected .card-info-row.weight-info{
-    display: block;
-}
-
-/*Exibe a descrição do sabor selecionado*/
-.card-type-03.size-selected.flavor-selected .flavor-info{
-    display: block;
-}
-
-/*Exibe a container de seleção do sabor*/
-.card-type-03.size-selected .card-flavor-selector-container{
-    display: grid;
-}
-
-.card-type-03.size-selected.flavor-selected .add-to-cart-button{
-    background-color: #229537;
-}
-
-.card-type-03.size-selected.flavor-selected .quantity-selector{
-    background-color: var(--color08);
-}
-
 
 
 /*------------------------
@@ -356,17 +297,6 @@ Possui 4 linhas, as quais são: card-image-container, card-name-price-container,
 
 
 
-/*-----ENABLE VIEW-----*/
-.card-type-04.flavor-selected .add-to-cart-button{
-    background-color: #229537;
-}
-
-.card-type-04.flavor-selected .quantity-selector{
-    background-color: var(--color08);
-}
-
-
-
 /*------------------------
 =======CARD-TYPE-05=======
 --------------------------
@@ -375,30 +305,6 @@ a escolha da quantidade deseja (quantity-selector) e posteriormente compra do pr
 separadas em 6 linhas, são elas: card-image-container, card-name-price-container, .card-info-row.weight-info, .card-flavor-selector-container, .card-info-row.flavor-info
  e card-actions-container.
 */
-
-/*-----DISABLE VIEW-----*/
-.card-type-05 .card-info-row.flavor-info,
-.card-type-05 .price-measure {
-    display: none;
-}
-
-/*-----ENABLE VIEW-----*/
-.card-type-05.flavor-selected .price-measure{
-    display: inline;
-}
-
-.card-type-05.flavor-selected .card-info-row.flavor-info{
-    display: block;
-}
-
-.card-type-05.flavor-selected .add-to-cart-button{
-    background-color: #229537;
-}
-
-.card-type-05.flavor-selected .quantity-selector{
-    background-color: var(--color08);
-}
-
 
 /*------------------------
 =======CARD-TYPE-06=======
@@ -417,7 +323,6 @@ Possu 4 linhas, as quais são: card-image-container, card-name-price-container, 
     justify-items: end;
 }
 
-/*-----DISABLE VIEW-----*/
 .product-card.card-type-06 .card-flavor-selector-container{
     display: grid;
     grid-template-columns: repeat(2,auto);
@@ -429,12 +334,6 @@ Possu 4 linhas, as quais são: card-image-container, card-name-price-container, 
     font-weight: normal;
     font-style: normal;
 }
-
-/*-----ENABLE VIEW-----*/
-.product-card.card-type-06.all-flavors-selected .add-to-cart-button{
-    background-color: #229537;
-}
-
 
 /*------------------------
 =======CARD-TYPE-07=======
@@ -449,29 +348,6 @@ A seleção do sabor injeta a tag "flavor-selected", que libere a exibição do 
     display: grid;
     grid-template-columns: auto;
     justify-items: end;
-}
-
-/*-----DISABLE VIEW-----*/
-.product-card.card-type-07 .card-name-price-container .price-measure,
-.product-card.card-type-07 .card-info-row.weight-info,
-.product-card.card-type-07 .card-flavor-selector-container,
-.product-card.card-type-07 .card-info-row.flavor-info{
-    display: none;
-}
-
-/*-----ENABLE VIEW-----*/
-.product-card.card-type-07.size-selected .card-info-row.weight-info,
-.product-card.card-type-07.size-selected .card-flavor-selector-container{
-    display: grid;
-}
-
-.product-card.card-type-07.size-selected.flavor-selected .card-info-row.flavor-info,
-.product-card.card-type-07.size-selected.flavor-selected .price-measure{
-    display: block;
-}
-
-.product-card.card-type-07.size-selected.flavor-selected .add-to-cart-button{
-    background-color: #229537;
 }
 
 

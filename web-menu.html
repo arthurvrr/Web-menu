@@ -378,7 +378,7 @@
                             <div class="name-price-row">
                                 <h3 class="product-name">QUINDIM</h3>
                                 <!--A class "price-measure só aparecerá quando o tamanho do produto for selecionado - quando product-card tiver a tag "size-selected"-->
-                                <div class="price-measure">
+                                <div class="price-measure is-hidden">
                                     <!--O conteudo de "product-price" será alterado conforme o tamanho for selecionado, cada tamanho tem um preço-->
                                     <span class="product-price">R$2.90</span>
                                     <span class="product-measure">UN</span>
@@ -387,7 +387,7 @@
                         </div>
 
                         <!--Essa linha só deve aparecer quando o tamanho for selecionado-->
-                        <div class="card-info-row weight-info">
+                        <div class="card-info-row weight-info is-hidden">
                             <p class="product-info">Aproximadamente 50 gramas</p> 
                         </div>
                         
@@ -421,7 +421,7 @@
                             <div class="name-price-row">
                                 <h3 class="product-name">CUPCAKE</h3>
                                 <!-- Escondido até a seleção do tamanho-->
-                                <div class="price-measure">
+                                <div class="price-measure is-hidden">
                                     <span class="product-price">R$4.00</span>
                                     <span class="product-measure">UN</span>
                                 </div>
@@ -437,12 +437,12 @@
                         </div>
 
                         <!-- Container com o descrição do peso do produto selecionado, só é revelado a partir da seleção do tamanho - "size-selected"-->
-                        <div class="card-info-row weight-info">
+                        <div class="card-info-row weight-info is-hidden">
                             <p class="product-info"> Tantas gramas</p>
                         </div>
 
                         <!--Container com o selector box para o sabor do produto, revela a descrição do sabor selecionado e permite selecionar a quantidade e adicionar o produto ao carrinho-->
-                        <div class="card-flavor-selector-container">
+                        <div class="card-flavor-selector-container is-hidden">
                             <select name="sabor" id="cupcake-flavor" class="flavor-select">
                                 <option value="" disabled selected>SABORES</option>
                                 <option value="red-velvet">Red Velvet</option>
@@ -452,7 +452,7 @@
                         </div>
 
                         <!-- Container com a descrição do sabor selecionado, só é visível se o sabor for selecionado - "flavor-selected"-->
-                        <div class="card-info-row flavor-info">
+                        <div class="card-info-row flavor-info is-hidden">
                             <p class="product-info">Bolo de cenoura recheado com leite condensado e cobertura de ganache branco</p>
                         </div>
 
@@ -475,7 +475,7 @@
                 </div>
             </section>
 
-            <section id="salgados-section" class="category-section">
+            <section id="salgados-section" class="category-section  category-visible">
                 <div class="menu-grid">
                     <div id="bolinha-queijo" class="product-card card-type-01">
                         <div class="card-image-container"><img src="/img/card-images/bolinha-queijo.jpg"></div>
@@ -678,6 +678,35 @@
                         </div>
                     </div>
 
+                    <div id="cachorro-quente" class="product-card card-type-01">
+                        <div class="card-image-container"><img src="/img/card-images/cachorro-quente.jpg"></div>
+
+                        <div class="card-name-price-container">
+                            <div class="name-price-row">
+                                <h3 class="product-name">CACHORRO QUENTE</h3>
+                                <div class="price-measure">
+                                    <span class="product-price">R$2.50</span>
+                                    <span class="product-measure">UN</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-info-row flavor-info"> 
+                            <p class="product-info">Pãozinho fofinho com suculento recheio de salsicha picada ao molho de tomate, temperado com alho, cebola e um toque de salsa. Aprox. 40g por unidade.</p>
+                        </div>
+
+                        <div class="card-actions-container">
+                            <div class="quantity-selector">
+                                <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                <span class="quantity-value">25</span>
+                                <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                            </div>
+
+                            <button type="button" class="add-to-cart-button" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
+                        </div>
+
+                    </div>
+
                     <div id="risoles" class="product-card card-type-04">
                         <div class="card-image-container">
                             <img src="img/card-images/risoles.png">
@@ -709,6 +738,11 @@
                                 <option value="queijo">Queijo</option>
                             </select>
                         </div>
+                        
+                        <div class="card-info-row flavor-info is-hidden">
+                            <p class="product-info">Ingredientes do sabor</p>
+                        </div>
+
 
                         <!-- A seleção do sabor permite a compra do produto através da tag "flavor-selected"-->
                         <div class="card-actions-container">
@@ -728,7 +762,7 @@
 
                         <div class="card-name-price-container">
                             <div class="name-price-row">
-                                <h3 class="product-name">RISOLES</h3>
+                                <h3 class="product-name">PASTEL DE PASTELINA</h3>
                                 <div class="price-measure">
                                     <span class="product-price">R$2.00</span>
                                     <span class="product-measure">UN</span>
@@ -746,6 +780,10 @@
                                 <option value="carne">Carne</option>
                                 <option value="frango">Frango</option>
                             </select>
+                        </div>
+
+                        <div class="card-info-row flavor-info is-hidden">
+                            <p class="product-info">Ingredientes do sabor escolhido</p>
                         </div>
 
                         <!-- A seleção do sabor permite a compra do produto através da tag "flavor-selected"-->
@@ -784,6 +822,10 @@
                                 <option value="frango">Frango</option>
                                 <option value="palmito">Palmito</option>
                             </select>
+                        </div>
+
+                        <div class="card-info-row flavor-info is-hidden">
+                            <p class="product-info">Ingredientes do sabor escolhido</p>
                         </div>
 
                         <!-- A seleção do sabor permite a compra do produto através da tag "flavor-selected"-->
@@ -826,6 +868,10 @@
                             </select>
                         </div>
 
+                        <div class="card-info-row flavor-info is-hidden">
+                            <p class="product-info">Ingredientes do sabor escolhido</p>
+                        </div>
+
                         <!-- A seleção do sabor permite a compra do produto através da tag "flavor-selected"-->
                         <div class="card-actions-container">
                             <div class="quantity-selector is-disabled">
@@ -835,81 +881,6 @@
                             </div>
                             <button type="button" class="add-to-cart-button is-disabled" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
                         </div>
-                    </div>
-
-                    <div id="cachorro-quente" class="product-card card-type-01">
-                        <div class="card-image-container"><img src="/img/card-images/cachorro-quente.jpg"></div>
-
-                        <div class="card-name-price-container">
-                            <div class="name-price-row">
-                                <h3 class="product-name">CACHORRO QUENTE</h3>
-                                <div class="price-measure">
-                                    <span class="product-price">R$2.50</span>
-                                    <span class="product-measure">UN</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-info-row flavor-info"> 
-                            <p class="product-info">Pãozinho fofinho com suculento recheio de salsicha picada ao molho de tomate, temperado com alho, cebola e um toque de salsa. Aprox. 40g por unidade.</p>
-                        </div>
-
-                        <div class="card-actions-container">
-                            <div class="quantity-selector">
-                                <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
-                                <span class="quantity-value">25</span>
-                                <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
-                            </div>
-
-                            <button type="button" class="add-to-cart-button" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
-                        </div>
-
-                    </div>
-
-                    <div id="mini-hamburguer" class="product-card card-type-05 ">
-                        <div class="card-image-container">
-                            <img src="/img/card-images/mini-hamburguer.webp">
-                        </div>
-
-                        <div class="card-name-price-container">
-                            <div class="name-price-row">
-                                <h3 class="product-name">HAMBÚRGUER</h3>
-                                <div class="price-measure">
-                                    <span class="product-price">R$5.00</span>
-                                    <span class="product-measure">UN</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-info-row weight-info">
-                            <p class="product-info">Aproximadamente 85 gramas</p>
-                        </div>
-
-                        <div class="card-flavor-selector-container">
-                            <select name="sabor" id="mini-hamburguer-flavor" class="flavor-select">
-                                <option value="" disabled selected>SABORES</option>
-                                <option value="tradicional">Tradicional</option>
-                                <option value="cheddar">Cheddar</option>
-                                <option value="vegetariano">Vegetariano</option>
-                            </select>
-                        </div>
-
-                        <div class="card-info-row flavor-info">
-                            <div class="product-info">ingredientes do sabor</div>
-                            
-                        </div>
-                
-                        <div class="card-actions-container">
-                            <div class="quantity-selector is-disabled">
-                                <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
-                                <span class="quantity-value">25</span>
-                                <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
-                            </div>
-
-                            <button type="button" class="add-to-cart-button is-disabled" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
-                        </div>
-
-
                     </div>
 
                     <div id="canape" class="product-card card-type-04">
@@ -940,6 +911,10 @@
                             </select>
                         </div>
 
+                        <div class="card-info-row flavor-info is-hidden">
+                            <p class="product-info">Ingredientes do sabor escolhido</p>
+                        </div>
+
                         <!-- A seleção do sabor permite a compra do produto através da tag "flavor-selected"-->
                         <div class="card-actions-container">
                             <div class="quantity-selector is-disabled">
@@ -951,7 +926,7 @@
                         </div>
                     </div>
 
-                    <div id="mini-pizza" class="product-card card-type-05">
+                    <div id="mini-pizza" class="product-card card-type-04">
                         <div class="card-image-container">
                             <img src="/img/card-images/mini-pizza.png" alt="Mini Pizza">
                         </div>
@@ -966,6 +941,10 @@
                             </div>
                         </div>
 
+                        <div class="card-info-row weight-info">
+                            <p class="product-info">Aproximadamente 50gramas</p>
+                        </div>
+
                         <div class="card-flavor-selector-container">
                             <select name="sabor" id="mini-pizza-flavor" class="flavor-select">
                                 <option value="" disabled selected>SABORES</option>
@@ -976,8 +955,8 @@
                             </select>
                         </div>
 
-                        <div class="card-info-row flavor-info">
-                            <div class="product-info">ingredientes do sabor + peso</div>
+                        <div class="card-info-row flavor-info is-hidden">
+                            <div class="product-info">ingredientes do sabor</div>
                             
                         </div>
                 
@@ -994,7 +973,7 @@
 
                     </div>
 
-                    <div id="mini-quiche" class="product-card card-type-05">
+                    <div id="mini-quiche" class="product-card card-type-04">
                         <div class="card-image-container">
                             <img src="/img/card-images/mini-quiche.jpg" alt="Mini Quiche">
                         </div>
@@ -1009,6 +988,10 @@
                             </div>
                         </div>
 
+                        <div class="card-info-row weight-info">
+                            <p class="product-info">Aproximadamente 20 gramas</p>
+                        </div>
+
                         <div class="card-flavor-selector-container">
                             <select name="sabor" id="mini-quiche-flavor" class="flavor-select">
                                 <option value="" disabled selected>SABORES</option>
@@ -1020,8 +1003,8 @@
                             </select>
                         </div>
 
-                        <div class="card-info-row flavor-info">
-                            <div class="product-info">ingredientes do sabor + peso</div>
+                        <div class="card-info-row flavor-info is-hidden">
+                            <div class="product-info">ingredientes do sabor</div>
                         </div>
                 
                         <div class="card-actions-container">
@@ -1036,7 +1019,7 @@
 
                     </div>
 
-                    <div id="barquete" class="product-card card-type-05">
+                    <div id="barquete" class="product-card card-type-04">
                         <div class="card-image-container">
                             <img src="/img/card-images/barquete.png" alt="Barquete">
                         </div>
@@ -1051,6 +1034,10 @@
                             </div>
                         </div>
 
+                          <div class="card-info-row weight-info">
+                            <div class="product-info">Aproximadamente 20 gramas</div>
+                        </div>
+
                         <div class="card-flavor-selector-container">
                             <select name="sabor" id="barquete-flavor" class="flavor-select">
                                 <option value="" disabled selected>SABORES</option>
@@ -1059,9 +1046,53 @@
                             </select>
                         </div>
 
-                        <div class="card-info-row flavor-info">
-                            <div class="product-info">ingredientes do sabor + peso</div>
-                            
+                        <div class="card-info-row flavor-info is-hidden">
+                            <div class="product-info">ingredientes do sabor</div>
+                        </div>
+                
+                        <div class="card-actions-container">
+                            <div class="quantity-selector is-disabled">
+                                <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                <span class="quantity-value">25</span>
+                                <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                            </div>
+
+                            <button type="button" class="add-to-cart-button is-disabled" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
+                        </div>
+
+
+                    </div>
+
+                    <div id="mini-hamburguer" class="product-card card-type-05">
+                        <div class="card-image-container">
+                            <img src="/img/card-images/mini-hamburguer.webp">
+                        </div>
+
+                        <div class="card-name-price-container">
+                            <div class="name-price-row">
+                                <h3 class="product-name">HAMBÚRGUER</h3>
+                                <div class="price-measure is-hidden">
+                                    <span class="product-price">R$5.00</span>
+                                    <span class="product-measure">UN</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-info-row weight-info">
+                            <p class="product-info">Aproximadamente 85 gramas</p>
+                        </div>
+
+                        <div class="card-flavor-selector-container">
+                            <select name="sabor" id="mini-hamburguer-flavor" class="flavor-select">
+                                <option value="" disabled selected>SABORES</option>
+                                <option value="tradicional">Tradicional</option>
+                                <option value="cheddar">Cheddar</option>
+                                <option value="vegetariano">Vegetariano</option>
+                            </select>
+                        </div>
+
+                        <div class="card-info-row flavor-info is-hidden">
+                            <div class="product-info">ingredientes do sabor</div>
                         </div>
                 
                         <div class="card-actions-container">
@@ -1084,7 +1115,7 @@
                         <div class="card-name-price-container">
                             <div class="name-price-row">
                                 <h3 class="product-name">TORTA QUICHE</h3>
-                                <div class="price-measure">
+                                <div class="price-measure is-hidden">
                                     <span class="product-price">R$140.00</span>
                                     <span class="product-measure">UN</span>
                                 </div>
@@ -1099,12 +1130,12 @@
                             <button class="size-button">GRANDE</button>
                         </div>
 
-                        <div class="card-info-row weight-info">
+                        <div class="card-info-row weight-info is-hidden">
                             <p class="product-info">PESO MUDA CONFORME O TAMANHO</p>
                         </div>
 
                         <!--Container com o selector box para o sabor do produto, revela a descrição do sabor selecionado e permite selecionar a quantidade e adicionar o produto ao carrinho-->
-                        <div class="card-flavor-selector-container">
+                        <div class="card-flavor-selector-container is-hidden">
                             <select name="sabor" id="torta-quiche-flavor" class="flavor-select">
                                 <option value="" disabled selected>SABORES</option>
                                 <option value="lorraine">Lorraine</option>
@@ -1114,7 +1145,7 @@
                         </div>
 
                         <!-- Container com a descrição do sabor selecionado, só é visível se o sabor for selecionado - "flavor-selected"-->
-                        <div class="card-info-row flavor-info">
+                        <div class="card-info-row flavor-info is-hidden">
                             <p class="product-info">Sabor muda conforme a seleção</p>
                         </div>
 
@@ -1214,7 +1245,7 @@
                 </div>
             </section>
 
-            <section id="tortas-section" class="category-section category-visible">
+            <section id="tortas-section" class="category-section">
                 <div class="menu-grid">
 
                     <div id="torta-macron" class="product-card card-type-08">
