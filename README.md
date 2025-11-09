@@ -16,7 +16,7 @@ Below you can see some ideas that I'll implement in this project. Suggestions ar
 - [x] Develop the main navigation menu.
 - [x] Develop "DOCES" menu section.
 - [x] Develop "SALGADOS" menu section.
-- [ ] Develop "TORTAS" menu section.
+- [x] Develop "TORTAS" menu section.
 - [x] Develop a visual effect to display all products cards.
   - [x] Implement a Masonry grid layout for products.
   - [ ] Fix end menu layout problem.
