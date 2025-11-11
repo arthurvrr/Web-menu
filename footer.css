@@ -1,0 +1,12 @@
+/*=======================================
+                FOOTER
+=======================================*/
+
+.footer-container{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    padding: 0 ;
+    background-color: var(--color03);
+    height: 10rem;
+    width: 100%;
+}

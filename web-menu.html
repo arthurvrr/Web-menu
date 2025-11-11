@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="slider.css">
         <link rel="stylesheet" href="main-menu.css">
         <link rel="stylesheet" href="cards.css">
+        <link rel="stylesheet" href="footer.css">
     </head>
 
     <body>
@@ -378,7 +379,7 @@
                             <div class="name-price-row">
                                 <h3 class="product-name">QUINDIM</h3>
                                 <!--A class "price-measure só aparecerá quando o tamanho do produto for selecionado - quando product-card tiver a tag "size-selected"-->
-                                <div class="price-measure is-hidden">
+                                <div class="price-measure">
                                     <!--O conteudo de "product-price" será alterado conforme o tamanho for selecionado, cada tamanho tem um preço-->
                                     <span class="product-price">R$2.90</span>
                                     <span class="product-measure">UN</span>
@@ -395,19 +396,19 @@
                         <div class="card-size-selector-container">
                             <!-- A seleção de algum dos tamanhos faz com que o botão seja estilizado - mudando de cor - para sinalizar ao usuário que a opção foi selecionada.
                             Esse controle de estilo é feito através da tag "button-selected", que sinaliza a interação do usuário com o botão-->
-                            <button class="size-button">MINI</button>
+                            <button class="size-button button-selected">MINI</button>
                             <button class="size-button">TRADICIONAL</button>
                         </div>
 
                         <!--Conteiner com os botão seletor de tamanho e o botão de adicionar ao carrinho, esses só são liberados com a escolha de um tamanho - "size-selected"-->
                         <div class="card-actions-container">
-                            <div class="quantity-selector is-disabled">
+                            <div class="quantity-selector">
                                 <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
                                 <span class="quantity-value">25</span>
                                 <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
                             </div>
 
-                            <button type="button" class="add-to-cart-button is-disabled" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
+                            <button type="button" class="add-to-cart-button" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
                         </div>
                     </div>
 
@@ -475,7 +476,7 @@
                 </div>
             </section>
 
-            <section id="salgados-section" class="category-section  category-visible">
+            <section id="salgados-section" class="category-section">
                 <div class="menu-grid">
                     <div id="bolinha-queijo" class="product-card card-type-01">
                         <div class="card-image-container"><img src="/img/card-images/bolinha-queijo.jpg"></div>
@@ -1135,7 +1136,7 @@
                         </div>
 
                         <!--Container com o selector box para o sabor do produto, revela a descrição do sabor selecionado e permite selecionar a quantidade e adicionar o produto ao carrinho-->
-                        <div class="card-flavor-selector-container is-hidden">
+                        <div class="card-flavor-selector-container">
                             <select name="sabor" id="torta-quiche-flavor" class="flavor-select">
                                 <option value="" disabled selected>SABORES</option>
                                 <option value="lorraine">Lorraine</option>
@@ -1145,7 +1146,7 @@
                         </div>
 
                         <!-- Container com a descrição do sabor selecionado, só é visível se o sabor for selecionado - "flavor-selected"-->
-                        <div class="card-info-row flavor-info is-hidden">
+                        <div class="card-info-row flavor-info">
                             <p class="product-info">Sabor muda conforme a seleção</p>
                         </div>
 
@@ -1245,7 +1246,7 @@
                 </div>
             </section>
 
-            <section id="tortas-section" class="category-section">
+            <section id="tortas-section" class="category-section  category-visible">
                 <div class="menu-grid">
 
                     <div id="torta-macron" class="product-card card-type-08">
@@ -1269,7 +1270,7 @@
                         </div>
 
                         <!-- Essa informação só é mostrada quando o tamanho for selecionado, "size-selected"-->
-                        <div class="card-info-row weight-info">
+                        <div class="card-info-row weight-info is-hidden">
                             <p class="product-info">Aproximadamente 1.5 à 2 quilos</p>
                         </div>
 
@@ -1302,7 +1303,7 @@
                             </select>
                         </div>
 
-                        <div class="card-info-row weight-info">
+                        <div class="card-info-row weight-info is-hidden">
                             <p class="product-info">Aproximadamente 1.5 à 2 quilos</p>
                         </div>
 
@@ -1337,7 +1338,7 @@
                             </select>
                         </div>
 
-                        <div class="card-info-row weight-info">
+                        <div class="card-info-row weight-info is-hidden">
                             <p class="product-info">Aproximadamente 1.5 à 2 quilos</p>
                         </div>
 
@@ -1371,7 +1372,7 @@
                             </select>
                         </div>
 
-                        <div class="card-info-row weight-info">
+                        <div class="card-info-row weight-info is-hidden">
                             <p class="product-info">Aproximadamente 1.5 à 2 quilos</p>
                         </div>
 
@@ -1406,7 +1407,7 @@
                             </select>
                         </div>
 
-                        <div class="card-info-row weight-info">
+                        <div class="card-info-row weight-info is-hidden">
                             <p class="product-info">Aproximadamente 1.5 à 2 quilos</p>
                         </div>
 
@@ -1437,7 +1438,7 @@
                             <p class="product-info">Intensidade e crocância. Esta torta une um pão de ló de chocolate preto, o recheio cremoso de leite condensado cozido e a textura única das nozes caramelizadas feitas aqui na casa.</p>
                         </div>
 
-                       <div class="card-size-options-selector-container">
+                       <div class="card-size-options-selector-container is-hidden">
                             <select name="tamanho" id="size-select-torta-nozes" class="size-select">
                                 <option value="" disabled selected>TAMANHOS</option>
                                 <option value="mini">Mini</option>
@@ -1448,7 +1449,7 @@
                             </select>
                         </div>
 
-                        <div class="card-info-row weight-info">
+                        <div class="card-info-row weight-info is-hidden">
                             <p class="product-info">Peso conforme o tamanho selecionado</p>
                         </div>
 
@@ -1483,7 +1484,7 @@
                             <p class="product-info">Leve e refrescante. Pão de ló de chocolate branco recheado com abacaxi fresco, ovos moles artesanais, chantilly de nata, e finalizado com a textura única do merengão e de um macron de coco.</p>
                         </div>
 
-                       <div class="card-size-options-selector-container">
+                       <div class="card-size-options-selector-container is-hidden">
                             <select name="tamanho" id="size-select-torta-tropicalia" class="size-select">
                                 <option value="" disabled selected>TAMANHOS</option>
                                 <option value="mini">Mini</option>
@@ -1492,7 +1493,7 @@
                             </select>
                         </div>
 
-                        <div class="card-info-row weight-info">
+                        <div class="card-info-row weight-info is-hidden">
                             <p class="product-info">Peso conforme o tamanho selecionado</p>
                         </div>
 
@@ -1527,7 +1528,7 @@
                             <p class="product-info">Um ícone de confeitaria, essa torta combina os sabores do Pão de ló preto e branco com recheios de ovos moles, chantilly de nata, e os texturizados merengão e praline de nozes.</p>
                         </div>
 
-                       <div class="card-size-options-selector-container">
+                       <div class="card-size-options-selector-container is-hidden">
                             <select name="tamanho" id="size-select-torta-marta-rocha" class="size-select">
                                 <option value="" disabled selected>TAMANHOS</option>
                                 <option value="mini">Mini</option>
@@ -1538,7 +1539,7 @@
                             </select>
                         </div>
 
-                        <div class="card-info-row weight-info">
+                        <div class="card-info-row weight-info is-hidden">
                             <p class="product-info">Peso conforme o tamanho selecionado</p>
                         </div>
 
@@ -1573,7 +1574,7 @@
                             <p class="product-info">A combinação perfeita de chocolate e cremes brancos. Base de pão de ló preto intenso, recheada em camadas com um suave creme de baunilha, mousse branco aerado e generosos pedaços de bombom Ouro Branco.</p>
                         </div>
 
-                       <div class="card-size-options-selector-container">
+                       <div class="card-size-options-selector-container is-hidden">
                             <select name="tamanho" id="size-select-torta-ouro-branco" class="size-select">
                                 <option value="" disabled selected>TAMANHOS</option>
                                 <option value="mini">Mini</option>
@@ -1584,7 +1585,7 @@
                             </select>
                         </div>
 
-                        <div class="card-info-row weight-info">
+                        <div class="card-info-row weight-info is-hidden">
                             <p class="product-info">Peso conforme o tamanho selecionado</p>
                         </div>
 
@@ -1619,7 +1620,7 @@
                             <p class="product-info">Uma celebração do chocolate preto. Combina um pão de ló fofinho de chocolate com camadas intercaladas de mousse de chocolate intenso e o nosso clássico brigadeiro caseiro.</p>
                         </div>
 
-                        <div class="card-size-options-selector-container">
+                        <div class="card-size-options-selector-container is-hidden">
                             <select name="tamanho" id="size-select-torta-brigadeiro-preto" class="size-select">
                                 <option value="" disabled selected>TAMANHOS</option>
                                 <option value="mini">Mini</option>
@@ -1630,12 +1631,12 @@
                             </select>
                         </div>
 
-                        <div class="card-info-row weight-info">
+                        <div class="card-info-row weight-info is-hidden">
                             <p class="product-info">Peso conforme o tamanho selecionado</p>
                         </div>
 
                         <!--Card responsável pelos adicionais, é necessário sua seleção para liberar a opção de compra-->
-                        <div class="card-extra-options-selector-container">
+                        <div class="card-extra-options-selector-container is-hidden">
                             <select name="adicional" id="torta-brigadeiro-preto" class="extra-select">
                                 <option value="" disabled selected>ADICIONAIS</option>
                                 <option value="sem-adicional">Sem adicional</option>
@@ -1673,7 +1674,7 @@
                             <p class="product-info">O encontro do chocolate preto e branco. Pão de ló mesclado recheado com brigadeiro branco, brigadeiro preto e um mousse de brigadeiro aerado. Impossível não se apaixonar.</p>
                         </div>
 
-                        <div class="card-size-options-selector-container">
+                        <div class="card-size-options-selector-container is-hidden">
                             <select name="tamanho" id="size-select-torta-dois-amores" class="size-select">
                                 <option value="" disabled selected>TAMANHOS</option>
                                 <option value="mini">Mini</option>
@@ -1684,12 +1685,12 @@
                             </select>
                         </div>
 
-                        <div class="card-info-row weight-info">
+                        <div class="card-info-row weight-info is-hidden">
                             <p class="product-info">Peso conforme o tamanho selecionado</p>
                         </div>
 
                         <!--Card responsável pelos adicionais, é necessário sua seleção para liberar a opção de compra-->
-                        <div class="card-extra-options-selector-container">
+                        <div class="card-extra-options-selector-container is-hidden">
                             <select name="adicional" id="torta-dois-amores" class="extra-select">
                                 <option value="" disabled selected>ADICIONAIS</option>
                                 <option value="sem-adicional">Sem adicional</option>
@@ -1726,7 +1727,7 @@
                             </select>
                         </div>
 
-                        <div class="card-info-row flavor-info">
+                        <div class="card-info-row flavor-info is-hidden">
                             <p class="product-info"> Descrição do sabor selecionado</p>
                         </div>
 
@@ -1763,7 +1764,7 @@
                             </select>
                         </div>
 
-                        <div class="card-info-row flavor-info">
+                        <div class="card-info-row flavor-info is-hidden">
                             <p class="product-info"> Descrição do sabor selecionado</p>
                         </div>
 
@@ -1784,7 +1785,12 @@
 
         </main>
 
-        <footer></footer>
+        <footer>
+            <div class="footer-container">
+
+
+            </div>
+        </footer>
 
      </body>
 

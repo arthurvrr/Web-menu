@@ -130,6 +130,73 @@ estilos */
 
 
 
+.card-size-options-selector-container{
+    display: grid;
+    margin: 0 1rem;
+}
+
+
+
+.card-price-button{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+
+.card-price-button .price-measure{
+    justify-self: start;
+    margin: 0px;
+}
+
+
+
+.card-style-selector-container{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+
+
+.card-style-selector-container .style-button{
+    background-color: var(--color08);
+    text-decoration: none;
+    border: none;
+    text-align: center;
+    margin: 0 1rem;
+    margin-bottom: 0px;
+    border-radius: 20px;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
+    height: 2.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: white;
+    transition: background-color 0.6s ease,
+                color 0.6s ease;
+}
+
+
+
+.card-style-selector-container .style-button.button-selected{
+    background-color: var(--color03);
+    color: white;
+}
+
+
+.card-extra-options-selector-container{
+    display: grid;
+    margin: 0 1rem;
+}
+
+
+
 /*=======QUANTITY SELECTOR=======*/
 .quantity-selector {
     display: flex;
@@ -366,41 +433,6 @@ de adicionar ao carrinho (add-to-cart-button). Contém 6 linhas, as quais são: 
     font-size: 1rem;
 }
 
-.card-size-options-selector-container{
-    display: grid;
-    margin: 0 1rem;
-}
-
-.card-price-button{
-    display: grid;
-    grid-template-columns: auto auto;
-    align-items: center;
-
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-}
-
-.card-price-button .price-measure{
-    justify-self: start;
-    margin: 0px;
-}
-
-/*-----DISABLE VIEW-----*/
-.product-card.card-type-08 .card-info-row.weight-info{
-    display: none;
-}
-
-/*-----ENABLE VIEW-----*/
-.product-card.card-type-08.size-selected .card-info-row.weight-info{
-    display: block;
-}
-
-.product-card.card-type-08.size-selected .card-price-button button{
-    background-color: #229537;
-}
-
-
 /*------------------------
 =======CARD-TYPE-09=======
 --------------------------
@@ -408,63 +440,12 @@ Esse card usa as tags "style-selected" e "size-selected" da seguinte forma: "sty
 a partir da seleção do estilo.
 */
 
-.card-style-selector-container{
-    display: grid;
-    grid-template-columns: auto auto;
-}
-
 .card-type-09 .card-info-row.weight-info .product-info,
 .card-type-09 .card-info-row.flavor-info .product-info{
     font-style: normal;
     font-weight: normal;
     font-size: 1rem;
 }
-
-.card-style-selector-container .style-button{
-    background-color: var(--color08);
-    text-decoration: none;
-    border: none;
-    text-align: center;
-    margin: 0 1rem;
-    margin-bottom: 0px;
-    border-radius: 20px;
-    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
-    height: 2.5rem;
-    cursor: pointer;
-    font-weight: bold;
-    font-style: normal;
-    font-size: 1.5rem;
-    color: white;
-    transition: background-color 0.6s ease,
-                color 0.6s ease;
-}
-
-.card-style-selector-container .style-button.button-selected{
-    background-color: var(--color03);
-    color: white;
-}
-
-/*-----DISABLE VIEW-----*/
-.card-type-09 .card-info-row.weight-info{
-    display: none;
-}
-
-.card-type-09 .card-size-options-selector-container{
-    display: none;
-}
-
-/*-----ENABLE VIEW-----*/
-.card-type-09.style-selected .card-size-options-selector-container{
-    display: grid;
-}
-.card-type-09.size-selected .card-info-row.weight-info{
-    display: block;
-}
-
-.card-type-09.style-selected.size-selected .card-price-button button{
-    background-color: #229537;
-}
-
 
 
 /*------------------------
@@ -480,35 +461,6 @@ a partir da seleção do estilo.
 
 }
 
-.card-extra-options-selector-container{
-    display: grid;
-    margin: 0 1rem;
-}
-
-/*-----DISABLE VIEW-----*/
-.card-type-10 .card-info-row.weight-info,
-.card-type-10 .card-extra-options-selector-container,
-.card-type-10 .card-size-options-selector-container{
-    display: none;
-}
-
-/*-----ENABLE VIEW-----*/
-.card-type-10.style-selected .card-size-options-selector-container{
-    display: grid;
-}
-
-.card-type-10.style-selected.size-selected .card-extra-options-selector-container{
-    display: grid;
-}
-
-.card-type-10.style-selected.size-selected .card-info-row.weight-info{
-    display: block;
-}
-
-.card-type-10.style-selected.size-selected.extra-selected .card-price-button button{
-    background-color: #229537;
-}
-
 /*------------------------
 =======CARD-TYPE-11=======
 --------------------------
@@ -522,19 +474,6 @@ a partir da seleção do estilo.
 
 }
 
-/*-----DISABLE VIEW-----*/
-.card-type-11 .card-info-row.flavor-info{
-    display: none;
-}
-
-/*-----ENABLE VIEW-----*/
-.card-type-11.flavor-selected .card-info-row.flavor-info{
-    display: block;
-}
-
-.card-type-11.flavor-selected .card-price-button button{
-    background-color: #229537;
-}
 
 /*===================================================================================================================
                                         Modificações para diferentes dispositivos*/
