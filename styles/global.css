@@ -11,35 +11,35 @@
 
 @font-face {
     font-family: 'LouisGeorgeCafe';
-    src: url('fontes/LouisGeorgeCafe.ttf') format('truetype');
+    src: url('/fontes/LouisGeorgeCafe.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'LouisGeorgeCafe';
-    src: url('fontes/LouisGeorgeCafeBold.ttf') format('truetype');
+    src: url('/fontes/LouisGeorgeCafeBold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'LouisGeorgeCafe';
-    src: url('fontes/LouisGeorgeCafeLight.ttf') format('truetype');
+    src: url('/fontes/LouisGeorgeCafeLight.ttf') format('truetype');
     font-weight: lighter;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'LouisGeorgeCafe';
-    src: url('fontes/LouisGeorgeCafeItalic.ttf') format('truetype');
+    src: url('/fontes/LouisGeorgeCafeItalic.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'LouisGeorgeCafe';
-    src: url('fontes/LouisGeorgeCafeBoldItalic.ttf') format('truetype');
+    src: url('/fontes/LouisGeorgeCafeBoldItalic.ttf') format('truetype');
     font-weight: bold;
     font-style: italic;
 }
