@@ -98,6 +98,302 @@ const menu = [
         description: "Pãozinho fofinho com suculento recheio de salsicha picada ao molho de tomate, temperado com alho, cebola e um toque de salsa. Aprox. 40g por unidade."
     },
 
+    // DATA-INTERACTION = "SIMPLE-FLAVOR-PRODUCT"
+
+    {
+        id: "risoles",
+        name: "RISOLES",
+        category: "salgados",
+        basePrice: 1.60,
+        image:"",
+        type: "simple-flavor-product",
+        description: "Aproximadamente 20 gramas",
+        flavors : [
+            {   
+                name: "Carne",
+                flavorDescription:  ""
+            },
+
+            {
+                name: "Frango",
+                flavorDescription: ""
+            },
+
+            {
+                name: "Palmito",
+                flavorDescription: ""
+            },
+
+            {
+                name: "Calabresa",
+                flavorDescription: ""
+            },
+
+            {
+                name: "Queijo",
+                flavorDescription: ""
+            },
+
+        ]
+    },
+
+    {
+        id: "pastel-pastelina",
+        name: "PASTEL DE PASTELINA",
+        category: "salgados",
+        basePrice: 2.00,
+        image:"",
+        type: "simple-flavor-product", 
+        description: "Aproximadamente 20 gramas",
+        flavors : [
+            {   
+                name: "Carne",
+                flavorDescription:  ""
+            },
+
+            {
+                name: "Frango",
+                flavorDescription: ""
+            }
+        ]
+    },
+
+    {
+        id: "empadinha-assada",
+        name: "EMPADINHA",
+        category: "salgados",
+        basePrice: 2.30,
+        image:"",
+        type: "simple-flavor-product",
+        description: "Aproximadamente 20 gramas",
+        flavors : [
+            {   
+                name: "Frango",
+                flavorDescription:  ""
+            },
+
+            {
+                name: "Palmito",
+                flavorDescription: ""
+            }
+        ]
+    },
+
+    {
+        id: "pastel-forno",
+        name: "PASTEL DE FORNO",
+        category: "salgados",
+        basePrice: 1.80,
+        image:"",
+        type: "simple-flavor-product",
+        description: "Aproximadamente 20 gramas",
+        flavors : [
+            {   
+                name: "Carne",
+                flavorDescription:  ""
+            },
+
+            {
+                name: "Frango",
+                flavorDescription: ""
+            },
+
+            {
+                name: "Brócolis",
+                flavorDescription: ""
+            },
+
+            {
+                name: "Palmito",
+                flavorDescription: ""
+            }
+        ]
+    },
+
+
+    {
+        id: "canape",
+        name: "CANAPÉ",
+        category: "salgados",
+        basePrice: 2.80,
+        image:"",
+        type: "simple-flavor-product",
+        description: "Aproximadamente 20 gramas",
+        flavors : [
+            {   
+                name: "Gorgonzola & Nozes",
+                flavorDescription:  ""
+            },
+
+            {
+                name: "Tomate Seco",
+                flavorDescription: ""
+            },
+
+            {
+                name: "Palmito",
+                flavorDescription: ""
+            }
+        ]
+        
+    },
+
+    {
+        id: "mini-quice",
+        name: "MINI QUICHE",
+        category: "salgados",
+        basePrice: 2.80,
+        image:"",
+        type: "simple-flavor-product",
+        description: "Aproximadamente 20 gramas",
+        flavors : [
+            {   
+                name: "Frango",
+                flavorDescription:  ""
+            },
+
+            {
+                name: "Lorraine",
+                flavorDescription: ""
+            },
+
+            {
+                name: "Palmito",
+                flavorDescription: ""
+            },
+
+            {
+                name: "Alho Poró",
+                flavorDescription: ""
+            },
+
+           {
+                name: "Queijox'",
+                flavorDescription: ""
+            }
+
+        ]
+        
+    },
+
+    {
+        id: "mini-pizza",
+        name: "MINI PIZZA",
+        category: "salgados",
+        basePrice: 2.80,
+        image:"",
+        type: "simple-flavor-product",
+        description: "Aproximadamente 50 gramas",
+        flavors : [
+            {   
+                name: "Frango",
+                flavorDescription:  ""
+            },
+
+            {
+                name: "Mussarela",
+                flavorDescription: ""
+            },
+
+            {
+                name: "Marguerita",
+                flavorDescription: ""
+            }
+        ]
+    },
+
+     {
+        id: "barquete",
+        name: "BARQUETE",
+        category: "salgados",
+        basePrice: 2.80,
+        image:"",
+        type: "simple-flavor-product",
+        description: "Aproximadamente 50 gramas",
+        flavors : [
+            {   
+                name: "Tomate Seco",
+                flavorDescription:  ""
+            },
+
+            {
+                name: "Fios de Ovos",
+                flavorDescription: ""
+            }
+        ]
+    },
+
+    // DATA-INTERACTION = "SIMPLE-FLAVOR-PRICE-PRODUCT"
+    {
+        id:"mini-hamburguer",
+        name: "MINI HAMBURGUER",
+        category: "salgados",
+        image:"",
+        type: "simple-flavor-price-product",
+        description: "Aproximadamente 90 gramas",
+        flavors : [
+            {   
+                name: "Tradicional",
+                flavorDescription:  "",
+                flavorPrice: 5.00
+            },
+
+            {
+                name: "Cheddar",
+                flavorDescription: "",
+                flavorPrice: 5.00
+            },
+
+            {
+                name: "Vegetariano",
+                flavorDescription: "",
+                flavorPrice: 3.50
+            }
+        ]
+    },
+
+    // DATA-INTERACTION = "DOUBLE-SIZE-PRICE-PRODUCT"
+    {
+        id:"torta-quiche",
+        name: "TORTA QUICHE",
+        category: "salgados",
+        image:"",
+        type: "simple-flavor-price-product",
+
+        size : [
+            {
+                name: "PEQUENO",
+                price: 90.00,
+                weightDescription: "Com 1,1kg, nossa quiche é extremamente bem servida. Rende 6 fatias grandes, perfeitas para compartilhar (ou não!)."
+            },
+
+            {
+                name: "GRANDE",
+                price: 140.00,
+                weightDescription: "Com 1,5kg de puro sabor, nossa quiche grande impressiona. Rende 10 fatias generosas, perfeitas para alimentar toda a família ou amigos."
+
+            }
+        ],
+        
+        flavors : [
+            {   
+                name: "Frango",
+                flavorDescription:  "Cremosidade em dobro. Massa fininha recheada com frango, requeijão e creme de leite. O resultado é um recheio ultra úmido e saboroso que derrete na boca"
+            },
+
+            {
+                name: "Lorraine",
+                flavorDescription: "A autêntica Quiche Lorraine com massa fina e recheio cremoso. Combina bacon crocante, ovos, creme de leite e a riqueza dos quejos prato e parmessão. Um clássico francês irresistível e saboroso!"
+            },
+
+            {
+                name: "Alho Poró",
+                flavorDescription: " Para quem busca leveza, o nosso Quiche de Alho Poró combina massa fina recheada com alho-poró selecionado, requeijão e creme de leite. Um recheio cremoso, aromático e muito saboroso."
+            }
+        ]
+    },
+
+
     /*========================================
                     DOCES
     ========================================*/
@@ -199,7 +495,7 @@ const menu = [
         description: "Aproximadamente 20 gramas"
     },
 
-    
+
 
     
 

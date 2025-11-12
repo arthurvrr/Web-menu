@@ -90,7 +90,7 @@
             
             <!-- Cada agrupamento de produto será divido em sections-->
             <!-- A exibição dos cards de cada section acontece por meio da tag "category-visible"-->
-            <section id="doces-section" class="category-section  category-visible">
+            <section id="doces-section" class="category-section">
                 <!-- A aba do "Doces" do cardápio esta setada com padrão, ou seja começará com a tag "category-visible" -->
                 <div class="menu-grid"> <!-- Na class "menu-grid" será configurado o display dos cards para a visualizacao mobile, tablet e desktop-->
                     <!--"Product-card" é a classe base e a "card-type-xx" é a classe modificadora, para cada estilo de card-->
@@ -476,7 +476,7 @@
                 </div>
             </section>
 
-            <section id="salgados-section" class="category-section">
+            <section id="salgados-section" class="category-section category-visible">
                 <div class="menu-grid">
                     <div id="bolinha-queijo" class="product-card" data-interaction="static-product">
                         <div class="card-image-container"><img src="/img/card-images/bolinha-queijo.jpg"></div>
@@ -693,7 +693,7 @@
                         </div>
 
                         <div class="card-info-row flavor-info"> 
-                            <p class="product-info">Pãozinho fofinho com suculento recheio de salsicha picada ao molho de tomate, temperado com alho, cebola e um toque de salsa. Aprox. 40g por unidade.</p>
+                            <p class="product-info normal-font-style">Pãozinho fofinho com suculento recheio de salsicha picada ao molho de tomate, temperado com alho, cebola e um toque de salsa. Aprox. 40g por unidade.</p>
                         </div>
 
                         <div class="card-actions-container">
@@ -708,7 +708,7 @@
 
                     </div>
 
-                    <div id="risoles" class="product-card card-type-04">
+                    <div id="risoles" class="product-card" data-interaction="simple-flavor-product">
                         <div class="card-image-container">
                             <img src="img/card-images/risoles.png">
                         </div>
@@ -756,7 +756,7 @@
                         </div>
                     </div>
 
-                    <div id="pastel-pastelina" class="product-card card-type-04">
+                    <div id="pastel-pastelina" class="product-card" data-interaction="simple-flavor-product">
                         <div class="card-image-container">
                             <img src="img/card-images/pastel-pastelina.jpg">
                         </div>
@@ -798,7 +798,7 @@
                         </div>
                     </div>
 
-                    <div id="empadinha-assada" class="product-card card-type-04">
+                    <div id="empadinha-assada" class="product-card" data-interaction="simple-flavor-product">
                         <div class="card-image-container">
                             <img src="img/card-images/empadinha-assada.avif">
                         </div>
@@ -840,7 +840,7 @@
                         </div>
                     </div>
 
-                    <div id="pastel-forno" class="product-card card-type-04">
+                    <div id="pastel-forno" class="product-card" data-interaction="simple-flavor-product">
                         <div class="card-image-container">
                             <img src="img/card-images/pastelzinho-forno.jpg">
                         </div>
@@ -884,7 +884,7 @@
                         </div>
                     </div>
 
-                    <div id="canape" class="product-card card-type-04">
+                    <div id="canape" class="product-card" data-interaction="simple-flavor-product">
                         <div class="card-image-container">
                             <img src="img/card-images/canape.jpg">
                         </div>
@@ -927,7 +927,7 @@
                         </div>
                     </div>
 
-                    <div id="mini-pizza" class="product-card card-type-04">
+                    <div id="mini-pizza" class="product-card" data-interaction="simple-flavor-product">
                         <div class="card-image-container">
                             <img src="/img/card-images/mini-pizza.png" alt="Mini Pizza">
                         </div>
@@ -974,7 +974,7 @@
 
                     </div>
 
-                    <div id="mini-quiche" class="product-card card-type-04">
+                    <div id="mini-quiche" class="product-card" data-interaction="simple-flavor-product">
                         <div class="card-image-container">
                             <img src="/img/card-images/mini-quiche.jpg" alt="Mini Quiche">
                         </div>
@@ -1020,7 +1020,7 @@
 
                     </div>
 
-                    <div id="barquete" class="product-card card-type-04">
+                    <div id="barquete" class="product-card" data-interaction="simple-flavor-product">
                         <div class="card-image-container">
                             <img src="/img/card-images/barquete.png" alt="Barquete">
                         </div>
@@ -1064,7 +1064,7 @@
 
                     </div>
 
-                    <div id="mini-hamburguer" class="product-card card-type-05">
+                    <div id="mini-hamburguer" class="product-card" data-interaction="simple-flavor-price-product">
                         <div class="card-image-container">
                             <img src="/img/card-images/mini-hamburguer.webp">
                         </div>
@@ -1109,7 +1109,7 @@
 
                     </div>
 
-                    <div id="torta-quiche" class="product-card card-type-07">
+                    <div id="torta-quiche" class="product-card" data-interaction="double-size-price-product">
 
                         <div class="card-image-container"><img src="/img/card-images/quiche-pequeno.jpg" alt="Torta Quiche"></div>
 
@@ -1136,7 +1136,7 @@
                         </div>
 
                         <!--Container com o selector box para o sabor do produto, revela a descrição do sabor selecionado e permite selecionar a quantidade e adicionar o produto ao carrinho-->
-                        <div class="card-flavor-selector-container">
+                        <div class="card-flavor-selector-container is-hidden">
                             <select name="sabor" id="torta-quiche-flavor" class="flavor-select">
                                 <option value="" disabled selected>SABORES</option>
                                 <option value="lorraine">Lorraine</option>
@@ -1146,7 +1146,7 @@
                         </div>
 
                         <!-- Container com a descrição do sabor selecionado, só é visível se o sabor for selecionado - "flavor-selected"-->
-                        <div class="card-info-row flavor-info">
+                        <div class="card-info-row flavor-info is-hidden">
                             <p class="product-info">Sabor muda conforme a seleção</p>
                         </div>
 
