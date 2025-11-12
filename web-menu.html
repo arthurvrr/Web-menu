@@ -5,12 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Padaria & Confeitaria Vanellis</title>
 
-        <link rel="stylesheet" href="global.css">
-        <link rel="stylesheet" href="header.css">
-        <link rel="stylesheet" href="slider.css">
-        <link rel="stylesheet" href="main-menu.css">
-        <link rel="stylesheet" href="cards.css">
-        <link rel="stylesheet" href="footer.css">
+        <link rel="stylesheet" href="/styles/global.css">
+        <link rel="stylesheet" href="/styles/footer.css">
+        <link rel="stylesheet" href="/styles/cards.css">
+        <link rel="stylesheet" href="/styles/main-menu.css">
+        <link rel="stylesheet" href="/styles/header.css">
+        <link rel="stylesheet" href="/styles/slider.css">
     </head>
 
     <body>
@@ -90,7 +90,7 @@
             
             <!-- Cada agrupamento de produto será divido em sections-->
             <!-- A exibição dos cards de cada section acontece por meio da tag "category-visible"-->
-            <section id="doces-section" class="category-section">
+            <section id="doces-section" class="category-section category-visible">
                 <!-- A aba do "Doces" do cardápio esta setada com padrão, ou seja começará com a tag "category-visible" -->
                 <div class="menu-grid"> <!-- Na class "menu-grid" será configurado o display dos cards para a visualizacao mobile, tablet e desktop-->
                     <!--"Product-card" é a classe base e a "card-type-xx" é a classe modificadora, para cada estilo de card-->
@@ -379,7 +379,7 @@
                             <div class="name-price-row">
                                 <h3 class="product-name">QUINDIM</h3>
                                 <!--A class "price-measure só aparecerá quando o tamanho do produto for selecionado - quando product-card tiver a tag "size-selected"-->
-                                <div class="price-measure">
+                                <div class="price-measure is-hidden">
                                     <!--O conteudo de "product-price" será alterado conforme o tamanho for selecionado, cada tamanho tem um preço-->
                                     <span class="product-price">R$2.90</span>
                                     <span class="product-measure">UN</span>
@@ -402,13 +402,13 @@
 
                         <!--Conteiner com os botão seletor de tamanho e o botão de adicionar ao carrinho, esses só são liberados com a escolha de um tamanho - "size-selected"-->
                         <div class="card-actions-container">
-                            <div class="quantity-selector">
+                            <div class="quantity-selector is-disabled">
                                 <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
                                 <span class="quantity-value">25</span>
                                 <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
                             </div>
 
-                            <button type="button" class="add-to-cart-button" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
+                            <button type="button" class="add-to-cart-button  is-disabled" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
                         </div>
                     </div>
 
@@ -1151,7 +1151,7 @@
                         </div>
 
                         <!-- Container add-to-cart-button, só aparece quando o tamanho e o sabor estão selecionados - "size-selected" e "flavor-selected"-->
-                        <div class="card-actions-container">
+                        <div class="card-actions-container-right">
                             <!--Botão para adicionar ao carrinho-->
                             <button type="button" class="add-to-cart-button is-disabled" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
                         </div>
@@ -1172,7 +1172,7 @@
                         </div>
 
                         <div class="card-info-row ">
-                            <p class="product-info">Pizza Pan quadrada de massa alta e fofinha. São 12 fatias e cerca de 2kg de sabor. Perfeita para dividir, escolha até 2 sabores!</p>
+                            <p class="product-info normal-font-style">Pizza Pan quadrada de massa alta e fofinha. São 12 fatias e cerca de 2kg de sabor. Perfeita para dividir, escolha até 2 sabores!</p>
                         </div>
 
                         <div class="card-flavor-selector-container">
@@ -1192,7 +1192,7 @@
                         </div>
 
                         <!-- Container add-to-cart-button, só aparece quando ambos sabores estao selecionados - "all-flavors-selected"-->
-                        <div class="card-actions-container">
+                        <div class="card-actions-container-right">
                             <!--Botão para adicionar ao carrinho-->
                             <button type="button" class="add-to-cart-button is-disabled" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
                         </div>
@@ -1237,7 +1237,7 @@
                         </div>
 
                         <!-- Container add-to-cart-button, só aparece quando ambos sabores estao selecionados - "all-flavors-selected"-->
-                        <div class="card-actions-container">
+                        <div class="card-actions-container-right">
                             <!--Botão para adicionar ao carrinho-->
                             <button type="button" class="add-to-cart-button is-disabled" aria-label="Adicionar ao carrinho" ><img src="/img/icons/add-to-cart.svg"></button>
                         </div>
@@ -1246,7 +1246,7 @@
                 </div>
             </section>
 
-            <section id="tortas-section" class="category-section  category-visible">
+            <section id="tortas-section" class="category-section">
                 <div class="menu-grid">
 
                     <div id="torta-macron" class="product-card card-type-08">
@@ -1257,7 +1257,7 @@
                         </div>
 
                         <div class="card-info-row flavor-info">
-                            <p class="product-info">Base de bolo macron de coco queimado, recheada com ovos moles e um toque azedo de polpa de ameixa. Uma combinação perfeitamente equilibrada.</p>
+                            <p class="product-info normal-font-style">Base de bolo macron de coco queimado, recheada com ovos moles e um toque azedo de polpa de ameixa. Uma combinação perfeitamente equilibrada.</p>
                         </div>
 
                         <div class="card-size-options-selector-container">
@@ -1271,7 +1271,7 @@
 
                         <!-- Essa informação só é mostrada quando o tamanho for selecionado, "size-selected"-->
                         <div class="card-info-row weight-info is-hidden">
-                            <p class="product-info">Aproximadamente 1.5 à 2 quilos</p>
+                            <p class="product-info normal-font-style">Aproximadamente 1.5 à 2 quilos</p>
                         </div>
 
                         <div class="card-price-button">
@@ -1291,7 +1291,7 @@
                         </div>
 
                         <div class="card-info-row flavor-info">
-                            <p class="product-info">Uma homenagem à nossa praia, esta torta equilibra o doce e o sofisticado. Possui uma base macia de bolo de aveia coberta por camadas de creme de coco, o clássico leite condensado cozido e um toque de polpa de ameixa, finalizada com a crocância de um praline de nozes.</p>
+                            <p class="product-info normal-font-style">Uma homenagem à nossa praia, esta torta equilibra o doce e o sofisticado. Possui uma base macia de bolo de aveia coberta por camadas de creme de coco, o clássico leite condensado cozido e um toque de polpa de ameixa, finalizada com a crocância de um praline de nozes.</p>
                         </div>
 
                         <div class="card-size-options-selector-container">
@@ -1304,7 +1304,7 @@
                         </div>
 
                         <div class="card-info-row weight-info is-hidden">
-                            <p class="product-info">Aproximadamente 1.5 à 2 quilos</p>
+                            <p class="product-info normal-font-style">Aproximadamente 1.5 à 2 quilos</p>
                         </div>
 
                         <div class="card-price-button">
@@ -1324,7 +1324,7 @@
                         </div>
 
                         <div class="card-info-row flavor-info">
-                            <p class="product-info"> Morangos frescos e o "bronze" do leite condensado cozido encontram um pão de ló de chocolate macio e nosso chantilly de nata caseiro. Simplesmente irresistível.</p>
+                            <p class="product-info normal-font-style"> Morangos frescos e o "bronze" do leite condensado cozido encontram um pão de ló de chocolate macio e nosso chantilly de nata caseiro. Simplesmente irresistível.</p>
                         </div>
 
                         <div class="card-size-options-selector-container">
@@ -1339,7 +1339,7 @@
                         </div>
 
                         <div class="card-info-row weight-info is-hidden">
-                            <p class="product-info">Aproximadamente 1.5 à 2 quilos</p>
+                            <p class="product-info normal-font-style">Aproximadamente 1.5 à 2 quilos</p>
                         </div>
 
                         <div class="card-price-button">
@@ -1358,7 +1358,7 @@
                         </div>
 
                         <div class="card-info-row flavor-info">
-                            <p class="product-info">Uma combinação generosa de sabores sobre um pão de ló mesclado (branco e preto). Desfrute das camadas de ovos moles artesanais, doce de leite, polpa de ameixa e um delicioso creme de leite condensado com coco.</p>
+                            <p class="product-info normal-font-style">Uma combinação generosa de sabores sobre um pão de ló mesclado (branco e preto). Desfrute das camadas de ovos moles artesanais, doce de leite, polpa de ameixa e um delicioso creme de leite condensado com coco.</p>
                         </div>
 
                         <div class="card-size-options-selector-container">
@@ -1373,7 +1373,7 @@
                         </div>
 
                         <div class="card-info-row weight-info is-hidden">
-                            <p class="product-info">Aproximadamente 1.5 à 2 quilos</p>
+                            <p class="product-info normal-font-style">Aproximadamente 1.5 à 2 quilos</p>
                         </div>
 
                         <div class="card-price-button">
@@ -1393,7 +1393,7 @@
                         </div>
 
                         <div class="card-info-row flavor-info">
-                            <p class="product-info">Uma sobremesa leve e refrescante. Combina morangos frescos, nosso chantilly artesanal de nata e pedaços crocantes de merengão, tudo sobre uma base macia de pão de ló de chocolate branco.</p>
+                            <p class="product-info normal-font-style">Uma sobremesa leve e refrescante. Combina morangos frescos, nosso chantilly artesanal de nata e pedaços crocantes de merengão, tudo sobre uma base macia de pão de ló de chocolate branco.</p>
                         </div>
 
                         <div class="card-size-options-selector-container">
@@ -1408,7 +1408,7 @@
                         </div>
 
                         <div class="card-info-row weight-info is-hidden">
-                            <p class="product-info">Aproximadamente 1.5 à 2 quilos</p>
+                            <p class="product-info normal-font-style">Aproximadamente 1.5 à 2 quilos</p>
                         </div>
 
                         <div class="card-price-button">
@@ -1435,7 +1435,7 @@
                         </div>
 
                         <div class="card-info-row flavor-info">
-                            <p class="product-info">Intensidade e crocância. Esta torta une um pão de ló de chocolate preto, o recheio cremoso de leite condensado cozido e a textura única das nozes caramelizadas feitas aqui na casa.</p>
+                            <p class="product-info normal-font-style">Intensidade e crocância. Esta torta une um pão de ló de chocolate preto, o recheio cremoso de leite condensado cozido e a textura única das nozes caramelizadas feitas aqui na casa.</p>
                         </div>
 
                        <div class="card-size-options-selector-container is-hidden">
@@ -1450,7 +1450,7 @@
                         </div>
 
                         <div class="card-info-row weight-info is-hidden">
-                            <p class="product-info">Peso conforme o tamanho selecionado</p>
+                            <p class="product-info normal-font-style">Peso conforme o tamanho selecionado</p>
                         </div>
 
                         <div class="card-price-button">
@@ -1481,7 +1481,7 @@
                         </div>
 
                         <div class="card-info-row flavor-info">
-                            <p class="product-info">Leve e refrescante. Pão de ló de chocolate branco recheado com abacaxi fresco, ovos moles artesanais, chantilly de nata, e finalizado com a textura única do merengão e de um macron de coco.</p>
+                            <p class="product-info normal-font-style">Leve e refrescante. Pão de ló de chocolate branco recheado com abacaxi fresco, ovos moles artesanais, chantilly de nata, e finalizado com a textura única do merengão e de um macron de coco.</p>
                         </div>
 
                        <div class="card-size-options-selector-container is-hidden">
@@ -1494,7 +1494,7 @@
                         </div>
 
                         <div class="card-info-row weight-info is-hidden">
-                            <p class="product-info">Peso conforme o tamanho selecionado</p>
+                            <p class="product-info normal-font-style">Peso conforme o tamanho selecionado</p>
                         </div>
 
                         <div class="card-price-button">
@@ -1525,7 +1525,7 @@
                         </div>
 
                         <div class="card-info-row flavor-info">
-                            <p class="product-info">Um ícone de confeitaria, essa torta combina os sabores do Pão de ló preto e branco com recheios de ovos moles, chantilly de nata, e os texturizados merengão e praline de nozes.</p>
+                            <p class="product-info normal-font-style">Um ícone de confeitaria, essa torta combina os sabores do Pão de ló preto e branco com recheios de ovos moles, chantilly de nata, e os texturizados merengão e praline de nozes.</p>
                         </div>
 
                        <div class="card-size-options-selector-container is-hidden">
@@ -1540,7 +1540,7 @@
                         </div>
 
                         <div class="card-info-row weight-info is-hidden">
-                            <p class="product-info">Peso conforme o tamanho selecionado</p>
+                            <p class="product-info normal-font-style">Peso conforme o tamanho selecionado</p>
                         </div>
 
                         <div class="card-price-button">
@@ -1571,7 +1571,7 @@
                         </div>
 
                         <div class="card-info-row flavor-info">
-                            <p class="product-info">A combinação perfeita de chocolate e cremes brancos. Base de pão de ló preto intenso, recheada em camadas com um suave creme de baunilha, mousse branco aerado e generosos pedaços de bombom Ouro Branco.</p>
+                            <p class="product-info normal-font-style">A combinação perfeita de chocolate e cremes brancos. Base de pão de ló preto intenso, recheada em camadas com um suave creme de baunilha, mousse branco aerado e generosos pedaços de bombom Ouro Branco.</p>
                         </div>
 
                        <div class="card-size-options-selector-container is-hidden">
@@ -1586,7 +1586,7 @@
                         </div>
 
                         <div class="card-info-row weight-info is-hidden">
-                            <p class="product-info">Peso conforme o tamanho selecionado</p>
+                            <p class="product-info normal-font-style">Peso conforme o tamanho selecionado</p>
                         </div>
 
                         <div class="card-price-button">
@@ -1617,7 +1617,7 @@
                         </div>
 
                         <div class="card-info-row flavor-info">
-                            <p class="product-info">Uma celebração do chocolate preto. Combina um pão de ló fofinho de chocolate com camadas intercaladas de mousse de chocolate intenso e o nosso clássico brigadeiro caseiro.</p>
+                            <p class="product-info normal-font-style">Uma celebração do chocolate preto. Combina um pão de ló fofinho de chocolate com camadas intercaladas de mousse de chocolate intenso e o nosso clássico brigadeiro caseiro.</p>
                         </div>
 
                         <div class="card-size-options-selector-container is-hidden">
@@ -1632,7 +1632,7 @@
                         </div>
 
                         <div class="card-info-row weight-info is-hidden">
-                            <p class="product-info">Peso conforme o tamanho selecionado</p>
+                            <p class="product-info normal-font-style">Peso conforme o tamanho selecionado</p>
                         </div>
 
                         <!--Card responsável pelos adicionais, é necessário sua seleção para liberar a opção de compra-->
@@ -1671,7 +1671,7 @@
                         </div>
 
                         <div class="card-info-row flavor-info">
-                            <p class="product-info">O encontro do chocolate preto e branco. Pão de ló mesclado recheado com brigadeiro branco, brigadeiro preto e um mousse de brigadeiro aerado. Impossível não se apaixonar.</p>
+                            <p class="product-info normal-font-style">O encontro do chocolate preto e branco. Pão de ló mesclado recheado com brigadeiro branco, brigadeiro preto e um mousse de brigadeiro aerado. Impossível não se apaixonar.</p>
                         </div>
 
                         <div class="card-size-options-selector-container is-hidden">
@@ -1686,7 +1686,7 @@
                         </div>
 
                         <div class="card-info-row weight-info is-hidden">
-                            <p class="product-info">Peso conforme o tamanho selecionado</p>
+                            <p class="product-info normal-font-style">Peso conforme o tamanho selecionado</p>
                         </div>
 
                         <!--Card responsável pelos adicionais, é necessário sua seleção para liberar a opção de compra-->
@@ -1716,7 +1716,7 @@
                         </div>
 
                         <div class="card-info-row weight-info">
-                            <p class="product-info">Perfeito para sua celebração! Este cheesecake de 20cm foi feito para impressionar, servindo 10 a 12 fatias muito generosas</p>
+                            <p class="product-info normal-font-style">Perfeito para sua celebração! Este cheesecake de 20cm foi feito para impressionar, servindo 10 a 12 fatias muito generosas</p>
                         </div>
 
                         <div class="card-flavor-selector-container">
@@ -1728,7 +1728,7 @@
                         </div>
 
                         <div class="card-info-row flavor-info is-hidden">
-                            <p class="product-info"> Descrição do sabor selecionado</p>
+                            <p class="product-info normal-font-style"> Descrição do sabor selecionado</p>
                         </div>
 
                       <div class="card-price-button">
@@ -1748,7 +1748,7 @@
                         </div>
 
                         <div class="card-info-row weight-info">
-                            <p class="product-info">Uma sobremesa sofisticada. Nossa torta baixa de 20 cm combina uma base crocante com um recheio rico. Serve 10 a 12 fatias generosas, ideal para um café ou após o jantar.</p>
+                            <p class="product-info normal-font-style">Uma sobremesa sofisticada. Nossa torta baixa de 20 cm combina uma base crocante com um recheio rico. Serve 10 a 12 fatias generosas, ideal para um café ou após o jantar.</p>
                         </div>
 
 
@@ -1765,7 +1765,7 @@
                         </div>
 
                         <div class="card-info-row flavor-info is-hidden">
-                            <p class="product-info"> Descrição do sabor selecionado</p>
+                            <p class="product-info normal-font-style"> Descrição do sabor selecionado</p>
                         </div>
 
                       <div class="card-price-button">

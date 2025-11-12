@@ -113,7 +113,7 @@ estilos */
     margin: 0 1rem;
     font-weight: bold;
     font-style: normal;
-    font-size: 20px;
+    font-size: 1.2rem;
     -webkit-text-stroke: 0.5px var(--color08);
     color: var(--color08);
 }
@@ -128,6 +128,15 @@ estilos */
     margin-bottom: 1rem;
 }
 
+
+
+.card-actions-container-right{
+    display: grid;
+    grid-template-columns: auto;
+    align-items: end;
+    margin: 0 1rem;
+    margin-bottom: 1rem;
+}
 
 
 .card-size-options-selector-container{
@@ -190,9 +199,18 @@ estilos */
 }
 
 
+
 .card-extra-options-selector-container{
     display: grid;
     margin: 0 1rem;
+}
+
+
+
+.normal-font-style{
+    font-size: 1.2rem;
+    font-weight: normal;
+    font-style: normal;
 }
 
 
@@ -323,156 +341,14 @@ estilos */
 
 
 /*------------------------
-=======CARD-TYPE-02=======
---------------------------
-Nesse card é usado a tag "size-selected", ela permite a exibição interativa das informaçõs do produto.
-Por exemplo, o produto de id="qundim" possui dois tamanhos - MINI e TRADICIONAL - cada um com preços e pesos únicos, os quais a
-exibição é feita através da tag mencionada. Além disso, é tag serve de controle para permitir a adição do produto ao carrinho
-apenas quanto um dos tamanhos for selecionados.
-Por padrão, o card-type-02 conta 5 linhas, sendo elas: card-image-container, card-name-price-container, card-info-row.weight-info,
-card-size-selector e card-actions-container.
-*/
-
-/*-----ENABLE VIEW-----*/
-
-
-
-
-/*------------------------
-=======CARD-TYPE-03=======
---------------------------
-A exibição dos campos nesse card é feito através das tags "size-selected" e "flavor-selected". Ao total o card-type-03 tem
-7 linhas, as quais são: card-image-container, card-name-price-container, card-flavor-selector-container, card-info-row.weight-info,
-card-flavor-selector-container, card-info-row.flavor-info e card-actions-container.
-Lógica de interação: Quando o usuário seleciona o tamanho a tag "size-selected" é injetada e as divs price-measure, 
-card-info-row.weight-info e card-flavor-selector são exibidas. Dessa forma, o usuário consegue escolher o sabor do produto (card-flavor-selector)
-e visualizar o preço e peso unitário conforme o tamanho selecionado (price-measure .card-info-row.weight-info). A seleção do sabor
-injeta a tag "flavor-selected", a qual exibe o seletor de quantidade (card-actions-container .quantity-selector) e o botão de adicionar
-ao carrinho (add-to-cart-button button).
-*/
-
-
-
-/*------------------------
-=======CARD-TYPE-04=======
---------------------------
-Nessa card não há campos omitidos da visualização, apenas desabilitados até a seleção do sabor (card-flavor-selector).
-Quando o sabor é escolhido, a tag "flavor-selected" é injetada, o que permite que o card-actions-container seja clicavel.
-Com isso, o usuário pode escolher a quantidade do produto (quantity-selector) e adicionar ao carrinho (add-to-cart-button).
-Possui 4 linhas, as quais são: card-image-container, card-name-price-container, card-flavor-selector-container e card-actions-container.
-*/
-
-
-
-/*------------------------
-=======CARD-TYPE-05=======
---------------------------
-Nessa card, a seleção do sabor permite a exibição do preço (price-measure), das informações sobre o sabor (card-info-row.flavor-info) e
-a escolha da quantidade deseja (quantity-selector) e posteriormente compra do produto (add-to-cart-button). Todas as informações são
-separadas em 6 linhas, são elas: card-image-container, card-name-price-container, .card-info-row.weight-info, .card-flavor-selector-container, .card-info-row.flavor-info
- e card-actions-container.
-*/
-
-/*------------------------
 =======CARD-TYPE-06=======
---------------------------
-Esse card usa a tag "all-flavor-selected" para permitir a compra do produto.
-O usuário seleciona os dois sabores no "card-flavor-container" e a opção de compra é habilitada.
-Importante, para a compra de duas unidades do produto, é necessário que as ações sejam feitas individualmente, ou seja,
-o usuário monta uma pizza e adiciona ao carrinho, o card renicia a exibição e permite a compra de outra pizza.
-Possu 4 linhas, as quais são: card-image-container, card-name-price-container, card-flavor-selector-container e card-actions-container.
-*/
-
-/*Possiciona o botão de adicionar ao carrinho na extremiadad direita do card*/
-.card-type-06 .card-actions-container{
-    display: grid;
-    grid-template-columns: auto;
-    justify-items: end;
-}
-
-.product-card.card-type-06 .card-flavor-selector-container{
+------------------------*/
+.card-type-06 .card-flavor-selector-container{
     display: grid;
     grid-template-columns: repeat(2,auto);
     gap: 1rem;
 }
 
-.product-card.card-type-06 .card-info-row .product-info{
-    font-size: 1.2rem;
-    font-weight: normal;
-    font-style: normal;
-}
-
-/*------------------------
-=======CARD-TYPE-07=======
---------------------------
-Esse card usa as tags "flavor-selected" e "size-selected" para exibição das linhas, as quais são 7, sendo elas:card-image-container,
-card-name-price-container, .card-flavor-selector-container, .card-info-row.weight-info,  .card-flavor-selector-container, .card-info-row.flavor-info
-e card-actions-container. A seleção do tamanho injeta a tag "size-selected" que exibe o peso (.card-info-row.weight-info) e o seletor do sabor (.card-flavor-selector-contianer).
-A seleção do sabor injeta a tag "flavor-selected", que libere a exibição do preço e unidade de venda (price-measure) e permite a compra do produto ( card-actions-container).
-*/
-
-.card-type-07 .card-actions-container{
-    display: grid;
-    grid-template-columns: auto;
-    justify-items: end;
-}
-
-
-
-/*------------------------
-=======CARD-TYPE-08=======
---------------------------
-Esse card usa a tag "size-selected" para exibição do peso do tamanho selecionado (card-info-row.weight-info) e para habilitação do botão
-de adicionar ao carrinho (add-to-cart-button). Contém 6 linhas, as quais são: .card-image-container, .card-name-price-container, .card-info-row.flavor-info,
-.card-size-options-selectior-container, .card-info-row.weight-info e .card-price-button.
-*/
-
-.card-type-08 .card-info-row.flavor-info .product-info{
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1rem;
-}
-
-/*------------------------
-=======CARD-TYPE-09=======
---------------------------
-Esse card usa as tags "style-selected" e "size-selected" da seguinte forma: "style-selected" é injetada
-a partir da seleção do estilo.
-*/
-
-.card-type-09 .card-info-row.weight-info .product-info,
-.card-type-09 .card-info-row.flavor-info .product-info{
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1rem;
-}
-
-
-/*------------------------
-=======CARD-TYPE-10=======
---------------------------
-*/
-
-.card-type-10 .card-info-row.flavor-info .product-info,
-.card-type-10 .card-info-row.weight-info .product-info{
-    font-weight: normal ;
-    font-style: normal;
-    font-size: 1.2rem;
-
-}
-
-/*------------------------
-=======CARD-TYPE-11=======
---------------------------
-*/
-
-.card-type-11 .card-info-row.flavor-info .product-info,
-.card-type-11 .card-info-row.weight-info .product-info{
-    font-weight: normal ;
-    font-style: normal;
-    font-size: 1.2rem;
-
-}
 
 
 /*===================================================================================================================

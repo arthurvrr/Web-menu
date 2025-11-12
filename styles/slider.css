@@ -84,7 +84,7 @@ SLIDER & SIDE-IMAGE - DESLTOP-VIEW: min-width: 1440px
         width: 65vw;
         max-width: 100%;
         transition: transform ease 1s;
-        align-self: center;
+        
     }
 
     .slider-wrapper:hover{
