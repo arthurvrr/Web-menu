@@ -339,17 +339,12 @@ estilos */
     margin: 0 1rem;
 }
 
-
-/*------------------------
-=======CARD-TYPE-06=======
-------------------------*/
-.card-type-06 .card-flavor-selector-container{
+.card-double-flavor-selector-container{
     display: grid;
     grid-template-columns: repeat(2,auto);
-    gap: 1rem;
+    gap: 1.5rem;
+    margin: 0 1rem;  
 }
-
-
 
 /*===================================================================================================================
                                         Modificações para diferentes dispositivos*/

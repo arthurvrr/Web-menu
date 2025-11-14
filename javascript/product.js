@@ -14,9 +14,10 @@ const menu = [
         name: "BOLINHA DE QUEIJO",
         category: "salgados",
         basePrice: 1.80,
-        image:"",
+        image:"/img/card-images/bolinha-queijo.jpg",
         type: "static-product",
-        description: "Aproximadamente 20 gramas"
+        description: "Aproximadamente 20 gramas",
+        measureUnit: "UN"
     },
 
 
@@ -25,9 +26,10 @@ const menu = [
         name: "COXINHA",
         category: "salgados",
         basePrice: 1.60,
-        image:"",
+        image:"/img/card-images/coxinha-frango.webp",
         type: "static-product",
-        description: "Aproximadamente 20 gramas"
+        description: "Aproximadamente 20 gramas",
+        measureUnit: "UN"
     },
 
 
@@ -36,9 +38,10 @@ const menu = [
         name: "CROQUETE CARNE",
         category: "salgados",
         basePrice: 1.80,
-        image:"",
+        image:"/img/card-images/croquete-de-carne.jpg",
         type: "static-product",
-        description: "Aproximadamente 20 gramas"
+        description: "Aproximadamente 20 gramas",
+        measureUnit: "UN"
     },
 
 
@@ -47,10 +50,10 @@ const menu = [
         name: "ENROLADINHO FRITO",
         category: "salgados",
         basePrice: 1.60,
-        image:"",
+        image:"/img/card-images/enroladinho-frito.jpg",
         type: "static-product",
-        description: "Aproximadamente 20 gramas"
-        
+        description: "Aproximadamente 20 gramas",
+        measureUnit: "UN"
     },
 
 
@@ -59,10 +62,10 @@ const menu = [
         name: "FOLHADINHO DE SALSICHA",
         category: "salgados",
         basePrice: 1.80,
-        image:"",
+        image:"/img/card-images/folhadinho-salsicha.png",
         type: "static-product",
-        description: "Aproximadamente 20 gramas"
-
+        description: "Aproximadamente 20 gramas",
+        measureUnit: "UN"
     },
 
 
@@ -71,9 +74,10 @@ const menu = [
         name: "DOGUINHO",
         category: "salgados",
         basePrice: 1.80,
-        image:"",
+        image:"/img/card-images/doguinho-salsicha.png",
         type: "static-product",
-        description: "Aproximadamente 20 gramas"
+        description: "Aproximadamente 20 gramas",
+        measureUnit: "UN"
     },
 
 
@@ -82,9 +86,10 @@ const menu = [
         name: "PRENSADINHO",
         category: "salgados",
         basePrice: 2.60,
-        image:"",
+        image:"/img/card-images/sanduiche-prensadinho.png",
         type: "static-product",
-        description: "Aproximadamente 40 gramas"
+        description: "Aproximadamente 40 gramas",
+        measureUnit: "UN"
     },
 
 
@@ -93,21 +98,22 @@ const menu = [
         name: "CACHORRO QUENTE",
         category: "salgados",
         basePrice: 2.50,
-        image:"",
+        image:"/img/card-images/cachorro-quente.jpg",
         type: "static-product",
-        description: "Pãozinho fofinho com suculento recheio de salsicha picada ao molho de tomate, temperado com alho, cebola e um toque de salsa. Aprox. 40g por unidade."
+        description: "Pãozinho fofinho com suculento recheio de salsicha picada ao molho de tomate, temperado com alho, cebola e um toque de salsa. Aprox. 40g por unidade.",
+        measureUnit: "UN"
     },
 
     // DATA-INTERACTION = "SIMPLE-FLAVOR-PRODUCT"
-
     {
         id: "risoles",
         name: "RISOLES",
         category: "salgados",
         basePrice: 1.60,
-        image:"",
+        image:"/img/card-images/risoles.png",
         type: "simple-flavor-product",
         description: "Aproximadamente 20 gramas",
+        measureUnit: "UN",
         flavors : [
             {   
                 name: "Carne",
@@ -142,9 +148,10 @@ const menu = [
         name: "PASTEL DE PASTELINA",
         category: "salgados",
         basePrice: 2.00,
-        image:"",
+        image:"/img/card-images/pastel-pastelina.jpg",
         type: "simple-flavor-product", 
         description: "Aproximadamente 20 gramas",
+        measureUnit: "UN",
         flavors : [
             {   
                 name: "Carne",
@@ -163,9 +170,10 @@ const menu = [
         name: "EMPADINHA",
         category: "salgados",
         basePrice: 2.30,
-        image:"",
+        image:"/img/card-images/empadinha-assada.avif",
         type: "simple-flavor-product",
         description: "Aproximadamente 20 gramas",
+        measureUnit: "UN",
         flavors : [
             {   
                 name: "Frango",
@@ -184,9 +192,10 @@ const menu = [
         name: "PASTEL DE FORNO",
         category: "salgados",
         basePrice: 1.80,
-        image:"",
+        image:"/img/card-images/pastelzinho-forno.jpg",
         type: "simple-flavor-product",
         description: "Aproximadamente 20 gramas",
+        measureUnit: "UN",
         flavors : [
             {   
                 name: "Carne",
@@ -216,9 +225,10 @@ const menu = [
         name: "CANAPÉ",
         category: "salgados",
         basePrice: 2.80,
-        image:"",
+        image:"/img/card-images/canape.jpg",
         type: "simple-flavor-product",
         description: "Aproximadamente 20 gramas",
+        measureUnit: "UN",
         flavors : [
             {   
                 name: "Gorgonzola & Nozes",
@@ -239,13 +249,14 @@ const menu = [
     },
 
     {
-        id: "mini-quice",
+        id: "mini-quiche",
         name: "MINI QUICHE",
         category: "salgados",
         basePrice: 2.80,
-        image:"",
+        image:"/img/card-images/mini-quiche.jpg",
         type: "simple-flavor-product",
         description: "Aproximadamente 20 gramas",
+        measureUnit: "UN",
         flavors : [
             {   
                 name: "Frango",
@@ -268,7 +279,7 @@ const menu = [
             },
 
            {
-                name: "Queijox'",
+                name: "Queijo",
                 flavorDescription: ""
             }
 
@@ -281,9 +292,10 @@ const menu = [
         name: "MINI PIZZA",
         category: "salgados",
         basePrice: 2.80,
-        image:"",
+        image:"/img/card-images/mini-pizza.png",
         type: "simple-flavor-product",
         description: "Aproximadamente 50 gramas",
+        measureUnit: "UN",
         flavors : [
             {   
                 name: "Frango",
@@ -307,9 +319,10 @@ const menu = [
         name: "BARQUETE",
         category: "salgados",
         basePrice: 2.80,
-        image:"",
+        image:"/img/card-images/barquete.png",
         type: "simple-flavor-product",
         description: "Aproximadamente 50 gramas",
+        measureUnit: "UN",
         flavors : [
             {   
                 name: "Tomate Seco",
@@ -328,9 +341,10 @@ const menu = [
         id:"mini-hamburguer",
         name: "MINI HAMBURGUER",
         category: "salgados",
-        image:"",
+        image:"/img/card-images/mini-hamburguer.webp",
         type: "simple-flavor-price-product",
         description: "Aproximadamente 90 gramas",
+        measureUnit: "UN",
         flavors : [
             {   
                 name: "Tradicional",
@@ -357,21 +371,22 @@ const menu = [
         id:"torta-quiche",
         name: "TORTA QUICHE",
         category: "salgados",
-        image:"",
-        type: "simple-flavor-price-product",
-
+        type: "double-size-price-product",
+        image: "/img/card-images/quiche-pequeno.jpg",
+        measureUnit: "UN",
         size : [
             {
                 name: "PEQUENO",
                 price: 90.00,
-                weightDescription: "Com 1,1kg, nossa quiche é extremamente bem servida. Rende 6 fatias grandes, perfeitas para compartilhar (ou não!)."
+                weightDescription: "Com ??, nossa quiche é extremamente bem servida. Rende 6 fatias, perfeitas para compartilhar (ou não!).",
+                image:"/img/card-images/quiche-pequeno.jpg",
             },
 
             {
                 name: "GRANDE",
                 price: 140.00,
-                weightDescription: "Com 1,5kg de puro sabor, nossa quiche grande impressiona. Rende 10 fatias generosas, perfeitas para alimentar toda a família ou amigos."
-
+                weightDescription: "Com 1,5kg de puro sabor, nossa quiche grande impressiona. Rende 10 fatias generosas, perfeitas para alimentar toda a família ou amigos.",
+                image:"/img/card-images/quiche-pequeno.jpg",
             }
         ],
         
@@ -394,6 +409,81 @@ const menu = [
     },
 
 
+    // DATA-INTERACTION = "DOUBLE-FLAVOR-PRODUCT"
+    {
+        id: "pizza-pan",
+        name: "PIZZA PAN",
+        type: "double-flavor-product",
+        image: "/img/card-images/pizza-pan.jpg",
+        description: "Pizza Pan quadrada de massa alta e fofinha. São 12 fatias e cerca de 2kg de sabor. Perfeita para dividir, escolha até 2 sabores!" ,
+        basePrice: 59.90,
+        measureUnit: "KG",
+        
+        flavors: [
+            {
+                name:"Calabresa"
+            },
+
+            {
+                name: "Quatro queijos"
+            },
+
+            {
+                name: "Frango & Catupiry"
+            }
+
+        ]
+    },
+
+
+    // DATA-INTERACTION = "DOUBLE-PRICE-SIZE-PRODUCT"
+    {
+        id: "torta-fria",
+        name: "TORTA FRIA",
+        image: "/img/card-images/torta-fria.jpg",
+        type: "double-price-size-product",
+        measureUnit: "KG",
+        size: [
+
+            {
+                name: "INTEIRA",
+                weightDescription:"Pesa aproximadamente 1.5 quilos e serve 10 fatias generosas"
+            },
+
+            {
+                name: "MEIA",
+                weightDescription:"Pesa aproximadamente 700 gramas e serve 6 fatias."
+            }
+
+
+        ],
+
+        flavors : [
+
+            {
+                name: "Frango",
+                flavorDescription:"Pão macio, frango cremoso (maionese e creme de leite), queijo e cenoura. Finalizada com picles, trazendo um toque especial e refrescante.",
+                price: 88.00
+            },
+
+            {
+                name: "Frios",
+                flavorDescription: "Pão macio, presunto e queijo envolvidos em nosso creme suave (maionese e creme de leite) e cenoura. Finalizada com picles, trazendo um toque especial e marcante.",
+                price: 88.00
+            },
+
+            {
+                name: "Atum",
+                flavorDescription: "Pão macio, atum e queijo envolvidos em nosso creme suave (maionese e creme de leite) e cenoura. Finalizada com picles, trazendo um toque especial e marcante",
+                price: 98.00
+            }
+
+
+        ]
+
+    },
+
+
     /*========================================
                     DOCES
     ========================================*/
@@ -405,7 +495,8 @@ const menu = [
         basePrice: 1.70,
         image:"",
         type: "static-product",
-        description: "Aproximadamente 20 gramas"
+        description: "Aproximadamente 20 gramas",
+        measureUnit: "UN"
     },
 
     {
@@ -415,7 +506,8 @@ const menu = [
         basePrice: 1.70,
         image:"",
         type: "static-product",
-        description: "Aproximadamente 20 gramas"
+        description: "Aproximadamente 20 gramas",
+        measureUnit: "UN"
     },
 
 
@@ -426,7 +518,8 @@ const menu = [
         basePrice: 1.70,
         image:"",
         type: "static-product",
-        description: "Aproximadamente 20 gramas"
+        description: "Aproximadamente 20 gramas",
+        measureUnit: "UN"
     },
 
 
@@ -437,7 +530,8 @@ const menu = [
         basePrice: 1.70,
         image:"",
         type: "static-product",
-        description: "Aproximadamente 20 gramas"
+        description: "Aproximadamente 20 gramas",
+        measureUnit: "UN"
     },
 
 
@@ -448,7 +542,8 @@ const menu = [
         basePrice: 1.70,
         image:"",
         type: "static-product",
-        description: "Aproximadamente 20 gramas"
+        description: "Aproximadamente 20 gramas",
+        measureUnit: "UN"
     },
 
 
@@ -459,7 +554,8 @@ const menu = [
         basePrice: 2.00,
         image:"",
         type: "static-product",
-        description: "Aproximadamente 20 gramas"
+        description: "Aproximadamente 20 gramas",
+        measureUnit: "UN"
     },
 
 
@@ -470,18 +566,20 @@ const menu = [
         basePrice: 2.00,
         image:"",
         type: "static-product",
-        description: "Aproximadamente 20 gramas"
+        description: "Aproximadamente 20 gramas",
+        measureUnit: "UN"
     },
 
 
     {
         id: "ninho-nutella",
-        name: "NINHO & NUTELLO",
+        name: "NINHO & NUTELLA",
         category: "doces",
         basePrice: 2.20,
         image:"",
         type: "static-product",
-        description: "Aproximadamente 20 gramas"
+        description: "Aproximadamente 20 gramas",
+        measureUnit: "UN"
     },
 
 
@@ -492,7 +590,8 @@ const menu = [
         basePrice: 2.90,
         image:"",
         type: "static-product",
-        description: "Aproximadamente 20 gramas"
+        description: "Aproximadamente 20 gramas",
+        measureUnit: "UN"
     },
 
 
