@@ -95,7 +95,7 @@
                 <div class="menu-grid"> <!-- Na class "menu-grid" será configurado o display dos cards para a visualizacao mobile, tablet e desktop-->
                     <!--"Product-card" é a classe base e a "card-type-xx" é a classe modificadora, para cada estilo de card-->
                     
-                    <div id= "brigadeiro-preto" class="product-card" data-interaction = "static-product"> 
+                    <div id= "brigadeiro-preto" class="product-card" data-interaction = "staticPriceAndSize"> 
                         <div class="card-image-container">
                             <img src="/img/card-images/brigadeiro-preto01.png" alt="Brigadeiro">
                         </div>
@@ -125,7 +125,7 @@
                         </div>
                     </div>
 
-                    <div id="brigadeiro-branco"  class="product-card" data-interaction="static-product">
+                    <div id="brigadeiro-branco"  class="product-card" data-interaction="staticPriceAndSize">
 
                         <div class="card-image-container">
                             <img src="/img/card-images/brigadeiro-branco.png" alt="Brigadeiro branco">
@@ -157,7 +157,7 @@
                         
                     </div>
 
-                    <div id="beijinho" class="product-card" data-interaction="static-product">
+                    <div id="beijinho" class="product-card" data-interaction="staticPriceAndSize">
                         <div class="card-image-container">
                             <img src="/img/card-images/beijinho-coco.png" alt="Beijinho">
                         </div>
@@ -188,7 +188,7 @@
                         
                     </div>
                     
-                    <div id="docinho-amendoim" class="product-card" data-interaction="static-product">
+                    <div id="docinho-amendoim" class="product-card" data-interaction="staticPriceAndSize">
                         <div class="card-image-container">
                             <img src="/img/card-images/docinho-amendoim.png" alt="Amendoim">
                         </div>
@@ -219,7 +219,7 @@
             
                     </div>
 
-                    <div id="doce-de-leite" class="product-card " data-interaction="static-product">
+                    <div id="doce-de-leite" class="product-card " data-interaction="staticPriceAndSize">
                         <div class="card-image-container">
                             <img src="/img/card-images/doce-de-leite.png" alt="Doce de leite">
                         </div>
@@ -249,7 +249,7 @@
                         </div>
                     </div>
 
-                    <div id="docinho-nozes" class="product-card" data-interaction="static-product">
+                    <div id="docinho-nozes" class="product-card" data-interaction="staticPriceAndSize">
                         <div class="card-image-container">
                             <img src="/img/card-images/brigadeiro-nozes.png" alt="Nozes">
                         </div>
@@ -279,7 +279,7 @@
                         </div>
                     </div>
 
-                    <div id="olho-sogra" class="product-card" data-interaction="static-product">
+                    <div id="olho-sogra" class="product-card" data-interaction="staticPriceAndSize">
                         <div class="card-image-container">
                             <img src="/img/card-images/olho-de-sogra.jpg" alt="Olho de sogra">
                         </div>
@@ -309,7 +309,7 @@
                         </div>
                     </div>
 
-                    <div id="ninho-nutella" class="product-card" data-interaction="static-product">
+                    <div id="ninho-nutella" class="product-card" data-interaction="staticPriceAndSize">
                         <div class="card-image-container">
                             <img src="/img/card-images/leite-ninho-nutell.jpg" alt="Leite Ninho com nutella">
                         </div>
@@ -339,7 +339,7 @@
                         </div>
                     </div>
 
-                    <div id="camafeu-nozes" class="product-card" data-interaction="static-product">
+                    <div id="camafeu-nozes" class="product-card" data-interaction="staticPriceAndSize">
                         <div class="card-image-container">
                             <img src="/img/card-images/camafeu-branco.webp" alt="Camafeu">
                         </div>
@@ -370,7 +370,7 @@
                     </div>
 
                     <!--A card-type-02 necessida o uso de JS para esconder/revelar as informações do produto com base no tamanho selecionado-->
-                    <div id="quindim" class="product-card card-type-02">
+                    <div id="quindim" class="product-card" data-interaction="priceBySize-simpleFlavor">
                         <!-- Container com a imagem do produto, a imagem será modificada conforme o tamanho do produto selecionado-->
                         <div class="card-image-container"><img src="/img/card-images/quindim-mini.webp" alt="Quindim"></div>
 
@@ -413,7 +413,7 @@
                     </div>
 
                     <!--A card-type-03 também requer JS para a progressão interativa da compra do produto-->
-                    <div id="cupcake" class="product-card card-type-03">
+                    <div id="cupcake" class="product-card" data-interaction="priceBySize-multFlavor">
                         <!--Contianer com a imagem do produto-->
                         <div class="card-image-container"><img src="/img/card-images/cupcake-tradicional.webp" alt="Cupcake"></div>
 
@@ -428,6 +428,7 @@
                                 </div>
                             </div>
                         </div>
+
 
                         <!--Container com os botões mini e tradicional, revelam o preço, unidade e peso do produto quando selecionadas-->
                         <div class="card-size-selector-container">
@@ -476,9 +477,9 @@
                 </div>
             </section>
 
-            <section id="salgados-section" class="category-section category-visible">
+            <section id="salgados-section" class="category-section">
                 <div class="menu-grid">
-                    <div id="bolinha-queijo" class="product-card" data-interaction="static-product">
+                    <div id="bolinha-queijo" class="product-card" data-interaction="staticPriceAndSize">
                         <div class="card-image-container"><img src="/img/card-images/bolinha-queijo.jpg"></div>
 
                         <div class="card-name-price-container">
@@ -507,7 +508,7 @@
                         </div>
                     </div>
 
-                    <div id="coxinha-frango" class="product-card" data-interaction="static-product">
+                    <div id="coxinha-frango" class="product-card" data-interaction="staticPriceAndSize">
                         <div class="card-image-container"><img src="/img/card-images/coxinha-frango.webp"></div>
 
                         <div class="card-name-price-container">
@@ -536,7 +537,7 @@
                         </div>
                     </div>
 
-                    <div id="croquete-carne" class="product-card" data-interaction="static-product">
+                    <div id="croquete-carne" class="product-card" data-interaction="staticPriceAndSize">
                         <div class="card-image-container"><img src="/img/card-images/croquete-de-carne.jpg"></div>
 
                         <div class="card-name-price-container">
@@ -565,7 +566,7 @@
                         </div>
                     </div>
 
-                    <div id="enroladinho-frito" class="product-card" data-interaction="static-product">
+                    <div id="enroladinho-frito" class="product-card" data-interaction="staticPriceAndSize">
                         <div class="card-image-container"><img src="/img/card-images/enroladinho-frito.jpg"></div>
 
                         <div class="card-name-price-container">
@@ -594,7 +595,7 @@
                         </div>
                     </div>
 
-                    <div id="folhadinho-salsicha" class="product-card" data-interaction="static-product">
+                    <div id="folhadinho-salsicha" class="product-card" data-interaction="staticPriceAndSize">
                         <div class="card-image-container"><img src="/img/card-images/folhadinho-salsicha.png"></div>
 
                         <div class="card-name-price-container">
@@ -623,7 +624,7 @@
                         </div>
                     </div>
 
-                    <div id="doguinho-salsicha" class="product-card" data-interaction="static-product">
+                    <div id="doguinho-salsicha" class="product-card" data-interaction="staticPriceAndSize">
                         <div class="card-image-container"><img src="/img/card-images/doguinho-salsicha.png"></div>
 
                         <div class="card-name-price-container">
@@ -652,7 +653,7 @@
                         </div>
                     </div>
 
-                    <div id="prensadinho" class="product-card" data-interaction="static-product">
+                    <div id="prensadinho" class="product-card" data-interaction="staticPriceAndSize">
                         <div class="card-image-container"><img src="/img/card-images/sanduiche-prensadinho.png"></div>
 
                         <div class="card-name-price-container">
@@ -679,7 +680,7 @@
                         </div>
                     </div>
 
-                    <div id="cachorro-quente" class="product-card" data-interaction="static-product">
+                    <div id="cachorro-quente" class="product-card" data-interaction="staticPriceAndSize">
                         <div class="card-image-container"><img src="/img/card-images/cachorro-quente.jpg"></div>
 
                         <div class="card-name-price-container">
@@ -708,7 +709,7 @@
 
                     </div>
 
-                    <div id="risoles" class="product-card" data-interaction="simple-flavor-product">
+                    <div id="risoles" class="product-card" data-interaction="simpleFlavorAndSize">
                         <div class="card-image-container"><img src="img/card-images/risoles.png"></div>
 
                         <div class="card-name-price-container">
@@ -754,7 +755,7 @@
                         </div>
                     </div>
 
-                    <div id="pastel-pastelina" class="product-card" data-interaction="simple-flavor-product">
+                    <div id="pastel-pastelina" class="product-card" data-interaction="simpleFlavorAndSize">
                         <div class="card-image-container">
                             <img src="img/card-images/pastel-pastelina.jpg">
                         </div>
@@ -796,7 +797,7 @@
                         </div>
                     </div>
 
-                    <div id="empadinha-assada" class="product-card" data-interaction="simple-flavor-product">
+                    <div id="empadinha-assada" class="product-card" data-interaction="simpleFlavorAndSize">
                         <div class="card-image-container">
                             <img src="img/card-images/empadinha-assada.avif">
                         </div>
@@ -838,7 +839,7 @@
                         </div>
                     </div>
 
-                    <div id="pastel-forno" class="product-card" data-interaction="simple-flavor-product">
+                    <div id="pastel-forno" class="product-card" data-interaction="simpleFlavorAndSize">
                         <div class="card-image-container">
                             <img src="img/card-images/pastelzinho-forno.jpg">
                         </div>
@@ -882,7 +883,7 @@
                         </div>
                     </div>
 
-                    <div id="canape" class="product-card" data-interaction="simple-flavor-product">
+                    <div id="canape" class="product-card" data-interaction="simpleFlavorAndSize">
                         <div class="card-image-container">
                             <img src="img/card-images/canape.jpg">
                         </div>
@@ -925,7 +926,7 @@
                         </div>
                     </div>
 
-                    <div id="mini-pizza" class="product-card" data-interaction="simple-flavor-product">
+                    <div id="mini-pizza" class="product-card" data-interaction="simpleFlavorAndSize">
                         <div class="card-image-container">
                             <img src="/img/card-images/mini-pizza.png" alt="Mini Pizza">
                         </div>
@@ -972,7 +973,7 @@
 
                     </div>
 
-                    <div id="mini-quiche" class="product-card" data-interaction="simple-flavor-product">
+                    <div id="mini-quiche" class="product-card" data-interaction="simpleFlavorAndSize">
                         <div class="card-image-container">
                             <img src="/img/card-images/mini-quiche.jpg" alt="Mini Quiche">
                         </div>
@@ -1018,7 +1019,7 @@
 
                     </div>
 
-                    <div id="barquete" class="product-card" data-interaction="simple-flavor-product">
+                    <div id="barquete" class="product-card" data-interaction="simpleFlavorAndSize">
                         <div class="card-image-container">
                             <img src="/img/card-images/barquete.png" alt="Barquete">
                         </div>
@@ -1062,7 +1063,7 @@
 
                     </div>
 
-                    <div id="mini-hamburguer" class="product-card" data-interaction="simple-flavor-price-product">
+                    <div id="mini-hamburguer" class="product-card" data-interaction="priceByFlavor-doubleSize">
                         <div class="card-image-container">
                             <img src="/img/card-images/mini-hamburguer.webp">
                         </div>
@@ -1107,7 +1108,7 @@
 
                     </div>
 
-                    <div id="torta-quiche" class="product-card" data-interaction="double-size-price-product">
+                    <div id="torta-quiche" class="product-card" data-interaction="priceBySize-MultFlavor">
 
                         <div class="card-image-container"><img src="/img/card-images/quiche-pequeno.jpg" alt="Torta Quiche"></div>
 
@@ -1156,7 +1157,7 @@
 
                     </div>
 
-                    <div id="pizza-pan" class="product-card" data-interaction="doble-flavor-product">
+                    <div id="pizza-pan" class="product-card" data-interaction="simpleSizeAndPrice-doubleFlavor">
                         <div class="card-image-container"> <img src="/img/card-images/pizza-pan.jpg" alt="Pizza pan"></div>
 
                         <div class="card-name-price-container">
@@ -1197,7 +1198,7 @@
 
                     </div>
 
-                    <div id="torta-fria" class="product-card" data-interaction="double-price-size-product">
+                    <div id="torta-fria" class="product-card" data-interaction="priceByFlavor-doubleSize">
                         <div class="card-image-container"> <img src="img/card-images/torta-fria.jpg" alt="Torta Fria"></div>
 
                         <div class="card-name-price-container">
@@ -1244,7 +1245,7 @@
                 </div>
             </section>
 
-            <section id="tortas-section" class="category-section">
+            <section id="tortas-section" class="category-section category-visible">
                 <div class="menu-grid">
 
                     <div id="torta-macron" class="product-card card-type-08">

@@ -8,14 +8,14 @@ const menu = [
 /*========================================
                 SALGADOS
  ========================================*/
-    // DATA-INTERACTION = "STATIC-PRODUCT"
+    // DATA-INTERACTION = "staticPriceAndSize"
     {
         id: "bolinha-queijo",
         name: "BOLINHA DE QUEIJO",
         category: "salgados",
         basePrice: 1.80,
         image:"/img/card-images/bolinha-queijo.jpg",
-        type: "static-product",
+        type: "staticPriceAndSize",
         description: "Aproximadamente 20 gramas",
         measureUnit: "UN"
     },
@@ -27,7 +27,7 @@ const menu = [
         category: "salgados",
         basePrice: 1.60,
         image:"/img/card-images/coxinha-frango.webp",
-        type: "static-product",
+        type: "staticPriceAndSize",
         description: "Aproximadamente 20 gramas",
         measureUnit: "UN"
     },
@@ -39,7 +39,7 @@ const menu = [
         category: "salgados",
         basePrice: 1.80,
         image:"/img/card-images/croquete-de-carne.jpg",
-        type: "static-product",
+        type: "staticPriceAndSize",
         description: "Aproximadamente 20 gramas",
         measureUnit: "UN"
     },
@@ -51,7 +51,7 @@ const menu = [
         category: "salgados",
         basePrice: 1.60,
         image:"/img/card-images/enroladinho-frito.jpg",
-        type: "static-product",
+        type: "staticPriceAndSize",
         description: "Aproximadamente 20 gramas",
         measureUnit: "UN"
     },
@@ -63,7 +63,7 @@ const menu = [
         category: "salgados",
         basePrice: 1.80,
         image:"/img/card-images/folhadinho-salsicha.png",
-        type: "static-product",
+        type: "staticPriceAndSize",
         description: "Aproximadamente 20 gramas",
         measureUnit: "UN"
     },
@@ -75,7 +75,7 @@ const menu = [
         category: "salgados",
         basePrice: 1.80,
         image:"/img/card-images/doguinho-salsicha.png",
-        type: "static-product",
+        type: "staticPriceAndSize",
         description: "Aproximadamente 20 gramas",
         measureUnit: "UN"
     },
@@ -87,7 +87,7 @@ const menu = [
         category: "salgados",
         basePrice: 2.60,
         image:"/img/card-images/sanduiche-prensadinho.png",
-        type: "static-product",
+        type: "staticPriceAndSize",
         description: "Aproximadamente 40 gramas",
         measureUnit: "UN"
     },
@@ -99,19 +99,19 @@ const menu = [
         category: "salgados",
         basePrice: 2.50,
         image:"/img/card-images/cachorro-quente.jpg",
-        type: "static-product",
+        type: "staticPriceAndSize",
         description: "Pãozinho fofinho com suculento recheio de salsicha picada ao molho de tomate, temperado com alho, cebola e um toque de salsa. Aprox. 40g por unidade.",
         measureUnit: "UN"
     },
 
-    // DATA-INTERACTION = "SIMPLE-FLAVOR-PRODUCT"
+    // DATA-INTERACTION = "simpleFlavorAndSize"
     {
         id: "risoles",
         name: "RISOLES",
         category: "salgados",
         basePrice: 1.60,
         image:"/img/card-images/risoles.png",
-        type: "simple-flavor-product",
+        type: "simpleFlavorAndSize",
         description: "Aproximadamente 20 gramas",
         measureUnit: "UN",
         flavors : [
@@ -149,7 +149,7 @@ const menu = [
         category: "salgados",
         basePrice: 2.00,
         image:"/img/card-images/pastel-pastelina.jpg",
-        type: "simple-flavor-product", 
+        type: "simpleFlavorAndSize",
         description: "Aproximadamente 20 gramas",
         measureUnit: "UN",
         flavors : [
@@ -171,7 +171,7 @@ const menu = [
         category: "salgados",
         basePrice: 2.30,
         image:"/img/card-images/empadinha-assada.avif",
-        type: "simple-flavor-product",
+        type: "simpleFlavorAndSize",
         description: "Aproximadamente 20 gramas",
         measureUnit: "UN",
         flavors : [
@@ -193,7 +193,7 @@ const menu = [
         category: "salgados",
         basePrice: 1.80,
         image:"/img/card-images/pastelzinho-forno.jpg",
-        type: "simple-flavor-product",
+        type: "simpleFlavorAndSize",
         description: "Aproximadamente 20 gramas",
         measureUnit: "UN",
         flavors : [
@@ -226,7 +226,7 @@ const menu = [
         category: "salgados",
         basePrice: 2.80,
         image:"/img/card-images/canape.jpg",
-        type: "simple-flavor-product",
+        type: "simpleFlavorAndSize",
         description: "Aproximadamente 20 gramas",
         measureUnit: "UN",
         flavors : [
@@ -254,7 +254,7 @@ const menu = [
         category: "salgados",
         basePrice: 2.80,
         image:"/img/card-images/mini-quiche.jpg",
-        type: "simple-flavor-product",
+        type: "simpleFlavorAndSize",
         description: "Aproximadamente 20 gramas",
         measureUnit: "UN",
         flavors : [
@@ -293,7 +293,7 @@ const menu = [
         category: "salgados",
         basePrice: 2.80,
         image:"/img/card-images/mini-pizza.png",
-        type: "simple-flavor-product",
+        type: "simpleFlavorAndSize",
         description: "Aproximadamente 50 gramas",
         measureUnit: "UN",
         flavors : [
@@ -320,7 +320,7 @@ const menu = [
         category: "salgados",
         basePrice: 2.80,
         image:"/img/card-images/barquete.png",
-        type: "simple-flavor-product",
+        type: "simpleFlavorAndSize",
         description: "Aproximadamente 50 gramas",
         measureUnit: "UN",
         flavors : [
@@ -336,13 +336,38 @@ const menu = [
         ]
     },
 
-    // DATA-INTERACTION = "SIMPLE-FLAVOR-PRICE-PRODUCT"
+
+    // DATA-INTERACTION = "priceBySize-simpleFlavor"
+    {
+        id: "quindim",
+        name: "QUINDIM",
+        type: "priceBySize-simpleFlavor",
+        measureUnit: "UN",
+        category: "salgado",
+        size:[
+            {   
+                name: "MINI",
+                weightDescription: "",
+                price: 2.90,
+                image: "/img/card-images/quindim-mini.webp"
+            },
+
+            {
+                name: "TRADICIONAL",
+                weightDescription: "",
+                price: 4.50,
+                image: "/img/card-images/quindim-tradicional.jpg"
+            }
+        ]
+    },
+
+    // DATA-INTERACTION = "priceByFlavor-doubleSize"
     {
         id:"mini-hamburguer",
         name: "MINI HAMBURGUER",
         category: "salgados",
         image:"/img/card-images/mini-hamburguer.webp",
-        type: "simple-flavor-price-product",
+        type: "priceByFlavor-doubleSize",
         description: "Aproximadamente 90 gramas",
         measureUnit: "UN",
         flavors : [
@@ -366,12 +391,12 @@ const menu = [
         ]
     },
 
-    // DATA-INTERACTION = "DOUBLE-SIZE-PRICE-PRODUCT"
+    // DATA-INTERACTION = "priceBySize-MultFlavor"
     {
         id:"torta-quiche",
         name: "TORTA QUICHE",
         category: "salgados",
-        type: "double-size-price-product",
+        type: "priceBySize-MultFlavor",
         image: "/img/card-images/quiche-pequeno.jpg",
         measureUnit: "UN",
         size : [
@@ -409,11 +434,11 @@ const menu = [
     },
 
 
-    // DATA-INTERACTION = "DOUBLE-FLAVOR-PRODUCT"
+    // DATA-INTERACTION = "simpleSizeAndPrice-doubleFlavor"
     {
         id: "pizza-pan",
         name: "PIZZA PAN",
-        type: "double-flavor-product",
+        type: "simpleSizeAndPrice-doubleFlavor",
         image: "/img/card-images/pizza-pan.jpg",
         description: "Pizza Pan quadrada de massa alta e fofinha. São 12 fatias e cerca de 2kg de sabor. Perfeita para dividir, escolha até 2 sabores!" ,
         basePrice: 59.90,
@@ -436,12 +461,12 @@ const menu = [
     },
 
 
-    // DATA-INTERACTION = "DOUBLE-PRICE-SIZE-PRODUCT"
+    // DATA-INTERACTION = "priceByFlavor-doubleSize"
     {
         id: "torta-fria",
         name: "TORTA FRIA",
         image: "/img/card-images/torta-fria.jpg",
-        type: "double-price-size-product",
+        type: "priceByFlavor-doubleSize",
         measureUnit: "KG",
         size: [
 
@@ -487,14 +512,14 @@ const menu = [
     /*========================================
                     DOCES
     ========================================*/
-    // DATA-INTERACTION = "STATIC-PRODUCT"
+    // DATA-INTERACTION = "staticPriceAndSize"
     {
         id: "brigadeiro-preto",
         name: "BRIGADEIRO",
         category: "doces",
         basePrice: 1.70,
         image:"",
-        type: "static-product",
+        type: "staticPriceAndSize",
         description: "Aproximadamente 20 gramas",
         measureUnit: "UN"
     },
@@ -505,7 +530,7 @@ const menu = [
         category: "doces",
         basePrice: 1.70,
         image:"",
-        type: "static-product",
+        type: "staticPriceAndSize",
         description: "Aproximadamente 20 gramas",
         measureUnit: "UN"
     },
@@ -517,7 +542,7 @@ const menu = [
         category: "doces",
         basePrice: 1.70,
         image:"",
-        type: "static-product",
+        type: "staticPriceAndSize",
         description: "Aproximadamente 20 gramas",
         measureUnit: "UN"
     },
@@ -529,7 +554,7 @@ const menu = [
         category: "doces",
         basePrice: 1.70,
         image:"",
-        type: "static-product",
+        type: "staticPriceAndSize",
         description: "Aproximadamente 20 gramas",
         measureUnit: "UN"
     },
@@ -541,7 +566,7 @@ const menu = [
         category: "doces",
         basePrice: 1.70,
         image:"",
-        type: "static-product",
+        type: "staticPriceAndSize",
         description: "Aproximadamente 20 gramas",
         measureUnit: "UN"
     },
@@ -553,7 +578,7 @@ const menu = [
         category: "doces",
         basePrice: 2.00,
         image:"",
-        type: "static-product",
+        type: "staticPriceAndSize",
         description: "Aproximadamente 20 gramas",
         measureUnit: "UN"
     },
@@ -565,7 +590,7 @@ const menu = [
         category: "doces",
         basePrice: 2.00,
         image:"",
-        type: "static-product",
+        type: "staticPriceAndSize",
         description: "Aproximadamente 20 gramas",
         measureUnit: "UN"
     },
@@ -577,7 +602,7 @@ const menu = [
         category: "doces",
         basePrice: 2.20,
         image:"",
-        type: "static-product",
+        type: "staticPriceAndSize",
         description: "Aproximadamente 20 gramas",
         measureUnit: "UN"
     },
@@ -589,17 +614,90 @@ const menu = [
         category: "doces",
         basePrice: 2.90,
         image:"",
-        type: "static-product",
+        type: "staticPriceAndSize",
         description: "Aproximadamente 20 gramas",
         measureUnit: "UN"
     },
 
+    // DATA-INTERACTION = "priceBySize-multFlavor"
+    {
+        id: "cupcake",
+        name: "CUPCAKE",
+        image: "/img/card-images/cupcake-tradicional.webp",
+        type: "priceBySize-multFlavor",
+        measureUnit: "UN",
+        size: [
+
+            {
+                name: "MINI",
+                weightDescription:"Pesa aproximadamente TANTAS GRAMAS",
+                price: 88.00
+            },
+
+            {
+                name: "TRADICIONAL",
+                weightDescription:"Pesa aproximadamente TANTAS GRAMAS",
+                price: 88.00
+            }
 
 
-    
+        ],
 
+        flavors : [
 
+            {
+                name: "Frango",
+                flavorDescription:"Pão macio, frango cremoso (maionese e creme de leite), queijo e cenoura. Finalizada com picles, trazendo um toque especial e refrescante.",
+                price: 88.00
+            },
 
+            {
+                name: "Frios",
+                flavorDescription: "Pão macio, presunto e queijo envolvidos em nosso creme suave (maionese e creme de leite) e cenoura. Finalizada com picles, trazendo um toque especial e marcante.",
+                price: 88.00
+            },
+
+            {
+                name: "Atum",
+                flavorDescription: "Pão macio, atum e queijo envolvidos em nosso creme suave (maionese e creme de leite) e cenoura. Finalizada com picles, trazendo um toque especial e marcante",
+                price: 98.00
+            }
+        ]
+    },
+
+    /*========================================
+                    TORTAS
+    ========================================*/
+    //DATA-INTERACTION: "staticStyleAndPrice-multSize"
+
+    {
+        id:"torta-macron",
+        name: "TORTA MACRON",
+        measureUnit: "KG",
+        type: "staticStyleAndPrice-multSize",
+        image: "/img/card-images/bolo-macron.png",
+        price: 79.90,
+        flavorDescription:"Base de bolo macron de coco queimado, recheada com ovos moles e um toque azedo de polpa de ameixa. Uma combinação perfeitamente equilibrada.",
+        
+        size: [
+            {
+                name: "Mini",
+                weightDescription: "",
+            },
+
+            {
+                name: "Pequena",
+                weightDescription: "",
+            },
+
+            {
+                name: "Média",
+                weightDescription: "",
+            },
+
+        ]
+
+    }
 
 
 
