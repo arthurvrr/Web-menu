@@ -1200,7 +1200,7 @@ const menu = [
 
             {
                 name:"NAKED",
-                image: ""
+                image: "/img/card-images/torta-dois-amores-naked.png"
             }
         ],
 
@@ -1244,9 +1244,90 @@ const menu = [
                 displayPrice: "Consulte valores"
             }
         ]
-    }
+    },
 
 
+    //DATA-INTERACTION: "staticPriceAndSize-multFlavor"
+    { 
+        id: "chessecake",
+        name: "CHEESECAKE",
+        description:"Perfeito para sua celebração! Este cheesecake de 20cm foi feito para impressionar, servindo 10 a 12 fatias muito generosas",
+        type: "staticPriceAndSize-multFlavor",
+        measureUnit: "UN",
+        price: 159.00,
+        displayPrice: 159.00,
+        image:"/img/card-images/cheesecake-goiabada.jpg",
+        isSummable: true,
+
+        flavors : [
+            {
+                name:"Frutas vermelhas",
+                flavorDescription: "Equilíbrio perfeito entre o doce e o cítrico! Base de massa frola, creme suave de cream cheese e uma cobertura vibrante de framboesa, morango e amora.",
+                image:"/img/card-images/cheesecake-frutas-vermelhas.webp"
+            },
+
+            {
+                name: "Goiabada",
+                flavorDescription: "O encontro perfeito do queijo com a goiabada. Base de massa frola, creme de cream cheese suave e cobertura generosa de goiabada.",
+                image: "/img/card-images/cheesecake-goiabada.jpg",
+            }
+
+        ]
+    },
+
+    { 
+        id: "torta-baixa",
+        name: "TORTA BAIXA",
+        description:"Uma sobremesa sofisticada. Nossa torta baixa de 20 cm combina uma base crocante com um recheio rico. Serve 10 a 12 fatias generosas, ideal para um café ou após o jantar.",
+        type: "staticPriceAndSize-multFlavor",
+        measureUnit: "UN",
+        price: 149.00,
+        displayPrice: 149.00,
+        image:"/img/card-images/cheesecake-goiabada.jpg",
+        isSummable: true,
+
+        flavors : [
+            {
+                name:"Holandesa",
+                flavorDescription: "Sofisticação em cada camada: base crocante, biscoitos Calipso na lateral, creme especial de chocolate branco com cream cheese e uma cobertura irresistível de ganache de chocolate.",
+                image:"/img/card-images/torta-baixa-holandesa.jpg"
+            },
+
+            {
+                name: "Três Chocolates",
+                flavorDescription: "O trio perfeito. Base de bolacha, camadas de mousse de chocolate (meio amargo, ao leite e branco) e finalização com ganache de chocolate.",
+                image: "/img/card-images/torta-baixa-3-chocolates.jpg",
+            },
+
+            {
+                name: "Banoffee",
+                flavorDescription: "Doce de leite e banana em perfeita harmonia. Base de bolacha, mousse de doce de leite e o toque final tostado e delicioso da cobertura de glacê maçaricado.",
+                image: "",
+            },
+
+            {
+                name: "Limão",
+                flavorDescription: "Frescor em cada fatia. Base de bolacha, mousse de limão cremoso e o toque final sofisticado do glacê maçaricado.",
+                image: "/img/card-images/torta-baixa-limao.png",
+            },
+
+            {
+                name: "Ninho com morango",
+                flavorDescription: "O clássico perfeito. Base crocante, creme de Ninho, mousse de chocolate, morangos frescos e uma finalização deliciosa com ganache de chocolate.",
+                image: "",
+            },
+
+            
+            {
+                name: "Nozes",
+                flavorDescription: "O encontro do doce de leite com as nozes. Base de bolacha, recheio de doce de leite e mousse, praline de nozes crocante e cobertura de ganache de chocolate.",
+                image: "",
+            },
+
+
+
+        ]
+    },
 
 
 
