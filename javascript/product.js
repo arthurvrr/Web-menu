@@ -1187,7 +1187,7 @@ const menu = [
         name: "TORTA DOIS AMORES",
         measureUnit: "KG",
         type: "priceByExtra-multStyle-multSize",
-        image: "/img/card-images/torta-brigadeiro-tradicional.jpeg",
+        image: "",
         description: "Uma celebração do chocolate preto. Combina um pão de ló fofinho de chocolate com camadas intercaladas de mousse de chocolate intenso e o nosso clássico brigadeiro caseiro.",
         isSummable: false,
 
@@ -1195,7 +1195,7 @@ const menu = [
 
             {
                 name: "TRADICIONAL",
-                image: "/img/card-images/torta-brigadeiro-tradicional.jpeg",
+                image: "",
             },
 
             {
@@ -1249,7 +1249,7 @@ const menu = [
 
     //DATA-INTERACTION: "staticPriceAndSize-multFlavor"
     { 
-        id: "chessecake",
+        id: "cheesecake",
         name: "CHEESECAKE",
         description:"Perfeito para sua celebração! Este cheesecake de 20cm foi feito para impressionar, servindo 10 a 12 fatias muito generosas",
         type: "staticPriceAndSize-multFlavor",
@@ -1285,7 +1285,6 @@ const menu = [
         displayPrice: 149.00,
         image:"/img/card-images/cheesecake-goiabada.jpg",
         isSummable: true,
-
         flavors : [
             {
                 name:"Holandesa",

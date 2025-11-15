@@ -23,20 +23,21 @@
 }
 
 .main-menu li a{
-    padding: 5px;
+    padding: 0.5rem;
     text-decoration: none;
 
+    text-align: center;
     font-size: 1.2rem;
     font-weight: bold;
     font-style: normal;
     color: black;
 
-    border-radius: 1rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 1.5rem;
+    transition: background-color 0.6s ease, color 0.3s ease;
 }
 
 .main-menu li a.active-category {
-    background-color: #894e3f;
+    background-color: var(--color03);
     color: white;
 }
 
@@ -47,7 +48,6 @@
 .category-section.category-visible{
     display: block;
 }
-
 
 
 /*===================================================
