@@ -405,16 +405,16 @@ const menu = [
         ]
     },
 
-    // DATA-INTERACTION = "priceBySize-MultFlavor"
+    // DATA-INTERACTION = "priceBySize-multFlavor"
     {
         id:"torta-quiche",
         name: "TORTA QUICHE",
         category: "salgados",
-        type: "priceBySize-MultFlavor",
+        type: "priceBySize-multFlavor",
         image: "/img/card-images/quiche-pequeno.jpg",
         measureUnit: "UN",
         isSummable: true,
-        size : [
+        sizes : [
             {
                 name: "PEQUENO",
                 price: 90.00,
@@ -487,7 +487,7 @@ const menu = [
         type: "priceByFlavor-doubleSize",
         measureUnit: "KG",
         isSummable: false,
-        size: [
+        sizes: [
 
             {
                 name: "INTEIRA",
@@ -667,7 +667,7 @@ const menu = [
         type: "priceBySize-multFlavor",
         measureUnit: "UN",
         isSummable: true,
-        size: [
+        sizes: [
 
             {
                 name: "MINI",
@@ -716,7 +716,7 @@ const menu = [
         category: "doces",
         isSummable: true,
 
-        size:[
+        sizes:[
             {   
                 name: "MINI",
                 weightDescription: "",
@@ -729,7 +729,7 @@ const menu = [
                 name: "TRADICIONAL",
                 weightDescription: "",
                 price: 4.50,
-                displayPrice: 4.90,
+                displayPrice: 4.50,
                 image: "/img/card-images/quindim-tradicional.jpg"
             }
         ]
@@ -750,7 +750,7 @@ const menu = [
         displayPrice: 79.90,
         description:"Base de bolo macron de coco queimado, recheada com ovos moles e um toque azedo de polpa de ameixa. Uma combinação perfeitamente equilibrada.",
         isSummable: false,
-        size: [
+        sizes: [
             {
                 name: "Mini",
                 weightDescription: "",
@@ -781,7 +781,7 @@ const menu = [
         description:"Uma combinação generosa de sabores sobre um pão de ló mesclado (branco e preto). Desfrute das camadas de ovos moles artesanais, doce de leite, polpa de ameixa e um delicioso creme de leite condensado com coco.",
         isSummable: false,
 
-        size: [
+        sizes: [
             {
                 name: "Mini",
                 weightDescription: "",
@@ -819,7 +819,7 @@ const menu = [
         displayPrice: 89.90,
         description:"Uma homenagem à nossa praia, esta torta equilibra o doce e o sofisticado. Possui uma base macia de bolo de aveia coberta por camadas de creme de coco, o clássico leite condensado cozido e um toque de polpa de ameixa, finalizada com a crocância de um praline de nozes.",
         isSummable: false,
-        size: [
+        sizes: [
             {
                 name: "Mini",
                 weightDescription: "",
@@ -848,7 +848,7 @@ const menu = [
         description:"Morangos frescos e o bronze do leite condensado cozido encontram um pão de ló de chocolate macio e nosso chantilly de nata caseiro. Simplesmente irresistível.",
         isSummable: false,
 
-        size: [
+        sizes: [
             {
                 name: "Mini",
                 weightDescription: "",
@@ -887,7 +887,7 @@ const menu = [
         description:"Uma sobremesa leve e refrescante. Combina morangos frescos, nosso chantilly artesanal de nata e pedaços crocantes de merengão, tudo sobre uma base macia de pão de ló de chocolate branco.",
         isSummable: false,
 
-        size: [
+        sizes: [
             {
                 name: "Mini",
                 weightDescription: "",
@@ -915,20 +915,20 @@ const menu = [
         ]
     },
 
-    //DATA-INTERACTION: "doubleStyle-multSize"
+    //DATA-INTERACTION: "staticPrice-multStyle-multSize"
 
     {
         id:"torta-ouro-branco",
         name: "TORTA OURO BRANCO",
         measureUnit: "KG",
-        type: "doubleStyle-multSize",
+        type: "staticPrice-multStyle-multSize",
         price: 79.90,
         displayPrice:79.90,
         image: "/img/card-images/torta-ouro-branco.png",
         description:"A combinação perfeita de chocolate e cremes brancos. Base de pão de ló preto intenso, recheada em camadas com um suave creme de baunilha, mousse branco aerado e generosos pedaços de bombom Ouro Branco.",
         isSummable: false,
 
-        style: [
+        styles: [
 
             {
                 name: "TRADICIONAL",
@@ -941,7 +941,7 @@ const menu = [
             }
         ],
 
-        size: [
+        sizes: [
             {
                 name: "Mini",
                 weightDescription: "",
@@ -962,12 +962,289 @@ const menu = [
                 weightDescription: "",
             },
 
-                        {
+            {
                 name: "Família",
                 weightDescription: "",
             },
         ]
     },
+
+    {
+        id:"torta-nozes",
+        name: "TORTA DE NOZES",
+        measureUnit: "KG",
+        type: "staticPrice-multStyle-multSize",
+        price: 98.00,
+        displayPrice: 98.00,
+        image: "/img/card-images/torta-nozes.png",
+        description: "Intensidade e crocância. Esta torta une um pão de ló de chocolate preto, o recheio cremoso de leite condensado cozido e a textura única das nozes caramelizadas feitas aqui na casa.",
+        isSummable: false,
+
+        styles: [
+
+            {
+                name: "TRADICIONAL",
+                image: "/img/card-images/torta-nozes.png",
+            },
+
+            {
+                name:"NAKED",
+                image: ""
+            }
+        ],
+
+        sizes: [
+            {
+                name: "Mini",
+                weightDescription: "",
+            },
+
+            {
+                name: "Pequena",
+                weightDescription: "",
+            },
+
+            {
+                name: "Média",
+                weightDescription: "",
+            },
+
+            {
+                name: "Grande",
+                weightDescription: "",
+            },
+
+            {
+                name: "Família",
+                weightDescription: "",
+            },
+        ]
+    },
+
+    {
+        id:"torta-tropicalia",
+        name: "TORTA TROPICALIA",
+        measureUnit: "KG",
+        type: "staticPrice-multStyle-multSize",
+        price: 79.90,
+        displayPrice: 79.90,
+        image: "/img/card-images/torta-tropicalia.png",
+        description: "Leve e refrescante. Pão de ló de chocolate branco recheado com abacaxi fresco, ovos moles artesanais, chantilly de nata, e finalizado com a textura única do merengão e de um macron de coco.",
+        isSummable: false,
+
+        styles: [
+
+            {
+                name: "TRADICIONAL",
+                image: "/img/card-images/torta-tropicalia.png",
+            },
+
+            {
+                name:"NAKED",
+                image: "/img/card-images/torta-tropicalia-naked.png"
+            }
+        ],
+
+        sizes: [
+            {
+                name: "Mini",
+                weightDescription: "",
+            },
+
+            {
+                name: "Pequena",
+                weightDescription: "",
+            },
+
+            {
+                name: "Média",
+                weightDescription: "",
+            },
+        ]
+    },
+
+    {
+        id:"torta-marta-rocha",
+        name: "TORTA MARTA ROCHA",
+        measureUnit: "KG",
+        type: "staticPrice-multStyle-multSize",
+        price: 79.90,
+        displayPrice: 79.90,
+        image: "/img/card-images/marta-rocha-tradicional.png",
+        description: "Um ícone de confeitaria, essa torta combina os sabores do Pão de ló preto e branco com recheios de ovos moles, chantilly de nata, e os texturizados merengão e praline de nozes.",
+        isSummable: false,
+
+        styles: [
+
+            {
+                name: "TRADICIONAL",
+                image: "/img/card-images/marta-rocha-tradicional.png",
+            },
+
+            {
+                name:"NAKED",
+                image: "/img/card-images/torta-marta-rocha-naked.png"
+            }
+        ],
+
+        sizes: [
+            {
+                name: "Mini",
+                weightDescription: "",
+            },
+
+            {
+                name: "Pequena",
+                weightDescription: "",
+            },
+
+            {
+                name: "Média",
+                weightDescription: "",
+            },
+
+            {
+                name: "Grande",
+                weightDescription: "",
+            },
+
+            {
+                name: "Família",
+                weightDescription: "",
+            },
+        ]
+    },
+
+    //DATA-INTERACTION: "priceByExtra-multStyle-multSize"
+
+    {
+        id:"torta-brigadeiro",
+        name: "TORTA BRIGADEIRO",
+        measureUnit: "KG",
+        type: "priceByExtra-multStyle-multSize",
+        image: "/img/card-images/torta-brigadeiro-tradicional.jpeg",
+        description: "Uma celebração do chocolate preto. Combina um pão de ló fofinho de chocolate com camadas intercaladas de mousse de chocolate intenso e o nosso clássico brigadeiro caseiro.",
+        isSummable: false,
+
+        styles: [
+
+            {
+                name: "TRADICIONAL",
+                image: "/img/card-images/torta-brigadeiro-tradicional.jpeg",
+            },
+
+            {
+                name:"NAKED",
+                image: ""
+            }
+        ],
+
+        sizes: [
+            {
+                name: "Mini",
+                weightDescription: "",
+            },
+
+            {
+                name: "Pequena",
+                weightDescription: "",
+            },
+
+            {
+                name: "Média",
+                weightDescription: "",
+            },
+
+            {
+                name: "Grande",
+                weightDescription: "",
+            },
+
+            {
+                name: "Família",
+                weightDescription: "",
+            },
+        ],
+
+        extras: [
+            {
+                name: "Sem adicional",
+                price: 89.90,
+                displayPrice: 89.90                
+            },
+
+            {
+                name: "Morangos",
+                price: 0,
+                displayPrice: "Consulte valores"
+            }
+        ]
+    },
+
+
+    {
+        id:"torta-dois-amores",
+        name: "TORTA DOIS AMORES",
+        measureUnit: "KG",
+        type: "priceByExtra-multStyle-multSize",
+        image: "/img/card-images/torta-brigadeiro-tradicional.jpeg",
+        description: "Uma celebração do chocolate preto. Combina um pão de ló fofinho de chocolate com camadas intercaladas de mousse de chocolate intenso e o nosso clássico brigadeiro caseiro.",
+        isSummable: false,
+
+        styles: [
+
+            {
+                name: "TRADICIONAL",
+                image: "/img/card-images/torta-brigadeiro-tradicional.jpeg",
+            },
+
+            {
+                name:"NAKED",
+                image: ""
+            }
+        ],
+
+        sizes: [
+            {
+                name: "Mini",
+                weightDescription: "",
+            },
+
+            {
+                name: "Pequena",
+                weightDescription: "",
+            },
+
+            {
+                name: "Média",
+                weightDescription: "",
+            },
+
+            {
+                name: "Grande",
+                weightDescription: "",
+            },
+
+            {
+                name: "Família",
+                weightDescription: "",
+            },
+        ],
+
+        extras: [
+            {
+                name: "Sem adicional",
+                price: 89.90,
+                displayPrice: 89.90                
+            },
+
+            {
+                name: "Morangos",
+                price: 0,
+                displayPrice: "Consulte valores"
+            }
+        ]
+    }
 
 
 
