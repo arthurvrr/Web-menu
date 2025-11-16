@@ -673,14 +673,16 @@ const menu = [
                 name: "MINI",
                 weightDescription:"Pesa aproximadamente TANTAS GRAMAS",
                 price: 4.90,
-                displayPrice: 4.90
+                displayPrice: 4.90,
+                minQuantity: 10,
             },
 
             {
                 name: "TRADICIONAL",
                 weightDescription:"Pesa aproximadamente TANTAS GRAMAS",
                 price: 8.00,
-                displayPrice: 8.00
+                displayPrice: 8.00,
+                minQuantity: 10,
             }
 
 
@@ -715,6 +717,7 @@ const menu = [
         measureUnit: "UN",
         category: "doces",
         isSummable: true,
+        
 
         sizes:[
             {   
@@ -722,7 +725,8 @@ const menu = [
                 weightDescription: "",
                 price: 2.90,
                 displayPrice: 2.90,
-                image: "/img/card-images/quindim-mini.webp"
+                image: "/img/card-images/quindim-mini.webp",
+                minQuantity: 10,
             },
 
             {
@@ -730,7 +734,8 @@ const menu = [
                 weightDescription: "",
                 price: 4.50,
                 displayPrice: 4.50,
-                image: "/img/card-images/quindim-tradicional.jpg"
+                image: "/img/card-images/quindim-tradicional.jpg",
+                minQuantity: 10,
             }
         ]
     },
