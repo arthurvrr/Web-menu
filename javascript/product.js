@@ -1,6 +1,6 @@
 
 
-
+const minQuantity = 25;
 
 //Menu é um vetor dinâmico que representa os produtos,
 const menu = [

@@ -77,12 +77,57 @@ increaseQuantityButtons.forEach((button) => {
 
 
 });
+function injectQuantityLabel(cardElement,product){
+    const cardQuantityLabel = cardElement.querySelector( '.card-actions-container .quantity-selector .quantity-value');            
+    if(cardQuantityLabel){
+        // Verifica se o campo minQuantity existe no product, se sim, usa ele como valor, se não usa a quantidade mínima padrão minQuantidy.
+        const finalQuantity = product.minQuantity || minQuantity;
+        cardQuantityLabel.innerText = finalQuantity;
+    };
+}
 
+function injectDefaultImage(cardElement, product) {
+    const cardImage = cardElement.querySelector( '.card-image-container img');
+    if( cardImage && product.image){
+        cardImage.src = product.image;
+    };
+}
 
+function injectProductName(cardElement, product){
+     const cardName = cardElement.querySelector('.product-name');
+    if( cardName){
+        cardName.innerText = product.name;
+    };
+}
+
+function injectProductMeasureUnit(cardElement, product){
+    const cardMeasureUnit = cardElement.querySelector('.product-measure');
+    if(cardMeasureUnit){
+    cardMeasureUnit.innerText = product.measureUnit;
+    };
+}
+
+function injectProductPrice(cardElement, product){
+    const cardPrice = cardElement.querySelector( '.product-price');
+
+    if(cardPrice){
+
+        if( typeof product.displayPrice === 'string' ){
+            cardPrice.innerText = product.displayPrice;
+        }else{
+            cardPrice.innerText = `R$ ${product.displayPrice.toFixed(2)}`;
+        }
+    };
+}
+
+function injectProductDescription(cardElement, product){
+    const cardInfo = cardElement.querySelector( '.card-info-row.weight-info .product-info');
+    if(cardInfo){
+        cardInfo.innerText = product.description;
+    };
+}
 
 menu.forEach( (product) => {
-    
-
     //Procura no HTML o elemento com o mesmo ID
     const cardElement = document.getElementById(product.id);
 
@@ -91,17 +136,18 @@ menu.forEach( (product) => {
 
         switch(product.type){
             case "staticPriceAndSize":
-                const cardImage = cardElement.querySelector( '.card-image-container img');
 
-                if( cardImage && product.image){
-                    cardImage.src = prodcut.image;
+                injectDefaultImage(cardElement,product);
 
+                injectProductName(cardElement, product);
+               
+                injectProductMeasureUnit(cardElement,product);
 
-                };
+                injectProductPrice(cardElement, product);
 
+                injectProductDescription(cardElement, product);
 
-
-
+                injectQuantityLabel(cardElement,product);
 
             
             break;
