@@ -90,7 +90,7 @@
             
             <!-- Cada agrupamento de produto será divido em sections-->
             <!-- A exibição dos cards de cada section acontece por meio da tag "category-visible"-->
-            <section id="doces-section" class="category-section">
+            <section id="doces-section" class="category-section category-visible">
                 <!-- A aba do "Doces" do cardápio esta setada com padrão, ou seja começará com a tag "category-visible" -->
                 <div class="menu-grid"> <!-- Na class "menu-grid" será configurado o display dos cards para a visualizacao mobile, tablet e desktop-->
                     <!--"Product-card" é a classe base e a "card-type-xx" é a classe modificadora, para cada estilo de card-->
@@ -372,32 +372,32 @@
                     <!--A card-type-02 necessida o uso de JS para esconder/revelar as informações do produto com base no tamanho selecionado-->
                     <div id="quindim" class="product-card" data-interaction="priceBySize-simpleFlavor">
                         <!-- Container com a imagem do produto, a imagem será modificada conforme o tamanho do produto selecionado-->
-                        <div class="card-image-container"><img src="/img/card-images/quindim-mini.webp" alt="Quindim"></div>
+                        <div class="card-image-container"><img src="" alt="Quindim"></div>
 
                         <!-- Container com o nome, preço e unidade do comercialização e peso do produto.-->
                         <div class="card-name-price-container">
                             <div class="name-price-row">
-                                <h3 class="product-name">QUINDIM</h3>
+                                <h3 class="product-name"></h3>
                                 <!--A class "price-measure só aparecerá quando o tamanho do produto for selecionado - quando product-card tiver a tag "size-selected"-->
                                 <div class="price-measure is-hidden">
                                     <!--O conteudo de "product-price" será alterado conforme o tamanho for selecionado, cada tamanho tem um preço-->
-                                    <span class="product-price">R$2.90</span>
-                                    <span class="product-measure">UN</span>
+                                    <span class="product-price"></span>
+                                    <span class="product-measure"></span>
                                 </div>                
                             </div>
                         </div>
 
                         <!--Essa linha só deve aparecer quando o tamanho for selecionado-->
                         <div class="card-info-row weight-info is-hidden">
-                            <p class="product-info">Aproximadamente 50 gramas</p> 
+                            <p class="product-info"></p> 
                         </div>
                         
                         <!--Container contendo os 2 botões do tamanho do produto, a seleção do tamanho é chave para a progressão interativa do card-->
                         <div class="card-size-selector-container">
                             <!-- A seleção de algum dos tamanhos faz com que o botão seja estilizado - mudando de cor - para sinalizar ao usuário que a opção foi selecionada.
                             Esse controle de estilo é feito através da tag "button-selected", que sinaliza a interação do usuário com o botão-->
-                            <button class="size-button button-selected">MINI</button>
-                            <button class="size-button">TRADICIONAL</button>
+                            <button class="size-button"></button>
+                            <button class="size-button"></button>
                         </div>
 
                         <!--Conteiner com os botão seletor de tamanho e o botão de adicionar ao carrinho, esses só são liberados com a escolha de um tamanho - "size-selected"-->
@@ -415,16 +415,16 @@
                     <!--A card-type-03 também requer JS para a progressão interativa da compra do produto-->
                     <div id="cupcake" class="product-card" data-interaction="priceBySize-multFlavor">
                         <!--Contianer com a imagem do produto-->
-                        <div class="card-image-container"><img src="/img/card-images/cupcake-tradicional.webp" alt="Cupcake"></div>
+                        <div class="card-image-container"><img src="" alt="Cupcake"></div>
 
                         <!-- Container com nome do produto, preço e medida-->
                         <div class="card-name-price-container">
                             <div class="name-price-row">
-                                <h3 class="product-name">CUPCAKE</h3>
+                                <h3 class="product-name"></h3>
                                 <!-- Escondido até a seleção do tamanho-->
                                 <div class="price-measure is-hidden">
-                                    <span class="product-price">R$4.00</span>
-                                    <span class="product-measure">UN</span>
+                                    <span class="product-price"></span>
+                                    <span class="product-measure"></span>
                                 </div>
                             </div>
                         </div>
@@ -434,13 +434,13 @@
                         <div class="card-size-selector-container">
                             <!-- A seleção de algum dos tamanhos faz com que o botão seja estilizado - mudando de cor - para sinalizar ao usuário que a opção foi selecionada.
                             Esse controle de estilo é feito através da tag "button-selected", que sinaliza a interação do usuário com o botão-->
-                            <button class="size-button">MINI</button>
-                            <button class="size-button">TRADICIONAL</button>
+                            <button class="size-button"></button>
+                            <button class="size-button"></button>
                         </div>
 
                         <!-- Container com o descrição do peso do produto selecionado, só é revelado a partir da seleção do tamanho - "size-selected"-->
                         <div class="card-info-row weight-info is-hidden">
-                            <p class="product-info"> Tantas gramas</p>
+                            <p class="product-info"></p>
                         </div>
 
                         <!--Container com o selector box para o sabor do produto, revela a descrição do sabor selecionado e permite selecionar a quantidade e adicionar o produto ao carrinho-->
@@ -480,26 +480,26 @@
             <section id="salgados-section" class="category-section">
                 <div class="menu-grid">
                     <div id="bolinha-queijo" class="product-card" data-interaction="staticPriceAndSize">
-                        <div class="card-image-container"><img src="/img/card-images/bolinha-queijo.jpg"></div>
+                        <div class="card-image-container"><img src=""></div>
 
                         <div class="card-name-price-container">
                             <div class="name-price-row">
-                                <h3 class="product-name">BOLINHA DE QUEIJO</h3>
+                                <h3 class="product-name"></h3>
                                 <div class="price-measure">
-                                    <span class="product-price">R$1.80</span>
-                                    <span class="product-measure">UN</span>
+                                    <span class="product-price"></span>
+                                    <span class="product-measure"></span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="card-info-row weight-info">
-                            <p class="product-info">Aproximadamente 20 gramas</p>
+                            <p class="product-info"></p>
                         </div>
 
                         <div class="card-actions-container">
                             <div class="quantity-selector">
                                 <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
-                                <span class="quantity-value">25</span>
+                                <span class="quantity-value"></span>
                                 <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
                             </div>
 
@@ -799,28 +799,28 @@
 
                     <div id="empadinha-assada" class="product-card" data-interaction="simpleFlavorAndSize">
                         <div class="card-image-container">
-                            <img src="img/card-images/empadinha-assada.avif">
+                            <img src="" alt="Empadinha">
                         </div>
 
                         <div class="card-name-price-container">
                             <div class="name-price-row">
-                                <h3 class="product-name">EMPADINHA</h3>
+                                <h3 class="product-name"></h3>
                                 <div class="price-measure">
-                                    <span class="product-price">R$2.30</span>
-                                    <span class="product-measure">UN</span>
+                                    <span class="product-price"></span>
+                                    <span class="product-measure"></span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="card-info-row weight-info">
-                            <p class="product-info">Aproximadamente 20 gramas</p>
+                            <p class="product-info"></p>
                         </div>
                         
                         <div class="card-flavor-selector-container">
                             <select name="sabor" id="empadinha-assada-flavor" class="flavor-select">
                                 <option value="" disabled selected>SABORES</option>
-                                <option value="frango">Frango</option>
-                                <option value="palmito">Palmito</option>
+                                <option value=""></option>
+                                <option value=""></option>
                             </select>
                         </div>
 
@@ -1245,7 +1245,7 @@
                 </div>
             </section>
 
-            <section id="tortas-section" class="category-section category-visible">
+            <section id="tortas-section" class="category-section">
                 <div class="menu-grid">
 
                     <div id="torta-macron" class="product-card" data-interaction="staticStyleAndPrice-multSize">

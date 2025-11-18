@@ -70,14 +70,17 @@ increaseQuantityButtons.forEach((button) => {
 
         //Busca o elemento que contem a classe .product-card mais próxima.
         const closestProduct = button.closest('.product-card');
-
-        
-
     });
-
-
 });
-function injectQuantityLabel(cardElement,product){
+
+
+
+/*=============================================
+            FUNÇÕES AUXILIARES 
+=============================================*/
+
+
+function injectProductQuantityLabel(cardElement,product){
     const cardQuantityLabel = cardElement.querySelector( '.card-actions-container .quantity-selector .quantity-value');            
     if(cardQuantityLabel){
         // Verifica se o campo minQuantity existe no product, se sim, usa ele como valor, se não usa a quantidade mínima padrão minQuantidy.
@@ -86,12 +89,16 @@ function injectQuantityLabel(cardElement,product){
     };
 }
 
-function injectDefaultImage(cardElement, product) {
+
+
+function injectProductDefaultImage(cardElement, product) {
     const cardImage = cardElement.querySelector( '.card-image-container img');
     if( cardImage && product.image){
         cardImage.src = product.image;
     };
 }
+
+
 
 function injectProductName(cardElement, product){
      const cardName = cardElement.querySelector('.product-name');
@@ -100,12 +107,16 @@ function injectProductName(cardElement, product){
     };
 }
 
+
+
 function injectProductMeasureUnit(cardElement, product){
     const cardMeasureUnit = cardElement.querySelector('.product-measure');
     if(cardMeasureUnit){
     cardMeasureUnit.innerText = product.measureUnit;
     };
 }
+
+
 
 function injectProductPrice(cardElement, product){
     const cardPrice = cardElement.querySelector( '.product-price');
@@ -120,6 +131,8 @@ function injectProductPrice(cardElement, product){
     };
 }
 
+
+
 function injectProductDescription(cardElement, product){
     const cardInfo = cardElement.querySelector( '.card-info-row.weight-info .product-info');
     if(cardInfo){
@@ -127,6 +140,52 @@ function injectProductDescription(cardElement, product){
     };
 }
 
+
+function injectProductSizeButtonLabel(cardElement, product){
+    const cardButtons = cardElement.querySelectorAll('.card-size-selector-container .size-button');
+
+    if(cardButtons){
+
+        //Para cada tamanho disponível no campo sizes do product
+        product.sizes.forEach((size, i) => {
+        
+            //Coloca o botão de indice i encontrado pela querySelector na variavel currentButton.
+            const curretButton = cardButtons[i];
+        
+            //Se o botão existe, então:
+            if(curretButton){
+                //Coloca o nome do tamanho contido no campo name do tamanho.
+                curretButton.innerText = size.name
+                //Atribui um dataSet correspondente ao índice do vetor, por exemplo: <button class="size-button" [data-size-index="i"] >size.name</button>
+                curretButton.dataset.sizeIndex = i;
+            };
+
+        });
+
+    };
+}
+
+function injectProductFlavorOptions(cardElement, product){
+
+    //Pegas as opções de sabores habilitadas (option:enabled).
+    const validOptions = cardElement.querySelectorAll('.card-flavor-selector-container option:enabled');
+    
+    product.flavors.forEach((flavor, i) => {
+
+        const currentFlavor = validOptions[i];
+
+        if(currentFlavor){
+            currentFlavor.innerText = flavor.name;
+            currentFlavor.value = flavor.name;
+        };
+    });
+}
+
+
+
+/*=============================
+        CARD RENDER
+=============================*/
 menu.forEach( (product) => {
     //Procura no HTML o elemento com o mesmo ID
     const cardElement = document.getElementById(product.id);
@@ -136,20 +195,54 @@ menu.forEach( (product) => {
 
         switch(product.type){
             case "staticPriceAndSize":
-
-                injectDefaultImage(cardElement,product);
+                injectProductDefaultImage(cardElement, product);
 
                 injectProductName(cardElement, product);
                
-                injectProductMeasureUnit(cardElement,product);
+                injectProductMeasureUnit(cardElement, product);
 
                 injectProductPrice(cardElement, product);
 
                 injectProductDescription(cardElement, product);
 
-                injectQuantityLabel(cardElement,product);
+                injectProductQuantityLabel(cardElement, product);
 
+                break;
             
+            case "priceBySize-simpleFlavor":
+                injectProductDefaultImage(cardElement, product);
+
+                injectProductName(cardElement, product);
+
+                injectProductQuantityLabel(cardElement, product);
+                
+                injectProductSizeButtonLabel( cardElement,product);
+
+                break;
+            
+            case "priceBySize-multFlavor":
+                injectProductDefaultImage(cardElement,product);
+
+                injectProductName(cardElement, product);
+
+                injectProductQuantityLabel( cardElement, product);
+            
+                injectProductSizeButtonLabel(cardElement, product)
+
+                break;
+
+            case "simpleFlavorAndSize":
+                injectProductDefaultImage(cardElement,product);
+
+                injectProductMeasureUnit(cardElement,product);
+
+                injectProductName(cardElement, product);
+
+                injectProductPrice(cardElement, product);
+
+                injectProductDescription(cardElement, product);
+
+                injectProductFlavorOptions(cardElement,product);
             break;
         }
 

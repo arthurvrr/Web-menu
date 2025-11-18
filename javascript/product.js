@@ -667,6 +667,7 @@ const menu = [
         type: "priceBySize-multFlavor",
         measureUnit: "UN",
         isSummable: true,
+        minQuantity: 10,
         sizes: [
 
             {
@@ -674,7 +675,7 @@ const menu = [
                 weightDescription:"Pesa aproximadamente TANTAS GRAMAS",
                 price: 4.90,
                 displayPrice: 4.90,
-                minQuantity: 10,
+                
             },
 
             {
@@ -682,7 +683,6 @@ const menu = [
                 weightDescription:"Pesa aproximadamente TANTAS GRAMAS",
                 price: 8.00,
                 displayPrice: 8.00,
-                minQuantity: 10,
             }
 
 
@@ -717,7 +717,7 @@ const menu = [
         measureUnit: "UN",
         category: "doces",
         isSummable: true,
-        
+        minQuantity: 10,
 
         sizes:[
             {   
@@ -726,7 +726,7 @@ const menu = [
                 price: 2.90,
                 displayPrice: 2.90,
                 image: "/img/card-images/quindim-mini.webp",
-                minQuantity: 10,
+                
             },
 
             {
@@ -735,7 +735,6 @@ const menu = [
                 price: 4.50,
                 displayPrice: 4.50,
                 image: "/img/card-images/quindim-tradicional.jpg",
-                minQuantity: 10,
             }
         ]
     },
