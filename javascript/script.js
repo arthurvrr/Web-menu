@@ -167,17 +167,25 @@ function injectProductSizeButtonLabel(cardElement, product){
 
 function injectProductFlavorOptions(cardElement, product){
 
-    //Pegas as opções de sabores habilitadas (option:enabled).
-    const validOptions = cardElement.querySelectorAll('.card-flavor-selector-container option:enabled');
     
-    product.flavors.forEach((flavor, i) => {
+    const flavorSelector = cardElement.querySelectorAll('.card-flavor-selector-container .flavor-select');    
+    
+    //
+    flavorSelector.forEach((select) =>{
+        //Forma um array com as option disponíveis dentro do seletor atual.
+        const validOptions = select.querySelectorAll('option:enabled');
 
-        const currentFlavor = validOptions[i];
+        //Para cada sabor no campo sabores do produto, faz:
+        product.flavors.forEach((flavor, i) =>{
+            //Pega o <option> válido.
+            const currentFlavor = validOptions[i];
 
-        if(currentFlavor){
-            currentFlavor.innerText = flavor.name;
-            currentFlavor.value = flavor.name;
-        };
+            if(currentFlavor){
+                currentFlavor.innerText = flavor.name;
+                currentFlavor.value = flavor.name;
+            };
+
+        });
     });
 }
 
@@ -243,7 +251,35 @@ menu.forEach( (product) => {
                 injectProductDescription(cardElement, product);
 
                 injectProductFlavorOptions(cardElement,product);
-            break;
+                break;
+
+            case "priceByFlavor-staticSize":
+                injectProductDefaultImage(cardElement,product);
+
+                injectProductName(cardElement,product);
+
+                injectProductDescription(cardElement,product);
+
+                injectProductFlavorOptions(cardElement, product);
+
+                injectProductQuantityLabel(cardElement,product);
+
+                break;
+
+            case "simpleSizeAndPrice-doubleFlavor":
+                injectProductDefaultImage(cardElement,product);
+
+                injectProductName(cardElement,product);
+
+                injectProductPrice(cardElement,product);
+
+                injectProductMeasureUnit(cardElement,product);
+
+                injectProductDescription(cardElement,product);
+
+                injectProductFlavorOptions(cardElement,product);
+
+                break;
         }
 
 

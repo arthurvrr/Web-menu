@@ -158,6 +158,11 @@ const menu = [
                 flavorDescription: ""
             },
 
+            {
+                name: "Frios",
+                flavorDescription: ""
+            },
+
         ]
     },
 
@@ -381,6 +386,7 @@ const menu = [
         description: "Aproximadamente 90 gramas",
         measureUnit: "UN",
         isSummable: true,
+        minQuantity: 10,
         flavors : [
             {   
                 name: "Tradicional",

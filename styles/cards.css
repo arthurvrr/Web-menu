@@ -339,7 +339,7 @@ estilos */
     margin: 0 1rem;
 }
 
-.card-double-flavor-selector-container{
+.double-flavor{
     display: grid;
     grid-template-columns: repeat(2,auto);
     gap: 1.5rem;
