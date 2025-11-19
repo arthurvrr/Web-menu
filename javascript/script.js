@@ -75,125 +75,15 @@ increaseQuantityButtons.forEach((button) => {
 
 
 
-/*=============================================
-            FUNÇÕES AUXILIARES 
-=============================================*/
 
-
-function injectProductQuantityLabel(cardElement,product){
-    const cardQuantityLabel = cardElement.querySelector( '.card-actions-container .quantity-selector .quantity-value');            
-    if(cardQuantityLabel){
-        // Verifica se o campo minQuantity existe no product, se sim, usa ele como valor, se não usa a quantidade mínima padrão minQuantidy.
-        const finalQuantity = product.minQuantity || minQuantity;
-        cardQuantityLabel.innerText = finalQuantity;
-    };
-}
-
-
-
-function injectProductDefaultImage(cardElement, product) {
-    const cardImage = cardElement.querySelector( '.card-image-container img');
-    if( cardImage && product.image){
-        cardImage.src = product.image;
-    };
-}
-
-
-
-function injectProductName(cardElement, product){
-     const cardName = cardElement.querySelector('.product-name');
-    if( cardName){
-        cardName.innerText = product.name;
-    };
-}
-
-
-
-function injectProductMeasureUnit(cardElement, product){
-    const cardMeasureUnit = cardElement.querySelector('.product-measure');
-    if(cardMeasureUnit){
-    cardMeasureUnit.innerText = product.measureUnit;
-    };
-}
-
-
-
-function injectProductPrice(cardElement, product){
-    const cardPrice = cardElement.querySelector( '.product-price');
-
-    if(cardPrice){
-
-        if( typeof product.displayPrice === 'string' ){
-            cardPrice.innerText = product.displayPrice;
-        }else{
-            cardPrice.innerText = `R$ ${product.displayPrice.toFixed(2)}`;
-        }
-    };
-}
-
-
-
-function injectProductDescription(cardElement, product){
-    const cardInfo = cardElement.querySelector( '.card-info-row.weight-info .product-info');
-    if(cardInfo){
-        cardInfo.innerText = product.description;
-    };
-}
-
-
-function injectProductSizeButtonLabel(cardElement, product){
-    const cardButtons = cardElement.querySelectorAll('.card-size-selector-container .size-button');
-
-    if(cardButtons){
-
-        //Para cada tamanho disponível no campo sizes do product
-        product.sizes.forEach((size, i) => {
-        
-            //Coloca o botão de indice i encontrado pela querySelector na variavel currentButton.
-            const curretButton = cardButtons[i];
-        
-            //Se o botão existe, então:
-            if(curretButton){
-                //Coloca o nome do tamanho contido no campo name do tamanho.
-                curretButton.innerText = size.name
-                //Atribui um dataSet correspondente ao índice do vetor, por exemplo: <button class="size-button" [data-size-index="i"] >size.name</button>
-                curretButton.dataset.sizeIndex = i;
-            };
-
-        });
-
-    };
-}
-
-function injectProductFlavorOptions(cardElement, product){
-
-    
-    const flavorSelector = cardElement.querySelectorAll('.card-flavor-selector-container .flavor-select');    
-    
-    //
-    flavorSelector.forEach((select) =>{
-        //Forma um array com as option disponíveis dentro do seletor atual.
-        const validOptions = select.querySelectorAll('option:enabled');
-
-        //Para cada sabor no campo sabores do produto, faz:
-        product.flavors.forEach((flavor, i) =>{
-            //Pega o <option> válido.
-            const currentFlavor = validOptions[i];
-
-            if(currentFlavor){
-                currentFlavor.innerText = flavor.name;
-                currentFlavor.value = flavor.name;
-            };
-
-        });
-    });
-}
 
 
 
 /*=============================
         CARD RENDER
 =============================*/
+/**/
+
 menu.forEach( (product) => {
     //Procura no HTML o elemento com o mesmo ID
     const cardElement = document.getElementById(product.id);
@@ -280,12 +170,163 @@ menu.forEach( (product) => {
                 injectProductFlavorOptions(cardElement,product);
 
                 break;
-        }
 
+            case "priceByFlavor-doubleSize":
+                injectProductDefaultImage(cardElement,product);
+
+                injectProductName(cardElement,product);
+
+                injectProductSizeButtonLabel(cardElement,product);
+            
+                break;
+
+            case "staticStyleAndPrice-multSize":
+                injectProductDefaultImage(cardElement,product);
+
+                injectProductName(cardElement,product);
+
+                injectProductDescription(cardElement, product);
+
+                injectProductSizeOptions(cardElement,product);
+
+                injectProductPrice(cardElement,product);
+            
+            break;
+        }
+    };
+});
+
+
+
+/*=============================================
+            FUNÇÕES AUXILIARES 
+=============================================*/
+
+
+function injectProductQuantityLabel(cardElement,product){
+    const cardQuantityLabel = cardElement.querySelector( '.card-actions-container .quantity-selector .quantity-value');            
+    if(cardQuantityLabel){
+        // Verifica se o campo minQuantity existe no product, se sim, usa ele como valor, se não usa a quantidade mínima padrão minQuantidy.
+        const finalQuantity = product.minQuantity || minQuantity;
+        cardQuantityLabel.innerText = finalQuantity;
+    };
+}
+
+
+
+function injectProductDefaultImage(cardElement, product) {
+    const cardImage = cardElement.querySelector( '.card-image-container img');
+    if( cardImage && product.image){
+        cardImage.src = product.image;
+    };
+}
+
+
+
+function injectProductName(cardElement, product){
+     const cardName = cardElement.querySelector('.product-name');
+    if( cardName){
+        cardName.innerText = product.name;
+    };
+}
+
+
+
+function injectProductMeasureUnit(cardElement, product){
+    const cardMeasureUnit = cardElement.querySelector('.product-measure');
+    if(cardMeasureUnit){
+    cardMeasureUnit.innerText = product.measureUnit;
+    };
+}
+
+
+
+function injectProductPrice(cardElement, product){
+    const cardPrice = cardElement.querySelector( '.product-price');
+
+    if(cardPrice){
+
+        if( typeof product.displayPrice === 'string' ){
+            cardPrice.innerText = product.displayPrice;
+        }else{
+            cardPrice.innerText = `R$ ${product.displayPrice.toFixed(2)}`;
+        }
+    };
+}
+
+
+
+function injectProductDescription(cardElement, product){
+    const cardInfo = cardElement.querySelector( '.card-info-row .product-info');
+    if(cardInfo){
+        cardInfo.innerText = product.description;
+    };
+}
+
+
+function injectProductSizeButtonLabel(cardElement, product){
+    const cardButtons = cardElement.querySelectorAll('.card-size-selector-container .size-button');
+
+    if(cardButtons){
+
+        //Para cada tamanho disponível no campo sizes do product
+        product.sizes.forEach((size, i) => {
+        
+            //Coloca o botão de indice i encontrado pela querySelector na variavel currentButton.
+            const curretButton = cardButtons[i];
+        
+            //Se o botão existe, então:
+            if(curretButton){
+                //Coloca o nome do tamanho contido no campo name do tamanho.
+                curretButton.innerText = size.name
+                //Atribui um dataSet correspondente ao índice do vetor, por exemplo: <button class="size-button" [data-size-index="i"] >size.name</button>
+                curretButton.dataset.sizeIndex = i;
+            };
+
+        });
 
     };
+}
+
+function injectProductFlavorOptions(cardElement, product){
 
     
+    const flavorSelector = cardElement.querySelectorAll('.card-flavor-selector-container .flavor-select');    
+    
+    //
+    flavorSelector.forEach((select) =>{
+        //Forma um array com as option disponíveis dentro do seletor atual.
+        const validOptions = select.querySelectorAll('option:enabled');
+
+        //Para cada sabor no campo sabores do produto, faz:
+        product.flavors.forEach((flavor, i) =>{
+            //Pega o <option> válido.
+            const currentFlavor = validOptions[i];
+
+            if(currentFlavor){
+                currentFlavor.innerText = flavor.name;
+                currentFlavor.value = flavor.name;
+            };
+        });
+    });
+}
+
+function injectProductSizeOptions(cardElement,product){
+    const sizeSelector = cardElement.querySelectorAll('.card-size-options-selector-container .size-select');
+
+    sizeSelector.forEach((select) => {
+        const validOptions = select.querySelectorAll('option:enabled');
+
+        product.sizes.forEach((size, i) => {
+            const currentSize = validOptions[i];
+
+            if(currentSize){
+                currentSize.innerText = size.name;
+                currentSize.value = size.name;
+            };
+        });
+    });
 
 
-});
+
+}
