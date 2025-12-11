@@ -4,30 +4,30 @@ const menuCategories = document.querySelectorAll(".category-section");
 //Obtem todos os elementos do tipo "<a href="#doces-section">DOCES</a>" e armazena em um array.
 const menuLinks = document.querySelectorAll( ".main-menu a");
 
-//Adicone um "EventeListener" em cada "botão" do menu para monitorar uma ação click.
+/* Adiciona um EventListener que responde ao click e todas as categorias do menu. Quando o usuário click em alguma categoria,
+esta função remove as propriedades "active-category" e "category-visible" de todas as categorias, e por fim ativa as
+propriedades anteriores na categoria selecionada pelo usuário */
+
 menuLinks.forEach((link) => {
     link.addEventListener('click', (event) => {
-        //Elimina o coportamente padrão do navegador
         event.preventDefault();
-
 
         //Dentro do elemento do tipo "<a href="#doces-section">DOCES</a>" busca o que esta em href, no exemplo #doces-section.
         const currentId = link.getAttribute('href');
 
-        //Proocura no HTML uma seção com o mesmo nome que o a variavel de currentID.
-        //No exemplo, ele procura um elemento que tenha o ID = #doces-section
+        /*Proocura no HTML uma seção com  ID de  mesmo nome que a variavel de currentID.
+        No exemplo, ele procura um elemento que tenha o ID = doces-section */
         const targetSection = document.querySelector(currentId);
 
-        //Busca todos os elementos com a propriedade .category-visible
+        /*Busca todos os elementos com a propriedade .category-visible e remove essa propriedade. */
         const visibleCategories = document.querySelectorAll(".category-visible");
-        //Remove a propriedade .category-visible de cada uma.
         visibleCategories.forEach( (category) => {
             category.classList.remove('category-visible')
 
         }) ;
 
+        /*Busca e remove todos os elementos do HTML com a propriedade "active-category.*/
         const activeCategories = document.querySelectorAll(".active-category")
-
         activeCategories.forEach((category) => {
             category.classList.remove("active-category");
 
@@ -82,15 +82,14 @@ increaseQuantityButtons.forEach((button) => {
 /*=============================
         CARD RENDER
 =============================*/
-/**/
+/*Função responsável por transferir as informações de product.js para o HTML, os dados dos produtos estão salvos no
+array "menu" no arquivo "product.js".*/
 
 menu.forEach( (product) => {
-    //Procura no HTML o elemento com o mesmo ID
+    /*Procura o ID do product atual no HTML, o ID é um campo do produto "product.id".*/
     const cardElement = document.getElementById(product.id);
 
     if(cardElement){
-        console.log(cardElement)
-
         switch(product.type){
             case "staticPriceAndSize":
                 injectProductDefaultImage(cardElement, product);
@@ -191,7 +190,24 @@ menu.forEach( (product) => {
 
                 injectProductPrice(cardElement,product);
             
-            break;
+                break;
+
+            case "staticPrice-multStyle-multSize":
+                injectProductDefaultImage(cardElement,product);
+
+                injectProductName(cardElement,product);
+
+                injectProductPrice(cardElement,product);
+
+                injectProductMeasureUnit(cardElement,product);
+
+                injectProductDescription(cardElement,product);
+
+                injectProductStyleButtonLabel(cardElement,product);
+
+                break;
+
+            
         }
     };
 });
@@ -264,6 +280,7 @@ function injectProductDescription(cardElement, product){
 }
 
 
+
 function injectProductSizeButtonLabel(cardElement, product){
     const cardButtons = cardElement.querySelectorAll('.card-size-selector-container .size-button');
 
@@ -288,6 +305,8 @@ function injectProductSizeButtonLabel(cardElement, product){
     };
 }
 
+
+
 function injectProductFlavorOptions(cardElement, product){
 
     
@@ -311,6 +330,8 @@ function injectProductFlavorOptions(cardElement, product){
     });
 }
 
+
+
 function injectProductSizeOptions(cardElement,product){
     const sizeSelector = cardElement.querySelectorAll('.card-size-options-selector-container .size-select');
 
@@ -326,7 +347,16 @@ function injectProductSizeOptions(cardElement,product){
             };
         });
     });
+}
 
 
 
+function injectProductStyleButtonLabel(cardElement,product){
+    const styleSelector = cardElement.querySelectorAll('.card-style-selector-container .style-button');
+
+    styleSelector.forEach((select,i) => {
+        if(select){
+            select.innerText = product.styles[i].name;
+        };
+    });
 }
