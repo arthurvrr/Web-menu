@@ -238,6 +238,32 @@ menu.forEach( (product) => {
 });
 
 
+styleButtons = document.querySelectorAll('.card-style-selector-container .style-button');
+//console.log(styleButtons);
+
+styleButtons.forEach((currentButton) =>{
+    currentButton.addEventListener( 'click', (event) => {
+
+        /*Sobe no DOM procurando o pai do botão atual*/
+        buttonsContainer = currentButton.closest('.card-style-selector-container');
+
+        /*Par de botões que estão dentro de ".card-style-selector-container".*/
+        buttonPair = buttonsContainer.querySelectorAll('.style-button');
+
+
+        /*Remove o "button-select" de todos os botões, inclusive o atual.*/
+        buttonPair.forEach((button) => {
+            if(button.classList.contains('button-selected')){
+                button.classList.remove('button-selected');
+
+            };
+
+        });
+        
+        currentButton.classList.add('button-selected');        
+    });
+});
+
 
 /*=============================================
             FUNÇÕES AUXILIARES 
