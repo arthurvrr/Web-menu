@@ -207,7 +207,32 @@ menu.forEach( (product) => {
 
                 break;
 
+            case "priceByExtra-multStyle-multSize":
+                injectProductDefaultImage(cardElement,product);
+
+                injectProductName(cardElement, product);
+
+                injectProductDescription(cardElement,product);
+
+                injectProductStyleButtonLabel(cardElement,product);
+
+                break;
             
+            case "staticPriceAndSize-multFlavor":
+                    injectProductDefaultImage(cardElement,product);
+                    
+                    injectProductName(cardElement,product);
+
+                    injectProductMeasureUnit(cardElement,product);
+
+                    injectProductPrice(cardElement,product);
+
+                    injectProductDescription(cardElement,product);
+
+                    injectProductFlavorOptions(cardElement,product);
+            
+                break;
+
         }
     };
 });
@@ -232,8 +257,10 @@ function injectProductQuantityLabel(cardElement,product){
 
 function injectProductDefaultImage(cardElement, product) {
     const cardImage = cardElement.querySelector( '.card-image-container img');
-    if( cardImage && product.image){
+
+    if(cardImage && product.image){
         cardImage.src = product.image;
+        cardImage.alt = product.alt;
     };
 }
 
@@ -241,7 +268,7 @@ function injectProductDefaultImage(cardElement, product) {
 
 function injectProductName(cardElement, product){
      const cardName = cardElement.querySelector('.product-name');
-    if( cardName){
+    if(cardName){
         cardName.innerText = product.name;
     };
 }
