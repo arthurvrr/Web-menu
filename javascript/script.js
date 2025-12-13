@@ -259,14 +259,15 @@ function reactToButtonInteraction(classContainerName, ClassButtonName){
 
                 if( classContainerName === '.card-style-selector-container' && ClassButtonName === '.style-button'){
 
+                
                     const parentElement = currentClass.parentElement;
                     
                     const sizeOptionsContainer = parentElement.querySelector('.card-size-options-selector-container');
 
                     if(sizeOptionsContainer){
-                        sizeOptionsContainer.classList.remove('is-hidden');
+                        sizeOptionsContainer.classList.add('is-open');
                     };
-
+                    
                     
                 }else if(classContainerName === '.card-size-selector-container' && ClassButtonName === '.size-button'){
 

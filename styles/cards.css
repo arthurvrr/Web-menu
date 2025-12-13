@@ -29,7 +29,7 @@ dimensões da imagem.*/
     background-color: white;
     box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
     border-radius: 2rem;
-    row-gap: 1rem;
+    /*row-gap: 1rem;*/
 }
 
 
@@ -38,8 +38,8 @@ dimensões da imagem.*/
 mudar o aspect-radio*/
 .product-card .card-image-container{
     padding: 1rem;
-    padding-bottom: 0;
     aspect-ratio: 4 / 3;
+
 }
 
 
@@ -54,6 +54,30 @@ estilos */
     object-fit: cover;
     border-radius: 2rem;
     box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+.card-name-container{
+    display: grid;
+    margin-bottom: 1rem;
+
+}
+
+
+
+.card-name-price-container{
+    display: grid;
+    margin-bottom: 1rem;
+}
+
+
+
+.card-info-row{
+    display: grid;
+    grid-template-rows: 0fr;
+    
 }
 
 
@@ -139,12 +163,6 @@ estilos */
 }
 
 
-.card-size-options-selector-container{
-    display: grid;
-    margin: 0 1rem;
-}
-
-
 
 .card-price-button{
     display: grid;
@@ -168,6 +186,7 @@ estilos */
 .card-style-selector-container{
     display: grid;
     grid-template-columns: auto auto;
+    margin-bottom: 1rem;
 }
 
 
@@ -213,6 +232,37 @@ estilos */
     font-style: normal;
 }
 
+
+.card-size-options-selector-container{
+    display: grid;
+    grid-template-rows: 0fr;
+
+    min-height: 0;
+   
+    margin: 0 1rem;
+    margin-bottom: 0;
+    opacity: 0;
+ 
+    transition: grid-template-rows 0.8s ease-out,
+                opacity 1.8s ease-out,
+                margin-bottom 1s ease-out;
+    
+}
+
+.expandable-content{
+    display: grid;
+    min-height: 0;
+    overflow: hidden;
+}
+
+
+
+
+.is-open{
+    grid-template-rows: 1fr;
+    margin-bottom: 1rem;
+    opacity: 1;
+}
 
 
 /*=======QUANTITY SELECTOR=======*/
@@ -300,15 +350,20 @@ estilos */
     cursor: not-allowed;
 }
 
+/*
+
 .is-hidden{
     display: none !important;
 }
+
+*/
 
 /*===============================*/
 
 .card-size-selector-container{
     display: grid;
     grid-template-columns: auto auto;
+    margin-bottom: 1rem;
 }
 
 .card-size-selector-container .size-button{
@@ -337,6 +392,7 @@ estilos */
 .card-flavor-selector-container{
     display: grid;
     margin: 0 1rem;
+    margin-bottom: 1rem;
 }
 
 .double-flavor{
