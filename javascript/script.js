@@ -205,6 +205,8 @@ menu.forEach( (product) => {
 
                 injectProductStyleButtonLabel(cardElement,product);
 
+                injectProductSizeOptions(cardElement,product);
+
                 break;
 
             case "priceByExtra-multStyle-multSize":
@@ -215,8 +217,10 @@ menu.forEach( (product) => {
                 injectProductDescription(cardElement,product);
 
                 injectProductStyleButtonLabel(cardElement,product);
+                
+                injectProductSizeOptions(cardElement,product);
 
-                break;
+            break;
             
             case "staticPriceAndSize-multFlavor":
                     injectProductDefaultImage(cardElement,product);
@@ -237,37 +241,73 @@ menu.forEach( (product) => {
     };
 });
 
-
-styleButtons = document.querySelectorAll('.card-style-selector-container .style-button');
-//console.log(styleButtons);
-
-styleButtons.forEach((currentButton) =>{
-    currentButton.addEventListener( 'click', (event) => {
-
-        /*Sobe no DOM procurando o pai do botão atual*/
-        buttonsContainer = currentButton.closest('.card-style-selector-container');
-
-        /*Par de botões que estão dentro de ".card-style-selector-container".*/
-        buttonPair = buttonsContainer.querySelectorAll('.style-button');
+reactToButtonInteraction('.card-style-selector-container', '.style-button' );
+reactToButtonInteraction('.card-size-selector-container', '.size-button');
 
 
-        /*Remove o "button-select" de todos os botões, inclusive o atual.*/
-        buttonPair.forEach((button) => {
-            if(button.classList.contains('button-selected')){
-                button.classList.remove('button-selected');
+function reactToButtonInteraction(classContainerName, ClassButtonName){
 
-            };
+    const containerList = document.querySelectorAll(classContainerName);
 
+    containerList.forEach( (currentClass) => {
+
+        const buttonList = currentClass.querySelectorAll(ClassButtonName);
+
+        buttonList.forEach((button) => {
+            button.addEventListener('click', (event) => {
+                colorClickedButton( button,currentClass,ClassButtonName);
+
+                if( classContainerName === '.card-style-selector-container' && ClassButtonName === '.style-button'){
+
+                    const parentElement = currentClass.parentElement;
+                    
+                    const sizeOptionsContainer = parentElement.querySelector('.card-size-options-selector-container');
+
+                    if(sizeOptionsContainer){
+                        sizeOptionsContainer.classList.remove('is-hidden');
+                    };
+
+                    
+                }else if(classContainerName === '.card-size-selector-container' && ClassButtonName === '.size-button'){
+
+
+                };
+            });
         });
-        
-        currentButton.classList.add('button-selected');        
     });
-});
+
+};
+
+
+
+
+
+
+
+
 
 
 /*=============================================
             FUNÇÕES AUXILIARES 
 =============================================*/
+
+function colorClickedButton(currentButton, buttonContainer, ClassButtonName){
+
+    /*Par de botões que estão dentro de ".card-style-selector-container".*/
+    buttonPair = buttonContainer.querySelectorAll(ClassButtonName);
+
+    /*Remove o "button-select" de todos os botões, inclusive o atual.*/
+    buttonPair.forEach((button) => {
+        if(button.classList.contains('button-selected')){
+            button.classList.remove('button-selected');
+
+        };
+
+    });
+        
+    /*Adicione o efeito clicado*/
+    currentButton.classList.add('button-selected');
+}
 
 
 function injectProductQuantityLabel(cardElement,product){
