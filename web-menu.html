@@ -116,7 +116,7 @@
                         <div class="card-actions-container">
                             <div class="quantity-selector">
                                 <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
-                                <span class="quantity-value">0</span>
+                                <span class="quantity-value"></span>
                                 <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
                             </div>
 
@@ -148,7 +148,7 @@
                         <div class="card-actions-container">
                             <div class="quantity-selector">
                                 <button type="button" class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
-                                <span class="quantity-value">25</span>
+                                <span class="quantity-value"></span>
                                 <button type="button" class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
                             </div>
 
@@ -159,15 +159,15 @@
 
                     <div id="beijinho" class="product-card" data-interaction="staticPriceAndSize">
                         <div class="card-image-container">
-                            <img src="" alt="Beijinho">
+                            <img src="" alt="">
                         </div>
 
                         <div class="card-name-price-container">
                             <div class="name-price-row">
-                                <h3 class="product-name">BEIJINHO</h3>
+                                <h3 class="product-name"></h3>
                                 <div class="price-measure">
-                                    <span class="product-price">R$1.70</span>
-                                    <span class="product-measure">UN</span>
+                                    <span class="product-price"></span>
+                                    <span class="product-measure"></span>
                                 </div>
                             </div>
                         </div>
@@ -445,12 +445,16 @@
 
                         <!--Container com o selector box para o sabor do produto, revela a descrição do sabor selecionado e permite selecionar a quantidade e adicionar o produto ao carrinho-->
                         <div class="card-flavor-selector-container">
-                            <select name="sabor" id="cupcake-flavor" class="flavor-select">
-                                <option value="" disabled selected>SABORES</option>
-                                <option value="red-velvet"></option>
-                                <option value="chocolate"></option>
-                                <option value="Baunilha"></option>
-                            </select>
+
+                            <div class="expandable-content">
+                                <select name="sabor" id="cupcake-flavor" class="flavor-select">
+                                    <option value="" disabled selected>SABORES</option>
+                                    <option value="red-velvet"></option>
+                                    <option value="chocolate"></option>
+                                    <option value="Baunilha"></option>
+                                </select>
+                            </div>
+
                         </div>
 
                         <!-- Container com a descrição do sabor selecionado, só é visível se o sabor for selecionado - "flavor-selected"-->
@@ -479,6 +483,7 @@
 
             <section id="salgados-section" class="category-section">
                 <div class="menu-grid">
+
                     <div id="bolinha-queijo" class="product-card" data-interaction="staticPriceAndSize">
                         <div class="card-image-container"><img src=""></div>
 
@@ -513,16 +518,16 @@
 
                         <div class="card-name-price-container">
                             <div class="name-price-row">
-                                <h3 class="product-name">COXINHA</h3>
+                                <h3 class="product-name"></h3>
                                 <div class="price-measure">
-                                    <span class="product-price">R$1.60</span>
-                                    <span class="product-measure">UN</span>
+                                    <span class="product-price"></span>
+                                    <span class="product-measure"></span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="card-info-row weight-info is-open">
-                            <p class="product-info">Aproximadamente 20 gramas</p>
+                            <p class="product-info"></p>
                         </div>
 
                         <div class="card-actions-container">
@@ -727,7 +732,7 @@
                         </div>
 
                         
-                        <div class="card-flavor-selector-container">
+                        <div class="card-flavor-selector-container is-open">
                             <select name="sabor" id="risoles-flavor" class="flavor-select">
                                 <option value="" disabled selected>SABORES</option>
                                 <option value="carne"></option>
@@ -774,7 +779,7 @@
                             <p class="product-info"></p>
                         </div>
                         
-                        <div class="card-flavor-selector-container">
+                        <div class="card-flavor-selector-container is-open">
                             <select name="sabor" id="pastel-pastelina-flavor" class="flavor-select">
                                 <option value="" disabled selected>SABORES</option>
                                 <option value="carne"></option>
@@ -816,7 +821,7 @@
                             <p class="product-info"></p>
                         </div>
                         
-                        <div class="card-flavor-selector-container">
+                        <div class="card-flavor-selector-container is-open">
                             <select name="sabor" id="empadinha-assada-flavor" class="flavor-select">
                                 <option value="" disabled selected>SABORES</option>
                                 <option value=""></option>
@@ -858,7 +863,7 @@
                             <p class="product-info"></p>
                         </div>
                         
-                        <div class="card-flavor-selector-container">
+                        <div class="card-flavor-selector-container is-open">
                             <select name="sabor" id="pastel-forno-flavor" class="flavor-select">
                                 <option value="" disabled selected>SABORES</option>
                                 <option value="carne"></option>
@@ -902,7 +907,7 @@
                             <p class="product-info"></p>
                         </div>
                         
-                        <div class="card-flavor-selector-container">
+                        <div class="card-flavor-selector-container is-open">
                             <select name="sabor" id="canape-flavor" class="flavor-select">
                                 <option value="" disabled selected>SABORES</option>
                                 <option value="gorgonzola-nozes"></option>
@@ -945,7 +950,7 @@
                             <p class="product-info"></p>
                         </div>
 
-                        <div class="card-flavor-selector-container">
+                        <div class="card-flavor-selector-container is-open">
                             <select name="sabor" id="mini-pizza-flavor" class="flavor-select">
                                 <option value="" disabled selected>SABORES</option>
                                 <option value="frango"></option>
@@ -992,7 +997,7 @@
                             <p class="product-info"></p>
                         </div>
 
-                        <div class="card-flavor-selector-container">
+                        <div class="card-flavor-selector-container is-open">
                             <select name="sabor" id="mini-quiche-flavor" class="flavor-select">
                                 <option value="" disabled selected>SABORES</option>
                                 <option value="frango"></option>
@@ -1038,7 +1043,7 @@
                             <div class="product-info">Aproximadamente 20 gramas</div>
                         </div>
 
-                        <div class="card-flavor-selector-container">
+                        <div class="card-flavor-selector-container is-open">
                             <select name="sabor" id="barquete-flavor" class="flavor-select">
                                 <option value="" disabled selected>SABORES</option>
                                 <option value="tomate-seco"></option>
@@ -1082,7 +1087,7 @@
                             <p class="product-info"></p>
                         </div>
 
-                        <div class="card-flavor-selector-container">
+                        <div class="card-flavor-selector-container is-open">
                             <select name="sabor" id="mini-hamburguer-flavor" class="flavor-select">
                                 <option value="" disabled selected>SABORES</option>
                                 <option value=""></option>
@@ -1135,13 +1140,17 @@
                         </div>
 
                         <!--Container com o selector box para o sabor do produto, revela a descrição do sabor selecionado e permite selecionar a quantidade e adicionar o produto ao carrinho-->
-                        <div class="card-flavor-selector-container is-hidden">
-                            <select name="sabor" id="torta-quiche-flavor" class="flavor-select">
-                                <option value="" disabled selected>SABORES</option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                            </select>
+                        <div class="card-flavor-selector-container">
+
+                            <div class="expandable-content">
+                                <select name="sabor" id="torta-quiche-flavor" class="flavor-select">
+                                    <option value="" disabled selected>SABORES</option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                </select>
+                            </div>
+
                         </div>
 
                         <!-- Container com a descrição do sabor selecionado, só é visível se o sabor for selecionado - "flavor-selected"-->
@@ -1174,7 +1183,7 @@
                             <p class="product-info normal-font-style"></p>
                         </div>
 
-                        <div class="card-flavor-selector-container double-flavor">
+                        <div class="card-flavor-selector-container double-flavor is-open">
                             <select name="sabor1" class="flavor-select right-flavor" id="pizza-pan-flavor01"  aria-label="Seleção do primeiro sabor">
                                 <option value="" disabled selected>SABOR 01</option>
                                 <option value=""></option>
@@ -1222,13 +1231,16 @@
                             <p class="product-info"></p>
                         </div>
 
-                        <div class="card-flavor-selector-container is-hidden">
-                            <select name="sabor" id="torta-fria-flavor" class="flavor-select">
-                                <option value="" disabled selected>SABORES</option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                            </select>
+                        <div class="card-flavor-selector-container">
+
+                            <div class="expandable-content">
+                                <select name="sabor" id="torta-fria-flavor" class="flavor-select">
+                                    <option value="" disabled selected>SABORES</option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                </select>
+                            </div>
                         </div>
 
                         <div class="card-info-row flavor-info">
@@ -1249,7 +1261,7 @@
                 <div class="menu-grid">
 
                     <div id="torta-macron" class="product-card" data-interaction="staticStyleAndPrice-multSize">
-                        <div class="card-image-container" alt="Torta macron"><img src=""></div>
+                        <div class="card-image-container" alt=""><img src=""></div>
 
                         <div class="card-name-container">
                             <h3 class="product-name"></h3>
@@ -1269,7 +1281,7 @@
                         </div>
 
                         <!-- Essa informação só é mostrada quando o tamanho for selecionado, "size-selected"-->
-                        <div class="card-info-row weight-info is-open">
+                        <div class="card-info-row weight-info">
                             <p class="product-info normal-font-style"></p>
                         </div>
 
