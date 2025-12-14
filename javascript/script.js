@@ -126,6 +126,8 @@ menu.forEach( (product) => {
             
                 injectProductSizeButtonLabel(cardElement, product)
 
+                injectProductFlavorOptions(cardElement, product);
+
                 break;
 
             case "simpleFlavorAndSize":
@@ -140,6 +142,8 @@ menu.forEach( (product) => {
                 injectProductDescription(cardElement, product);
 
                 injectProductFlavorOptions(cardElement,product);
+
+                injectProductQuantityLabel(cardElement,product);
                 break;
 
             case "priceByFlavor-staticSize":
@@ -257,7 +261,8 @@ function reactToButtonInteraction(classContainerName, ClassButtonName){
             button.addEventListener('click', (event) => {
                 colorClickedButton( button,currentClass,ClassButtonName);
 
-                if( classContainerName === '.card-style-selector-container' && ClassButtonName === '.style-button'){
+                
+              /*  if( classContainerName === '.card-style-selector-container' && ClassButtonName === '.style-button'){
 
                 
                     const parentElement = currentClass.parentElement;
@@ -272,7 +277,7 @@ function reactToButtonInteraction(classContainerName, ClassButtonName){
                 }else if(classContainerName === '.card-size-selector-container' && ClassButtonName === '.size-button'){
 
 
-                };
+                }; */
             });
         });
     });
