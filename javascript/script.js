@@ -250,7 +250,7 @@ function reactToButtonInteraction(classContainerName, ClassButtonName){
     const containerList = document.querySelectorAll(classContainerName);
 
     containerList.forEach( (currentClass) => {
-
+        
         const buttonList = currentClass.querySelectorAll(ClassButtonName);
 
         buttonList.forEach((button) => {
@@ -264,64 +264,33 @@ function reactToButtonInteraction(classContainerName, ClassButtonName){
                 switch(currentType) {
                     case "priceBySize-simpleFlavor":
 
+                        /*Procura o produto atual no array "menu" */
                         const index = button.getAttribute('data-size-index');
                         const productName = parent.getAttribute('id');
                         const product = menu.find( item => item.id === productName);
 
-                        const priceMeasure = parent.querySelector('.price-measure');
-                        
-                        var temp = priceMeasure.querySelector('.product-price');
-                        if( typeof product.sizes[index].displayPrice === 'string'){
-                            temp.innerText = product.sizes[index].displayPrice;
+                        enablePriceMeasure(parent, index, product);
 
-                        }else{
-                            temp.innerText = `R$ ${product.sizes[index].displayPrice.toFixed(2)}`;
+                        switchImage(parent,index,product);
 
-                            temp = priceMeasure.querySelector('.product-measure');
-                            temp.innerText = product.measureUnit;
-
-                        };
-
+                        /*Faça a linha de informação expandir */
                         const cardInfoRow = parent.querySelector('.card-info-row.weight-info');
                         cardInfoRow.classList.add('is-open');
 
+                        /*Informa o peso do tamanho selecionado*/
                         temp = cardInfoRow.querySelector('.product-info');
+
+                        /*Exibe o texto.*/
                         temp.innerText = product.sizes[index].weightDescription;
 
-                        
-
-                        
-
-
-
+                        enableActionsContainer(parent);
 
                     break;
 
                 };
 
-                    
-
-                    
-            
 
 
-                
-              /*  if( classContainerName === '.card-style-selector-container' && ClassButtonName === '.style-button'){
-
-                
-                    const parentElement = currentClass.parentElement;
-                    
-                    const sizeOptionsContainer = parentElement.querySelector('.card-size-options-selector-container');
-
-                    if(sizeOptionsContainer){
-                        sizeOptionsContainer.classList.add('is-open');
-                    };
-                    
-                    
-                }else if(classContainerName === '.card-size-selector-container' && ClassButtonName === '.size-button'){
-
-
-                }; */
             });
         });
     });
@@ -501,3 +470,71 @@ function injectProductStyleButtonLabel(cardElement,product){
         };
     });
 }
+
+
+
+function wait(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
+
+async function waitFor(ms) {
+
+  await wait(ms);
+  
+}
+
+
+function enableActionsContainer(parent){
+
+    /*Busca o container de ações de compra e quantidade*/
+    const cardActionsContainer = parent.querySelector('.card-actions-container');
+
+    /*Habilita o seletor de quantidade removendo a classe "is-disabled" */
+    var temp = cardActionsContainer.querySelector('.quantity-selector');
+    temp.classList.remove('is-disabled');
+
+    /*Habilita o botão para adicionar ao carrinho*/
+    temp = cardActionsContainer.querySelector('.add-to-cart-button');
+    temp.classList.remove('is-disabled');
+
+}
+
+
+
+function enablePriceMeasure(parent, index, product){
+    /*Busca o container price-measure*/
+    const priceMeasure = parent.querySelector('.price-measure');
+                        
+    /*Busca o container product-price que é filho do price-measure */
+    var temp = priceMeasure.querySelector('.product-price');
+    if( typeof product.sizes[index].displayPrice === 'string'){
+        /*Se o displayPrice for uma string, mostra apenas a string. Ex: displayPrice: "Consulte valores" */
+        temp.innerText = product.sizes[index].displayPrice;
+
+    }else{
+        /*Se for um número, coloca o cifrão na frente */
+        temp.innerText = `R$ ${product.sizes[index].displayPrice.toFixed(2)}`;
+
+        /*E adiciona a unidade de medida do produto */
+        temp = priceMeasure.querySelector('.product-measure');
+        temp.innerText = product.measureUnit;
+
+        };
+
+
+};
+
+
+
+function switchImage(parent, index, product){
+
+    const imageContainer = parent.querySelector('.card-image-container img');
+
+    if(imageContainer && product.sizes[index].image){
+        imageContainer.src = product.sizes[index].image;
+        imageContainer.alt = product.sizes[index].alt;
+    };
+
+};
