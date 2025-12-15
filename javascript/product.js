@@ -753,7 +753,7 @@ const menu = [
         sizes:[
             {   
                 name: "MINI",
-                weightDescription: "",
+                weightDescription: "Aproximadamente 30 gramas",
                 price: 2.90,
                 displayPrice: 2.90,
                 image: "/img/card-images/quindim-mini.webp",
@@ -762,7 +762,7 @@ const menu = [
 
             {
                 name: "TRADICIONAL",
-                weightDescription: "",
+                weightDescription: "Aproximadamente 50 gramas",
                 price: 4.50,
                 displayPrice: 4.50,
                 image: "/img/card-images/quindim-tradicional.jpg",

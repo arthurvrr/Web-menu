@@ -7,7 +7,6 @@ const menuLinks = document.querySelectorAll( ".main-menu a");
 /* Adiciona um EventListener que responde ao click e todas as categorias do menu. Quando o usuário click em alguma categoria,
 esta função remove as propriedades "active-category" e "category-visible" de todas as categorias, e por fim ativa as
 propriedades anteriores na categoria selecionada pelo usuário */
-
 menuLinks.forEach((link) => {
     link.addEventListener('click', (event) => {
         event.preventDefault();
@@ -43,6 +42,7 @@ menuLinks.forEach((link) => {
 });
 
 
+//DESENVOLVER!
 const decreaseQuantityButtons = document.querySelectorAll(".decrease-quantity");
 
 const increaseQuantityButtons = document.querySelectorAll(".increase-quantity");
@@ -72,10 +72,6 @@ increaseQuantityButtons.forEach((button) => {
         const closestProduct = button.closest('.product-card');
     });
 });
-
-
-
-
 
 
 
@@ -261,6 +257,54 @@ function reactToButtonInteraction(classContainerName, ClassButtonName){
             button.addEventListener('click', (event) => {
                 colorClickedButton( button,currentClass,ClassButtonName);
 
+                const parent = currentClass.parentElement;
+                
+                const currentType = parent.getAttribute('data-interaction');
+
+                switch(currentType) {
+                    case "priceBySize-simpleFlavor":
+
+                        const index = button.getAttribute('data-size-index');
+                        const productName = parent.getAttribute('id');
+                        const product = menu.find( item => item.id === productName);
+
+                        const priceMeasure = parent.querySelector('.price-measure');
+                        
+                        var temp = priceMeasure.querySelector('.product-price');
+                        if( typeof product.sizes[index].displayPrice === 'string'){
+                            temp.innerText = product.sizes[index].displayPrice;
+
+                        }else{
+                            temp.innerText = `R$ ${product.sizes[index].displayPrice.toFixed(2)}`;
+
+                            temp = priceMeasure.querySelector('.product-measure');
+                            temp.innerText = product.measureUnit;
+
+                        };
+
+                        const cardInfoRow = parent.querySelector('.card-info-row.weight-info');
+                        cardInfoRow.classList.add('is-open');
+
+                        temp = cardInfoRow.querySelector('.product-info');
+                        temp.innerText = product.sizes[index].weightDescription;
+
+                        
+
+                        
+
+
+
+
+                    break;
+
+                };
+
+                    
+
+                    
+            
+
+
                 
               /*  if( classContainerName === '.card-style-selector-container' && ClassButtonName === '.style-button'){
 
@@ -283,9 +327,6 @@ function reactToButtonInteraction(classContainerName, ClassButtonName){
     });
 
 };
-
-
-
 
 
 
@@ -316,6 +357,7 @@ function colorClickedButton(currentButton, buttonContainer, ClassButtonName){
 }
 
 
+
 function injectProductQuantityLabel(cardElement,product){
     const cardQuantityLabel = cardElement.querySelector( '.card-actions-container .quantity-selector .quantity-value');            
     if(cardQuantityLabel){
@@ -339,7 +381,7 @@ function injectProductDefaultImage(cardElement, product) {
 
 
 function injectProductName(cardElement, product){
-     const cardName = cardElement.querySelector('.product-name');
+    const cardName = cardElement.querySelector('.product-name');
     if(cardName){
         cardName.innerText = product.name;
     };

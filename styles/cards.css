@@ -74,14 +74,6 @@ estilos */
 
 
 
-.card-info-row{
-    display: grid;
-    grid-template-rows: 0fr;
-    
-}
-
-
-
 .name-price-row{
     display: grid;
     grid-template-columns: 1fr auto;
@@ -134,7 +126,7 @@ estilos */
 
 
 .product-info {
-    margin: 0 1rem;
+    margin: 0;
     font-weight: bold;
     font-style: normal;
     font-size: 1.2rem;
@@ -261,6 +253,22 @@ estilos */
             opacity 1.8s ease-out,
             margin-bottom 1s ease-out;
 
+}
+
+
+
+.card-info-row{
+    display: grid;
+    grid-template-rows: 0fr;
+
+    margin: 0 1rem;
+    margin-bottom: 0;
+    opacity: 0;
+
+    transition: grid-template-rows 0.8s ease-out,
+            opacity 1.8s ease-out,
+            margin-bottom 1s ease-out;
+    
 }
 
 
