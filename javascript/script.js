@@ -51,9 +51,34 @@ const increaseQuantityButtons = document.querySelectorAll(".increase-quantity");
 decreaseQuantityButtons.forEach((button) => {
     button.addEventListener( 'click', (evet) => {
 
-        const currentParent = button.parentElement;
 
-        const currentQuantitySelector = currentParent.querySelector( ".quantity-value");
+        /*Busca o elemento pai do botão, .quantity-selector*/
+        const quantitySelector = button.parentElement;
+        const parent = quantitySelector.closest('.product-card');
+
+        const id = parent.getAttribute('id');
+        const product = findProductByID(menu,id);
+
+        /*Busca a quantidade atual*/    
+        const quantityValue = quantitySelector.querySelector('.quantity-value');
+        var value = quantityValue.textContent;
+        value = Number(value);
+
+        if(product.minQuantity){
+
+            if( value > product.minQuantity){
+                value--;
+            };
+
+        }else{
+            /* Se a quantidade atual for maior que a quantidade mínima global, decrementa a quantidade */
+            if(value > minQuantity){
+                value--;
+            }
+
+        };
+
+        quantityValue.innerText = value;
 
     });
 
@@ -267,7 +292,8 @@ function reactToButtonInteraction(classContainerName, ClassButtonName){
                         /*Procura o produto atual no array "menu" */
                         const index = button.getAttribute('data-size-index');
                         const productName = parent.getAttribute('id');
-                        const product = menu.find( item => item.id === productName);
+                        const product = findProductByID(menu,productName);
+
 
                         enablePriceMeasure(parent, index, product);
 
@@ -506,6 +532,7 @@ function enableActionsContainer(parent){
 function enablePriceMeasure(parent, index, product){
     /*Busca o container price-measure*/
     const priceMeasure = parent.querySelector('.price-measure');
+
                         
     /*Busca o container product-price que é filho do price-measure */
     var temp = priceMeasure.querySelector('.product-price');
@@ -514,11 +541,13 @@ function enablePriceMeasure(parent, index, product){
         temp.innerText = product.sizes[index].displayPrice;
 
     }else{
+        temp.classList.add('is-open');
         /*Se for um número, coloca o cifrão na frente */
         temp.innerText = `R$ ${product.sizes[index].displayPrice.toFixed(2)}`;
 
         /*E adiciona a unidade de medida do produto */
         temp = priceMeasure.querySelector('.product-measure');
+        temp.classList.add('is-open');
         temp.innerText = product.measureUnit;
 
         };
@@ -538,3 +567,11 @@ function switchImage(parent, index, product){
     };
 
 };
+
+
+function findProductByID(menu, id){
+
+    const product = menu.find( item => item.id === id);
+    return product;
+
+}
