@@ -43,10 +43,17 @@ menuLinks.forEach((link) => {
 
 
 
+
+
+
+
+ /*================================================
+  CONTROLE DA QUANTIDADE SELECIONADA PELO USUÁRIO
+ ================================================ */
+
 const decreaseQuantityButtons = document.querySelectorAll(".decrease-quantity");
 const increaseQuantityButtons = document.querySelectorAll(".increase-quantity");
 const quantityInputs = document.querySelectorAll('.quantity-value');
-
 
 quantityInputs.forEach((input) => {
     input.addEventListener('input', () => {
@@ -86,57 +93,51 @@ quantityInputs.forEach((input) => {
     });
 });
 
-
 decreaseQuantityButtons.forEach((button) => {
-    button.addEventListener( 'click', (evet) => {
+    button.addEventListener( 'click', (event) => {
 
-
-        /*Busca o elemento pai do botão, .quantity-selector*/
         const quantitySelector = button.parentElement;
-        const parent = quantitySelector.closest('.product-card');
 
-        const id = parent.getAttribute('id');
-        const product = findProductByID(menu,id);
-
-        /*Busca a quantidade atual*/    
         const quantityValue = quantitySelector.querySelector('.quantity-value');
-        var value = quantityValue.textContent;
-        value = Number(value);
 
-        if(product.minQuantity){
+        if(quantityValue){
 
-            if( value > product.minQuantity){
+            var value = Number(quantityValue.value);
+
+            if( value > Number(quantityValue.min)){
                 value--;
+
+                quantityValue.value = value;
+
             };
-
-        }else{
-            /* Se a quantidade atual for maior que a quantidade mínima global, decrementa a quantidade */
-            if(value > minQuantity){
-                value--;
-            }
-
         };
-
-        quantityValue.innerText = value;
-
     });
-
-
 });
 
 increaseQuantityButtons.forEach((button) => {
-    button.addEventListener('click', (evet) => {
-        //Busca o elemento pai do botão atual, nesse caso é o quantity-selector
-        const currentParent = button.parentElement;
+    button.addEventListener('click', (event) => {
 
-        //Busca a div .quantity-selector para obter o campo onde a quantidade selecionada esta.
-        const currentQuantitySelector = currentParent.querySelector(".quantity-value")
+        const quantitySelector = button.parentElement;
 
-        //Busca o elemento que contem a classe .product-card mais próxima.
-        const closestProduct = button.closest('.product-card');
+        const quantityValue = quantitySelector.querySelector('.quantity-value');
+
+        if(quantityValue){
+
+            var value = Number(quantityValue.value);
+
+            if( value < 999){
+                value++;
+
+                quantityValue.value = value;
+
+            };
+        };
+        
+
     });
 });
 
+/*=================================================*/
 
 
 /*=============================
@@ -163,6 +164,8 @@ menu.forEach( (product) => {
                 injectProductDescription(cardElement, product);
 
                 injectProductQuantityLabel(cardElement, product);
+
+                enableActionsContainer(cardElement);
 
                 break;
             
@@ -309,6 +312,10 @@ reactToButtonInteraction('.card-style-selector-container', '.style-button' );
 reactToButtonInteraction('.card-size-selector-container', '.size-button');
 
 
+/*=============================================
+            FUNÇÕES AUXILIARES 
+=============================================*/
+
 function reactToButtonInteraction(classContainerName, ClassButtonName){
 
     const containerList = document.querySelectorAll(classContainerName);
@@ -363,15 +370,6 @@ function reactToButtonInteraction(classContainerName, ClassButtonName){
 };
 
 
-
-
-
-
-
-/*=============================================
-            FUNÇÕES AUXILIARES 
-=============================================*/
-
 function colorClickedButton(currentButton, buttonContainer, ClassButtonName){
 
     /*Par de botões que estão dentro de ".card-style-selector-container".*/
@@ -399,6 +397,7 @@ function injectProductQuantityLabel(cardElement,product){
         const finalQuantity = product.minQuantity || minQuantity;
         cardQuantityLabel.value = finalQuantity;
         cardQuantityLabel.min = finalQuantity;
+
     };
 }
 
@@ -561,10 +560,21 @@ function enableActionsContainer(parent){
     var temp = cardActionsContainer.querySelector('.quantity-selector');
     temp.classList.remove('is-disabled');
 
+    var buttons = temp.querySelectorAll('button');
+    buttons.forEach( (button) => {
+        button.disabled = false;
+    });
+
+    /*Habilita inserir a quantidade de compra*/
+    temp = parent.querySelector('.quantity-value');
+    temp.disabled = false;
+
     /*Habilita o botão para adicionar ao carrinho*/
     temp = cardActionsContainer.querySelector('.add-to-cart-button');
     temp.classList.remove('is-disabled');
+    temp.disabled = false;
 
+    
 }
 
 
