@@ -303,6 +303,23 @@ estilos */
 }
 
 
+.quantity-value{
+    display: block;
+
+    background-color:  transparent;
+    border: none;
+    outline: none;
+
+    max-width: 3rem;
+
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: normal;
+    color: white;
+
+}
+
 /*=======QUANTITY SELECTOR=======*/
 .quantity-selector {
     display: flex;
@@ -373,6 +390,7 @@ estilos */
 
 .quantity-selector.is-disabled{
     background-color: #BEBEBE;
+    cursor: not-allowed;
 }
 
 .quantity-selector.is-disabled button{
@@ -388,13 +406,6 @@ estilos */
     cursor: not-allowed;
 }
 
-/*
-
-.is-hidden{
-    display: none !important;
-}
-
-*/
 
 /*===============================*/
 

@@ -42,10 +42,49 @@ menuLinks.forEach((link) => {
 });
 
 
-//DESENVOLVER!
-const decreaseQuantityButtons = document.querySelectorAll(".decrease-quantity");
 
+const decreaseQuantityButtons = document.querySelectorAll(".decrease-quantity");
 const increaseQuantityButtons = document.querySelectorAll(".increase-quantity");
+const quantityInputs = document.querySelectorAll('.quantity-value');
+
+
+quantityInputs.forEach((input) => {
+    input.addEventListener('input', () => {
+    
+        /*Permite somente numeros*/
+        let currentValue = input.value;
+        const onlyNumbers = currentValue.replace(/\D/g, '');
+        input.value = onlyNumbers
+
+        if( onlyNumbers === '') {return};
+
+        var inputNumber = Number(onlyNumbers);
+
+        if(inputNumber > 999){
+            input.value = 999;
+        }
+    
+    });
+});
+
+quantityInputs.forEach((input) => {
+    input.addEventListener('blur', () => {
+    
+    let valorAtual = Number(input.value.trim());
+    const min = Number(input.min);
+    
+    // Se o campo estiver vazio ou for menor que o mínimo, corrija
+    if (input.value.trim() === '' || valorAtual < min) {
+        // Corrigir para o mínimo
+        input.value = min;
+        
+    // (Opcional) Corrigir NaN (se o usuário digitar '-' ou '.' e sair)
+    } else if (isNaN(valorAtual)) {
+        input.value = min; 
+    }
+    
+    });
+});
 
 
 decreaseQuantityButtons.forEach((button) => {
@@ -358,7 +397,8 @@ function injectProductQuantityLabel(cardElement,product){
     if(cardQuantityLabel){
         // Verifica se o campo minQuantity existe no product, se sim, usa ele como valor, se não usa a quantidade mínima padrão minQuantidy.
         const finalQuantity = product.minQuantity || minQuantity;
-        cardQuantityLabel.innerText = finalQuantity;
+        cardQuantityLabel.value = finalQuantity;
+        cardQuantityLabel.min = finalQuantity;
     };
 }
 
