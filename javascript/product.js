@@ -407,7 +407,7 @@ const menu = [
         flavors : [
             {   
                 name: "Tradicional",
-                flavorDescription:  "",
+                flavorDescription: "Teste",
                 price: 5.00,
                 displayPrice: 5.00,
             },

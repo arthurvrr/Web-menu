@@ -143,16 +143,38 @@ flavorSelectorContainers.forEach((flavorContainer) => {
     
     /*Busca o elemento pai*/
     const parent = flavorContainer.closest('.product-card');
+
+    const productType = parent.getAttribute('data-interaction');
+
+    const product = findProductByID(menu, parent.getAttribute('id'));
+
     /* Busca o select*/
     const select = flavorContainer.querySelector('select');
 
     select.addEventListener( 'change' , (event) => {
 
-        const index = (event.target.selectedIndex) - 1;
+        if(event){
 
-        showFlavorInfo(parent, index);
+            const index = (event.target.selectedIndex) - 1;
 
-        
+            showFlavorInfo(parent, index);
+
+            switch(productType){
+
+                case "priceByFlavor-doubleSize":
+                    enablePriceMeasure(parent,index,product);
+
+                    break;
+
+                case  "priceByFlavor-staticSize":
+                    enablePriceMeasure(parent,index,product);
+
+                    break;
+
+            }
+
+        }
+
 
 
     });
@@ -266,6 +288,8 @@ menu.forEach( (product) => {
                 injectProductName(cardElement,product);
 
                 injectProductSizeButtonLabel(cardElement,product);
+
+                injectProductFlavorOptions(cardElement,product);
             
                 break;
 
@@ -331,5 +355,5 @@ menu.forEach( (product) => {
     };
 });
 
-reactToButtonInteraction('.card-style-selector-container', '.style-button' );
+reactToButtonInteraction('.card-style-selector-container', '.style-button');
 reactToButtonInteraction('.card-size-selector-container', '.size-button');

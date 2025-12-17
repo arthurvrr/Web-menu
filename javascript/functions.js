@@ -18,7 +18,7 @@ function reactToButtonInteraction(classContainerName, ClassButtonName){
                 
                 const currentType = parent.getAttribute('data-interaction');
 
-                const productName = parent.getAttribute('id');
+                const productID = parent.getAttribute('id');
 
                 switch(currentType) {
                     case "priceBySize-simpleFlavor":
@@ -27,7 +27,7 @@ function reactToButtonInteraction(classContainerName, ClassButtonName){
                         var index = button.getAttribute('data-size-index');
 
                         /*Busca o produto no array de produtos*/
-                        var product = findProductByID(menu,productName);
+                        var product = findProductByID(menu,productID);
 
                         enablePriceMeasure(parent, index, product);
 
@@ -45,7 +45,7 @@ function reactToButtonInteraction(classContainerName, ClassButtonName){
                         var index = button.getAttribute('data-size-index');
                         
                         /*Busca o produto no array de produtos*/
-                        var product = findProductByID(menu,productName);
+                        var product = findProductByID(menu,productID);
 
                         enablePriceMeasure(parent, index, product);
 
@@ -57,6 +57,17 @@ function reactToButtonInteraction(classContainerName, ClassButtonName){
 
                         break;
 
+                    case "priceByFlavor-doubleSize":
+                        index = button.getAttribute('data-size-index');
+
+                        product = findProductByID(menu,productID);
+
+                        showFlavorSelectorContainer(parent);
+
+                        showWeightInfo(parent,index,product);
+
+
+                        break;
                 };
             });
         });
@@ -301,28 +312,39 @@ async function waitFor(ms) {
 function enableActionsContainer(parent){
 
     /*Busca o container de ações de compra e quantidade*/
-    const cardActionsContainer = parent.querySelector('.card-actions-container');
+    var cardActionsContainer = parent.querySelector('.card-actions-container');
 
-    /*Habilita o seletor de quantidade removendo a classe "is-disabled" */
-    var temp = cardActionsContainer.querySelector('.quantity-selector');
-    temp.classList.remove('is-disabled');
+    if(cardActionsContainer){ 
 
-    var buttons = temp.querySelectorAll('button');
-    buttons.forEach( (button) => {
-        button.disabled = false;
-    });
+        /*Habilita o seletor de quantidade removendo a classe "is-disabled" */
+        var temp = cardActionsContainer.querySelector('.quantity-selector');
+        temp.classList.remove('is-disabled');
 
-    /*Habilita inserir a quantidade de compra*/
-    temp = parent.querySelector('.quantity-value');
-    temp.disabled = false;
+        var buttons = temp.querySelectorAll('button');
+        buttons.forEach( (button) => {
+            button.disabled = false;
 
-    /*Habilita o botão para adicionar ao carrinho*/
-    temp = cardActionsContainer.querySelector('.add-to-cart-button');
-    temp.classList.remove('is-disabled');
-    temp.disabled = false;
+        });
 
+        /*Habilita inserir a quantidade de compra*/
+        temp = parent.querySelector('.quantity-value');
+        temp.disabled = false;
+
+        /*Habilita o botão para adicionar ao carrinho*/
+        temp = cardActionsContainer.querySelector('.add-to-cart-button');
+        temp.classList.remove('is-disabled');
+        temp.disabled = false;
+
+    }else{
+        cardActionsContainer = parent.querySelector('.card-actions-container-right');
     
-}
+        /*Habilita o botão para adicionar ao carrinho*/
+        temp = cardActionsContainer.querySelector('.add-to-cart-button');
+        temp.classList.remove('is-disabled');
+        temp.disabled = false;
+    };
+
+};
 
 
 
@@ -330,25 +352,68 @@ function enablePriceMeasure(parent, index, product){
     /*Busca o container price-measure*/
     const priceMeasure = parent.querySelector('.price-measure');
 
-                        
     /*Busca o container product-price que é filho do price-measure */
     var temp = priceMeasure.querySelector('.product-price');
-    if( typeof product.sizes[index].displayPrice === 'string'){
-        /*Se o displayPrice for uma string, mostra apenas a string. Ex: displayPrice: "Consulte valores" */
-        temp.innerText = product.sizes[index].displayPrice;
+    
+    const productType = parent.getAttribute('data-interaction');
 
-    }else{
-        temp.classList.add('is-open');
-        /*Se for um número, coloca o cifrão na frente */
-        temp.innerText = `R$ ${product.sizes[index].displayPrice.toFixed(2)}`;
+    switch(productType){
 
-        /*E adiciona a unidade de medida do produto */
-        temp = priceMeasure.querySelector('.product-measure');
-        temp.classList.add('is-open');
-        temp.innerText = product.measureUnit;
+        case "priceByFlavor-doubleSize":
+            if( typeof product.flavors[index].displayPrice === 'string'){
+                /*Se o displayPrice for uma string, mostra apenas a string. Ex: displayPrice: "Consulte valores" */
+                temp.innerText = product.flavors[index].displayPrice;
 
-        };
+            }else{
+                temp.classList.add('is-open');
+                /*Se for um número, coloca o cifrão na frente */
+                temp.innerText = `R$ ${product.flavors[index].displayPrice.toFixed(2)}`;
 
+                /*E adiciona a unidade de medida do produto */
+                temp = priceMeasure.querySelector('.product-measure');
+                temp.classList.add('is-open');
+                temp.innerText = product.measureUnit;
+
+            };
+
+            break;
+
+        case "priceByFlavor-staticSize":
+            if( typeof product.flavors[index].displayPrice === 'string'){
+                /*Se o displayPrice for uma string, mostra apenas a string. Ex: displayPrice: "Consulte valores" */
+                temp.innerText = product.flavors[index].displayPrice;
+
+            }else{
+                temp.classList.add('is-open');
+                /*Se for um número, coloca o cifrão na frente */
+                temp.innerText = `R$ ${product.flavors[index].displayPrice.toFixed(2)}`;
+
+                /*E adiciona a unidade de medida do produto */
+                temp = priceMeasure.querySelector('.product-measure');
+                temp.classList.add('is-open');
+                temp.innerText = product.measureUnit;
+
+            };
+
+            break;
+
+        default:
+            if( typeof product.sizes[index].displayPrice === 'string'){
+                /*Se o displayPrice for uma string, mostra apenas a string. Ex: displayPrice: "Consulte valores" */
+                temp.innerText = product.sizes[index].displayPrice;
+
+            }else{
+                temp.classList.add('is-open');
+                /*Se for um número, coloca o cifrão na frente */
+                temp.innerText = `R$ ${product.sizes[index].displayPrice.toFixed(2)}`;
+
+                /*E adiciona a unidade de medida do produto */
+                temp = priceMeasure.querySelector('.product-measure');
+                temp.classList.add('is-open');
+                temp.innerText = product.measureUnit;
+            };
+
+    }
 
 };
 
