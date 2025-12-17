@@ -726,7 +726,7 @@ const menu = [
 
             {
                 name: "Chocolate",
-                flavorDescription:"Massa úmida de chocolate, recheada com creme de leite condensado e coberta por uma camada de ganache de chocolate.",
+                flavorDescription: " Massa úmida de chocolate, recheada com creme de leite condensado e coberta por uma camada de ganache de chocolate.",
             },
 
             {

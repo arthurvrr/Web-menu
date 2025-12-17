@@ -90,6 +90,9 @@ function showWeightInfo(parent,index,product){
 
 
 
+
+
+
 function colorClickedButton(currentButton, buttonContainer, ClassButtonName){
 
     /*Par de botões que estão dentro de ".card-style-selector-container".*/
@@ -198,6 +201,30 @@ function injectProductSizeButtonLabel(cardElement, product){
         });
 
     };
+}
+
+function showFlavorInfo( parent, index){
+
+    const id = parent.getAttribute('id');
+    const product = findProductByID(menu, id);
+    const flavorInfoRow = parent.querySelector('.card-info-row.flavor-info');
+
+    /*Caso exista a descrição do sabor do produto */
+    if(product.flavors[index].flavorDescription){
+        
+        /*Expande o campo da descrição do sabor */
+        flavorInfoRow.classList.add('is-open');
+
+        const productInfo = flavorInfoRow.querySelector('.product-info');
+        
+        /*Injeta a descrição do sabor*/
+        productInfo.innerText = product.flavors[index].flavorDescription;
+
+    }else{  /*Caso não exista descrição do sabor */
+        flavorInfoRow.classList.remove('is-open');
+    };
+
+    enableActionsContainer(parent);
 }
 
 
@@ -326,7 +353,7 @@ function enablePriceMeasure(parent, index, product){
 };
 
 
-
+ 
 function switchImage(parent, index, product){
 
     const imageContainer = parent.querySelector('.card-image-container img');

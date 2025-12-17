@@ -132,9 +132,33 @@ increaseQuantityButtons.forEach((button) => {
     });
 });
 
-const flavorSelectorContainer = document.querySelectorAll('.card-flavor-selector-container');
 
-console.log( flavorSelectorContainer);
+const flavorSelectorContainers = document.querySelectorAll('.card-flavor-selector-container ');
+
+
+
+
+
+flavorSelectorContainers.forEach((flavorContainer) => {
+    
+    /*Busca o elemento pai*/
+    const parent = flavorContainer.closest('.product-card');
+    /* Busca o select*/
+    const select = flavorContainer.querySelector('select');
+
+    select.addEventListener( 'change' , (event) => {
+
+        const index = (event.target.selectedIndex) - 1;
+
+        showFlavorInfo(parent, index);
+
+        
+
+
+    });
+
+
+});
 
 /*=================================================*/
 
