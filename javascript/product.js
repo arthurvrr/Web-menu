@@ -703,17 +703,20 @@ const menu = [
 
             {
                 name: "MINI",
-                weightDescription:"Pesa aproximadamente TANTAS GRAMAS",
+                weightDescription:"Aproximadamente 50 gramas",
                 price: 4.90,
                 displayPrice: 4.90,
+                image: "/img/card-images/cupcake-mini.webp"
                 
             },
 
             {
                 name: "TRADICIONAL",
-                weightDescription:"Pesa aproximadamente TANTAS GRAMAS",
+                weightDescription:"Aproximadamente 100 gramas",
                 price: 8.00,
                 displayPrice: 8.00,
+                image: "/img/card-images/cupcake-tradicional.webp"
+
             }
 
 
