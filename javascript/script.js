@@ -132,57 +132,73 @@ increaseQuantityButtons.forEach((button) => {
     });
 });
 
+/*=================================================*/
 
-const flavorSelectorContainers = document.querySelectorAll('.card-flavor-selector-container ');
-
-
-
-
-
+const flavorSelectorContainers = document.querySelectorAll('.card-flavor-selector-container');
 flavorSelectorContainers.forEach((flavorContainer) => {
     
     /*Busca o elemento pai*/
     const parent = flavorContainer.closest('.product-card');
-
     const productType = parent.getAttribute('data-interaction');
 
     const product = findProductByID(menu, parent.getAttribute('id'));
 
-    /* Busca o select*/
-    const select = flavorContainer.querySelector('select');
+    /* Busca o primeiro select*/
+    const selects = flavorContainer.querySelectorAll('select');
 
-    select.addEventListener( 'change' , (event) => {
-
-        if(event){
+    selects.forEach( (select) => {
+        select.addEventListener('change' , (event) => {
 
             const index = (event.target.selectedIndex) - 1;
-
-            showFlavorInfo(parent, index);
-
+        
             switch(productType){
-
                 case "priceByFlavor-doubleSize":
+                    showFlavorInfo(parent, index);
                     enablePriceMeasure(parent,index,product);
-
                     break;
 
                 case  "priceByFlavor-staticSize":
+                    showFlavorInfo(parent, index);
                     enablePriceMeasure(parent,index,product);
+                    break;
+
+                case "simpleSizeAndPrice-doubleFlavor":
+                    
+                    const dropdown = flavorContainer.querySelectorAll('select');
+
+                    const select01 = dropdown[0];
+                    const select02 = dropdown[1];
+
+                    if(select01.value && select02.value){
+                        enableActionsContainer(parent);
+                    }
 
                     break;
 
+                default:
+                    showFlavorInfo(parent,index);
+                    enableActionsContainer(parent);
+
             }
 
-        }
+        });
+    });
+});
 
+/*Busca todos os botões de adicionar ao carrinhos */
+const addToCartButtons = document.querySelectorAll('.add-to-cart-button');
 
+/*Cria o array que guarda os produtos escolhidos*/
+let purchasedProducts;
+
+addToCartButtons.forEach( (button) => {
+
+    button.addEventListener('click', (event) => {
+        console.log(button);
 
     });
 
-
 });
-
-/*=================================================*/
 
 
 /*=============================
