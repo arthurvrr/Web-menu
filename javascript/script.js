@@ -194,7 +194,15 @@ let purchasedProducts;
 addToCartButtons.forEach( (button) => {
 
     button.addEventListener('click', (event) => {
-        console.log(button);
+
+        const parent = button.closest('.product-card');
+
+        const productID = parent.getAttribute('id');
+
+        const product = findProductByID(menu, productID);
+
+        console.log(generateSignature(parent,product,productID));
+        
 
     });
 

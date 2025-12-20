@@ -2,6 +2,137 @@
             FUNÇÕES AUXILIARES 
 =============================================*/
 
+function generateSignature( parent, product, productID){
+    
+    const type = parent.getAttribute('data-interaction');
+
+    let signature = productID;
+
+    let sizeContainer;
+    let sizeIndex;
+    let sizeName;
+
+    let flavorContainer;
+    let flavorIndex;
+    let flavorName
+
+    switch(type){
+
+
+        /*========================================
+        Sem sabor para seleção, apenas tamanho.
+        Exemplo: Quindim
+        ======================================= */        
+        case "priceBySize-simpleFlavor":
+
+            sizeContainer = parent.querySelector('.size-button.button-selected');
+            sizeIndex = sizeContainer.getAttribute('data-size-index');
+
+            if(sizeContainer){
+                sizeName = product.sizes[sizeIndex].name;
+ 
+                signature = signature + '|' + sizeName.toLowerCase();
+
+                signature = signature.trim();
+            };
+
+            break;
+
+        case "priceBySize-multFlavor":
+
+            /*Buscao a string do tamanho atual */
+            size = parent.querySelector('.size-button.button-selected');
+            sizeIndex = size.getAttribute('data-size-index');
+            sizeName = product.sizes[sizeIndex].name;
+
+            /*Busca a string do sabor atual */
+            flavorContainer = parent.querySelector('.card-flavor-selector-container select');
+            flavorIndex = flavorContainer.selectedIndex;
+            flavorName = product.flavors[flavorIndex - 1].name;
+
+            /*Monta a assinatura*/
+            signature = signature + '|' + sizeName.toLowerCase() + '|' + flavorName.toLowerCase();
+            signature = signature.trim();
+            
+            break;
+
+            case "simpleFlavorAndSize":
+
+                /*Busca a string do sabor atual */
+                flavorContainer = parent.querySelector('.card-flavor-selector-container select');
+                flavorIndex = flavorContainer.selectedIndex;
+                flavorName = product.flavors[flavorIndex - 1].name;
+
+                signature = signature + '|' + flavorName.toLowerCase();
+
+                signature = signature.trim();
+
+                break;
+
+            case "priceByFlavor-staticSize":
+
+                /*Busca a string do sabor atual */
+                flavorContainer = parent.querySelector('.card-flavor-selector-container select');
+                flavorIndex = flavorContainer.selectedIndex;
+                flavorName = product.flavors[flavorIndex - 1].name;
+
+                signature = signature + '|' + flavorName.toLowerCase();
+
+                signature = signature.trim();
+
+                break;
+
+            case "priceByFlavor-doubleSize":
+
+                /*Buscao a string do tamanho atual */
+                size = parent.querySelector('.size-button.button-selected');
+                sizeIndex = size.getAttribute('data-size-index');
+                sizeName = product.sizes[sizeIndex].name;
+
+                /*Busca a string do sabor atual */
+                flavorContainer = parent.querySelector('.card-flavor-selector-container select');
+                flavorIndex = flavorContainer.selectedIndex;
+                flavorName = product.flavors[flavorIndex - 1].name;
+
+                /*Monta a assinatura*/
+                signature = signature + '|' + sizeName.toLowerCase() + '|' + flavorName.toLowerCase();
+                signature = signature.trim();
+            
+                break;
+
+                case "simpleSizeAndPrice-doubleFlavor":
+                    
+                    flavorContainer = parent.querySelectorAll('.card-flavor-selector-container select');
+                    
+                    let flavorsNames = [];
+
+                    flavorContainer.forEach((flavor) => {
+
+                       flavorIndex = flavor.selectedIndex;
+                       flavorName = product.flavors[flavorIndex - 1].name
+                       flavorName = flavorName.toLowerCase();
+                       flavorsNames.push(flavorName);
+
+                    });
+
+                    flavorsNames.sort();
+                    
+                    signature = signature + '|' + flavorsNames.join('|');
+
+                    signature = signature.trim();
+                    
+                    break;
+
+
+        default:
+
+
+    }
+
+    return signature;
+
+};
+
 function reactToButtonInteraction(classContainerName, ClassButtonName){
 
     const containerList = document.querySelectorAll(classContainerName);
@@ -98,9 +229,6 @@ function showWeightInfo(parent,index,product){
     /*Exibe o texto.*/
     temp.innerText = product.sizes[index].weightDescription;
 };
-
-
-
 
 
 
