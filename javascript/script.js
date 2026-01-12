@@ -185,6 +185,54 @@ flavorSelectorContainers.forEach((flavorContainer) => {
     });
 });
 
+
+
+const sizeSelectorContainers = document.querySelectorAll('.card-size-options-selector-container');
+sizeSelectorContainers.forEach((sizeContainer) => {
+
+    /*Busca o select*/
+    const select = sizeContainer.querySelector('select');
+
+    const parent = sizeContainer.closest('.product-card');
+
+    const product = findProductByID(menu, parent.getAttribute('id'));
+
+    const productType = parent.getAttribute('data-interaction');
+
+    let flavorIndex;
+
+    sizeContainer.addEventListener('change', (event) => {
+
+        flavorIndex = (event.target.selectedIndex) - 1;
+
+        switch(productType){
+
+            case "staticStyleAndPrice-multSize":
+
+                enableAddToCartButton(parent);
+
+                showWeightInfo(parent,flavorIndex,product);
+
+                break;
+
+            case "staticPrice-multStyle-multSize":
+                
+                enableAddToCartButton(parent);
+
+                showWeightInfo(parent,flavorIndex,product);
+                
+                break;
+
+            case "priceByExtra-multStyle-multSize":
+
+                
+            default:
+        }
+    })
+});
+
+
+
 /*Busca todos os botões de adicionar ao carrinhos */
 const addToCartButtons = document.querySelectorAll('.add-to-cart-button');
 
@@ -202,12 +250,12 @@ addToCartButtons.forEach( (button) => {
         const product = findProductByID(menu, productID);
 
         console.log(generateSignature(parent,product,productID));
-        
 
     });
-
 });
 
+reactToButtonInteraction('.card-style-selector-container', '.style-button');
+reactToButtonInteraction('.card-size-selector-container', '.size-button');
 
 /*=============================
         CARD RENDER
@@ -226,8 +274,6 @@ menu.forEach( (product) => {
 
                 injectProductName(cardElement, product);
                
-                injectProductMeasureUnit(cardElement, product);
-
                 injectProductPrice(cardElement, product);
 
                 injectProductDescription(cardElement, product);
@@ -265,8 +311,6 @@ menu.forEach( (product) => {
             case "simpleFlavorAndSize":
                 injectProductDefaultImage(cardElement,product);
 
-                injectProductMeasureUnit(cardElement,product);
-
                 injectProductName(cardElement, product);
 
                 injectProductPrice(cardElement, product);
@@ -298,8 +342,6 @@ menu.forEach( (product) => {
 
                 injectProductPrice(cardElement,product);
 
-                injectProductMeasureUnit(cardElement,product);
-
                 injectProductDescription(cardElement,product);
 
                 injectProductFlavorOptions(cardElement,product);
@@ -327,7 +369,7 @@ menu.forEach( (product) => {
                 injectProductSizeOptions(cardElement,product);
 
                 injectProductPrice(cardElement,product);
-            
+                
                 break;
 
             case "staticPrice-multStyle-multSize":
@@ -336,8 +378,6 @@ menu.forEach( (product) => {
                 injectProductName(cardElement,product);
 
                 injectProductPrice(cardElement,product);
-
-                injectProductMeasureUnit(cardElement,product);
 
                 injectProductDescription(cardElement,product);
 
@@ -352,10 +392,10 @@ menu.forEach( (product) => {
 
                 injectProductName(cardElement, product);
 
+                injectProductStyleButtonLabel(cardElement,product);
+
                 injectProductDescription(cardElement,product);
 
-                injectProductStyleButtonLabel(cardElement,product);
-                
                 injectProductSizeOptions(cardElement,product);
 
             break;
@@ -364,8 +404,6 @@ menu.forEach( (product) => {
                     injectProductDefaultImage(cardElement,product);
                     
                     injectProductName(cardElement,product);
-
-                    injectProductMeasureUnit(cardElement,product);
 
                     injectProductPrice(cardElement,product);
 
@@ -379,5 +417,3 @@ menu.forEach( (product) => {
     };
 });
 
-reactToButtonInteraction('.card-style-selector-container', '.style-button');
-reactToButtonInteraction('.card-size-selector-container', '.size-button');

@@ -101,11 +101,12 @@ function generateSignature( parent, product, productID){
                 break;
 
                 case "simpleSizeAndPrice-doubleFlavor":
-                    
+
                     flavorContainer = parent.querySelectorAll('.card-flavor-selector-container select');
                     
                     let flavorsNames = [];
 
+                    /*Busca os sabores selecionados e coloca em um array */
                     flavorContainer.forEach((flavor) => {
 
                        flavorIndex = flavor.selectedIndex;
@@ -115,8 +116,10 @@ function generateSignature( parent, product, productID){
 
                     });
 
+                    /*Ordena os saobres */
                     flavorsNames.sort();
                     
+                    /*Cria assinatura concatenado os sabores selecionados*/
                     signature = signature + '|' + flavorsNames.join('|');
 
                     signature = signature.trim();
@@ -199,6 +202,23 @@ function reactToButtonInteraction(classContainerName, ClassButtonName){
 
 
                         break;
+
+                    case "staticPrice-multStyle-multSize":
+                        /*Pega o índice atual do botão clicado*/
+                        var index = button.getAttribute('data-size-index');
+
+                        product = findProductByID(menu,productID);
+
+                        showSizeSelectorContainer(parent);
+                        
+                        switchStyleImage(parent,index,product);
+                        
+                        break;
+
+                    case "priceByExtra-multStyle-multSize":
+                        showSizeSelectorContainer(parent);
+
+                        break;
                 };
             });
         });
@@ -212,6 +232,16 @@ function showFlavorSelectorContainer(parent){
 
     if(flavorSelectorContainer){
         flavorSelectorContainer.classList.add('is-open');
+    }
+}
+
+function showSizeSelectorContainer(parent){
+
+    const sizeSelectorContainer = parent.querySelector('.card-size-options-selector-container');
+
+    if(sizeSelectorContainer){
+        sizeSelectorContainer.classList.add('is-open');
+
     }
 }
 
@@ -287,8 +317,13 @@ function injectProductName(cardElement, product){
 
 function injectProductMeasureUnit(cardElement, product){
     const cardMeasureUnit = cardElement.querySelector('.product-measure');
+
+
     if(cardMeasureUnit){
-    cardMeasureUnit.innerText = product.measureUnit;
+
+        cardMeasureUnit.classList.add('is-open');
+        cardMeasureUnit.innerText = product.measureUnit;
+        
     };
 }
 
@@ -297,12 +332,15 @@ function injectProductMeasureUnit(cardElement, product){
 function injectProductPrice(cardElement, product){
     const cardPrice = cardElement.querySelector( '.product-price');
 
+    cardPrice.classList.add('is-open');
+
     if(cardPrice){
 
         if( typeof product.displayPrice === 'string' ){
             cardPrice.innerText = product.displayPrice;
         }else{
             cardPrice.innerText = `R$ ${product.displayPrice.toFixed(2)}`;
+            injectProductMeasureUnit(cardElement,product);
         }
     };
 }
@@ -333,6 +371,31 @@ function injectProductSizeButtonLabel(cardElement, product){
             if(curretButton){
                 //Coloca o nome do tamanho contido no campo name do tamanho.
                 curretButton.innerText = size.name
+                //Atribui um dataSet correspondente ao índice do vetor, por exemplo: <button class="size-button" [data-size-index="i"] >size.name</button>
+                curretButton.dataset.sizeIndex = i;
+            };
+
+        });
+
+    };
+}
+
+
+function injectProductStyleButtonLabel(cardElement, product){
+    const cardButtons = cardElement.querySelectorAll('.card-style-selector-container .style-button');
+
+    if(cardButtons){
+
+        //Para cada tamanho disponível no campo sizes do product
+        product.styles.forEach((style, i) => {
+        
+            //Coloca o botão de indice i encontrado pela querySelector na variavel currentButton.
+            const curretButton = cardButtons[i];
+        
+            //Se o botão existe, então:
+            if(curretButton){
+                //Coloca o nome do tamanho contido no campo name do tamanho.
+                curretButton.innerText = style.name
                 //Atribui um dataSet correspondente ao índice do vetor, por exemplo: <button class="size-button" [data-size-index="i"] >size.name</button>
                 curretButton.dataset.sizeIndex = i;
             };
@@ -412,17 +475,6 @@ function injectProductSizeOptions(cardElement,product){
 
 
 
-function injectProductStyleButtonLabel(cardElement,product){
-    const styleSelector = cardElement.querySelectorAll('.card-style-selector-container .style-button');
-
-    styleSelector.forEach((select,i) => {
-        if(select){
-            select.innerText = product.styles[i].name;
-        };
-    });
-}
-
-
 
 function wait(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -450,7 +502,7 @@ function enableActionsContainer(parent){
 
         var buttons = temp.querySelectorAll('button');
         buttons.forEach( (button) => {
-            button.disabled = false;
+        button.disabled = false;
 
         });
 
@@ -459,22 +511,25 @@ function enableActionsContainer(parent){
         temp.disabled = false;
 
         /*Habilita o botão para adicionar ao carrinho*/
-        temp = cardActionsContainer.querySelector('.add-to-cart-button');
-        temp.classList.remove('is-disabled');
-        temp.disabled = false;
+        enableAddToCartButton(parent);
 
     }else{
         cardActionsContainer = parent.querySelector('.card-actions-container-right');
     
         /*Habilita o botão para adicionar ao carrinho*/
-        temp = cardActionsContainer.querySelector('.add-to-cart-button');
-        temp.classList.remove('is-disabled');
-        temp.disabled = false;
+        enableAddToCartButton(parent);
     };
+
 
 };
 
+function enableAddToCartButton(parent){
+    const button = parent.querySelector('.add-to-cart-button');
 
+    button.classList.remove('is-disabled');
+    button.disabled = false;
+
+}
 
 function enablePriceMeasure(parent, index, product){
     /*Busca o container price-measure*/
@@ -559,6 +614,19 @@ function switchImage(parent, index, product){
     }
 
 };
+
+
+function switchStyleImage(parent,index,product){
+
+    const imageContainer = parent.querySelector('.card-image-container img');
+
+    if(imageContainer && product.styles[index].image){
+        imageContainer.src = product.styles[index].image;
+        imageContainer.alt = product.styles[index].alt;
+    }else{
+        imageContainer.src = product.image;
+    }
+}
 
 
 function findProductByID(menu, id){

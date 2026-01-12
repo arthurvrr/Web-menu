@@ -791,17 +791,17 @@ const menu = [
         sizes: [
             {
                 name: "Mini",
-                weightDescription: "",
+                weightDescription: "Aproximadamente 1 quilo.",
             },
 
             {
                 name: "Pequena",
-                weightDescription: "",
+                weightDescription: "Aproximadamente 1,4 quilos",
             },
 
             {
                 name: "Média",
-                weightDescription: "",
+                weightDescription: "Aproximadamente 2 quilos",
             },
 
         ]
@@ -880,7 +880,7 @@ const menu = [
         name: "TORTA MORANGO BRONZEADO",
         measureUnit: "KG",
         type: "staticStyleAndPrice-multSize",
-        image: "/img/card-images/bolo-morango-moreno.png",
+        image: "/img/card-images/bolo-morango-moreno-01.png",
         price: 0,
         displayPrice: "Consulte valores",
         description:"Morangos frescos e o bronze do leite condensado cozido encontram um pão de ló de chocolate macio e nosso chantilly de nata caseiro. Simplesmente irresistível.",
@@ -928,7 +928,7 @@ const menu = [
         sizes: [
             {
                 name: "Mini",
-                weightDescription: "",
+                weightDescription: "Aproximadamente 700 gramas a 1 quilo",
             },
 
             {
@@ -1014,7 +1014,7 @@ const menu = [
         type: "staticPrice-multStyle-multSize",
         price: 98.00,
         displayPrice: 98.00,
-        image: "/img/card-images/torta-nozes.png",
+        image: "/img/card-images/torta-nozes-trad.png",
         description: "Intensidade e crocância. Esta torta une um pão de ló de chocolate preto, o recheio cremoso de leite condensado cozido e a textura única das nozes caramelizadas feitas aqui na casa.",
         isSummable: false,
 
@@ -1022,24 +1022,24 @@ const menu = [
 
             {
                 name: "TRADICIONAL",
-                image: "/img/card-images/torta-nozes.png",
+                image: "/img/card-images/torta-nozes-trad.png",
             },
 
             {
                 name:"NAKED",
-                image: ""
+                image: "/img/card-images/torta-nozes-naked.png"
             }
         ],
 
         sizes: [
             {
                 name: "Mini",
-                weightDescription: "",
+                weightDescription: "Aproximadamente 900 gramas a 1 quilo",
             },
 
             {
                 name: "Pequena",
-                weightDescription: "",
+                weightDescription: "Aproximadamente 1,5 quilos à 1,7 quilos",
             },
 
             {
@@ -1086,17 +1086,17 @@ const menu = [
         sizes: [
             {
                 name: "Mini",
-                weightDescription: "",
+                weightDescription: "Aproximadamente 1 quilo",
             },
 
             {
                 name: "Pequena",
-                weightDescription: "",
+                weightDescription: "Aproximadamente 1.5 à 1.7 quilos",
             },
 
             {
                 name: "Média",
-                weightDescription: "",
+                weightDescription: "Aproximadamente 1.8 à 2.1 quilos",
             },
         ]
     },
@@ -1112,7 +1112,7 @@ const menu = [
         description: "Um ícone de confeitaria, essa torta combina os sabores do Pão de ló preto e branco com recheios de ovos moles, chantilly de nata, e os texturizados merengão e praline de nozes.",
         isSummable: false,
 
-        styles: [
+        styles:  [
 
             {
                 name: "TRADICIONAL",
@@ -1128,17 +1128,17 @@ const menu = [
         sizes: [
             {
                 name: "Mini",
-                weightDescription: "",
+                weightDescription: "Aproximadamente 800 gramas a 1 quilos",
             },
 
             {
                 name: "Pequena",
-                weightDescription: "",
+                weightDescription: "Aproximadamente 1 à 1.3 quilo.",
             },
 
             {
                 name: "Média",
-                weightDescription: "",
+                weightDescription: "Aproximadamente 1,3 à 1,6 quilos",
             },
 
             {
@@ -1186,7 +1186,7 @@ const menu = [
 
             {
                 name: "Pequena",
-                weightDescription: "",
+                weightDescription: "Aproximadamente 1.6 quilos à 1.8 quilos",
             },
 
             {
@@ -1196,7 +1196,7 @@ const menu = [
 
             {
                 name: "Grande",
-                weightDescription: "",
+                weightDescription: "Aproximadamente 3,5 quilos a 4 quilos",
             },
 
             {
@@ -1246,12 +1246,12 @@ const menu = [
         sizes: [
             {
                 name: "Mini",
-                weightDescription: "",
+                weightDescription: "Aproximadamente 900 gramas à 1 quilo.",
             },
 
             {
                 name: "Pequena",
-                weightDescription: "",
+                weightDescription: "Aproximadamente 1,6 à 1,8 quilos",
             },
 
             {
