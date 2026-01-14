@@ -16,6 +16,12 @@ function generateSignature( parent, product, productID){
     let flavorIndex;
     let flavorName
 
+    let style;
+    let styleIndex;
+    let styleName;
+
+    
+
     switch(type){
 
 
@@ -56,7 +62,7 @@ function generateSignature( parent, product, productID){
             
             break;
 
-            case "simpleFlavorAndSize":
+        case "simpleFlavorAndSize":
 
                 /*Busca a string do sabor atual */
                 flavorContainer = parent.querySelector('.card-flavor-selector-container select');
@@ -69,7 +75,7 @@ function generateSignature( parent, product, productID){
 
                 break;
 
-            case "priceByFlavor-staticSize":
+        case "priceByFlavor-staticSize":
 
                 /*Busca a string do sabor atual */
                 flavorContainer = parent.querySelector('.card-flavor-selector-container select');
@@ -82,7 +88,7 @@ function generateSignature( parent, product, productID){
 
                 break;
 
-            case "priceByFlavor-doubleSize":
+        case "priceByFlavor-doubleSize":
 
                 /*Buscao a string do tamanho atual */
                 size = parent.querySelector('.size-button.button-selected');
@@ -100,31 +106,59 @@ function generateSignature( parent, product, productID){
             
                 break;
 
-                case "simpleSizeAndPrice-doubleFlavor":
+        case "simpleSizeAndPrice-doubleFlavor":
 
-                    flavorContainer = parent.querySelectorAll('.card-flavor-selector-container select');
+            flavorContainer = parent.querySelectorAll('.card-flavor-selector-container select');
                     
-                    let flavorsNames = [];
+            let flavorsNames = [];
 
-                    /*Busca os sabores selecionados e coloca em um array */
-                    flavorContainer.forEach((flavor) => {
+            /*Busca os sabores selecionados e coloca em um array */
+            flavorContainer.forEach((flavor) => {
+                flavorIndex = flavor.selectedIndex;
+                flavorName = product.flavors[flavorIndex - 1].name
+                flavorName = flavorName.toLowerCase();
+                flavorsNames.push(flavorName);
 
-                       flavorIndex = flavor.selectedIndex;
-                       flavorName = product.flavors[flavorIndex - 1].name
-                       flavorName = flavorName.toLowerCase();
-                       flavorsNames.push(flavorName);
+            });
 
-                    });
-
-                    /*Ordena os saobres */
-                    flavorsNames.sort();
+            /*Ordena os saobres */
+            flavorsNames.sort();
                     
-                    /*Cria assinatura concatenado os sabores selecionados*/
-                    signature = signature + '|' + flavorsNames.join('|');
+            /*Cria assinatura concatenado os sabores selecionados*/
+            signature = signature + '|' + flavorsNames.join('|');
 
-                    signature = signature.trim();
+            signature = signature.trim();
                     
-                    break;
+                break;
+            
+        case "staticStyleAndPrice-multSize":
+                
+            sizeContainer =  parent.querySelector('.card-size-options-selector-container select');
+            sizeIndex = sizeContainer.selectedIndex - 1;
+            sizeName = product.sizes[sizeIndex].name;
+
+            signature = signature + '|' + sizeName.toLowerCase();
+            signature = signature.trim();
+
+            break;
+
+        case "staticPrice-multStyle-multSize":
+            sizeContainer =  parent.querySelector('.card-size-options-selector-container select');
+            sizeIndex = sizeContainer.selectedIndex - 1;
+            sizeName = product.sizes[sizeIndex].name;
+
+            style = parent.querySelector('.style-button.button-selected');
+            styleIndex = style.getAttribute('data-size-index');
+            styleName = product.styles[styleIndex].name;
+
+            signature = signature + '|' + sizeName.toLowerCase() + '|' + styleName.toLowerCase();
+            signature = signature.trim();
+
+            break;
+
+        case "priceByExtra-multStyle-multSize":
+
+            break;
 
 
         default:
@@ -216,7 +250,10 @@ function reactToButtonInteraction(classContainerName, ClassButtonName){
                         break;
 
                     case "priceByExtra-multStyle-multSize":
-                        showSizeSelectorContainer(parent);
+                        // showSizeSelectorContainer(parent);
+                        showExtraOptionsContainer(parent);
+
+                        
 
                         break;
                 };
@@ -245,6 +282,16 @@ function showSizeSelectorContainer(parent){
     }
 }
 
+function showExtraOptionsContainer(parent){
+
+    const extraContainer = parent.querySelector('.card-extra-options-selector-container');
+
+    if(extraContainer){
+        extraContainer.classList.add('is-open');
+
+    }
+
+}
 
 
 function showWeightInfo(parent,index,product){
@@ -475,11 +522,25 @@ function injectProductSizeOptions(cardElement,product){
 
 
 
-
 function wait(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+function injectExtraOptions(cardElement, product){
+
+    const extraSelect = cardElement.querySelector('.card-extra-options-selector-container .extra-select');
+
+    const options = extraSelect.querySelectorAll('option:enabled');
+
+    options.forEach((option, i) => {
+        const currentExtra = product.extras[i].name;
+
+        option.value = currentExtra.toLowerCase();
+
+        option.innerText = currentExtra;
+    
+    })
+}
 
 
 async function waitFor(ms) {
@@ -635,3 +696,4 @@ function findProductByID(menu, id){
     return product;
 
 }
+

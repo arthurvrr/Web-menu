@@ -199,11 +199,11 @@ sizeSelectorContainers.forEach((sizeContainer) => {
 
     const productType = parent.getAttribute('data-interaction');
 
-    let flavorIndex;
+    let sizeIndex;
 
     sizeContainer.addEventListener('change', (event) => {
 
-        flavorIndex = (event.target.selectedIndex) - 1;
+        sizeIndex = (event.target.selectedIndex) - 1;
 
         switch(productType){
 
@@ -211,7 +211,7 @@ sizeSelectorContainers.forEach((sizeContainer) => {
 
                 enableAddToCartButton(parent);
 
-                showWeightInfo(parent,flavorIndex,product);
+                showWeightInfo(parent,sizeIndex,product);
 
                 break;
 
@@ -219,11 +219,19 @@ sizeSelectorContainers.forEach((sizeContainer) => {
                 
                 enableAddToCartButton(parent);
 
-                showWeightInfo(parent,flavorIndex,product);
+                showWeightInfo(parent,sizeIndex,product);
                 
                 break;
 
             case "priceByExtra-multStyle-multSize":
+
+                enableAddToCartButton(parent);
+                console.log(sizeIndex);
+
+                showWeightInfo(parent,sizeIndex,product);
+
+
+                break;
 
                 
             default:
@@ -232,6 +240,19 @@ sizeSelectorContainers.forEach((sizeContainer) => {
 });
 
 
+
+const extraSelectorContainers = document.querySelectorAll('.card-extra-options-selector-container');
+extraSelectorContainers.forEach( (extraContainer) => {
+
+    const parent = extraContainer.closest('.product-card');
+
+    extraContainer.addEventListener( 'change', (event) => {
+        
+        showSizeSelectorContainer(parent);
+
+    })
+
+})
 
 /*Busca todos os botões de adicionar ao carrinhos */
 const addToCartButtons = document.querySelectorAll('.add-to-cart-button');
@@ -397,6 +418,8 @@ menu.forEach( (product) => {
                 injectProductDescription(cardElement,product);
 
                 injectProductSizeOptions(cardElement,product);
+
+                injectExtraOptions(cardElement,product);
 
             break;
             

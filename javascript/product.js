@@ -899,7 +899,7 @@ const menu = [
 
             {
                 name: "Média",
-                weightDescription: "",
+                weightDescription: "Aproximadamente 2 à 2,2 quilos.",
             },
 
             {
@@ -1002,7 +1002,7 @@ const menu = [
 
             {
                 name: "Família",
-                weightDescription: "",
+                weightDescription: "Aproximadamente 3,8 à 4 quilos.",
             },
         ]
     },
@@ -1161,7 +1161,7 @@ const menu = [
         name: "TORTA BRIGADEIRO",
         measureUnit: "KG",
         type: "priceByExtra-multStyle-multSize",
-        image: "/img/card-images/torta-brigadeiro-tradicional.jpeg",
+        image: "/img/card-images/torta-brigadeiro-preto-trad.png",
         description: "Uma celebração do chocolate preto. Combina um pão de ló fofinho de chocolate com camadas intercaladas de mousse de chocolate intenso e o nosso clássico brigadeiro caseiro.",
         isSummable: false,
 
@@ -1169,7 +1169,7 @@ const menu = [
 
             {
                 name: "TRADICIONAL",
-                image: "/img/card-images/torta-brigadeiro-tradicional.jpeg",
+                image: "/img/card-images/torta-brigadeiro-preto-trad.png",
             },
 
             {
@@ -1181,27 +1181,27 @@ const menu = [
         sizes: [
             {
                 name: "Mini",
-                weightDescription: "",
+                weightDescription: "Aproximadamente 900 gramas à 1 quilo.",
             },
 
             {
                 name: "Pequena",
-                weightDescription: "Aproximadamente 1.6 quilos à 1.8 quilos",
+                weightDescription: "Aproximadamente 1,6 à 2 quilos",
             },
 
             {
                 name: "Média",
-                weightDescription: "",
+                weightDescription: "Aproxiamadamente 2 à 2,3 quilos",
             },
 
             {
                 name: "Grande",
-                weightDescription: "Aproximadamente 3,5 quilos a 4 quilos",
+                weightDescription: "Aproximadamente 3 quilos a 3,5 quilos",
             },
 
             {
                 name: "Família",
-                weightDescription: "",
+                weightDescription: "Aproximadamente 3,8 à 4 quilos",
             },
         ],
 
@@ -1261,7 +1261,7 @@ const menu = [
 
             {
                 name: "Grande",
-                weightDescription: "",
+                weightDescription: "Aproximadamente 3 quilos a 3,5 quilos",
             },
 
             {
