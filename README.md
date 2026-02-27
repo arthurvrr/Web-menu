@@ -20,5 +20,5 @@ Below you can see some ideas that I'll implement in this project. Suggestions ar
 - [x] Develop a visual effect to display all products cards.
   - [x] Implement a Masonry grid layout for products.
   - [ ] Fix end menu layout problem.
-- [ ] Develop product card animation.
+- [x] Develop product card animation.
 - [ ] Implement the order check-out flow.
