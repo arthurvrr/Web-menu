@@ -206,7 +206,7 @@ const menu = [
         category: "salgados",
         price: 2.30,
         displayPrice: 2.30,
-        image:"/img/card-images/empadinha-assada.avif",
+        image:"/img/card-images/empada-assada.png",
         alt: "Empadinha Assada",
         type: "simpleFlavorAndSize",
         description: "Aproximadamente 20 gramas",
@@ -443,7 +443,7 @@ const menu = [
                 name: "PEQUENO",
                 price: 90.00,
                 displayPrice: 90.00,
-                weightDescription: "Com ??, nossa quiche é extremamente bem servida. Rende 6 fatias, perfeitas para compartilhar (ou não!).",
+                weightDescription: "Com 900 gramas e serve até 8 fatias.",
                 image:"/img/card-images/quiche-pequeno.jpg",
             },
 
@@ -451,7 +451,7 @@ const menu = [
                 name: "GRANDE",
                 price: 140.00,
                 displayPrice: 140.00,
-                weightDescription: "Com 1,5kg de puro sabor, nossa quiche grande impressiona. Rende 10 fatias generosas, perfeitas para alimentar toda a família ou amigos.",
+                weightDescription: "Com 1,3 quilos e serve 8 fatias generosas.",
                 image:"/img/card-images/quiche-pequeno.jpg",
             }
         ],
@@ -694,7 +694,7 @@ const menu = [
     {
         id: "cupcake",
         name: "CUPCAKE",
-        image: "/img/card-images/cupcake-tradicional.webp",
+        image: "/img/card-images/cupcake-tradicional.png",
         type: "priceBySize-multFlavor",
         measureUnit: "UN",
         isSummable: true,
@@ -715,7 +715,7 @@ const menu = [
                 weightDescription:"Aproximadamente 100 gramas",
                 price: 8.00,
                 displayPrice: 8.00,
-                image: "/img/card-images/cupcake-tradicional.webp"
+                image: "/img/card-images/cupcake-tradicional.png"
 
             }
 
@@ -747,7 +747,7 @@ const menu = [
         id: "quindim",
         name: "QUINDIM",
         type: "priceBySize-simpleFlavor",
-        image: "/img/card-images/quindim-mini.webp",
+        image: "/img/card-images/mini-quindim.png",
         measureUnit: "UN",
         category: "doces",
         isSummable: true,
@@ -759,7 +759,7 @@ const menu = [
                 weightDescription: "Aproximadamente 30 gramas",
                 price: 2.90,
                 displayPrice: 2.90,
-                image: "/img/card-images/quindim-mini.webp",
+                image: "/img/card-images/mini-quindim.png",
                 
             },
 
@@ -768,7 +768,7 @@ const menu = [
                 weightDescription: "Aproximadamente 50 gramas",
                 price: 4.50,
                 displayPrice: 4.50,
-                image: "/img/card-images/quindim-tradicional.jpg",
+                image: "/img/card-images/quindim-tradicional.png",
             }
         ]
     },
@@ -852,7 +852,7 @@ const menu = [
         name: "TORTA NOIVA DO MAR",
         measureUnit: "KG",
         type: "staticStyleAndPrice-multSize",
-        image: "/img/card-images/torta-noiva-do-mar.jpeg",
+        image: "/img/card-images/torta-noiva-do-mar-tradicional.png",
         price: 89.90,
         displayPrice: 89.90,
         description:"Uma homenagem à nossa praia, esta torta equilibra o doce e o sofisticado. Possui uma base macia de bolo de aveia coberta por camadas de creme de coco, o clássico leite condensado cozido e um toque de polpa de ameixa, finalizada com a crocância de um praline de nozes.",
@@ -881,8 +881,8 @@ const menu = [
         measureUnit: "KG",
         type: "staticStyleAndPrice-multSize",
         image: "/img/card-images/bolo-morango-moreno-01.png",
-        price: 0,
-        displayPrice: "Consulte valores",
+        price: 79.90,
+        displayPrice: 79.90,
         description:"Morangos frescos e o bronze do leite condensado cozido encontram um pão de ló de chocolate macio e nosso chantilly de nata caseiro. Simplesmente irresistível.",
         isSummable: false,
 
@@ -919,9 +919,9 @@ const menu = [
         name: "TORTA MORANGO NATA",
         measureUnit: "KG",
         type: "staticStyleAndPrice-multSize",
-        image: "/img/card-images/torta-morango-nata.png",
-        price: 0,
-        displayPrice: "Consulte valores",
+        image: "/img/card-images/torta-morango-nata-tradicional.png",
+        price: 79.90,
+        displayPrice: 79.90,
         description:"Uma sobremesa leve e refrescante. Combina morangos frescos, nosso chantilly artesanal de nata e pedaços crocantes de merengão, tudo sobre uma base macia de pão de ló de chocolate branco.",
         isSummable: false,
 
@@ -962,7 +962,7 @@ const menu = [
         type: "staticPrice-multStyle-multSize",
         price: 79.90,
         displayPrice:79.90,
-        image: "/img/card-images/torta-ouro-branco.png",
+        image: "/img/card-images/torta-bombom-ouro-branco-tradicional.png",
         description:"A combinação perfeita de chocolate e cremes brancos. Base de pão de ló preto intenso, recheada em camadas com um suave creme de baunilha, mousse branco aerado e generosos pedaços de bombom Ouro Branco.",
         isSummable: false,
 
@@ -970,7 +970,7 @@ const menu = [
 
             {
                 name: "TRADICIONAL",
-                image: "/img/card-images/torta-ouro-branco.png",
+                image: "/img/card-images/torta-bombom-ouro-branco-tradicional.png",
             },
 
             {
@@ -1066,7 +1066,7 @@ const menu = [
         type: "staticPrice-multStyle-multSize",
         price: 79.90,
         displayPrice: 79.90,
-        image: "/img/card-images/torta-tropicalia.png",
+        image: "/img/card-images/torta-tropicalia-tradicional.png",
         description: "Leve e refrescante. Pão de ló de chocolate branco recheado com abacaxi fresco, ovos moles artesanais, chantilly de nata, e finalizado com a textura única do merengão e de um macron de coco.",
         isSummable: false,
 
@@ -1074,7 +1074,7 @@ const menu = [
 
             {
                 name: "TRADICIONAL",
-                image: "/img/card-images/torta-tropicalia.png",
+                image: "/img/card-images/torta-tropicalia-tradicional.png",
             },
 
             {
@@ -1160,6 +1160,8 @@ const menu = [
         alt: "Torta de Brigadeiro Preto",
         name: "TORTA BRIGADEIRO",
         measureUnit: "KG",
+        price: 89.90,
+        displayPrice: 89.90,
         type: "priceByExtra-multStyle-multSize",
         image: "/img/card-images/torta-brigadeiro-preto-trad.png",
         description: "Uma celebração do chocolate preto. Combina um pão de ló fofinho de chocolate com camadas intercaladas de mousse de chocolate intenso e o nosso clássico brigadeiro caseiro.",
@@ -1174,7 +1176,7 @@ const menu = [
 
             {
                 name:"NAKED",
-                image: ""
+                image: "/img/card-images/torta-brigadeiro-com-morango-naked.png",
             }
         ],
 
@@ -1207,15 +1209,11 @@ const menu = [
 
         extras: [
             {
-                name: "Sem adicional",
-                price: 89.90,
-                displayPrice: 89.90                
+                name: "Sem adicional",            
             },
 
             {
                 name: "Morangos",
-                price: 0,
-                displayPrice: "Consulte valores"
             }
         ]
     },
@@ -1225,8 +1223,10 @@ const menu = [
         id:"torta-dois-amores",
         name: "TORTA DOIS AMORES",
         measureUnit: "KG",
+        price: 89.90,
+        displayPrice: 89.90,
         type: "priceByExtra-multStyle-multSize",
-        image: "",
+        image: "/img/card-images/torta-dois-amores-naked.png",
         description: "Uma celebração do chocolate preto. Combina um pão de ló fofinho de chocolate com camadas intercaladas de mousse de chocolate intenso e o nosso clássico brigadeiro caseiro.",
         isSummable: false,
 
@@ -1234,7 +1234,7 @@ const menu = [
 
             {
                 name: "TRADICIONAL",
-                image: "",
+                image: "/img/card-images/torta-dois-amores-tradicional.jpeg",
             },
 
             {
@@ -1290,19 +1290,19 @@ const menu = [
     { 
         id: "cheesecake",
         name: "CHEESECAKE",
-        description:"Perfeito para sua celebração! Este cheesecake de 20cm foi feito para impressionar, servindo 10 a 12 fatias muito generosas",
+        description:"Perfeito para sua celebração! Com 20cm de diametro foi feito para impressionar, servindo 10 a 12 fatias muito generosas",
         type: "staticPriceAndSize-multFlavor",
         measureUnit: "UN",
         price: 159.00,
         displayPrice: 159.00,
-        image:"/img/card-images/cheesecake-goiabada.jpg",
+        image:"/img/card-images/cheesecake-frutas-vermelhas.png",
         isSummable: true,
 
         flavors : [
             {
                 name:"Frutas vermelhas",
                 flavorDescription: "Equilíbrio perfeito entre o doce e o cítrico! Base de massa frola, creme suave de cream cheese e uma cobertura vibrante de framboesa, morango e amora.",
-                image:"/img/card-images/cheesecake-frutas-vermelhas.webp"
+                image:"/img/card-images/cheesecake-frutas-vermelhas.png"
             },
 
             {
@@ -1322,20 +1322,20 @@ const menu = [
         measureUnit: "UN",
         price: 159.00,
         displayPrice: 159.00,
-        image:"/img/card-images/torta-baixa-3-chocolates.jpg",
+        image:"/img/card-images/torta-baixa-3-chocolates.png",
         isSummable: true,
 
         flavors : [
             {
                 name:"Holandesa",
                 flavorDescription: "Sofisticação em cada camada: base crocante, biscoitos Calipso na lateral, creme especial de chocolate branco com cream cheese e uma cobertura irresistível de ganache de chocolate.",
-                image:"/img/card-images/torta-baixa-holandesa.jpg"
+                image:"/img/card-images/torta-baixa-holandesa.png"
             },
 
             {
                 name: "Três Chocolates",
                 flavorDescription: "O trio perfeito. Base de bolacha, camadas de mousse de chocolate (meio amargo, ao leite e branco) e finalização com ganache de chocolate.",
-                image: "/img/card-images/torta-baixa-3-chocolates.jpg",
+                image: "/img/card-images/torta-baixa-3-chocolates.png",
             },
 
             {

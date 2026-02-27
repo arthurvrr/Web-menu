@@ -157,7 +157,7 @@ flavorSelectorContainers.forEach((flavorContainer) => {
                     enablePriceMeasure(parent,index,product);
                     break;
 
-                case  "priceByFlavor-staticSize":
+                case "priceByFlavor-staticSize":
                     showFlavorInfo(parent, index);
                     enablePriceMeasure(parent,index,product);
                     break;
@@ -172,6 +172,13 @@ flavorSelectorContainers.forEach((flavorContainer) => {
                     if(select01.value && select02.value){
                         enableActionsContainer(parent);
                     }
+
+                    break;
+
+                case "staticPriceAndSize-multFlavor":
+                    showFlavorInfo(parent,index);
+                    enableActionsContainer(parent);
+                    switchImage(parent,index,product);
 
                     break;
 
@@ -226,7 +233,6 @@ sizeSelectorContainers.forEach((sizeContainer) => {
             case "priceByExtra-multStyle-multSize":
 
                 enableAddToCartButton(parent);
-                console.log(sizeIndex);
 
                 showWeightInfo(parent,sizeIndex,product);
 
@@ -254,12 +260,12 @@ extraSelectorContainers.forEach( (extraContainer) => {
 
 })
 
-/*Busca todos os botões de adicionar ao carrinhos */
-const addToCartButtons = document.querySelectorAll('.add-to-cart-button');
-
 /*Cria o array que guarda os produtos escolhidos*/
 let purchasedProducts;
 
+
+/*Busca todos os botões de adicionar ao carrinhos */
+const addToCartButtons = document.querySelectorAll('.add-to-cart-button');
 addToCartButtons.forEach( (button) => {
 
     button.addEventListener('click', (event) => {
@@ -270,7 +276,11 @@ addToCartButtons.forEach( (button) => {
 
         const product = findProductByID(menu, productID);
 
-        console.log(generateSignature(parent,product,productID));
+        // Gera a assinatura do produto para buscar verifar se é necessário criar uma estutura nova do produto escolhido no carrinho
+        // de compras ou apenas adicionar.
+        // console.log(generateSignature(parent,product,productID));
+
+        reloadProductCard(parent,product);
 
     });
 });
@@ -291,148 +301,54 @@ menu.forEach( (product) => {
     if(cardElement){
         switch(product.type){
             case "staticPriceAndSize":
-                injectProductDefaultImage(cardElement, product);
-
-                injectProductName(cardElement, product);
-               
-                injectProductPrice(cardElement, product);
-
-                injectProductDescription(cardElement, product);
-
-                injectProductQuantityLabel(cardElement, product);
-
-                enableActionsContainer(cardElement);
+                renderStaticPriceAndSize(cardElement,product);
 
                 break;
             
             case "priceBySize-simpleFlavor":
-                injectProductDefaultImage(cardElement, product);
-
-                injectProductName(cardElement, product);
-
-                injectProductQuantityLabel(cardElement, product);
-                
-                injectProductSizeButtonLabel( cardElement,product);
+                renderPriceBySizeSimpleFlavor(cardElement,product);
 
                 break;
             
             case "priceBySize-multFlavor":
-                injectProductDefaultImage(cardElement,product);
-
-                injectProductName(cardElement, product);
-
-                injectProductQuantityLabel( cardElement, product);
-            
-                injectProductSizeButtonLabel(cardElement, product)
-
-                injectProductFlavorOptions(cardElement, product);
+                renderPriceBySizeMultFlavor(cardElement,product);
 
                 break;
 
             case "simpleFlavorAndSize":
-                injectProductDefaultImage(cardElement,product);
-
-                injectProductName(cardElement, product);
-
-                injectProductPrice(cardElement, product);
-
-                injectProductDescription(cardElement, product);
-
-                injectProductFlavorOptions(cardElement,product);
-
-                injectProductQuantityLabel(cardElement,product);
+                renderSimpleFlavorAndSize(cardElement,product);
                 break;
 
             case "priceByFlavor-staticSize":
-                injectProductDefaultImage(cardElement,product);
-
-                injectProductName(cardElement,product);
-
-                injectProductDescription(cardElement,product);
-
-                injectProductFlavorOptions(cardElement, product);
-
-                injectProductQuantityLabel(cardElement,product);
+                renderPriceByFlavorStaticSize(cardElement,product);
 
                 break;
 
             case "simpleSizeAndPrice-doubleFlavor":
-                injectProductDefaultImage(cardElement,product);
-
-                injectProductName(cardElement,product);
-
-                injectProductPrice(cardElement,product);
-
-                injectProductDescription(cardElement,product);
-
-                injectProductFlavorOptions(cardElement,product);
+                renderSimpleSizeAndPriceDoubleFlavor(cardElement,product);
 
                 break;
 
             case "priceByFlavor-doubleSize":
-                injectProductDefaultImage(cardElement,product);
-
-                injectProductName(cardElement,product);
-
-                injectProductSizeButtonLabel(cardElement,product);
-
-                injectProductFlavorOptions(cardElement,product);
-            
+                renderPriceByFlavorDoubleSize(cardElement,product);
                 break;
 
             case "staticStyleAndPrice-multSize":
-                injectProductDefaultImage(cardElement,product);
-
-                injectProductName(cardElement,product);
-
-                injectProductDescription(cardElement, product);
-
-                injectProductSizeOptions(cardElement,product);
-
-                injectProductPrice(cardElement,product);
-                
+                renderStaticStyleAndPriceMultSize(cardElement,product);
                 break;
 
             case "staticPrice-multStyle-multSize":
-                injectProductDefaultImage(cardElement,product);
-
-                injectProductName(cardElement,product);
-
-                injectProductPrice(cardElement,product);
-
-                injectProductDescription(cardElement,product);
-
-                injectProductStyleButtonLabel(cardElement,product);
-
-                injectProductSizeOptions(cardElement,product);
+                renderStaticPriceMultStyleMultSize(cardElement,product);
 
                 break;
 
             case "priceByExtra-multStyle-multSize":
-                injectProductDefaultImage(cardElement,product);
-
-                injectProductName(cardElement, product);
-
-                injectProductStyleButtonLabel(cardElement,product);
-
-                injectProductDescription(cardElement,product);
-
-                injectProductSizeOptions(cardElement,product);
-
-                injectExtraOptions(cardElement,product);
+                renderRiceByExtraMultStyleMultSize(cardElement,product)
 
             break;
             
             case "staticPriceAndSize-multFlavor":
-                    injectProductDefaultImage(cardElement,product);
-                    
-                    injectProductName(cardElement,product);
-
-                    injectProductPrice(cardElement,product);
-
-                    injectProductDescription(cardElement,product);
-
-                    injectProductFlavorOptions(cardElement,product);
+                renderStaticPriceAndSizeMultFlavor(cardElement,product);
             
                 break;
 

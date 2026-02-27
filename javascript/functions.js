@@ -157,7 +157,33 @@ function generateSignature( parent, product, productID){
             break;
 
         case "priceByExtra-multStyle-multSize":
+            style = parent.querySelector('.style-button.button-selected');
+            styleIndex = style.getAttribute('data-size-index');
+            styleName = product.styles[styleIndex].name;
 
+            sizeContainer =  parent.querySelector('.card-size-options-selector-container select');
+            sizeIndex = sizeContainer.selectedIndex - 1;
+            sizeName = product.sizes[sizeIndex].name;
+
+            var extraContainer = parent.querySelector('.card-extra-options-selector-container select');
+            var extraIndex = extraContainer.selectedIndex - 1;
+            var extraName = product.extras[extraIndex].name;
+
+            signature = signature + '|' + sizeName.toLowerCase() + '|' + styleName.toLowerCase() + '|' + extraName.toLowerCase();
+
+            signature = signature.trim();
+
+            break;
+
+        case "staticPriceAndSize-multFlavor":
+            flavorContainer = parent.querySelector('.card-flavor-selector-container select');
+            flavorIndex = flavorContainer.selectedIndex;
+            flavorName = product.flavors[flavorIndex - 1].name;
+
+            signature = signature + '|' + flavorName.toLowerCase();
+
+            signature = signature.trim();
+            
             break;
 
 
@@ -165,7 +191,7 @@ function generateSignature( parent, product, productID){
 
 
     }
-
+    
     return signature;
 
 };
@@ -188,14 +214,14 @@ function reactToButtonInteraction(classContainerName, ClassButtonName){
 
                 const productID = parent.getAttribute('id');
 
+                /*Busca o produto no array de produtos*/
+                const product = findProductByID(menu,productID);
+
                 switch(currentType) {
                     case "priceBySize-simpleFlavor":
 
                         /*Pega o índice atual do botão clicado*/
                         var index = button.getAttribute('data-size-index');
-
-                        /*Busca o produto no array de produtos*/
-                        var product = findProductByID(menu,productID);
 
                         enablePriceMeasure(parent, index, product);
 
@@ -212,9 +238,6 @@ function reactToButtonInteraction(classContainerName, ClassButtonName){
                         /*Pega o índice atual do botão clicado*/
                         var index = button.getAttribute('data-size-index');
                         
-                        /*Busca o produto no array de produtos*/
-                        var product = findProductByID(menu,productID);
-
                         enablePriceMeasure(parent, index, product);
 
                         switchImage(parent,index,product);
@@ -228,8 +251,6 @@ function reactToButtonInteraction(classContainerName, ClassButtonName){
                     case "priceByFlavor-doubleSize":
                         index = button.getAttribute('data-size-index');
 
-                        product = findProductByID(menu,productID);
-
                         showFlavorSelectorContainer(parent);
 
                         showWeightInfo(parent,index,product);
@@ -241,8 +262,6 @@ function reactToButtonInteraction(classContainerName, ClassButtonName){
                         /*Pega o índice atual do botão clicado*/
                         var index = button.getAttribute('data-size-index');
 
-                        product = findProductByID(menu,productID);
-
                         showSizeSelectorContainer(parent);
                         
                         switchStyleImage(parent,index,product);
@@ -250,9 +269,11 @@ function reactToButtonInteraction(classContainerName, ClassButtonName){
                         break;
 
                     case "priceByExtra-multStyle-multSize":
-                        // showSizeSelectorContainer(parent);
+                        var index = button.getAttribute('data-size-index');
+
                         showExtraOptionsContainer(parent);
 
+                        switchStyleImage(parent,index,product);
                         
 
                         break;
@@ -325,7 +346,7 @@ function colorClickedButton(currentButton, buttonContainer, ClassButtonName){
         
     /*Adicione o efeito clicado*/
     currentButton.classList.add('button-selected');
-}
+} 
 
 
 
@@ -483,7 +504,6 @@ function injectProductFlavorOptions(cardElement, product){
     
     const flavorSelector = cardElement.querySelectorAll('.card-flavor-selector-container .flavor-select');    
     
-    //
     flavorSelector.forEach((select) =>{
         //Forma um array com as option disponíveis dentro do seletor atual.
         const validOptions = select.querySelectorAll('option:enabled');
@@ -662,18 +682,24 @@ function enablePriceMeasure(parent, index, product){
 };
 
 
- 
 function switchImage(parent, index, product){
 
     const imageContainer = parent.querySelector('.card-image-container img');
+    switch(product.type){
 
-    if(imageContainer && product.sizes[index].image){
-        imageContainer.src = product.sizes[index].image;
-        imageContainer.alt = product.sizes[index].alt;
-    }else{
-        imageContainer.src = product.image;
+        case "staticPriceAndSize-multFlavor":
+            imageContainer.src = product.flavors[index].image;
+
+            break;
+
+        default:    
+            if(imageContainer && product.sizes[index].image){
+                imageContainer.src = product.sizes[index].image;
+                imageContainer.alt = product.sizes[index].alt;
+            }else{
+                imageContainer.src = product.image;
+            }
     }
-
 };
 
 
@@ -697,3 +723,255 @@ function findProductByID(menu, id){
 
 }
 
+function renderStaticPriceAndSize(cardElement,product){
+    injectProductDefaultImage(cardElement, product);
+    injectProductName(cardElement, product);           
+    injectProductPrice(cardElement, product);
+    injectProductDescription(cardElement, product);
+    injectProductQuantityLabel(cardElement, product);
+    enableActionsContainer(cardElement);
+
+}
+
+function renderPriceBySizeSimpleFlavor(cardElement,product){
+    injectProductDefaultImage(cardElement, product);
+    injectProductName(cardElement, product);
+    injectProductQuantityLabel(cardElement, product);
+    injectProductSizeButtonLabel( cardElement,product);
+
+}
+
+function renderPriceBySizeMultFlavor(cardElement,product){
+    injectProductDefaultImage(cardElement,product);
+    injectProductName(cardElement, product);
+    injectProductQuantityLabel( cardElement, product);
+    injectProductSizeButtonLabel(cardElement, product)
+    injectProductFlavorOptions(cardElement, product);
+
+}
+
+
+function renderSimpleFlavorAndSize(cardElement,product){
+    injectProductDefaultImage(cardElement,product);
+    injectProductName(cardElement, product);
+    injectProductPrice(cardElement, product);
+    injectProductDescription(cardElement, product);
+    injectProductFlavorOptions(cardElement,product);
+    injectProductQuantityLabel(cardElement,product);
+
+}
+
+
+function renderPriceByFlavorStaticSize(cardElement,product){
+    injectProductDefaultImage(cardElement,product);
+    injectProductName(cardElement,product);
+    injectProductDescription(cardElement,product);
+    injectProductFlavorOptions(cardElement, product);
+    injectProductQuantityLabel(cardElement,product);
+
+}
+
+function renderSimpleSizeAndPriceDoubleFlavor(cardElement,product){
+    injectProductDefaultImage(cardElement,product);
+    injectProductName(cardElement,product);
+    injectProductPrice(cardElement,product);
+    injectProductDescription(cardElement,product);
+    injectProductFlavorOptions(cardElement,product);
+
+}
+
+function renderPriceByFlavorDoubleSize(cardElement,product){
+    injectProductDefaultImage(cardElement,product);
+    injectProductName(cardElement,product);
+    injectProductSizeButtonLabel(cardElement,product);
+    injectProductFlavorOptions(cardElement,product);
+            
+}
+
+function renderStaticStyleAndPriceMultSize(cardElement,product){
+    injectProductDefaultImage(cardElement,product);
+    injectProductName(cardElement,product);
+    injectProductDescription(cardElement, product);
+    injectProductSizeOptions(cardElement,product);
+    injectProductPrice(cardElement,product);
+                
+}
+
+
+function renderStaticPriceMultStyleMultSize(cardElement,product){
+    injectProductDefaultImage(cardElement,product);
+    injectProductName(cardElement,product);
+    injectProductPrice(cardElement,product);
+    injectProductDescription(cardElement,product);
+    injectProductStyleButtonLabel(cardElement,product);
+    injectProductSizeOptions(cardElement,product);
+
+}
+
+function renderRiceByExtraMultStyleMultSize(cardElement,product){
+    injectProductDefaultImage(cardElement,product);
+    injectProductName(cardElement, product);
+    injectProductStyleButtonLabel(cardElement,product);
+    injectProductDescription(cardElement,product);
+    injectProductSizeOptions(cardElement,product);
+    injectExtraOptions(cardElement,product);
+    injectProductPrice(cardElement,product);
+
+}
+
+function renderStaticPriceAndSizeMultFlavor(cardElement,product){
+    injectProductDefaultImage(cardElement,product);                
+    injectProductName(cardElement,product);
+    injectProductPrice(cardElement,product);
+    injectProductDescription(cardElement,product);
+    injectProductFlavorOptions(cardElement,product);
+
+}
+
+function reloadProductCard(parent, product ){
+
+    const interaction = parent.getAttribute('data-interaction');
+
+
+
+    switch(interaction){
+            case "staticPriceAndSize":
+                renderStaticPriceAndSize(parent,product);
+
+                break;
+            
+            case "priceBySize-simpleFlavor":
+                retractInfoRow(parent);
+                hidePrice(parent);
+                clearSizeButton(parent);
+                resetQuantitySelector(parent);
+                renderPriceBySizeSimpleFlavor(parent,product);
+
+                break;
+            
+            case "priceBySize-multFlavor":
+                hideFlavorSelect(parent);
+                hidePrice(parent);
+                retractInfoRow(parent);
+                clearSelect(parent);
+                clearSizeButton(parent);
+                renderPriceBySizeMultFlavor(parent,product);
+
+                break;
+
+            case "simpleFlavorAndSize":
+                clearSelect(parent);
+                renderSimpleFlavorAndSize(parent,product);
+                break;
+
+            case "priceByFlavor-staticSize":
+                clearSelect(parent);
+                renderPriceByFlavorStaticSize(parent,product);
+
+                break;
+
+            case "simpleSizeAndPrice-doubleFlavor":
+                clearSelect(parent);
+                renderSimpleSizeAndPriceDoubleFlavor(parent,product);
+
+                break;
+
+            case "priceByFlavor-doubleSize":
+                clearSelect(parent);
+                clearSizeButton(parent);
+                renderPriceByFlavorDoubleSize(parent,product);
+                break;
+
+            case "staticStyleAndPrice-multSize":
+                clearSelect(parent);
+                renderStaticStyleAndPriceMultSize(parent,product);
+                break;
+
+            case "staticPrice-multStyle-multSize":
+                clearSelect(parent);
+                clearStyleButton(parent);
+                renderStaticPriceMultStyleMultSize(parent,product);
+
+                break;
+
+            case "priceByExtra-multStyle-multSize":
+                clearSelect(parent);
+                clearStyleButton(parent);
+                renderRiceByExtraMultStyleMultSize(parent,product)
+
+            break;
+            
+            case "staticPriceAndSize-multFlavor":
+                clearSelect(parent);
+                renderStaticPriceAndSizeMultFlavor(parent,product);
+            
+                break;
+
+    }
+
+
+}
+
+function clearSelect(parent){
+    const selects = parent.querySelectorAll("select");
+
+    selects.forEach((select)=>{
+        select.value = "";
+    })
+}
+
+function clearStyleButton(parent){
+    const buttons = parent.querySelectorAll(".style-button");
+
+    buttons.forEach((button)=>{
+        button.classList.remove('button-selected');
+
+    })
+
+}
+
+function clearSizeButton(parent){
+    const buttons = parent.querySelectorAll(".size-button");
+
+    buttons.forEach((button)=>{
+        button.classList.remove('button-selected');
+
+    })
+}
+
+function hidePrice(parent){
+    const price = parent.querySelector('.product-price');
+    const measure = parent.querySelector('.product-measure');
+
+    price.classList.remove('is-open');
+    measure.classList.remove('is-open');
+
+}
+
+function retractInfoRow(parent){
+    const infoRows = parent.querySelectorAll('.card-info-row');
+
+    infoRows.forEach( (infoRow) =>{
+        infoRow.classList.remove('is-open');
+
+    })
+
+}
+
+function hideFlavorSelect(parent){
+    const container = parent.querySelector('.card-flavor-selector-container');
+
+    container.classList.remove('is-open');
+}
+
+function resetQuantitySelector(parent){
+    const quantitySelector = parent.querySelector('.quantity-selector');
+
+    quantitySelector.classList.add('is-disabled');
+
+    const buttons = quantitySelector.querySelectorAll('button');
+
+    buttons.forEach( (button) => {
+        button.disabled = true;
+    });
+}

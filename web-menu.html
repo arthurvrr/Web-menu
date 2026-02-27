@@ -92,10 +92,12 @@
             <!-- A exibição dos cards de cada section acontece por meio da tag "category-visible"-->
             <section id="doces-section" class="category-section category-visible">
                 <!-- A aba do "Doces" do cardápio esta setada com padrão, ou seja começará com a tag "category-visible" -->
+                
                 <div class="menu-grid"> <!-- Na class "menu-grid" será configurado o display dos cards para a visualizacao mobile, tablet e desktop-->
                     <!--"Product-card" é a classe base e a "card-type-xx" é a classe modificadora, para cada estilo de card-->
-                    
-                    <div id= "brigadeiro-preto" class="product-card" data-interaction = "staticPriceAndSize"> 
+                    <div class="product-slider">
+                      <div class="product-slider-wrapper">
+                            <div id= "brigadeiro-preto" class="product-card" data-interaction = "staticPriceAndSize"> 
                         <div class="card-image-container">
                             <img src="" alt="Brigadeiro">
                         </div>
@@ -122,9 +124,9 @@
 
                             <button type="button" class="add-to-cart-button  is-disabled" disabled="" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
                         </div>
-                    </div>
+                            </div>
 
-                    <div id="brigadeiro-branco"  class="product-card" data-interaction="staticPriceAndSize">
+                            <div id="brigadeiro-branco"  class="product-card" data-interaction="staticPriceAndSize">
 
                         <div class="card-image-container">
                             <img src="" alt="Brigadeiro branco">
@@ -154,9 +156,9 @@
                             <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
                         </div>
                         
-                    </div>
+                             </div>
 
-                    <div id="beijinho" class="product-card" data-interaction="staticPriceAndSize">
+                            <div id="beijinho" class="product-card" data-interaction="staticPriceAndSize">
                         <div class="card-image-container">
                             <img src="" alt="">
                         </div>
@@ -185,9 +187,9 @@
                             <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
                         </div>
                         
-                    </div>
+                            </div>
                     
-                    <div id="docinho-amendoim" class="product-card" data-interaction="staticPriceAndSize">
+                            <div id="docinho-amendoim" class="product-card" data-interaction="staticPriceAndSize">
                         <div class="card-image-container">
                             <img src="" alt="Amendoim">
                         </div>
@@ -216,9 +218,9 @@
                             <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
                         </div>
             
-                    </div>
+                            </div>
 
-                    <div id="doce-de-leite" class="product-card " data-interaction="staticPriceAndSize">
+                            <div id="doce-de-leite" class="product-card " data-interaction="staticPriceAndSize">
                         <div class="card-image-container">
                             <img src="" alt="Doce de leite">
                         </div>
@@ -246,9 +248,9 @@
 
                             <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
                         </div>
-                    </div>
+                            </div>
 
-                    <div id="docinho-nozes" class="product-card" data-interaction="staticPriceAndSize">
+                            <div id="docinho-nozes" class="product-card" data-interaction="staticPriceAndSize">
                         <div class="card-image-container">
                             <img src="" alt="Nozes">
                         </div>
@@ -276,9 +278,9 @@
 
                             <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
                         </div>
-                    </div>
+                            </div>
 
-                    <div id="olho-sogra" class="product-card" data-interaction="staticPriceAndSize">
+                            <div id="olho-sogra" class="product-card" data-interaction="staticPriceAndSize">
                         <div class="card-image-container">
                             <img src="" alt="Olho de sogra">
                         </div>
@@ -306,9 +308,9 @@
 
                             <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
                         </div>
-                    </div>
+                            </div>
 
-                    <div id="ninho-nutella" class="product-card" data-interaction="staticPriceAndSize">
+                            <div id="ninho-nutella" class="product-card" data-interaction="staticPriceAndSize">
                         <div class="card-image-container">
                             <img src=" " alt="Leite Ninho com nutella">
                         </div>
@@ -336,9 +338,9 @@
 
                             <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
                         </div>
-                    </div>
+                            </div>
 
-                    <div id="camafeu-nozes" class="product-card" data-interaction="staticPriceAndSize">
+                            <div id="camafeu-nozes" class="product-card" data-interaction="staticPriceAndSize">
                         <div class="card-image-container">
                             <img src="" alt="Camafeu">
                         </div>
@@ -366,53 +368,53 @@
 
                             <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
                         </div>
-                    </div>
-
-                    <!--A card-type-02 necessida o uso de JS para esconder/revelar as informações do produto com base no tamanho selecionado-->
-                    <div id="quindim" class="product-card" data-interaction="priceBySize-simpleFlavor">
-                        <!-- Container com a imagem do produto, a imagem será modificada conforme o tamanho do produto selecionado-->
-                        <div class="card-image-container"><img src="" alt="Quindim"></div>
-
-                        <!-- Container com o nome, preço e unidade do comercialização e peso do produto.-->
-                        <div class="card-name-price-container">
-                            <div class="name-price-row">
-                                <h3 class="product-name"></h3>
-                                <!--A class "price-measure só aparecerá quando o tamanho do produto for selecionado - quando product-card tiver a tag "size-selected"-->
-                                <div class="price-measure">
-                                    <!--O conteudo de "product-price" será alterado conforme o tamanho for selecionado, cada tamanho tem um preço-->
-                                    <span class="product-price"></span>
-                                    <span class="product-measure"></span>
-                                </div>                
-                            </div>
-                        </div>
-                        
-                        <!--Container contendo os 2 botões do tamanho do produto, a seleção do tamanho é chave para a progressão interativa do card-->
-                        <div class="card-size-selector-container">
-                            <!-- A seleção de algum dos tamanhos faz com que o botão seja estilizado - mudando de cor - para sinalizar ao usuário que a opção foi selecionada.
-                            Esse controle de estilo é feito através da tag "button-selected", que sinaliza a interação do usuário com o botão-->
-                            <button class="size-button"></button>
-                            <button class="size-button"></button>
-                        </div>
-
-                        <!--Essa linha só deve aparecer quando o tamanho for selecionado-->
-                        <div class="card-info-row weight-info">
-                            <p class="product-info"></p> 
-                        </div>
-
-                        <!--Conteiner com os botão seletor de tamanho e o botão de adicionar ao carrinho, esses só são liberados com a escolha de um tamanho - "size-selected"-->
-                        <div class="card-actions-container">
-                            <div  class="quantity-selector is-disabled">
-                                <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
-                                <input class="quantity-value" disabled type="text" value="" min="">
-                                <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
                             </div>
 
-                            <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
-                        </div>
-                    </div>
+                            <!--A card-type-02 necessida o uso de JS para esconder/revelar as informações do produto com base no tamanho selecionado-->
+                            <div id="quindim" class="product-card" data-interaction="priceBySize-simpleFlavor">
+                                <!-- Container com a imagem do produto, a imagem será modificada conforme o tamanho do produto selecionado-->
+                                <div class="card-image-container"><img src="" alt="Quindim"></div>
 
-                    <!--A card-type-03 também requer JS para a progressão interativa da compra do produto-->
-                    <div id="cupcake" class="product-card" data-interaction="priceBySize-multFlavor">
+                                <!-- Container com o nome, preço e unidade do comercialização e peso do produto.-->
+                                <div class="card-name-price-container">
+                                    <div class="name-price-row">
+                                        <h3 class="product-name"></h3>
+                                        <!--A class "price-measure só aparecerá quando o tamanho do produto for selecionado - quando product-card tiver a tag "size-selected"-->
+                                        <div class="price-measure">
+                                            <!--O conteudo de "product-price" será alterado conforme o tamanho for selecionado, cada tamanho tem um preço-->
+                                            <span class="product-price"></span>
+                                            <span class="product-measure"></span>
+                                        </div>                
+                                    </div>
+                                </div>
+                                
+                                <!--Container contendo os 2 botões do tamanho do produto, a seleção do tamanho é chave para a progressão interativa do card-->
+                                <div class="card-size-selector-container">
+                                    <!-- A seleção de algum dos tamanhos faz com que o botão seja estilizado - mudando de cor - para sinalizar ao usuário que a opção foi selecionada.
+                                    Esse controle de estilo é feito através da tag "button-selected", que sinaliza a interação do usuário com o botão-->
+                                    <button class="size-button"></button>
+                                    <button class="size-button"></button>
+                                </div>
+
+                                <!--Essa linha só deve aparecer quando o tamanho for selecionado-->
+                                <div class="card-info-row weight-info">
+                                    <p class="product-info"></p> 
+                                </div>
+
+                                <!--Conteiner com os botão seletor de tamanho e o botão de adicionar ao carrinho, esses só são liberados com a escolha de um tamanho - "size-selected"-->
+                                <div class="card-actions-container">
+                                    <div  class="quantity-selector is-disabled">
+                                        <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                        <input class="quantity-value" disabled type="text" value="" min="">
+                                        <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                                    </div>
+
+                                    <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
+                                </div>
+                            </div>
+
+                            <!--A card-type-03 também requer JS para a progressão interativa da compra do produto-->
+                            <div id="cupcake" class="product-card" data-interaction="priceBySize-multFlavor">
                         <!--Contianer com a imagem do produto-->
                         <div class="card-image-container"><img src="" alt="Cupcake"></div>
 
@@ -469,1331 +471,1339 @@
 
                             <button type="button" disabled  class="add-to-cart-button  is-disabled" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
                         </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </section>
 
             <section id="salgados-section" class="category-section">
+
                 <div class="menu-grid">
+                    <div class="product-slider">
+                        <div class="product-slider-wrapper">
 
-                    <div id="bolinha-queijo" class="product-card" data-interaction="staticPriceAndSize">
-                        <div class="card-image-container"><img src=""></div>
+                            <div id="bolinha-queijo" class="product-card" data-interaction="staticPriceAndSize">
+                                <div class="card-image-container"><img src=""></div>
 
-                        <div class="card-name-price-container">
-                            <div class="name-price-row">
-                                <h3 class="product-name"></h3>
-                                <div class="price-measure">
-                                    <span class="product-price is-open"></span>
-                                    <span class="product-measure is-open"></span>
+                                <div class="card-name-price-container">
+                                    <div class="name-price-row">
+                                        <h3 class="product-name"></h3>
+                                        <div class="price-measure">
+                                            <span class="product-price is-open"></span>
+                                            <span class="product-measure is-open"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-info-row weight-info is-open">
+                                    <p class="product-info"></p>
+                                </div>
+
+                                <div class="card-actions-container">
+                                    <div  class="quantity-selector is-disabled">
+                                        <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                        <input class="quantity-value" disabled type="text" value="" min="">
+                                        <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                                    </div>
+
+                                    <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
+                                </div>
+
+                            </div>
+
+                            <div id="coxinha-frango" class="product-card" data-interaction="staticPriceAndSize">
+                                <div class="card-image-container"><img src="" alt=""></div>
+
+                                <div class="card-name-price-container">
+                                    <div class="name-price-row">
+                                        <h3 class="product-name"></h3>
+                                        <div class="price-measure">
+                                            <span class="product-price is-open"></span>
+                                            <span class="product-measure is-open"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-info-row weight-info is-open">
+                                    <p class="product-info"></p>
+                                </div>
+
+                                <div class="card-actions-container">
+                                    <div  class="quantity-selector is-disabled">
+                                        <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                        <input class="quantity-value" disabled type="text" value="" min="">
+                                        <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                                    </div>
+
+                                    <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
+                                </div>
+
+                            </div>
+
+                            <div id="croquete-carne" class="product-card" data-interaction="staticPriceAndSize">
+                                <div class="card-image-container"><img src="" alt=""></div>
+
+                                <div class="card-name-price-container">
+                                    <div class="name-price-row">
+                                        <h3 class="product-name"></h3>
+                                        <div class="price-measure">
+                                            <span class="product-price is-open"></span>
+                                            <span class="product-measure is-open"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-info-row weight-info is-open">
+                                <p class="product-info"></p>
+                                </div>
+
+                                <div class="card-actions-container">
+                                    <div  class="quantity-selector is-disabled">
+                                        <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                        <input class="quantity-value" disabled type="text" value="" min="">
+                                        <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                                    </div>
+
+                                    <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="card-info-row weight-info is-open">
-                            <p class="product-info"></p>
-                        </div>
+                            <div id="enroladinho-frito" class="product-card" data-interaction="staticPriceAndSize">
+                                <div class="card-image-container"><img src="" alt=""></div>
 
-                        <div class="card-actions-container">
-                            <div  class="quantity-selector is-disabled">
-                                <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
-                                <input class="quantity-value" disabled type="text" value="" min="">
-                                <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                                <div class="card-name-price-container">
+                                    <div class="name-price-row">
+                                        <h3 class="product-name"></h3>
+                                        <div class="price-measure">
+                                            <span class="product-price is-open"></span>
+                                            <span class="product-measure is-open"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-info-row weight-info is-open">
+                                    <p class="product-info"></p>
+                                </div>
+
+                                <div class="card-actions-container">
+                                    <div  class="quantity-selector is-disabled">
+                                        <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                        <input class="quantity-value" disabled type="text" value="" min="">
+                                        <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                                    </div>
+
+                                    <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
+                                </div>
+
                             </div>
 
-                            <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
-                        </div>
+                            <div id="folhadinho-salsicha" class="product-card" data-interaction="staticPriceAndSize">
+                                <div class="card-image-container"><img src="" alt=""></div>
 
-                    </div>
+                                <div class="card-name-price-container">
+                                    <div class="name-price-row">
+                                        <h3 class="product-name"></h3>
+                                        <div class="price-measure">
+                                            <span class="product-price is-open"></span>
+                                            <span class="product-measure is-open"></span>
+                                        </div>
+                                    </div>
+                                </div>
 
-                    <div id="coxinha-frango" class="product-card" data-interaction="staticPriceAndSize">
-                        <div class="card-image-container"><img src="" alt=""></div>
+                                <div class="card-info-row weight-info is-open">
+                                    <p class="product-info"></p>
+                                </div>
 
-                        <div class="card-name-price-container">
-                            <div class="name-price-row">
-                                <h3 class="product-name"></h3>
-                                <div class="price-measure">
-                                    <span class="product-price is-open"></span>
-                                    <span class="product-measure is-open"></span>
+                                <div class="card-actions-container">
+                                    <div  class="quantity-selector is-disabled">
+                                        <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                        <input class="quantity-value" disabled type="text" value="" min="">
+                                        <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                                    </div>
+
+                                    <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="card-info-row weight-info is-open">
-                            <p class="product-info"></p>
-                        </div>
+                            <div id="doguinho-salsicha" class="product-card" data-interaction="staticPriceAndSize">
+                                <div class="card-image-container"><img src="" alt=""></div>
 
-                        <div class="card-actions-container">
-                            <div  class="quantity-selector is-disabled">
-                                <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
-                                <input class="quantity-value" disabled type="text" value="" min="">
-                                <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
-                            </div>
+                                <div class="card-name-price-container">
+                                    <div class="name-price-row">
+                                        <h3 class="product-name"></h3>
+                                        <div class="price-measure">
+                                            <span class="product-price is-open"></span>
+                                            <span class="product-measure is-open"></span>
+                                        </div>
+                                    </div>
+                                </div>
 
-                            <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
-                        </div>
+                                <div class="card-info-row weight-info is-open">
+                                    <p class="product-info"></p>
+                                </div>
 
-                    </div>
+                                <div class="card-actions-container">
+                                    <div  class="quantity-selector is-disabled">
+                                        <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                        <input class="quantity-value" disabled type="text" value="" min="">
+                                        <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                                    </div>
 
-                    <div id="croquete-carne" class="product-card" data-interaction="staticPriceAndSize">
-                        <div class="card-image-container"><img src="" alt=""></div>
-
-                        <div class="card-name-price-container">
-                            <div class="name-price-row">
-                                <h3 class="product-name"></h3>
-                                <div class="price-measure">
-                                    <span class="product-price is-open"></span>
-                                    <span class="product-measure is-open"></span>
+                                    <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="card-info-row weight-info is-open">
-                           <p class="product-info"></p>
-                        </div>
+                            <div id="prensadinho" class="product-card" data-interaction="staticPriceAndSize">
+                                <div class="card-image-container"><img src="" alt=""></div>
 
-                        <div class="card-actions-container">
-                            <div  class="quantity-selector is-disabled">
-                                <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
-                                <input class="quantity-value" disabled type="text" value="" min="">
-                                <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                                <div class="card-name-price-container">
+                                    <div class="name-price-row">
+                                        <h3 class="product-name"></h3>
+                                        <div class="price-measure">
+                                            <span class="product-price is-open"></span>
+                                            <span class="product-measure is-open"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-info-row weight-info is-open">
+                                    <p class="product-info"></p>
+                                </div>
+
+                                <div class="card-actions-container">
+                                    <div  class="quantity-selector is-disabled">
+                                        <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                        <input class="quantity-value" disabled type="text" value="" min="">
+                                        <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                                    </div>
+
+                                    <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
+                                </div>
+
                             </div>
 
-                            <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
-                        </div>
-                    </div>
+                            <div id="cachorro-quente" class="product-card" data-interaction="staticPriceAndSize">
+                                <div class="card-image-container"><img src="" alt=""></div>
 
-                    <div id="enroladinho-frito" class="product-card" data-interaction="staticPriceAndSize">
-                        <div class="card-image-container"><img src="" alt=""></div>
+                                <div class="card-name-price-container">
+                                    <div class="name-price-row">
+                                        <h3 class="product-name"></h3>
+                                        <div class="price-measure">
+                                            <span class="product-price is-open"></span>
+                                            <span class="product-measure is-open"></span>
+                                        </div>
+                                    </div>
+                                </div>
 
-                        <div class="card-name-price-container">
-                            <div class="name-price-row">
-                                <h3 class="product-name"></h3>
-                                <div class="price-measure">
-                                    <span class="product-price is-open"></span>
-                                    <span class="product-measure is-open"></span>
+                                <div class="card-info-row flavor-info is-open"> 
+                                    <p class="product-info normal-font-style">Pãozinho fofinho com suculento recheio de salsicha picada ao molho de tomate, temperado com alho, cebola e um toque de salsa. Aprox. 40g por unidade.</p>
+                                </div>
+
+                                <div class="card-actions-container">
+                                    <div  class="quantity-selector is-disabled">
+                                        <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                        <input class="quantity-value" disabled type="text" value="" min="">
+                                        <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                                    </div>
+
+                                    <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
+                                </div>
+
+                            </div>
+
+                            <div id="risoles" class="product-card" data-interaction="simpleFlavorAndSize">
+                                <div class="card-image-container"><img src="" alt=""></div>
+
+                                <div class="card-name-price-container">
+                                    <div class="name-price-row">
+                                        <h3 class="product-name"></h3>
+                                        <div class="price-measure">
+                                            <span class="product-price is-open"></span>
+                                            <span class="product-measure is-open"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-info-row weight-info is-open">
+                                    <p class="product-info"></p>
+                                </div>
+
+                                
+                                <div class="card-flavor-selector-container is-open">
+                                    <select name="sabor" id="risoles-flavor" class="flavor-select">
+                                        <option value="" disabled selected>SABORES</option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                                
+                                <div class="card-info-row flavor-info">
+                                    <p class="product-info"></p>
+                                </div>
+
+                                <!-- A seleção do sabor permite a compra do produto através da tag "flavor-selected"-->
+                                <div class="card-actions-container">
+                                    <div  class="quantity-selector is-disabled">
+                                        <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                        <input class="quantity-value" disabled type="text" value="" min="">
+                                        <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                                    </div>
+
+                                    <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="card-info-row weight-info is-open">
-                            <p class="product-info"></p>
-                        </div>
-
-                        <div class="card-actions-container">
-                            <div  class="quantity-selector is-disabled">
-                                <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
-                                <input class="quantity-value" disabled type="text" value="" min="">
-                                <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
-                            </div>
-
-                            <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
-                        </div>
-
-                    </div>
-
-                    <div id="folhadinho-salsicha" class="product-card" data-interaction="staticPriceAndSize">
-                        <div class="card-image-container"><img src="" alt=""></div>
-
-                        <div class="card-name-price-container">
-                            <div class="name-price-row">
-                                <h3 class="product-name"></h3>
-                                <div class="price-measure">
-                                    <span class="product-price is-open"></span>
-                                    <span class="product-measure is-open"></span>
+                            <div id="pastel-pastelina" class="product-card" data-interaction="simpleFlavorAndSize">
+                                <div class="card-image-container">
+                                    <img src="" alt="">
                                 </div>
-                            </div>
-                        </div>
 
-                        <div class="card-info-row weight-info is-open">
-                            <p class="product-info"></p>
-                        </div>
-
-                        <div class="card-actions-container">
-                            <div  class="quantity-selector is-disabled">
-                                <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
-                                <input class="quantity-value" disabled type="text" value="" min="">
-                                <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
-                            </div>
-
-                            <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
-                        </div>
-                    </div>
-
-                    <div id="doguinho-salsicha" class="product-card" data-interaction="staticPriceAndSize">
-                        <div class="card-image-container"><img src="" alt=""></div>
-
-                        <div class="card-name-price-container">
-                            <div class="name-price-row">
-                                <h3 class="product-name"></h3>
-                                <div class="price-measure">
-                                    <span class="product-price is-open"></span>
-                                    <span class="product-measure is-open"></span>
+                                <div class="card-name-price-container">
+                                    <div class="name-price-row">
+                                        <h3 class="product-name"></h3>
+                                        <div class="price-measure">
+                                            <span class="product-price is-open"></span>
+                                            <span class="product-measure is-open"></span>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
 
-                        <div class="card-info-row weight-info is-open">
-                            <p class="product-info"></p>
-                        </div>
-
-                        <div class="card-actions-container">
-                            <div  class="quantity-selector is-disabled">
-                                <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
-                                <input class="quantity-value" disabled type="text" value="" min="">
-                                <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
-                            </div>
-
-                            <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
-                        </div>
-                    </div>
-
-                    <div id="prensadinho" class="product-card" data-interaction="staticPriceAndSize">
-                        <div class="card-image-container"><img src="" alt=""></div>
-
-                        <div class="card-name-price-container">
-                            <div class="name-price-row">
-                                <h3 class="product-name"></h3>
-                                <div class="price-measure">
-                                    <span class="product-price is-open"></span>
-                                    <span class="product-measure is-open"></span>
+                                <div class="card-info-row weight-info is-open">
+                                    <p class="product-info"></p>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="card-info-row weight-info is-open">
-                            <p class="product-info"></p>
-                        </div>
-
-                        <div class="card-actions-container">
-                            <div  class="quantity-selector is-disabled">
-                                <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
-                                <input class="quantity-value" disabled type="text" value="" min="">
-                                <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
-                            </div>
-
-                            <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
-                        </div>
-
-                    </div>
-
-                    <div id="cachorro-quente" class="product-card" data-interaction="staticPriceAndSize">
-                        <div class="card-image-container"><img src="" alt=""></div>
-
-                        <div class="card-name-price-container">
-                            <div class="name-price-row">
-                                <h3 class="product-name"></h3>
-                                <div class="price-measure">
-                                    <span class="product-price is-open"></span>
-                                    <span class="product-measure is-open"></span>
+                                
+                                <div class="card-flavor-selector-container is-open">
+                                    <select name="sabor" id="pastel-pastelina-flavor" class="flavor-select">
+                                        <option value="" disabled selected>SABORES</option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
                                 </div>
-                            </div>
-                        </div>
 
-                        <div class="card-info-row flavor-info is-open"> 
-                            <p class="product-info normal-font-style">Pãozinho fofinho com suculento recheio de salsicha picada ao molho de tomate, temperado com alho, cebola e um toque de salsa. Aprox. 40g por unidade.</p>
-                        </div>
-
-                        <div class="card-actions-container">
-                            <div  class="quantity-selector is-disabled">
-                                <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
-                                <input class="quantity-value" disabled type="text" value="" min="">
-                                <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
-                            </div>
-
-                            <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
-                        </div>
-
-                    </div>
-
-                    <div id="risoles" class="product-card" data-interaction="simpleFlavorAndSize">
-                        <div class="card-image-container"><img src="" alt=""></div>
-
-                        <div class="card-name-price-container">
-                            <div class="name-price-row">
-                                <h3 class="product-name"></h3>
-                                <div class="price-measure">
-                                    <span class="product-price is-open"></span>
-                                    <span class="product-measure is-open"></span>
+                                <div class="card-info-row flavor-info">
+                                    <p class="product-info"></p>
                                 </div>
+
+                                <!-- A seleção do sabor permite a compra do produto através da tag "flavor-selected"-->
+                                <div class="card-actions-container">
+                                    <div  class="quantity-selector is-disabled">
+                                        <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                        <input class="quantity-value" disabled type="text" value="" min="">
+                                        <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                                    </div>
+
+                                    <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
+                                </div>
+
                             </div>
-                        </div>
 
-                        <div class="card-info-row weight-info is-open">
-                            <p class="product-info"></p>
-                        </div>
+                            <div id="empadinha-assada" class="product-card" data-interaction="simpleFlavorAndSize">
+                                <div class="card-image-container">
+                                    <img src="" alt="">
+                                </div>
 
+                                <div class="card-name-price-container">
+                                    <div class="name-price-row">
+                                        <h3 class="product-name"></h3>
+                                        <div class="price-measure">
+                                            <span class="product-price is-open"></span>
+                                            <span class="product-measure is-open"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-info-row weight-info is-open">
+                                    <p class="product-info"></p>
+                                </div>
+                                
+                                <div class="card-flavor-selector-container is-open">
+                                    <select name="sabor" id="empadinha-assada-flavor" class="flavor-select">
+                                        <option value="" disabled selected>SABORES</option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+
+                                <div class="card-info-row flavor-info">
+                                    <p class="product-info"></p>
+                                </div>
+
+                                <!-- A seleção do sabor permite a compra do produto através da tag "flavor-selected"-->
+                                <div class="card-actions-container">
+                                    <div  class="quantity-selector is-disabled">
+                                        <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                        <input class="quantity-value" disabled type="text" value="" min="">
+                                        <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                                    </div>
+
+                                    <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
+                                </div>
+
+                            </div>
+
+                            <div id="pastel-forno" class="product-card" data-interaction="simpleFlavorAndSize">
+                                <div class="card-image-container">
+                                    <img src="" alt="">
+                                </div>
+
+                                <div class="card-name-price-container">
+                                    <div class="name-price-row">
+                                        <h3 class="product-name"></h3>
+                                        <div class="price-measure">
+                                            <span class="product-price is-open"></span>
+                                            <span class="product-measure is-open"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-info-row weight-info is-open">
+                                    <p class="product-info"></p>
+                                </div>
+                                
+                                <div class="card-flavor-selector-container is-open">
+                                    <select name="sabor" id="pastel-forno-flavor" class="flavor-select">
+                                        <option value="" disabled selected>SABORES</option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+
+                                <div class="card-info-row flavor-info">
+                                    <p class="product-info"></p>
+                                </div>
+
+                                <!-- A seleção do sabor permite a compra do produto através da tag "flavor-selected"-->
+                                <div class="card-actions-container">
+                                    <div  class="quantity-selector is-disabled">
+                                        <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                        <input class="quantity-value" disabled type="text" value="" min="">
+                                        <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                                    </div>
+
+                                    <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
+                                </div>
+
+                            </div>
+
+                            <div id="canape" class="product-card" data-interaction="simpleFlavorAndSize">
+                                <div class="card-image-container">
+                                    <img src="" alt="">
+                                </div>
+
+                                <div class="card-name-price-container">
+                                    <div class="name-price-row">
+                                        <h3 class="product-name"></h3>
+                                        <div class="price-measure">
+                                            <span class="product-price is-open"></span>
+                                            <span class="product-measure is-open"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-info-row weight-info is-open">
+                                    <p class="product-info"></p>
+                                </div>
+                                
+                                <div class="card-flavor-selector-container is-open">
+                                    <select name="sabor" id="canape-flavor" class="flavor-select">
+                                        <option value="" disabled selected>SABORES</option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+
+                                <div class="card-info-row flavor-info">
+                                    <p class="product-info"></p>
+                                </div>
+
+                                <!-- A seleção do sabor permite a compra do produto através da tag "flavor-selected"-->
+                                <div class="card-actions-container">
+                                    <div  class="quantity-selector is-disabled">
+                                        <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                        <input class="quantity-value" disabled type="text" value="" min="">
+                                        <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                                    </div>
+
+                                    <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
+                                </div>
+
+                            </div>
+
+                            <div id="mini-pizza" class="product-card" data-interaction="simpleFlavorAndSize">
+                                <div class="card-image-container">
+                                    <img src="" alt="">
+                                </div>
+
+                                <div class="card-name-price-container">
+                                    <div class="name-price-row">
+                                        <h3 class="product-name"></h3>
+                                        <div class="price-measure">
+                                            <span class="product-price is-open"></span>
+                                            <span class="product-measure is-open "></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-info-row weight-info is-open">
+                                    <p class="product-info"></p>
+                                </div>
+
+                                <div class="card-flavor-selector-container is-open">
+                                    <select name="sabor" id="mini-pizza-flavor" class="flavor-select">
+                                        <option value="" disabled selected>SABORES</option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+
+                                <div class="card-info-row flavor-info">
+                                    <div class="product-info"></div>
+                                    
+                                </div>
                         
-                        <div class="card-flavor-selector-container is-open">
-                            <select name="sabor" id="risoles-flavor" class="flavor-select">
-                                <option value="" disabled selected>SABORES</option>
-                                <option value="carne"></option>
-                                <option value="frango"></option>
-                                <option value="frios"></option>
-                                <option value="palmito"></option>
-                                <option value="calabresa"></option>
-                                <option value="queijo"></option>
-                            </select>
-                        </div>
+                                <div class="card-actions-container">
+                                    <div  class="quantity-selector is-disabled">
+                                        <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                        <input class="quantity-value" disabled type="text" value="" min="">
+                                        <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                                    </div>
+
+                                    <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
+                                </div>
+
+                            </div>
+
+                            <div id="mini-quiche" class="product-card" data-interaction="simpleFlavorAndSize">
+                                <div class="card-image-container">
+                                    <img src="" alt="">
+                                </div>
+
+                                <div class="card-name-price-container">
+                                    <div class="name-price-row">
+                                        <h3 class="product-name"></h3>
+                                        <div class="price-measure">
+                                            <span class="product-price is-open "></span>
+                                            <span class="product-measure is-open "></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-info-row weight-info is-open">
+                                    <p class="product-info"></p>
+                                </div>
+
+                                <div class="card-flavor-selector-container is-open">
+                                    <select name="sabor" id="mini-quiche-flavor" class="flavor-select">
+                                        <option value="" disabled selected>SABORES</option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+
+                                <div class="card-info-row flavor-info">
+                                    <div class="product-info"></div>
+                                </div>
                         
-                        <div class="card-info-row flavor-info">
-                            <p class="product-info"></p>
-                        </div>
+                                <div class="card-actions-container">
+                                    <div  class="quantity-selector is-disabled">
+                                        <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                        <input class="quantity-value" disabled type="text" value="" min="">
+                                        <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                                    </div>
 
-
-                        <!-- A seleção do sabor permite a compra do produto através da tag "flavor-selected"-->
-                        <div class="card-actions-container">
-                            <div  class="quantity-selector is-disabled">
-                                <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
-                                <input class="quantity-value" disabled type="text" value="" min="">
-                                <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
-                            </div>
-
-                            <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
-                        </div>
-                    </div>
-
-                    <div id="pastel-pastelina" class="product-card" data-interaction="simpleFlavorAndSize">
-                        <div class="card-image-container">
-                            <img src="" alt="">
-                        </div>
-
-                        <div class="card-name-price-container">
-                            <div class="name-price-row">
-                                <h3 class="product-name"></h3>
-                                <div class="price-measure">
-                                    <span class="product-price is-open"></span>
-                                    <span class="product-measure is-open"></span>
+                                    <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
                                 </div>
-                            </div>
-                        </div>
 
-                        <div class="card-info-row weight-info is-open">
-                            <p class="product-info"></p>
-                        </div>
+                            </div>
+
+                            <div id="barquete" class="product-card" data-interaction="simpleFlavorAndSize">
+                                <div class="card-image-container">
+                                    <img src="" alt="">
+                                </div>
+
+                                <div class="card-name-price-container">
+                                    <div class="name-price-row">
+                                        <h3 class="product-name"></h3>
+                                        <div class="price-measure">
+                                            <span class="product-price is-open "></span>
+                                            <span class="product-measure is-open "></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-info-row weight-info is-open">
+                                    <div class="product-info"></div>
+                                </div>
+
+                                <div class="card-flavor-selector-container is-open">
+                                    <select name="sabor" id="barquete-flavor" class="flavor-select">
+                                        <option value="" disabled selected>SABORES</option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+
+                                <div class="card-info-row flavor-info">
+                                    <div class="product-info"></div>
+                                </div>
                         
-                        <div class="card-flavor-selector-container is-open">
-                            <select name="sabor" id="pastel-pastelina-flavor" class="flavor-select">
-                                <option value="" disabled selected>SABORES</option>
-                                <option value="carne"></option>
-                                <option value="frango"></option>
-                            </select>
-                        </div>
+                                <div class="card-actions-container">
+                                    <div  class="quantity-selector is-disabled">
+                                        <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                        <input class="quantity-value" disabled type="text" value="" min="">
+                                        <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                                    </div>
 
-                        <div class="card-info-row flavor-info">
-                            <p class="product-info"></p>
-                        </div>
-
-                        <!-- A seleção do sabor permite a compra do produto através da tag "flavor-selected"-->
-                        <div class="card-actions-container">
-                            <div  class="quantity-selector is-disabled">
-                                <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
-                                <input class="quantity-value" disabled type="text" value="" min="">
-                                <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
-                            </div>
-
-                            <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
-                        </div>
-
-                    </div>
-
-                    <div id="empadinha-assada" class="product-card" data-interaction="simpleFlavorAndSize">
-                        <div class="card-image-container">
-                            <img src="" alt="">
-                        </div>
-
-                        <div class="card-name-price-container">
-                            <div class="name-price-row">
-                                <h3 class="product-name"></h3>
-                                <div class="price-measure">
-                                    <span class="product-price is-open"></span>
-                                    <span class="product-measure is-open"></span>
+                                    <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
                                 </div>
-                            </div>
-                        </div>
 
-                        <div class="card-info-row weight-info is-open">
-                            <p class="product-info"></p>
-                        </div>
+                            </div>
+
+                            <div id="mini-hamburguer" class="product-card" data-interaction="priceByFlavor-staticSize">
+                                <div class="card-image-container">
+                                    <img src="" alt="">
+                                </div>
+
+                                <div class="card-name-price-container">
+                                    <div class="name-price-row">
+                                        <h3 class="product-name"></h3>
+                                        <div class="price-measure is-hidden">
+                                            <span class="product-price"></span>
+                                            <span class="product-measure"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-info-row weight-info is-open">
+                                    <p class="product-info"></p>
+                                </div>
+
+                                <div class="card-flavor-selector-container is-open">
+                                    <select name="sabor" id="mini-hamburguer-flavor" class="flavor-select">
+                                        <option value="" disabled selected>SABORES</option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+
+                                <div class="card-info-row flavor-info">
+                                    <div class="product-info"></div>
+                                </div>
                         
-                        <div class="card-flavor-selector-container is-open">
-                            <select name="sabor" id="empadinha-assada-flavor" class="flavor-select">
-                                <option value="" disabled selected>SABORES</option>
-                                <option value=""></option>
-                                <option value=""></option>
-                            </select>
-                        </div>
+                                <div class="card-actions-container">
+                                    <div  class="quantity-selector is-disabled">
+                                        <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
+                                        <input class="quantity-value" disabled type="text" value="" min="">
+                                        <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
+                                    </div>
 
-                        <div class="card-info-row flavor-info">
-                            <p class="product-info"></p>
-                        </div>
-
-                        <!-- A seleção do sabor permite a compra do produto através da tag "flavor-selected"-->
-                        <div class="card-actions-container">
-                            <div  class="quantity-selector is-disabled">
-                                <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
-                                <input class="quantity-value" disabled type="text" value="" min="">
-                                <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
-                            </div>
-
-                            <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
-                        </div>
-
-                    </div>
-
-                    <div id="pastel-forno" class="product-card" data-interaction="simpleFlavorAndSize">
-                        <div class="card-image-container">
-                            <img src="" alt="">
-                        </div>
-
-                        <div class="card-name-price-container">
-                            <div class="name-price-row">
-                                <h3 class="product-name"></h3>
-                                <div class="price-measure">
-                                    <span class="product-price is-open"></span>
-                                    <span class="product-measure is-open"></span>
+                                    <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
                                 </div>
-                            </div>
-                        </div>
 
-                        <div class="card-info-row weight-info is-open">
-                            <p class="product-info"></p>
-                        </div>
-                        
-                        <div class="card-flavor-selector-container is-open">
-                            <select name="sabor" id="pastel-forno-flavor" class="flavor-select">
-                                <option value="" disabled selected>SABORES</option>
-                                <option value="carne"></option>
-                                <option value="frango"></option>
-                                <option value="brocolis"></option>
-                                <option value="palmito"></option>
-                            </select>
-                        </div>
-
-                        <div class="card-info-row flavor-info">
-                            <p class="product-info"></p>
-                        </div>
-
-                        <!-- A seleção do sabor permite a compra do produto através da tag "flavor-selected"-->
-                        <div class="card-actions-container">
-                            <div  class="quantity-selector is-disabled">
-                                <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
-                                <input class="quantity-value" disabled type="text" value="" min="">
-                                <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
                             </div>
 
-                            <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
-                        </div>
+                            <div id="torta-quiche" class="product-card" data-interaction="priceBySize-multFlavor">
+                                <div class="card-image-container"><img src="" alt=""></div>
 
-                    </div>
-
-                    <div id="canape" class="product-card" data-interaction="simpleFlavorAndSize">
-                        <div class="card-image-container">
-                            <img src="" alt="">
-                        </div>
-
-                        <div class="card-name-price-container">
-                            <div class="name-price-row">
-                                <h3 class="product-name"></h3>
-                                <div class="price-measure">
-                                    <span class="product-price is-open"></span>
-                                    <span class="product-measure is-open"></span>
+                                <div class="card-name-price-container">
+                                    <div class="name-price-row">
+                                        <h3 class="product-name"></h3>
+                                        <div class="price-measure is-hidden">
+                                            <span class="product-price"></span>
+                                            <span class="product-measure"></span>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
 
-                        <div class="card-info-row weight-info is-open">
-                            <p class="product-info"></p>
-                        </div>
-                        
-                        <div class="card-flavor-selector-container is-open">
-                            <select name="sabor" id="canape-flavor" class="flavor-select">
-                                <option value="" disabled selected>SABORES</option>
-                                <option value="gorgonzola-nozes"></option>
-                                <option value="tomate-seco"></option>
-                                <option value="palmito"></option>
-                            </select>
-                        </div>
-
-                        <div class="card-info-row flavor-info">
-                            <p class="product-info"></p>
-                        </div>
-
-                        <!-- A seleção do sabor permite a compra do produto através da tag "flavor-selected"-->
-                        <div class="card-actions-container">
-                            <div  class="quantity-selector is-disabled">
-                                <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
-                                <input class="quantity-value" disabled type="text" value="" min="">
-                                <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
-                            </div>
-
-                            <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
-                        </div>
-
-                    </div>
-
-                    <div id="mini-pizza" class="product-card" data-interaction="simpleFlavorAndSize">
-                        <div class="card-image-container">
-                            <img src="" alt="">
-                        </div>
-
-                        <div class="card-name-price-container">
-                            <div class="name-price-row">
-                                <h3 class="product-name"></h3>
-                                <div class="price-measure">
-                                    <span class="product-price is-open"></span>
-                                    <span class="product-measure is-open "></span>
+                                <!--Container com os botões mini e tradicional, revelam o preço, unidade e peso do produto quando selecionadas-->
+                                <div class="card-size-selector-container">
+                                    <!-- A seleção de algum dos tamanhos faz com que o botão seja estilizado - mudando de cor - para sinalizar ao usuário que a opção foi selecionada.
+                                    Esse controle de estilo é feito através da tag "button-selected", que sinaliza a interação do usuário com o botão-->
+                                    <button class="size-button"></button>
+                                    <button class="size-button"></button>
                                 </div>
-                            </div>
-                        </div>
 
-                        <div class="card-info-row weight-info is-open">
-                            <p class="product-info"></p>
-                        </div>
-
-                        <div class="card-flavor-selector-container is-open">
-                            <select name="sabor" id="mini-pizza-flavor" class="flavor-select">
-                                <option value="" disabled selected>SABORES</option>
-                                <option value="frango"></option>
-                                <option value="calabresa"></option>
-                                <option value="marguerita"></option>
-                                <option value="mussarela"></option>
-                            </select>
-                        </div>
-
-                        <div class="card-info-row flavor-info">
-                            <div class="product-info"></div>
-                            
-                        </div>
-                
-                        <div class="card-actions-container">
-                            <div  class="quantity-selector is-disabled">
-                                <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
-                                <input class="quantity-value" disabled type="text" value="" min="">
-                                <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
-                            </div>
-
-                            <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
-                        </div>
-
-                    </div>
-
-                    <div id="mini-quiche" class="product-card" data-interaction="simpleFlavorAndSize">
-                        <div class="card-image-container">
-                            <img src="" alt="">
-                        </div>
-
-                        <div class="card-name-price-container">
-                            <div class="name-price-row">
-                                <h3 class="product-name"></h3>
-                                <div class="price-measure">
-                                    <span class="product-price is-open "></span>
-                                    <span class="product-measure is-open "></span>
+                                <div class="card-info-row weight-info">
+                                    <p class="product-info"></p>
                                 </div>
-                            </div>
-                        </div>
 
-                        <div class="card-info-row weight-info is-open">
-                            <p class="product-info"></p>
-                        </div>
+                                <!--Container com o selector box para o sabor do produto, revela a descrição do sabor selecionado e permite selecionar a quantidade e adicionar o produto ao carrinho-->
+                                <div class="card-flavor-selector-container">
 
-                        <div class="card-flavor-selector-container is-open">
-                            <select name="sabor" id="mini-quiche-flavor" class="flavor-select">
-                                <option value="" disabled selected>SABORES</option>
-                                <option value="frango"></option>
-                                <option value="lorraine"></option>
-                                <option value="palmito"></option>
-                                <option value="alho-poro"></option>
-                                <option value="queijo"></option>
-                            </select>
-                        </div>
+                                    <div class="expandable-content">
+                                        <select name="sabor" id="torta-quiche-flavor" class="flavor-select">
+                                            <option value="" disabled selected>SABORES</option>
+                                            <option value=""></option>
+                                            <option value=""></option>
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
 
-                        <div class="card-info-row flavor-info">
-                            <div class="product-info"></div>
-                        </div>
-                
-                        <div class="card-actions-container">
-                            <div  class="quantity-selector is-disabled">
-                                <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
-                                <input class="quantity-value" disabled type="text" value="" min="">
-                                <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
-                            </div>
-
-                            <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
-                        </div>
-
-                    </div>
-
-                    <div id="barquete" class="product-card" data-interaction="simpleFlavorAndSize">
-                        <div class="card-image-container">
-                            <img src="" alt="">
-                        </div>
-
-                        <div class="card-name-price-container">
-                            <div class="name-price-row">
-                                <h3 class="product-name"></h3>
-                                <div class="price-measure">
-                                    <span class="product-price is-open "></span>
-                                    <span class="product-measure is-open "></span>
                                 </div>
-                            </div>
-                        </div>
 
-                          <div class="card-info-row weight-info is-open">
-                            <div class="product-info"></div>
-                        </div>
-
-                        <div class="card-flavor-selector-container is-open">
-                            <select name="sabor" id="barquete-flavor" class="flavor-select">
-                                <option value="" disabled selected>SABORES</option>
-                                <option value="tomate-seco"></option>
-                                <option value="fios-"></option>
-                            </select>
-                        </div>
-
-                        <div class="card-info-row flavor-info">
-                            <div class="product-info"></div>
-                        </div>
-                
-                        <div class="card-actions-container">
-                            <div  class="quantity-selector is-disabled">
-                                <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
-                                <input class="quantity-value" disabled type="text" value="" min="">
-                                <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
-                            </div>
-
-                            <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
-                        </div>
-
-                    </div>
-
-                    <div id="mini-hamburguer" class="product-card" data-interaction="priceByFlavor-staticSize">
-                        <div class="card-image-container">
-                            <img src="" alt="">
-                        </div>
-
-                        <div class="card-name-price-container">
-                            <div class="name-price-row">
-                                <h3 class="product-name"></h3>
-                                <div class="price-measure is-hidden">
-                                    <span class="product-price"></span>
-                                    <span class="product-measure"></span>
+                                <!-- Container com a descrição do sabor selecionado, só é visível se o sabor for selecionado - "flavor-selected"-->
+                                <div class="card-info-row flavor-info">
+                                    <p class="product-info"></p>
                                 </div>
-                            </div>
-                        </div>
 
-                        <div class="card-info-row weight-info is-open">
-                            <p class="product-info"></p>
-                        </div>
-
-                        <div class="card-flavor-selector-container is-open">
-                            <select name="sabor" id="mini-hamburguer-flavor" class="flavor-select">
-                                <option value="" disabled selected>SABORES</option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                            </select>
-                        </div>
-
-                        <div class="card-info-row flavor-info">
-                            <div class="product-info"></div>
-                        </div>
-                
-                        <div class="card-actions-container">
-                            <div  class="quantity-selector is-disabled">
-                                <button type="button" disabled class="decrease-quantity" aria-label="Diminuir quantidade"><img src="/img/icons/minus.png"></button>
-                                <input class="quantity-value" disabled type="text" value="" min="">
-                                <button type="button"  disabled class="increase-quantity" aria-label="Aumentar quantidade"><img src="/img/icons/plus.png"></button>
-                            </div>
-
-                            <button type="button" class="add-to-cart-button  is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
-                        </div>
-
-
-                    </div>
-
-                    <div id="torta-quiche" class="product-card" data-interaction="priceBySize-multFlavor">
-
-                        <div class="card-image-container"><img src="" alt=""></div>
-
-                        <div class="card-name-price-container">
-                            <div class="name-price-row">
-                                <h3 class="product-name"></h3>
-                                <div class="price-measure is-hidden">
-                                    <span class="product-price"></span>
-                                    <span class="product-measure"></span>
+                                <!-- Container add-to-cart-button, só aparece quando o tamanho e o sabor estão selecionados - "size-selected" e "flavor-selected"-->
+                                <div class="card-actions-container-right">
+                                    <!--Botão para adicionar ao carrinho-->
+                                    <button type="button" class="add-to-cart-button is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
                                 </div>
-                            </div>
-                        </div>
 
-                        <!--Container com os botões mini e tradicional, revelam o preço, unidade e peso do produto quando selecionadas-->
-                        <div class="card-size-selector-container">
-                            <!-- A seleção de algum dos tamanhos faz com que o botão seja estilizado - mudando de cor - para sinalizar ao usuário que a opção foi selecionada.
-                            Esse controle de estilo é feito através da tag "button-selected", que sinaliza a interação do usuário com o botão-->
-                            <button class="size-button"></button>
-                            <button class="size-button"></button>
-                        </div>
-
-                        <div class="card-info-row weight-info">
-                            <p class="product-info"></p>
-                        </div>
-
-                        <!--Container com o selector box para o sabor do produto, revela a descrição do sabor selecionado e permite selecionar a quantidade e adicionar o produto ao carrinho-->
-                        <div class="card-flavor-selector-container">
-
-                            <div class="expandable-content">
-                                <select name="sabor" id="torta-quiche-flavor" class="flavor-select">
-                                    <option value="" disabled selected>SABORES</option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select>
                             </div>
 
-                        </div>
+                            <div id="pizza-pan" class="product-card" data-interaction="simpleSizeAndPrice-doubleFlavor">
+                                <div class="card-image-container"> <img src="" alt=""></div>
 
-                        <!-- Container com a descrição do sabor selecionado, só é visível se o sabor for selecionado - "flavor-selected"-->
-                        <div class="card-info-row flavor-info">
-                            <p class="product-info"></p>
-                        </div>
-
-                        <!-- Container add-to-cart-button, só aparece quando o tamanho e o sabor estão selecionados - "size-selected" e "flavor-selected"-->
-                        <div class="card-actions-container-right">
-                            <!--Botão para adicionar ao carrinho-->
-                            <button type="button" class="add-to-cart-button is-disabled" disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
-                        </div>
-
-                    </div>
-
-                    <div id="pizza-pan" class="product-card" data-interaction="simpleSizeAndPrice-doubleFlavor">
-                        <div class="card-image-container"> <img src="" alt=""></div>
-
-                        <div class="card-name-price-container">
-                            <div class="name-price-row">
-                                <h3 class="product-name"></h3>
-                                <div class="price-measure">
-                                    <span class="product-price is-open"></span>
-                                    <span class="product-measure is-open"></span>
+                                <div class="card-name-price-container">
+                                    <div class="name-price-row">
+                                        <h3 class="product-name"></h3>
+                                        <div class="price-measure">
+                                            <span class="product-price is-open"></span>
+                                            <span class="product-measure is-open"></span>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
 
-                        <div class="card-info-row weight-info is-open">
-                            <p class="product-info normal-font-style"></p>
-                        </div>
-
-                        <div class="card-flavor-selector-container double-flavor is-open">
-                            <select name="sabor1" class="flavor-select right-flavor" id="pizza-pan-flavor01"  aria-label="Seleção do primeiro sabor">
-                                <option value="" disabled selected>SABOR 01</option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                            </select>
-
-                            <select name="sabor2" class="flavor-select left-flavor" id="pizza-pan-flavor2"  aria-label="Seleção do segundo sabor">
-                                <option value="" disabled selected>SABOR 02</option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                            </select>
-                        </div>
-
-                        <!-- Container add-to-cart-button, só aparece quando ambos sabores estao selecionados - "all-flavors-selected"-->
-                        <div class="card-actions-container-right">
-                            <!--Botão para adicionar ao carrinho-->
-                            <button type="button" class="add-to-cart-button is-disabled"  disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
-                        </div>
-
-                    </div>
-
-                    <div id="torta-fria" class="product-card" data-interaction="priceByFlavor-doubleSize">
-                        <div class="card-image-container"> <img src="" alt=""></div>
-
-                        <div class="card-name-price-container">
-                            <div class="name-price-row">
-                                <h3 class="product-name"></h3>
-                                <div class="price-measure is-hidden">
-                                    <span class="product-price"></span>
-                                    <span class="product-measure"></span>
+                                <div class="card-info-row weight-info is-open">
+                                    <p class="product-info normal-font-style"></p>
                                 </div>
+
+                                <div class="card-flavor-selector-container double-flavor is-open">
+                                    <select name="sabor1" class="flavor-select right-flavor" id="pizza-pan-flavor01"  aria-label="Seleção do primeiro sabor">
+                                        <option value="" disabled selected>SABOR 01</option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+
+                                    <select name="sabor2" class="flavor-select left-flavor" id="pizza-pan-flavor2"  aria-label="Seleção do segundo sabor">
+                                        <option value="" disabled selected>SABOR 02</option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+
+                                <!-- Container add-to-cart-button, só aparece quando ambos sabores estao selecionados - "all-flavors-selected"-->
+                                <div class="card-actions-container-right">
+                                    <!--Botão para adicionar ao carrinho-->
+                                    <button type="button" class="add-to-cart-button is-disabled"  disabled aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
+                                </div>
+
+                            </div>
+
+                            <div id="torta-fria" class="product-card" data-interaction="priceByFlavor-doubleSize">
+                                <div class="card-image-container"> <img src="" alt=""></div>
+
+                                <div class="card-name-price-container">
+                                    <div class="name-price-row">
+                                        <h3 class="product-name"></h3>
+                                        <div class="price-measure is-hidden">
+                                            <span class="product-price"></span>
+                                            <span class="product-measure"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-size-selector-container">
+                                    <!-- A seleção de algum dos tamanhos faz com que o botão seja estilizado - mudando de cor - para sinalizar ao usuário que a opção foi selecionada.
+                                    Esse controle de estilo é feito através da tag "button-selected", que sinaliza a interação do usuário com o botão-->
+                                    <button class="size-button"></button>
+                                    <button class="size-button"></button>
+                                </div>
+
+                                <div class="card-info-row weight-info">
+                                    <p class="product-info"></p>
+                                </div>
+
+                                <div class="card-flavor-selector-container">
+
+                                    <div class="expandable-content">
+                                        <select name="sabor" id="torta-fria-flavor" class="flavor-select">
+                                            <option value="" disabled selected>SABORES</option>
+                                            <option value=""></option>
+                                            <option value=""></option>
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="card-info-row flavor-info">
+                                    <p class="product-info"></p>
+                                </div>
+
+                                <!-- Container add-to-cart-button, só aparece quando ambos sabores estao selecionados - "all-flavors-selected"-->
+                                <div class="card-actions-container-right">
+                                    <!--Botão para adicionar ao carrinho-->
+                                    <button type="button" class="add-to-cart-button is-disabled"  disabled aria-label="Adicionar ao carrinho" ><img src="/img/icons/add-to-cart.svg"></button>
+                                </div>
+
                             </div>
                         </div>
-
-                        <div class="card-size-selector-container">
-                            <!-- A seleção de algum dos tamanhos faz com que o botão seja estilizado - mudando de cor - para sinalizar ao usuário que a opção foi selecionada.
-                            Esse controle de estilo é feito através da tag "button-selected", que sinaliza a interação do usuário com o botão-->
-                            <button class="size-button"></button>
-                            <button class="size-button"></button>
-                        </div>
-
-                        <div class="card-info-row weight-info">
-                            <p class="product-info"></p>
-                        </div>
-
-                        <div class="card-flavor-selector-container">
-
-                            <div class="expandable-content">
-                                <select name="sabor" id="torta-fria-flavor" class="flavor-select">
-                                    <option value="" disabled selected>SABORES</option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="card-info-row flavor-info">
-                            <p class="product-info"></p>
-                        </div>
-
-                        <!-- Container add-to-cart-button, só aparece quando ambos sabores estao selecionados - "all-flavors-selected"-->
-                        <div class="card-actions-container-right">
-                            <!--Botão para adicionar ao carrinho-->
-                            <button type="button" class="add-to-cart-button is-disabled"  disabled aria-label="Adicionar ao carrinho" ><img src="/img/icons/add-to-cart.svg"></button>
-                        </div>
-
                     </div>
-                </div>
+                </div>    
             </section>
 
             <section id="tortas-section" class="category-section">
                 <div class="menu-grid">
 
-                    <div id="torta-macron" class="product-card" data-interaction="staticStyleAndPrice-multSize">
-                        <div class="card-image-container" alt=""><img src=""></div>
-
-                        <div class="card-name-container">
-                            <h3 class="product-name"></h3>
-                        </div>
-
-                        <div class="card-info-row is-open">
-                            <p class="product-info normal-font-style"></p>
-                        </div>
-
-                        <div class="card-size-options-selector-container is-open">
-                            <select name="tamanho" id="size-select-torta-macron" class="size-select">
-                                <option value="" disabled selected>TAMANHOS</option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                            </select>
-                        </div>
-
-                        <!-- Essa informação só é mostrada quando o tamanho for selecionado, "size-selected"-->
-                        <div class="card-info-row weight-info">
-                            <p class="product-info normal-font-style"></p>
-                        </div>
-
-                        <div class="card-price-button">
-                            <div class="price-measure">
-                                <span class="product-price"></span>
-                                <span class="product-measure"></span>
-                            </div>
-                            <button type="button" class="add-to-cart-button is-disabled" disabled="" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
-                        </div>
-                    </div>
-
-                    <div id="torta-noiva-do-mar" class="product-card" data-interaction="staticStyleAndPrice-multSize">
-                        <div class="card-image-container" alt=""><img src=""></div>
-
-                        <div class="card-name-container">
-                            <h3 class="product-name"></h3>
-                        </div>
-
-                        <div class="card-info-row flavor-info is-open">
-                            <p class="product-info normal-font-style"></p>
-                        </div>
-
-                        <div class="card-size-options-selector-container is-open">
-                            <select name="tamanho" id="size-select-torta-noiva-do-mar" class="size-select">
-                                <option value="" disabled selected>TAMANHOS</option>
-                                <option value="mini"></option>
-                                <option value="pequena"></option>
-                                <option value="media"></option>
-                            </select>
-                        </div>
-
-                        <div class="card-info-row weight-info">
-                            <p class="product-info normal-font-style"></p>
-                        </div>
-
-                        <div class="card-price-button">
-                            <div class="price-measure">
-                                <span class="product-price"></span>
-                                <span class="product-measure"></span>
-                            </div>
-                            <button type="button" class="add-to-cart-button is-disabled" disabled="" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
-                        </div>
-
-                    </div>
-
-                    <div id="torta-morango-bronzeado" class="product-card" data-interaction="staticStyleAndPrice-multSize">
-                        <div class="card-image-container" alt=""><img src=""></div>
-
-                        <div class="card-name-container">
-                            <h3 class="product-name"></h3>
-                        </div>
-
-                        <div class="card-info-row flavor-info is-open">
-                            <p class="product-info normal-font-style"></p>
-                        </div>
-
-                        <div class="card-size-options-selector-container is-open">
-                            <select name="tamanho" id="size-select-torta-morango-bronzeado" class="size-select">
-                                <option value="" disabled selected>TAMANHOS</option>
-                                <option value="mini"></option>
-                                <option value="pequena"></option>
-                                <option value="media"></option>
-                                <option value="grande"></option>
-                                <option value="familia"></option>
-                            </select>
-                        </div>
-
-                        <div class="card-info-row weight-info">
-                            <p class="product-info normal-font-style"></p>
-                        </div>
-
-                        <div class="card-price-button">
-                            <div class="price-measure">
-                                <span class="product-price"></span>
-                                <span class="product-measure"></span>
-                            </div>
-                            <button type="button" class="add-to-cart-button is-disabled" disabled="" aria-label="Adicionar ao carrinho" ><img src="/img/icons/add-to-cart.svg" ></button>
-                        </div>
-
-                    </div>
-
-                    <div id="torta-cremes" class="product-card" data-interaction="staticStyleAndPrice-multSize">
-
-                        <div class="card-image-container"><img src="" alt=""></div>
-
-                        <div class="card-name-container">
-                            <h3 class="product-name"></h3>
-                        </div>
-
-                        <div class="card-info-row flavor-info is-open">
-                            <p class="product-info normal-font-style"></p>
-                        </div>
-
-                        <div class="card-size-options-selector-container is-open">
-                            <select name="tamanho" id="size-select-torta-cremes" class="size-select">
-                                <option value="" disabled selected>TAMANHOS</option>
-                                <option value="mini"></option>
-                                <option value="pequena"></option>
-                                <option value="media"></option>
-                                <option value="grande"></option> 
-                                <option value="familia"></option>
-                            </select>
-                        </div>
-
-                        <div class="card-info-row weight-info">
-                            <p class="product-info normal-font-style"></p>
-                        </div>
-
-                        <div class="card-price-button">
-                            <div class="price-measure">
-                                <span class="product-price"></span>
-                                <span class="product-measure"></span>
-                            </div>
-                            <button type="button" class="add-to-cart-button is-disabled"  disabled="" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg" ></button>
-                        </div>
+                    <div class="product-slider">
+                        <div class="product-slider-wrapper">
                         
-                    </div>
+                            <div id="torta-macron" class="product-card" data-interaction="staticStyleAndPrice-multSize">
 
-                    <div id="torta-morango-nata" class="product-card" data-interaction="staticStyleAndPrice-multSize">
+                                <div class="card-image-container" alt=""><img src=""></div>
 
-                        <div class="card-image-container"><img src="" alt=""></div>
+                                <div class="card-name-container">
+                                    <h3 class="product-name"></h3>
+                                </div>
 
-                        <div class="card-name-container">
-                            <h3 class="product-name"></h3>
-                        </div>
+                                <div class="card-info-row is-open">
+                                    <p class="product-info normal-font-style"></p>
+                                </div>
 
-                        <div class="card-info-row flavor-info is-open">
-                            <p class="product-info normal-font-style"></p>
-                        </div>
+                                <div class="card-size-options-selector-container is-open">
+                                    <select name="tamanho" id="size-select-torta-macron" class="size-select">
+                                        <option value="" disabled selected>TAMANHOS</option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
 
-                        <div class="card-size-options-selector-container is-open">
-                            <select name="tamanho" id="size-select-torta-morango-nata" class="size-select">
-                                <option value="" disabled selected>TAMANHOS</option>
-                                <option value="mini"></option>
-                                <option value="pequena"></option>
-                                <option value="media"></option>
-                                <option value="grande"></option> 
-                                <option value="familia"></option>
-                            </select>
-                        </div>
+                                <!-- Essa informação só é mostrada quando o tamanho for selecionado, "size-selected"-->
+                                <div class="card-info-row weight-info">
+                                    <p class="product-info normal-font-style"></p>
+                                </div>
 
-                        <div class="card-info-row weight-info">
-                            <p class="product-info normal-font-style"></p>
-                        </div>
+                                <div class="card-price-button">
+                                    <div class="price-measure">
+                                        <span class="product-price"></span>
+                                        <span class="product-measure"></span>
+                                    </div>
+                                    <button type="button" class="add-to-cart-button is-disabled" disabled="" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
+                                </div>
 
-                        <div class="card-price-button">
+                            </div>
+
+                            <div id="torta-noiva-do-mar" class="product-card" data-interaction="staticStyleAndPrice-multSize">
+                                <div class="card-image-container" alt=""><img src=""></div>
+
+                                <div class="card-name-container">
+                                    <h3 class="product-name"></h3>
+                                </div>
+
+                                <div class="card-info-row flavor-info is-open">
+                                    <p class="product-info normal-font-style"></p>
+                                </div>
+
+                                <div class="card-size-options-selector-container is-open">
+                                    <select name="tamanho" id="size-select-torta-noiva-do-mar" class="size-select">
+                                        <option value="" disabled selected>TAMANHOS</option>
+                                        <option value="mini"></option>
+                                        <option value="pequena"></option>
+                                        <option value="media"></option>
+                                    </select>
+                                </div>
+
+                                <div class="card-info-row weight-info">
+                                    <p class="product-info normal-font-style"></p>
+                                </div>
+
+                                <div class="card-price-button">
                             <div class="price-measure">
                                 <span class="product-price"></span>
                                 <span class="product-measure"></span>
                             </div>
-                            <button type="button" class="add-to-cart-button is-disabled" disabled="" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg" ></button>
-                        </div>
+                            <button type="button" class="add-to-cart-button is-disabled" disabled="" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
+                                </div>
+
+                            </div>
+
+                            <div id="torta-morango-bronzeado" class="product-card" data-interaction="staticStyleAndPrice-multSize">
+                                <div class="card-image-container" alt=""><img src=""></div>
+
+                                <div class="card-name-container">
+                                    <h3 class="product-name"></h3>
+                                </div>
+
+                                <div class="card-info-row flavor-info is-open">
+                                    <p class="product-info normal-font-style"></p>
+                                </div>
+
+                                <div class="card-size-options-selector-container is-open">
+                                    <select name="tamanho" id="size-select-torta-morango-bronzeado" class="size-select">
+                                        <option value="" disabled selected>TAMANHOS</option>
+                                        <option value="mini"></option>
+                                        <option value="pequena"></option>
+                                        <option value="media"></option>
+                                        <option value="grande"></option>
+                                        <option value="familia"></option>
+                                    </select>
+                                </div>
+
+                                <div class="card-info-row weight-info">
+                                    <p class="product-info normal-font-style"></p>
+                                </div>
+
+                                <div class="card-price-button">
+                                    <div class="price-measure">
+                                        <span class="product-price"></span>
+                                        <span class="product-measure"></span>
+                                    </div>
+                                    <button type="button" class="add-to-cart-button is-disabled" disabled="" aria-label="Adicionar ao carrinho" ><img src="/img/icons/add-to-cart.svg" ></button>
+                                </div>
+
+                            </div>
+
+                            <div id="torta-cremes" class="product-card" data-interaction="staticStyleAndPrice-multSize">
+
+                                <div class="card-image-container"><img src="" alt=""></div>
+
+                                <div class="card-name-container">
+                                    <h3 class="product-name"></h3>
+                                </div>
+
+                                <div class="card-info-row flavor-info is-open">
+                                    <p class="product-info normal-font-style"></p>
+                                </div>
+
+                                <div class="card-size-options-selector-container is-open">
+                                    <select name="tamanho" id="size-select-torta-cremes" class="size-select">
+                                        <option value="" disabled selected>TAMANHOS</option>
+                                        <option value="mini"></option>
+                                        <option value="pequena"></option>
+                                        <option value="media"></option>
+                                        <option value="grande"></option> 
+                                        <option value="familia"></option>
+                                    </select>
+                                </div>
+
+                                <div class="card-info-row weight-info">
+                                    <p class="product-info normal-font-style"></p>
+                                </div>
+
+                                <div class="card-price-button">
+                                    <div class="price-measure">
+                                        <span class="product-price"></span>
+                                        <span class="product-measure"></span>
+                                    </div>
+                                    <button type="button" class="add-to-cart-button is-disabled"  disabled="" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg" ></button>
+                                </div>
                         
-                    </div>
-
-                    <div id="torta-nozes" class="product-card" data-interaction="staticPrice-multStyle-multSize">
-                        <div class="card-image-container"><img src="" alt=""></div>
-
-                        <div class="card-name-container">
-                            <h3 class="product-name"></h3>
-                        </div>
-
-                        <!--Container com os botões mini e tradicional, revelam o preço, unidade e peso do produto quando selecionadas-->
-                        <div class="card-style-selector-container">
-                            <!-- A seleção de algum dos tamanhos faz com que o botão seja estilizado - mudando de cor - para sinalizar ao usuário que a opção foi selecionada.
-                            Esse controle de estilo é feito através da tag "button-selected", que sinaliza a interação do usuário com o botão-->
-                            <button class="style-button"></button>
-                            <button class="style-button"></button>
-                        </div>
-
-                        <div class="card-info-row flavor-info is-open">
-                            <p class="product-info normal-font-style"></p>
-                        </div>
-
-                       <div class="card-size-options-selector-container">
-                            <select name="tamanho" id="size-select-torta-nozes" class="size-select">
-                                <option value="" disabled selected>TAMANHOS</option>
-                                <option value="mini"></option>
-                                <option value="pequena"></option>
-                                <option value="media"></option>
-                                <option value="grande"></option> 
-                                <option value="familia"></option>
-                            </select>
-                        </div>
-
-                        <div class="card-info-row weight-info">
-                            <p class="product-info normal-font-style"></p>
-                        </div>
-
-                        <div class="card-price-button">
-                            <div class="price-measure">
-                                <span class="product-price"></span>
-                                <span class="product-measure"></span>
                             </div>
-                            <button type="button" class="add-to-cart-button is-disabled" disabled="" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
-                        </div>
-                    </div>
 
-                    <div id="torta-tropicalia" class="product-card" data-interaction="staticPrice-multStyle-multSize">  
-                        <div class="card-image-container"><img src="" alt=""></div>
+                            <div id="torta-morango-nata" class="product-card" data-interaction="staticStyleAndPrice-multSize">
 
-                        <div class="card-name-container">
-                            <h3 class="product-name"></h3>
-                        </div>
+                                <div class="card-image-container"><img src="" alt=""></div>
 
-                        <!--Container com os botões mini e tradicional, revelam o preço, unidade e peso do produto quando selecionadas-->
-                        <div class="card-style-selector-container">
-                            <!-- A seleção de algum dos tamanhos faz com que o botão seja estilizado - mudando de cor - para sinalizar ao usuário que a opção foi selecionada.
-                            Esse controle de estilo é feito através da tag "button-selected", que sinaliza a interação do usuário com o botão-->
-                            <button class="style-button"></button>
-                            <button class="style-button"></button>
-                        </div>
+                                <div class="card-name-container">
+                                    <h3 class="product-name"></h3>
+                                </div>
 
-                        <div class="card-info-row flavor-info is-open">
-                            <p class="product-info normal-font-style"></p>
-                        </div>
+                                <div class="card-info-row flavor-info is-open">
+                                    <p class="product-info normal-font-style"></p>
+                                </div>
 
-                       <div class="card-size-options-selector-container">
-                                <select name="tamanho" id="size-select-torta-tropicalia" class="size-select">
-                                    <option value="" disabled selected>TAMANHOS</option>
-                                    <option value="mini"></option>
-                                    <option value="pequena"></option>
-                                    <option value="media"></option>
-                                </select>
-                        </div>
+                                <div class="card-size-options-selector-container is-open">
+                                    <select name="tamanho" id="size-select-torta-morango-nata" class="size-select">
+                                        <option value="" disabled selected>TAMANHOS</option>
+                                        <option value="mini"></option>
+                                        <option value="pequena"></option>
+                                        <option value="media"></option>
+                                        <option value="grande"></option> 
+                                        <option value="familia"></option>
+                                    </select>
+                                </div>
 
-                        <div class="card-info-row weight-info">
-                            <p class="product-info normal-font-style"></p>
-                        </div>
+                                <div class="card-info-row weight-info">
+                                    <p class="product-info normal-font-style"></p>
+                                </div>
 
-                        <div class="card-price-button">
-                            <div class="price-measure">
-                                <span class="product-price"></span>
-                                <span class="product-measure"></span>
-                            </div>
-                            <button type="button" class="add-to-cart-button is-disabled" disabled="" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
-                        </div>
-
-                    </div>
-
-                    <div id="torta-marta-rocha" class="product-card" data-interaction="staticPrice-multStyle-multSize">
-                        <div class="card-image-container"><img src="" alt=""></div>
-
-                        <div class="card-name-container">
-                            <h3 class="product-name"></h3>
-                        </div>
-
-                        <!--Container com os botões mini e tradicional, revelam o preço, unidade e peso do produto quando selecionadas-->
-                        <div class="card-style-selector-container">
-                            <!-- A seleção de algum dos tamanhos faz com que o botão seja estilizado - mudando de cor - para sinalizar ao usuário que a opção foi selecionada.
-                            Esse controle de estilo é feito através da tag "button-selected", que sinaliza a interação do usuário com o botão-->
-                            <button class="style-button"></button>
-                            <button class="style-button"></button>
-                        </div>
-
-                        <div class="card-info-row flavor-info is-open">
-                            <p class="product-info normal-font-style"></p>
-                        </div>
-
+                                <div class="card-price-button">
+                                    <div class="price-measure">
+                                        <span class="product-price"></span>
+                                        <span class="product-measure"></span>
+                                    </div>
+                                    <button type="button" class="add-to-cart-button is-disabled" disabled="" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg" ></button>
+                                </div>
                         
-                        <div class="card-size-options-selector-container">
-                            <select name="tamanho" id="size-select-torta-marta-rocha" class="size-select">
-                                <option value="" disabled selected>TAMANHOS</option>
-                                <option value="mini"></option>
-                                <option value="pequena"></option>
-                                <option value="media"></option>
-                                <option value="grande"></option> 
-                                <option value="familia"></option>
-                            </select>
-                        </div>
+                            </div>
+
+                            <div id="torta-nozes" class="product-card" data-interaction="staticPrice-multStyle-multSize">
+                                <div class="card-image-container"><img src="" alt=""></div>
+
+                                <div class="card-name-container">
+                                    <h3 class="product-name"></h3>
+                                </div>
+
+                                <!--Container com os botões mini e tradicional, revelam o preço, unidade e peso do produto quando selecionadas-->
+                                <div class="card-style-selector-container">
+                                    <!-- A seleção de algum dos tamanhos faz com que o botão seja estilizado - mudando de cor - para sinalizar ao usuário que a opção foi selecionada.
+                                    Esse controle de estilo é feito através da tag "button-selected", que sinaliza a interação do usuário com o botão-->
+                                    <button class="style-button"></button>
+                                    <button class="style-button"></button>
+                                </div>
+
+                                <div class="card-info-row flavor-info is-open">
+                                    <p class="product-info normal-font-style"></p>
+                                </div>
+
+                                <div class="card-size-options-selector-container">
+                                        <select name="tamanho" id="size-select-torta-nozes" class="size-select">
+                                            <option value="" disabled selected>TAMANHOS</option>
+                                            <option value=""></option>
+                                            <option value=""></option>
+                                            <option value=""></option>
+                                            <option value=""></option> 
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
+
+                                <div class="card-info-row weight-info">
+                                    <p class="product-info normal-font-style"></p>
+                                </div>
+
+                                <div class="card-price-button">
+                                    <div class="price-measure">
+                                        <span class="product-price"></span>
+                                        <span class="product-measure"></span>
+                                    </div>
+                                    <button type="button" class="add-to-cart-button is-disabled" disabled="" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
+                                </div>
+                            </div>
+
+                            <div id="torta-tropicalia" class="product-card" data-interaction="staticPrice-multStyle-multSize">  
+                                <div class="card-image-container"><img src="" alt=""></div>
+
+                                <div class="card-name-container">
+                                    <h3 class="product-name"></h3>
+                                </div>
+
+                                <!--Container com os botões mini e tradicional, revelam o preço, unidade e peso do produto quando selecionadas-->
+                                <div class="card-style-selector-container">
+                                    <!-- A seleção de algum dos tamanhos faz com que o botão seja estilizado - mudando de cor - para sinalizar ao usuário que a opção foi selecionada.
+                                    Esse controle de estilo é feito através da tag "button-selected", que sinaliza a interação do usuário com o botão-->
+                                    <button class="style-button"></button>
+                                    <button class="style-button"></button>
+                                </div>
+
+                                <div class="card-info-row flavor-info is-open">
+                                    <p class="product-info normal-font-style"></p>
+                                </div>
+
+                                 <div class="card-size-options-selector-container">
+                                        <select name="tamanho" id="size-select-torta-tropicalia" class="size-select">
+                                            <option value="" disabled selected>TAMANHOS</option>
+                                            <option value=""></option>
+                                            <option value=""></option>
+                                            <option value=""></option>
+                                        </select>
+                                </div>
+
+                                <div class="card-info-row weight-info">
+                                    <p class="product-info normal-font-style"></p>
+                                </div>
+
+                                <div class="card-price-button">
+                                    <div class="price-measure">
+                                        <span class="product-price"></span>
+                                        <span class="product-measure"></span>
+                                    </div>
+                                    <button type="button" class="add-to-cart-button is-disabled" disabled="" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
+                                </div>
+
+                            </div>
+
+                            <div id="torta-marta-rocha" class="product-card" data-interaction="staticPrice-multStyle-multSize">
+                                <div class="card-image-container"><img src="" alt=""></div>
+
+                                <div class="card-name-container">
+                                    <h3 class="product-name"></h3>
+                                </div>
+
+                                <!--Container com os botões mini e tradicional, revelam o preço, unidade e peso do produto quando selecionadas-->
+                                <div class="card-style-selector-container">
+                                    <!-- A seleção de algum dos tamanhos faz com que o botão seja estilizado - mudando de cor - para sinalizar ao usuário que a opção foi selecionada.
+                                    Esse controle de estilo é feito através da tag "button-selected", que sinaliza a interação do usuário com o botão-->
+                                    <button class="style-button"></button>
+                                    <button class="style-button"></button>
+                                </div>
+
+                                <div class="card-info-row flavor-info is-open">
+                                    <p class="product-info"></p>
+                                </div>
+
+                                
+                                <div class="card-size-options-selector-container">
+                                    <select name="tamanho" id="size-select-torta-marta-rocha" class="size-select">
+                                        <option value="" disabled selected>TAMANHOS</option>
+                                        <option value="mini"></option>
+                                        <option value="pequena"></option>
+                                        <option value="media"></option>
+                                        <option value="grande"></option> 
+                                        <option value="familia"></option>
+                                    </select>
+                                </div>
+                                
+
+                                <div class="card-info-row weight-info is-hidden">
+                                    <p class="product-info normal-font-style"></p>
+                                </div>
+
+                                <div class="card-price-button">
+                                    <div class="price-measure">
+                                        <span class="product-price"></span>
+                                        <span class="product-measure"></span>
+                                    </div>
+                                    <button type="button" class="add-to-cart-button is-disabled" disabled="" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
+                                </div>
+
+                            </div>
+
+                            <div id="torta-ouro-branco" class="product-card" data-interaction="staticPrice-multStyle-multSize">
+                                <div class="card-image-container"><img src="" alt=""></div>
+
+                                <div class="card-name-container">
+                                    <h3 class="product-name"></h3>
+                                </div>
+
+                                <!--Container com os botões mini e tradicional, revelam o preço, unidade e peso do produto quando selecionadas-->
+                                <div class="card-style-selector-container">
+                                    <!-- A seleção de algum dos tamanhos faz com que o botão seja estilizado - mudando de cor - para sinalizar ao usuário que a opção foi selecionada.
+                                    Esse controle de estilo é feito através da tag "button-selected", que sinaliza a interação do usuário com o botão-->
+                                    <button class="style-button"></button>
+                                    <button class="style-button"></button>
+                                </div>
+
+                                <div class="card-info-row flavor-info is-open">
+                                    <p class="product-info normal-font-style"></p>
+                                </div>
+
+                                <div class="card-size-options-selector-container">
+                                        <select name="tamanho" id="size-select-torta-ouro-branco" class="size-select">
+                                            <option value="" disabled selected>TAMANHOS</option>
+                                            <option value=""></option>
+                                            <option value=""></option>
+                                            <option value=""></option>
+                                            <option value=""></option> 
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
+
+                                <div class="card-info-row weight-info is-hidden">
+                                    <p class="product-info normal-font-style"></p>
+                                </div>
+
+                                <div class="card-price-button">
+                                    <div class="price-measure">
+                                        <span class="product-price"></span>
+                                        <span class="product-measure"></span>
+                                    </div>
+                                    <button type="button" class="add-to-cart-button is-disabled" disabled="" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
+                                </div>
                         
-
-                        <div class="card-info-row weight-info is-hidden">
-                            <p class="product-info normal-font-style"></p>
-                        </div>
-
-                        <div class="card-price-button">
-                            <div class="price-measure">
-                                <span class="product-price"></span>
-                                <span class="product-measure"></span>
                             </div>
-                            <button type="button" class="add-to-cart-button is-disabled" disabled="" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
-                        </div>
 
-                    </div>
+                            <div id="torta-brigadeiro-preto" class="product-card" data-interaction="priceByExtra-multStyle-multSize">
+                                <div class="card-image-container"><img src="" alt=""></div>
 
-                    <div id="torta-ouro-branco" class="product-card" data-interaction="staticPrice-multStyle-multSize">
-                        <div class="card-image-container"><img src="" alt=""></div>
+                                <div class="card-name-container">
+                                    <h3 class="product-name"></h3>
+                                </div>
 
-                        <div class="card-name-container">
-                            <h3 class="product-name"></h3>
-                        </div>
+                                <!--Container com os botões mini e tradicional, revelam o preço, unidade e peso do produto quando selecionadas-->
+                                <div class="card-style-selector-container">
+                                    <!-- A seleção de algum dos tamanhos faz com que o botão seja estilizado - mudando de cor - para sinalizar ao usuário que a opção foi selecionada.
+                                    Esse controle de estilo é feito através da tag "button-selected", que sinaliza a interação do usuário com o botão-->
+                                    <button class="style-button"></button>
+                                    <button class="style-button"></button>
+                                </div>
 
-                        <!--Container com os botões mini e tradicional, revelam o preço, unidade e peso do produto quando selecionadas-->
-                        <div class="card-style-selector-container">
-                            <!-- A seleção de algum dos tamanhos faz com que o botão seja estilizado - mudando de cor - para sinalizar ao usuário que a opção foi selecionada.
-                            Esse controle de estilo é feito através da tag "button-selected", que sinaliza a interação do usuário com o botão-->
-                            <button class="style-button"></button>
-                            <button class="style-button"></button>
-                        </div>
+                                <div class="card-info-row flavor-info is-open" >
+                                    <p class="product-info normal-font-style"></p>
+                                </div>
 
-                        <div class="card-info-row flavor-info is-open">
-                            <p class="product-info normal-font-style"></p>
-                        </div>
+                                <div class="card-extra-options-selector-container">
+                                    <div class="expandable-content">
+                                        <select name="adicional" id="torta-brigadeiro-preto" class="extra-select">
+                                            <option value="" disabled selected>ADICIONAIS</option>
+                                            <option value=""></option>
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
+                                </div>
 
-                       <div class="card-size-options-selector-container">
-                            <select name="tamanho" id="size-select-torta-ouro-branco" class="size-select">
-                                <option value="" disabled selected>TAMANHOS</option>
-                                <option value="mini"></option>
-                                <option value="pequena"></option>
-                                <option value="media"></option>
-                                <option value="grande"></option> 
-                                <option value="familia"></option>
-                            </select>
-                        </div>
+                                <div class="card-size-options-selector-container">
+                                    <diV class="expandable-content">
+                                        <select name="tamanho" id="size-select-torta-brigadeiro-preto" class="size-select">
+                                            <option value="" disabled selected>TAMANHOS</option>
+                                            <option value=""></option>
+                                            <option value=""></option>
+                                            <option value=""></option>
+                                            <option value=""></option> 
+                                            <option value=""></option>
+                                        </select>
+                                    </diV>
+                                </div>
 
-                        <div class="card-info-row weight-info is-hidden">
-                            <p class="product-info normal-font-style"></p>
-                        </div>
+                                <div class="card-info-row weight-info">
+                                    <p class="product-info normal-font-style"></p>
+                                </div>
 
-                        <div class="card-price-button">
-                            <div class="price-measure">
-                                <span class="product-price"></span>
-                                <span class="product-measure"></span>
+                                <div class="card-price-button">
+                                    <div class="price-measure">
+                                        <span class="product-price"></span>
+                                        <span class="product-measure"></span>
+                                    </div>
+                                    <button type="button" class="add-to-cart-button is-disabled" disabled="" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
+                                </div>
+
                             </div>
-                            <button type="button" class="add-to-cart-button is-disabled" disabled="" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
-                        </div>
-                    </div>
 
-                    <div id="torta-brigadeiro-preto" class="product-card" data-interaction="priceByExtra-multStyle-multSize">
-                        <div class="card-image-container"><img src="" alt=""></div>
+                            <div id="torta-dois-amores" class="product-card" data-interaction="priceByExtra-multStyle-multSize">
+                                <div class="card-image-container"><img src="" alt=""></div>
 
-                        <div class="card-name-container">
-                            <h3 class="product-name"></h3>
-                        </div>
+                                <div class="card-name-container">
+                                    <h3 class="product-name"></h3>
+                                </div>
+                                
+                                <!--Container com os botões mini e tradicional, revelam o preço, unidade e peso do produto quando selecionadas-->
+                                <div class="card-style-selector-container">
+                                    <!-- A seleção de algum dos tamanhos faz com que o botão seja estilizado - mudando de cor - para sinalizar ao usuário que a opção foi selecionada.
+                                    Esse controle de estilo é feito através da tag "button-selected", que sinaliza a interação do usuário com o botão-->
+                                    <button class="style-button"></button>
+                                    <button class="style-button"></button>
+                                </div>
 
-                        <!--Container com os botões mini e tradicional, revelam o preço, unidade e peso do produto quando selecionadas-->
-                        <div class="card-style-selector-container">
-                            <!-- A seleção de algum dos tamanhos faz com que o botão seja estilizado - mudando de cor - para sinalizar ao usuário que a opção foi selecionada.
-                            Esse controle de estilo é feito através da tag "button-selected", que sinaliza a interação do usuário com o botão-->
-                            <button class="style-button"></button>
-                            <button class="style-button"></button>
-                        </div>
+                                <div class="card-info-row flavor-info is-open">
+                                    <p class="product-info normal-font-style"></p>
+                                </div>
 
-                        <div class="card-info-row flavor-info is-open" >
-                            <p class="product-info normal-font-style"></p>
-                        </div>
+                                <!--Card responsável pelos adicionais, é necessário sua seleção para liberar a opção de compra-->
+                                <div class="card-extra-options-selector-container">
+                                    <select name="adicional" id="torta-dois-amores" class="extra-select">
+                                        <option value="" disabled selected>ADICIONAIS</option>
+                                        <option value="sem-adicional"></option>
+                                        <option value="morango"></option>
+                                    </select>
+                                </div>
 
-                        <div class="card-extra-options-selector-container">
-                            <div class="expandable-content">
-                                <select name="adicional" id="torta-brigadeiro-preto" class="extra-select">
-                                    <option value="" disabled selected>ADICIONAIS</option>
-                                    <option value=""></option>
-                                    <option value=""></option>
-                                </select>
+                                <div class="card-size-options-selector-container is-hidden">
+                                    <select name="tamanho" id="size-select-torta-dois-amores" class="size-select">
+                                        <option value="" disabled selected>TAMANHOS</option>
+                                        <option value="mini"></option>
+                                        <option value="pequena"></option>
+                                        <option value="media"></option>
+                                        <option value="grande"></option> 
+                                        <option value="familia"></option>
+                                    </select>
+                                </div>
+
+                                <div class="card-info-row weight-info">
+                                    <p class="product-info normal-font-style"></p>
+                                </div>
+
+                                <div class="card-price-button">
+                                    <div class="price-measure">
+                                        <span class="product-price"></span>
+                                        <span class="product-measure"></span>
+                                    </div>
+                                    <button type="button" class="add-to-cart-button is-disabled" disabled="" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
+                                </div>
+
                             </div>
-                        </div>
 
-                        <div class="card-size-options-selector-container">
-                            <diV class="expandable-content">
-                                <select name="tamanho" id="size-select-torta-brigadeiro-preto" class="size-select">
-                                    <option value="" disabled selected>TAMANHOS</option>
-                                    <option value="mini"></option>
-                                    <option value="pequena"></option>
-                                    <option value="media"></option>
-                                    <option value="grande"></option> 
-                                    <option value="familia"></option>
-                                </select>
-                            </diV>
-                        </div>
-
-                        <div class="card-info-row weight-info">
-                            <p class="product-info normal-font-style"></p>
-                        </div>
-
-                        <div class="card-price-button">
-                            <div class="price-measure">
-                                <span class="product-price"></span>
-                                <span class="product-measure"></span>
-                            </div>
-                            <button type="button" class="add-to-cart-button is-disabled" disabled="" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
-                        </div>
-
-                    </div>
-
-                    <div id="torta-dois-amores" class="product-card" data-interaction="priceByExtra-multStyle-multSize">
-                        <div class="card-image-container"><img src="" alt=""></div>
-
-                        <div class="card-name-container">
-                            <h3 class="product-name"></h3>
-                        </div>
+                            <div id="cheesecake" class="product-card" data-interaction="staticPriceAndSize-multFlavor">
+                                <div class="card-image-container"><img  src="" alt=""></div>
                         
+                                <div class="card-name-container">
+                                    <h3 class="product-name"></h3>
+                                </div>
 
-                        <!--Container com os botões mini e tradicional, revelam o preço, unidade e peso do produto quando selecionadas-->
-                        <div class="card-style-selector-container">
-                            <!-- A seleção de algum dos tamanhos faz com que o botão seja estilizado - mudando de cor - para sinalizar ao usuário que a opção foi selecionada.
-                            Esse controle de estilo é feito através da tag "button-selected", que sinaliza a interação do usuário com o botão-->
-                            <button class="style-button"></button>
-                            <button class="style-button"></button>
-                        </div>
+                                <div class="card-info-row weight-info is-open">
+                                    <p class="product-info normal-font-style"></p>
+                                </div>
 
-                        <div class="card-info-row flavor-info is-open">
-                            <p class="product-info normal-font-style"></p>
-                        </div>
+                                <div class="card-flavor-selector-container is-open">
+                                    <select name="sabor" id="cheesecake-flavor" class="flavor-select">
+                                        <option value="" disabled selected>SABORES</option>
+                                        <option value="frutas-vermelhas"></option>
+                                        <option value="goiabada"></option>
+                                    </select>
+                                </div>
 
-                        <div class="card-size-options-selector-container is-hidden">
-                            <select name="tamanho" id="size-select-torta-dois-amores" class="size-select">
-                                <option value="" disabled selected>TAMANHOS</option>
-                                <option value="mini">Mini</option>
-                                <option value="pequena">Pequena</option>
-                                <option value="media">Média</option>
-                                <option value="grande">Grande</option> 
-                                <option value="familia">Família</option>
-                            </select>
-                        </div>
+                                <div class="card-info-row flavor-info is-hidden">
+                                    <p class="product-info normal-font-style"></p>
+                                </div>
 
-                        <div class="card-info-row weight-info">
-                            <p class="product-info normal-font-style"></p>
-                        </div>
-
-                        <!--Card responsável pelos adicionais, é necessário sua seleção para liberar a opção de compra-->
-                        <div class="card-extra-options-selector-container">
-                            <select name="adicional" id="torta-dois-amores" class="extra-select">
-                                <option value="" disabled selected>ADICIONAIS</option>
-                                <option value="sem-adicional"></option>
-                                <option value="morango"></option>
-                            </select>
-                        </div>
-
-                        <div class="card-price-button">
-                            <div class="price-measure">
-                                <span class="product-price"></span>
-                                <span class="product-measure"></span>
+                                <div class="card-price-button">
+                                    <div class="price-measure">
+                                        <span class="product-price"></span>
+                                        <span class="product-measure"></span>
+                                    </div>
+                                    <button type="button" class="add-to-cart-button is-disabled" disabled="" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
+                                </div> 
                             </div>
-                            <button type="button" class="add-to-cart-button is-disabled" disabled="" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
-                        </div>
 
-                    </div>
-
-                    <div id="cheesecake" class="product-card" data-interaction="staticPriceAndSize-multFlavor">
-                        <div class="card-image-container"><img  src="" alt=""></div>
+                            <div id="torta-baixa" class="product-card" data-interaction="staticPriceAndSize-multFlavor">
+                                <div class="card-image-container"><img  src="" alt=""></div>
                         
-                        <div class="card-name-container">
-                            <h3 class="product-name"></h3>
-                        </div>
+                                <div class="card-name-container">
+                                    <h3 class="product-name"></h3>
+                                </div>
 
-                        <div class="card-info-row weight-info">
-                            <p class="product-info normal-font-style"></p>
-                        </div>
+                                <div class="card-info-row weight-info is-open">
+                                    <p class="product-info normal-font-style"></p>
+                                </div>
 
-                        <div class="card-flavor-selector-container is-open">
-                            <select name="sabor" id="cheesecake-flavor" class="flavor-select">
-                                <option value="" disabled selected>SABORES</option>
-                                <option value="frutas-vermelhas"></option>
-                                <option value="goiabada"></option>
-                            </select>
-                        </div>
+                                <div class="card-flavor-selector-container is-open">
+                                    <select name="sabor" id="torta-baixa-flavor" class="flavor-select">
+                                        <option value="" disabled selected>SABORES</option>
+                                        <option value="banoffee"></option>
+                                        <option value="holandesa"></option>
+                                        <option value="limao"></option>
+                                        <option value="ninho-morango"></option>
+                                        <option value="nozes"></option>
+                                        <option value="tres-chocolates"></option>
+                                    </select>
+                                </div>
 
-                        <div class="card-info-row flavor-info is-hidden">
-                            <p class="product-info normal-font-style"></p>
-                        </div>
+                                <div class="card-info-row flavor-info is-hidden">
+                                    <p class="product-info normal-font-style"></p>
+                                </div>
 
-                      <div class="card-price-button">
-                            <div class="price-measure">
-                                <span class="product-price"></span>
-                                <span class="product-measure"></span>
+                                <div class="card-price-button">
+                                    <div class="price-measure">
+                                        <span class="product-price"></span>
+                                        <span class="product-measure"></span>
+                                    </div>
+                                    <button type="button" class="add-to-cart-button is-disabled" disabled="" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
+                                </div> 
                             </div>
-                            <button type="button" class="add-to-cart-button is-disabled" disabled="" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
-                        </div> 
+
+                        </div>
                     </div>
-
-                    <div id="torta-baixa" class="product-card" data-interaction="staticPriceAndSize-multFlavor">
-                        <div class="card-image-container"><img  src="" alt=""></div>
-                        
-                        <div class="card-name-container">
-                            <h3 class="product-name"></h3>
-                        </div>
-
-                        <div class="card-info-row weight-info">
-                            <p class="product-info normal-font-style"></p>
-                        </div>
-
-
-                        <div class="card-flavor-selector-container is-open">
-                            <select name="sabor" id="torta-baixa-flavor" class="flavor-select">
-                                <option value="" disabled selected>SABORES</option>
-                                <option value="banoffee"></option>
-                                <option value="holandesa"></option>
-                                <option value="limao"></option>
-                                <option value="ninho-morango"></option>
-                                <option value="nozes"></option>
-                                <option value="tres-chocolates"></option>
-                            </select>
-                        </div>
-
-                        <div class="card-info-row flavor-info is-hidden">
-                            <p class="product-info normal-font-style"></p>
-                        </div>
-
-                      <div class="card-price-button">
-                            <div class="price-measure">
-                                <span class="product-price"></span>
-                                <span class="product-measure"></span>
-                            </div>
-                            <button type="button" class="add-to-cart-button is-disabled" disabled="" aria-label="Adicionar ao carrinho"><img src="/img/icons/add-to-cart.svg"></button>
-                        </div> 
-                    </div>
-
-                    </div>
-
                 </div>
             </section>
         
-
         </main>
 
         <footer>

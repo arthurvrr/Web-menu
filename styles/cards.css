@@ -33,6 +33,12 @@ dimensões da imagem.*/
 }
 
 
+.product-slider-wrapper{
+    display: grid;
+    gap: 2rem;
+
+}
+
 
 /*A "card-imagem-container" controla a moldura da imagem dentro do card, para aumentar a largura do "product-card" é necessário
 mudar o aspect-radio*/
@@ -41,7 +47,6 @@ mudar o aspect-radio*/
     aspect-ratio: 4 / 3;
 
 }
-
 
 
 /* Essa classe faz com que a imagem fique encapsulada dentro do molde definido na classe "card-image-container" além de definir 
@@ -54,7 +59,6 @@ estilos */
     object-fit: cover;
     border-radius: 2rem;
     box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
-
 }
 
 
@@ -221,6 +225,11 @@ estilos */
     font-style: normal;
 }
 
+.slim-font-style{
+    font-size: 1.2rem;
+    font-weight: lighter;
+    font-style: normal;
+}
 
 .card-size-options-selector-container{
     display: grid;
@@ -288,7 +297,7 @@ estilos */
 
 .product-info {
     margin: 0;
-    font-weight: bold;
+    /* font-weight: bold; */
     font-style: normal;
     font-size: 1.2rem;
     -webkit-text-stroke: 0.5px var(--color08);
@@ -463,9 +472,48 @@ estilos */
 /*===================================================================================================================
                                         Modificações para diferentes dispositivos*/
 
+
+
+
+                                        
 /*===================================================
             TABLET VIEW: min-width: 1024px.
 =====================================================*/
+@media(min-width: 1024px) {
+  
+    .menu-grid{
+        display: block;
+    }
+
+    .product-slider{
+        width: 100%;
+        overflow-x: auto; /* Permite o scroll horizontal */
+        padding: 20px 0;
+        scrollbar-width: thin; /* Deixa a barra de scroll mais discreta no Firefox */
+        scroll-behavior: smooth; /* Suaviza o movimento ao rolar */
+    }
+
+
+    .product-slider-wrapper{
+        align-items: flex-start;
+        display: flex;
+        flex-wrap: nowrap;
+
+    };
+
+    .product-card .card-image-container img {
+        width: 20rem;
+
+    }
+
+};
+
+
+
+
+
+
+/*
 @media (min-width: 1024px){
     .menu-grid{
         display: block;
@@ -480,15 +528,15 @@ estilos */
     }
 
 }
+*/
 
 
 /*===================================================
             DESKTOP VIEW: min-width: 1440x.
 =====================================================*/
+
+
 @media (min-width: 1440px){
-    .menu-grid{
-        column-count: 4;
-    }
 
     .product-card{
         transition: transform 0.6s ease;
